@@ -1,15 +1,6 @@
 table _Measures
 	lineageTag: 53bbfafa-fa80-4cf9-a89d-30d0248c1aee
 
-	column Column1
-		dataType: string
-		lineageTag: 4bf5fed7-64c3-4930-8595-6c0abff44d12
-		summarizeBy: none
-		sourceColumn: Column1
-		isHidden
-
-		annotation SummarizationSetBy = Automatic
-
 	measure 'Actual YTD' =
 			CALCULATE(
 			    SUM('FactGL'[Belop_signert_MNOK]),
@@ -82,12 +73,12 @@ table _Measures
 		displayFolder: _03 EVM
 		lineageTag: d0792e3f-67b7-42d9-8059-5b8ba4fcc26c
 
-	measure 'CPI' = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
+	measure CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
 		formatString: 0.00
 		displayFolder: _03 EVM
 		lineageTag: 7a85ee1b-237b-4ca8-842b-73387db959de
 
-	measure 'SPI' = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
+	measure SPI = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
 		formatString: 0.00
 		displayFolder: _03 EVM
 		lineageTag: 787cd3ea-e14d-49d0-a3bc-3f2f6904dd62
@@ -171,12 +162,22 @@ table _Measures
 		displayFolder: _06 RAG & Design
 		lineageTag: b50da885-c3c0-4773-aec3-b4a63980d094
 
+	column Column1
+		dataType: string
+		isHidden
+		lineageTag: 4bf5fed7-64c3-4930-8595-6c0abff44d12
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
 	partition _Measures = m
 		mode: import
 		source =
-			let
-			    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
-			in
-			    Source
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
+				in
+				    Source
 
 	annotation PBI_ResultType = Table
+

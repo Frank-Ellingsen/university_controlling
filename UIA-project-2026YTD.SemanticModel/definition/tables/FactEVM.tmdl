@@ -103,11 +103,12 @@ table FactEVM
 	partition FactEVM = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactEVM.csv"),[Delimiter=";", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Planned_Value_PV_MNOK", type number}, {"Earned_Value_EV_MNOK", type number}, {"Actual_Cost_AC_MNOK", type number}, {"Budget_At_Completion_BAC_MNOK", type number}, {"Estimate_At_Completion_EAC_MNOK", type number}, {"Estimate_To_Complete_ETC_MNOK", type number}, {"Cost_Performance_Index_CPI", type number}, {"Schedule_Performance_Index_SPI", type number}, {"Variance_At_Completion_VAC_MNOK", type number}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactEVM.csv"),[Delimiter=";", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Planned_Value_PV_MNOK", type number}, {"Earned_Value_EV_MNOK", type number}, {"Actual_Cost_AC_MNOK", type number}, {"Budget_At_Completion_BAC_MNOK", type number}, {"Estimate_At_Completion_EAC_MNOK", type number}, {"Estimate_To_Complete_ETC_MNOK", type number}, {"Cost_Performance_Index_CPI", type number}, {"Schedule_Performance_Index_SPI", type number}, {"Variance_At_Completion_VAC_MNOK", type number}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

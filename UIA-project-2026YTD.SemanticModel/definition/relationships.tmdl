@@ -45,3 +45,4 @@ relationship 38d1d874-cf20-4d02-bcf0-b49edf192570
 relationship 6448ec67-dc97-432f-86f8-3fa87f8d14d8
 	fromColumn: FactGL.Konto
 	toColumn: DimAccountHierarchy.Konto
+

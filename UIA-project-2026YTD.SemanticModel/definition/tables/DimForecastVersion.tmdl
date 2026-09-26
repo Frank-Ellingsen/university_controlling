@@ -28,11 +28,12 @@ table DimForecastVersion
 	partition DimForecastVersion = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimForecastVersion.csv"),[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"VersjonKode", type text}, {"VersjonNavn", type text}, {"Beskrivelse", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimForecastVersion.csv"),[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"VersjonKode", type text}, {"VersjonNavn", type text}, {"Beskrivelse", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

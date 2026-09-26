@@ -105,11 +105,12 @@ table DimAccountHierarchy
 	partition DimAccountHierarchy = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimAccountHierarchy.csv"),[Delimiter=";", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Konto", Int64.Type}, {"Kontonavn", type text}, {"Nivaa1_Kontoklasse", Int64.Type}, {"Nivaa1_Navn", type text}, {"Nivaa2_Kontogruppe", Int64.Type}, {"Nivaa2_Navn", type text}, {"Nivaa3_Standardkonto", Int64.Type}, {"Nivaa3_Navn", type text}, {"Nivaa4_Underkonto", Int64.Type}, {"Nivaa4_Navn", type text}, {"Kontotype", type text}, {"SRS_regnskapslinje", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimAccountHierarchy.csv"),[Delimiter=";", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Konto", Int64.Type}, {"Kontonavn", type text}, {"Nivaa1_Kontoklasse", Int64.Type}, {"Nivaa1_Navn", type text}, {"Nivaa2_Kontogruppe", Int64.Type}, {"Nivaa2_Navn", type text}, {"Nivaa3_Standardkonto", Int64.Type}, {"Nivaa3_Navn", type text}, {"Nivaa4_Underkonto", Int64.Type}, {"Nivaa4_Navn", type text}, {"Kontotype", type text}, {"SRS_regnskapslinje", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

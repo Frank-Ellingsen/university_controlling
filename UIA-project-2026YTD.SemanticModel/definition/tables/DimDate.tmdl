@@ -13,13 +13,15 @@ table DimDate
 
 	column Dato
 		dataType: dateTime
-		formatString: yyyy-MM-dd
 		isKey
+		formatString: yyyy-MM-dd
 		lineageTag: 0d352500-d7af-435d-be14-4224704e5ae8
 		summarizeBy: none
 		sourceColumn: Dato
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Aar
 		dataType: int64
@@ -41,10 +43,10 @@ table DimDate
 
 	column MaanedNavn
 		dataType: string
-		sortByColumn: MaanedNummer
 		lineageTag: af612590-59e4-4411-bbbc-163c103dee20
 		summarizeBy: none
 		sourceColumn: MaanedNavn
+		sortByColumn: MaanedNummer
 
 		annotation SummarizationSetBy = Automatic
 
@@ -67,11 +69,12 @@ table DimDate
 	partition DimDate = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimDate.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"Dato", type date}, {"Aar", Int64.Type}, {"MaanedNummer", Int64.Type}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"StatusPr30Sep", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimDate.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"Dato", type date}, {"Aar", Int64.Type}, {"MaanedNummer", Int64.Type}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"StatusPr30Sep", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

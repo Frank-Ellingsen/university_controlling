@@ -182,11 +182,12 @@ table FactFacultyKPI
 	partition FactFacultyKPI = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactFacultyKPI.csv"),[Delimiter=";", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Fakultet", type text}, {"Statlig_Bevilgning_MNOK", type number}, {"BOA_Andre_Inntekt_MNOK", type number}, {"Total_Inntekt_MNOK", type number}, {"Lonnskostnader_MNOK", type number}, {"Driftskostnader_MNOK", type number}, {"Investeringer_Capex_MNOK", type number}, {"Total_Kostnad_MNOK", type number}, {"Netto_Resultat_MNOK", type number}, {"Lonnsandel_Pct", type number}, {"Aarsverk_UF", type number}, {"Aarsverk_TA", type number}, {"Total_Aarsverk", type number}, {"Antall_Ansatte", Int64.Type}, {"Antall_Studenter", Int64.Type}, {"SPE60_Helarsstudenter", type number}, {"Studenter_Pr_Faglig_ÅV", type number}, {"Kostnad_Pr_SPE60_NOK", Int64.Type}, {"RAG_Status", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactFacultyKPI.csv"),[Delimiter=";", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Fakultet", type text}, {"Statlig_Bevilgning_MNOK", type number}, {"BOA_Andre_Inntekt_MNOK", type number}, {"Total_Inntekt_MNOK", type number}, {"Lonnskostnader_MNOK", type number}, {"Driftskostnader_MNOK", type number}, {"Investeringer_Capex_MNOK", type number}, {"Total_Kostnad_MNOK", type number}, {"Netto_Resultat_MNOK", type number}, {"Lonnsandel_Pct", type number}, {"Aarsverk_UF", type number}, {"Aarsverk_TA", type number}, {"Total_Aarsverk", type number}, {"Antall_Ansatte", Int64.Type}, {"Antall_Studenter", Int64.Type}, {"SPE60_Helarsstudenter", type number}, {"Studenter_Pr_Faglig_ÅV", type number}, {"Kostnad_Pr_SPE60_NOK", Int64.Type}, {"RAG_Status", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

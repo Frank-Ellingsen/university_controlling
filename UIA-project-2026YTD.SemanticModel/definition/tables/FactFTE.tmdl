@@ -93,11 +93,12 @@ table FactFTE
 	partition FactFTE = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactFTE.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Aarsverk_UF", type number}, {"Aarsverk_TA", type number}, {"Aarsverk_Faktisk", type number}, {"Aarsverk_Budsjett", type number}, {"Antall_Ansatte", Int64.Type}, {"Ubesatte_Vakanser", type number}, {"Faglig_Andel_Pct", type number}, {"VersjonKode", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactFTE.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Aarsverk_UF", type number}, {"Aarsverk_TA", type number}, {"Aarsverk_Faktisk", type number}, {"Aarsverk_Budsjett", type number}, {"Antall_Ansatte", Int64.Type}, {"Ubesatte_Vakanser", type number}, {"Faglig_Andel_Pct", type number}, {"VersjonKode", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

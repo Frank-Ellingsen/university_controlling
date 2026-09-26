@@ -94,11 +94,12 @@ table FactStudents
 	partition FactStudents = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactStudents.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Aar", Int64.Type}, {"OrgKode", Int64.Type}, {"Registrerte_Studenter", Int64.Type}, {"Avlagte_Studiepoeng_Totalt", Int64.Type}, {"SPE60_Helarsstudenter", type number}, {"KD_Kategori1_SPE60", type number}, {"KD_Kategori2_SPE60", type number}, {"KD_Kategori3_SPE60", type number}, {"Bestattandel_Pct", type number}, {"Gjennomforing_Normert_Pct", type number}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactStudents.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Aar", Int64.Type}, {"OrgKode", Int64.Type}, {"Registrerte_Studenter", Int64.Type}, {"Avlagte_Studiepoeng_Totalt", Int64.Type}, {"SPE60_Helarsstudenter", type number}, {"KD_Kategori1_SPE60", type number}, {"KD_Kategori2_SPE60", type number}, {"KD_Kategori3_SPE60", type number}, {"Bestattandel_Pct", type number}, {"Gjennomforing_Normert_Pct", type number}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

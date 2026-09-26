@@ -55,11 +55,12 @@ table DimOrganization
 	partition DimOrganization = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimOrganization.csv"),[Delimiter=";", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Kortnavn", type text}, {"OverordnetEnhet", Int64.Type}, {"Nivaa", Int64.Type}, {"Type", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimOrganization.csv"),[Delimiter=";", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Kortnavn", type text}, {"OverordnetEnhet", Int64.Type}, {"Nivaa", Int64.Type}, {"Type", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

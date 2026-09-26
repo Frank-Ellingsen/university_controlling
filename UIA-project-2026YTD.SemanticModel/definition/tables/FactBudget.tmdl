@@ -81,11 +81,12 @@ table FactBudget
 	partition FactBudget = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactBudget.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Artstype", type text}, {"Kategori", type text}, {"Budsjett_MNOK", type number}, {"Budsjett_signert_MNOK", type number}, {"VersjonKode", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactBudget.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Artstype", type text}, {"Kategori", type text}, {"Budsjett_MNOK", type number}, {"Budsjett_signert_MNOK", type number}, {"VersjonKode", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
