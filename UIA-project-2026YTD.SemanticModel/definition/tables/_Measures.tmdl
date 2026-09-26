@@ -542,17 +542,17 @@ table _Measures
 		lineageTag: b1a12373-0de1-43b4-8a30-4aff406f9701
 
 	measure 'CPI MoM Endring' = 0.01
-		formatString: "+0.00;-0.00;0.00"
+		formatString: +0.00;-0.00;0.00
 		displayFolder: _03 EVM
 		lineageTag: b1a12374-0de1-43b4-8a30-4aff406f9702
 
 	measure 'SPI MoM Endring' = 0.00
-		formatString: "+0.00;-0.00;0.00"
+		formatString: +0.00;-0.00;0.00
 		displayFolder: _03 EVM
 		lineageTag: b1a12375-0de1-43b4-8a30-4aff406f9703
 
 	measure 'Årsverk MoM Endring (FTE)' = 3.0
-		formatString: "+0.0;-0.0;0.0"
+		formatString: +0.0;-0.0;0.0
 		displayFolder: _04 Bemanning & FTE
 		lineageTag: b1a12376-0de1-43b4-8a30-4aff406f9704
 
@@ -581,7 +581,7 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: b1a12382-0de1-43b4-8a30-4aff406f9710
 
-	measure 'Revenue Variance Indicator' = 
+	measure 'Revenue Variance Indicator' =
 			VAR Budget = [Årsbudsjett (BAC)]
 			VAR Forecast = [Forecast LE (EAC)]
 			VAR Diff = Forecast - Budget
@@ -592,14 +592,14 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: e1a12383-0de1-43b4-8a30-4aff406f9711
 
-	measure 'Net Result Status Text' = 
+	measure 'Net Result Status Text' =
 			VAR YTDResult = [Actual YTD]
 			RETURN
 			"YTD per Sept: " & FORMAT(YTDResult, "#,##0.0") & " MNOK (Dekkes av F-05-20)"
 		displayFolder: _07 RAG & Design
 		lineageTag: e1a12384-0de1-43b4-8a30-4aff406f9712
 
-	measure 'Staffing Card Subtitle' = 
+	measure 'Staffing Card Subtitle' =
 			VAR UF = [Faglige Årsverk (UF)]
 			VAR TA = [Teknisk-Admin Årsverk (TA)]
 			VAR LonnPct = [Lønnsandel %]
@@ -608,14 +608,14 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: e1a12385-0de1-43b4-8a30-4aff406f9713
 
-	measure 'EVM Status Subtitle' = 
+	measure 'EVM Status Subtitle' =
 			VAR SPIVal = [SPI]
 			RETURN
 			"SPI (Tidsfremdrift): " & FORMAT(SPIVal, "0.00") & " | 5% Kostnadsoverskridelse"
 		displayFolder: _07 RAG & Design
 		lineageTag: e1a12386-0de1-43b4-8a30-4aff406f9714
 
-	measure 'Student KPI Subtitle' = 
+	measure 'Student KPI Subtitle' =
 			VAR SPE = [Avlagte SPE60]
 			VAR Ratio = [Studenter pr UF-Årsverk]
 			RETURN
@@ -623,12 +623,11 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: e1a12387-0de1-43b4-8a30-4aff406f9715
 
-	measure 'Faculty Bar Color' = 
-			IF([Sluttavvik (VAC)] >= 0, "#10b981", "#ef4444")
+	measure 'Faculty Bar Color' = IF([Sluttavvik (VAC)] >= 0, "#10b981", "#ef4444")
 		displayFolder: _07 RAG & Design
 		lineageTag: e1a12388-0de1-43b4-8a30-4aff406f9716
 
-	measure 'Cumulative Actual & Forecast' = 
+	measure 'Cumulative Actual & Forecast' =
 			VAR MaxDate = MAX('DimDate'[Dato])
 			RETURN
 			CALCULATE(
@@ -640,7 +639,7 @@ table _Measures
 		displayFolder: _02 Prognose & EAC
 		lineageTag: e1a12389-0de1-43b4-8a30-4aff406f9717
 
-	measure 'Cumulative Budget' = 
+	measure 'Cumulative Budget' =
 			VAR MaxDate = MAX('DimDate'[Dato])
 			RETURN
 			CALCULATE(
@@ -652,7 +651,7 @@ table _Measures
 		displayFolder: _02 Prognose & EAC
 		lineageTag: e1a12390-0de1-43b4-8a30-4aff406f9718
 
-	measure 'KPI Card Border Color' = 
+	measure 'KPI Card Border Color' =
 			SWITCH(
 			    TRUE(),
 			    [VAC %] < -0.05, "#EF4444",
@@ -662,25 +661,7 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: e1a12391-0de1-43b4-8a30-4aff406f9719
 
-	measure 'Forecast RAG Status' = 
-			IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
-			    IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)",
-			        "🔴 Kritisk overskridelse (> 5%)"
-			    )
-			)
-		displayFolder: _07 RAG & Design
-		lineageTag: e1a12392-0de1-43b4-8a30-4aff406f9720
-
-	measure 'RAG Hex Color' = 
-			IF([Sluttavvik (VAC)] >= 0, "#10b981",
-			    IF([VAC %] >= -0.05, "#f59e0b",
-			        "#ef4444"
-			    )
-			)
-		displayFolder: _07 RAG & Design
-		lineageTag: e1a12393-0de1-43b4-8a30-4aff406f9721
-
-	measure 'Actual/FC Lønn' = 
+	measure 'Actual/FC Lønn' =
 			CALCULATE(
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Kategori] = "Lønnskostnader"
@@ -689,7 +670,7 @@ table _Measures
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12394-0de1-43b4-8a30-4aff406f9722
 
-	measure 'Actual/FC Drift' = 
+	measure 'Actual/FC Drift' =
 			CALCULATE(
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Kategori] = "Driftskostnader"
@@ -698,7 +679,7 @@ table _Measures
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12395-0de1-43b4-8a30-4aff406f9723
 
-	measure 'Actual/FC Capex' = 
+	measure 'Actual/FC Capex' =
 			CALCULATE(
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Kategori] = "Investeringer (Capex)"
@@ -707,7 +688,7 @@ table _Measures
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12396-0de1-43b4-8a30-4aff406f9724
 
-	measure 'Faktiske & Prognostiserte Driftskostnader' = 
+	measure 'Faktiske & Prognostiserte Driftskostnader' =
 			CALCULATE(
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Artstype] = "Kostnad"
@@ -716,7 +697,7 @@ table _Measures
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12397-0de1-43b4-8a30-4aff406f9725
 
-	measure 'Total Inntekt MNOK' = 
+	measure 'Total Inntekt MNOK' =
 			CALCULATE(
 			    SUM('FactGL'[Belop_MNOK]),
 			    'FactGL'[Artstype] = "Inntekt"

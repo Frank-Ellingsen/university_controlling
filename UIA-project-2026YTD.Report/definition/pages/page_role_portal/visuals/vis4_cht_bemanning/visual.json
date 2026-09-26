@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "vis4_cht_bemanning",
   "position": {
     "x": 1220,
     "y": 230,
     "z": 31,
-    "width": 680,
     "height": 430,
+    "width": 680,
     "tabOrder": 9
   },
   "visual": {
@@ -29,52 +29,6 @@
               "queryRef": "DimOrganization.Kortnavn",
               "nativeQueryRef": "Enhet",
               "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Faglige Årsverk (UF)"
-                }
-              },
-              "queryRef": "_Measures.Faglige Årsverk (UF)",
-              "nativeQueryRef": "Faglig (UF)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Teknisk-Admin Årsverk (TA)"
-                }
-              },
-              "queryRef": "_Measures.Teknisk-Admin Årsverk (TA)",
-              "nativeQueryRef": "Teknisk-Admin (TA)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Vakanser (Ubesatte stillinger)"
-                }
-              },
-              "queryRef": "_Measures.Vakanser (Ubesatte stillinger)",
-              "nativeQueryRef": "Ubesatte Vakanser"
             }
           ]
         },
@@ -123,30 +77,56 @@
               "nativeQueryRef": "Studenter / UF"
             }
           ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglige Årsverk (UF)"
+                }
+              },
+              "queryRef": "_Measures.Faglige Årsverk (UF)",
+              "nativeQueryRef": "Faglig (UF)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Teknisk-Admin Årsverk (TA)"
+                }
+              },
+              "queryRef": "_Measures.Teknisk-Admin Årsverk (TA)",
+              "nativeQueryRef": "Teknisk-Admin (TA)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Vakanser (Ubesatte stillinger)"
+                }
+              },
+              "queryRef": "_Measures.Vakanser (Ubesatte stillinger)",
+              "nativeQueryRef": "Ubesatte Vakanser"
+            }
+          ]
         }
       }
     },
     "objects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Enhetens Stillingsstruktur: UF vs TA vs Vakanser'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "legend": [
         {
           "properties": {

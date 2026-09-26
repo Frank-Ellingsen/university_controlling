@@ -1,0 +1,157 @@
+table DuckDB_v_ytd_regnskap
+	lineageTag: 95040954-0174-43f3-bf37-67140ca12488
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: d091507b-2238-48ca-a6e6-effff8c7ad9e
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dato
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ad506fb4-d60c-40f6-b7e9-4224b31f1e73
+		summarizeBy: none
+		sourceColumn: Dato
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNavn
+		dataType: string
+		lineageTag: e0a462cc-b176-4d19-8c22-b4520b797c09
+		summarizeBy: none
+		sourceColumn: MaanedNavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvartal
+		dataType: string
+		lineageTag: bf00a64a-a428-40aa-a714-f832a3a94246
+		summarizeBy: none
+		sourceColumn: Kvartal
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: a5987120-f0fb-4a9e-8bfb-dde13364e8f5
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enhet
+		dataType: string
+		lineageTag: 042baf04-9fc2-41ce-8911-2162603b8f06
+		summarizeBy: none
+		sourceColumn: Enhet
+
+		annotation SummarizationSetBy = Automatic
+
+	column FakultetKort
+		dataType: string
+		lineageTag: 15ee59c2-1e8b-4075-9605-6bf8e684fdbb
+		summarizeBy: none
+		sourceColumn: FakultetKort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: bf909bcd-8367-49a4-8565-31ee59868f99
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontonavn
+		dataType: string
+		lineageTag: 15529937-aff5-419f-a92b-47afa01a4615
+		summarizeBy: none
+		sourceColumn: Kontonavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontoklasse
+		dataType: string
+		lineageTag: 00d35b8d-ef8e-4724-a47b-6362b1d07702
+		summarizeBy: none
+		sourceColumn: Kontoklasse
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontogruppe
+		dataType: string
+		lineageTag: e1860bae-2230-45f9-86ca-e93f5749776d
+		summarizeBy: none
+		sourceColumn: Kontogruppe
+
+		annotation SummarizationSetBy = Automatic
+
+	column SRS_regnskapslinje
+		dataType: string
+		lineageTag: 5d13f3fa-e1ac-44c2-8175-b32670edefdd
+		summarizeBy: none
+		sourceColumn: SRS_regnskapslinje
+
+		annotation SummarizationSetBy = Automatic
+
+	column Artstype
+		dataType: string
+		lineageTag: 19834d2f-96ab-4d65-bdcb-e91f1014cb50
+		summarizeBy: none
+		sourceColumn: Artstype
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kategori
+		dataType: string
+		lineageTag: cecc3c43-2f0e-421c-bb3f-dcffeda6f902
+		summarizeBy: none
+		sourceColumn: Kategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column Belop_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: 3fa3311d-47a1-48ec-972b-db6c693ec197
+		summarizeBy: sum
+		sourceColumn: Belop_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Belop_signert_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: e7ff2e85-6f72-4e9c-aa6a-f4158e7f8b39
+		summarizeBy: sum
+		sourceColumn: Belop_signert_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 740115bb-4059-4d6c-883c-acbb64b38a34
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DuckDB_v_ytd_regnskap = m
+		mode: import
+		source =
+				let
+				    Source = Python.Execute("import duckdb#(lf)con = duckdb.connect(r'C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb', read_only=True)#(lf)df = con.execute('SELECT * FROM v_ytd_regnskap').df()#(lf)con.close()"),
+				    df_Table = Source{[Name="df"]}[Value],
+				    #"Changed Type" = Table.TransformColumnTypes(df_Table,{{"DatoNokkel", Int64.Type}, {"Dato", type date}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"OrgKode", Int64.Type}, {"Enhet", type text}, {"FakultetKort", type text}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Kontoklasse", type text}, {"Kontogruppe", type text}, {"SRS_regnskapslinje", type text}, {"Artstype", type text}, {"Kategori", type text}, {"Belop_MNOK", type number}, {"Belop_signert_MNOK", type number}, {"VersjonKode", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

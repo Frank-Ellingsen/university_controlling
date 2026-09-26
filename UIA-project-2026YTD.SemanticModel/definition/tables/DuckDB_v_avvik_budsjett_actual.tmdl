@@ -1,0 +1,101 @@
+table DuckDB_v_avvik_budsjett_actual
+	lineageTag: 1ddd9629-1640-4257-8ecb-9741325131d4
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 69370fc5-2dd2-4183-bb00-771d92428dfa
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enhet
+		dataType: string
+		lineageTag: 3566ee56-bafd-4fa2-9db8-634e96fd7ee0
+		summarizeBy: none
+		sourceColumn: Enhet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fakultet
+		dataType: string
+		lineageTag: bd315eae-602c-4492-9fe6-346b593e06ee
+		summarizeBy: none
+		sourceColumn: Fakultet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: 2bad898c-c583-48d0-9d6d-c0f04587ec38
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontonavn
+		dataType: string
+		lineageTag: c904637d-f147-45d0-a893-7d77c177caf4
+		summarizeBy: none
+		sourceColumn: Kontonavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontoklasse
+		dataType: string
+		lineageTag: 6780cbbb-65e7-45e7-855b-e09f65d51f86
+		summarizeBy: none
+		sourceColumn: Kontoklasse
+
+		annotation SummarizationSetBy = Automatic
+
+	column Actual_YTD_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: c93fef69-641c-473c-a7ad-54d8ac69c144
+		summarizeBy: sum
+		sourceColumn: Actual_YTD_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjett_YTD_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: dd82716c-8c01-4175-8045-d2ac22222e25
+		summarizeBy: sum
+		sourceColumn: Budsjett_YTD_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avvik_YTD_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: c237c484-3d20-4948-87b1-348f7d7e9253
+		summarizeBy: sum
+		sourceColumn: Avvik_YTD_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avvik_YTD_Pct
+		dataType: double
+		formatString: 0.00%
+		lineageTag: 7772632d-8325-408e-9baa-146a38bed7fc
+		summarizeBy: average
+		sourceColumn: Avvik_YTD_Pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DuckDB_v_avvik_budsjett_actual = m
+		mode: import
+		source =
+				let
+				    Source = Python.Execute("import duckdb#(lf)con = duckdb.connect(r'C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb', read_only=True)#(lf)df = con.execute('SELECT * FROM v_avvik_budsjett_actual').df()#(lf)con.close()"),
+				    df_Table = Source{[Name="df"]}[Value],
+				    #"Changed Type" = Table.TransformColumnTypes(df_Table,{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Fakultet", type text}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Kontoklasse", type text}, {"Actual_YTD_MNOK", type number}, {"Budsjett_YTD_MNOK", type number}, {"Avvik_YTD_MNOK", type number}, {"Avvik_YTD_Pct", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

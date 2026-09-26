@@ -111,3 +111,4 @@ table DimKPI
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

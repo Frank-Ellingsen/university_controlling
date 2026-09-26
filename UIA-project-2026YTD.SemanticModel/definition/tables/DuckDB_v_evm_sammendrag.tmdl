@@ -1,0 +1,156 @@
+table DuckDB_v_evm_sammendrag
+	lineageTag: 91cebe45-37f8-4f5e-b741-ff2c8fcfea70
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 16378dc8-77f3-41c8-8121-a9e3f3c9cd8f
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNavn
+		dataType: string
+		lineageTag: 0bec4e91-2c6e-4c44-a60b-049dac8ade19
+		summarizeBy: none
+		sourceColumn: MaanedNavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvartal
+		dataType: string
+		lineageTag: 4bd8dd74-8e47-4332-84ad-e9c6db638331
+		summarizeBy: none
+		sourceColumn: Kvartal
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 41fe2fd3-844c-4df4-bc4f-7a9384f76d29
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enhet
+		dataType: string
+		lineageTag: f57f4583-b577-4084-a7e2-ec8ad7f8c516
+		summarizeBy: none
+		sourceColumn: Enhet
+
+		annotation SummarizationSetBy = Automatic
+
+	column PV
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 4add8241-d287-4145-83d7-334b7f960105
+		summarizeBy: sum
+		sourceColumn: PV
+
+		annotation SummarizationSetBy = Automatic
+
+	column EV
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 19a3e649-a314-4edf-afcd-96bb2300298d
+		summarizeBy: sum
+		sourceColumn: EV
+
+		annotation SummarizationSetBy = Automatic
+
+	column AC
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: af8b45eb-2fb0-4951-9bad-e6483964d4e8
+		summarizeBy: sum
+		sourceColumn: AC
+
+		annotation SummarizationSetBy = Automatic
+
+	column BAC
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 34b1712c-afc1-4948-971c-f0ab2c460f69
+		summarizeBy: sum
+		sourceColumn: BAC
+
+		annotation SummarizationSetBy = Automatic
+
+	column EAC
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 5ca4a3ce-d180-4637-834e-08753631c5d8
+		summarizeBy: sum
+		sourceColumn: EAC
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETC
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: c484f750-c9e7-46d1-92ef-706b684c665b
+		summarizeBy: sum
+		sourceColumn: ETC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPI
+		dataType: double
+		formatString: 0.00
+		lineageTag: dd6499c5-dde8-4117-a556-6c5c009783d3
+		summarizeBy: average
+		sourceColumn: CPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPI
+		dataType: double
+		formatString: 0.00
+		lineageTag: 2c0e3027-e564-4e01-8475-9eb2f09471bb
+		summarizeBy: average
+		sourceColumn: SPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column VAC
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 5322a080-4b98-489f-914f-bc73ee5ae34f
+		summarizeBy: sum
+		sourceColumn: VAC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cost_Variance_CV
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: b092e805-1eb8-43e8-8090-d6ccd6d76859
+		summarizeBy: sum
+		sourceColumn: Cost_Variance_CV
+
+		annotation SummarizationSetBy = Automatic
+
+	column Schedule_Variance_SV
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 8195f721-1a3e-433b-8db9-060bc65698e5
+		summarizeBy: sum
+		sourceColumn: Schedule_Variance_SV
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DuckDB_v_evm_sammendrag = m
+		mode: import
+		source =
+				let
+				    Source = Python.Execute("import duckdb#(lf)con = duckdb.connect(r'C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb', read_only=True)#(lf)df = con.execute('SELECT * FROM v_evm_sammendrag').df()#(lf)con.close()"),
+				    df_Table = Source{[Name="df"]}[Value],
+				    #"Changed Type" = Table.TransformColumnTypes(df_Table,{{"DatoNokkel", Int64.Type}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"OrgKode", Int64.Type}, {"Enhet", type text}, {"PV", type number}, {"EV", type number}, {"AC", type number}, {"BAC", type number}, {"EAC", type number}, {"ETC", type number}, {"CPI", type number}, {"SPI", type number}, {"VAC", type number}, {"Cost_Variance_CV", type number}, {"Schedule_Variance_SV", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

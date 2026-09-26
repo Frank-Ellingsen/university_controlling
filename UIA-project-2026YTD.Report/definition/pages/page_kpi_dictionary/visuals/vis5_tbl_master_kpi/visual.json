@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "vis5_tbl_master_kpi",
   "position": {
     "x": 20,
     "y": 220,
     "z": 30,
-    "width": 1880,
     "height": 840,
+    "width": 1880,
     "tabOrder": 5
   },
   "visual": {
@@ -138,28 +138,6 @@
           ]
         }
       }
-    },
-    "objects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Master KPI Katalog: Samtlige 24 styringsindikatorer med formler, regler, MoM og YoY referanser'"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   }

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "vis2_cht_index_trend",
   "position": {
     "x": 1220,
     "y": 230,
     "z": 31,
-    "width": 680,
     "height": 430,
+    "width": 680,
     "tabOrder": 10
   },
   "visual": {
@@ -29,38 +29,6 @@
               "queryRef": "DimDate.MaanedNavn",
               "nativeQueryRef": "Måned",
               "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "CPI"
-                }
-              },
-              "queryRef": "_Measures.CPI",
-              "nativeQueryRef": "CPI (Kostnadseffektivitet)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "SPI"
-                }
-              },
-              "queryRef": "_Measures.SPI",
-              "nativeQueryRef": "SPI (Fremdriftseffektivitet)"
             }
           ]
         },
@@ -123,30 +91,42 @@
               "nativeQueryRef": "SPI RAG Status"
             }
           ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CPI"
+                }
+              },
+              "queryRef": "_Measures.CPI",
+              "nativeQueryRef": "CPI (Kostnadseffektivitet)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPI"
+                }
+              },
+              "queryRef": "_Measures.SPI",
+              "nativeQueryRef": "SPI (Fremdriftseffektivitet)"
+            }
+          ]
         }
       }
     },
     "objects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Prestasjonsindekser over tid: CPI & SPI (Mål: >= 1.00)'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "legend": [
         {
           "properties": {

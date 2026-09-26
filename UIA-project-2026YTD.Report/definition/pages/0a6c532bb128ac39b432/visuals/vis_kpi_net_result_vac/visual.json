@@ -37,16 +37,42 @@
       "accentBar": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } },
-            "position": { "expr": { "Literal": { "Value": "'Left'" } } },
-            "width": { "expr": { "Literal": { "Value": "4D" } } },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
             "color": {
               "solid": {
-                "color": { "expr": { "Literal": { "Value": "'#EF4444'" } } }
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#EF4444'"
+                    }
+                  }
+                }
               }
             }
           },
-          "selector": { "id": "default" }
+          "selector": {
+            "id": "default"
+          }
         }
       ]
     },

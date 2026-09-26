@@ -9,9 +9,9 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDL-Extension"]
 
-annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate","DimForecastVersion","DimOrganization","DimKPI","FactBudget","FactEVM","FactFTE","FactFacultyKPI","FactGL","FactStudents","FactAction","_Measures"]
+annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate","DimForecastVersion","DimOrganization","DimKPI","FactBudget","FactEVM","FactFTE","FactFacultyKPI","FactGL","FactStudents","FactAction","_Measures","DuckDB_v_avvik_budsjett_actual","DuckDB_v_evm_sammendrag","DuckDB_v_ytd_regnskap"]
 
 ref table DimAccountHierarchy
 ref table DimDate
@@ -26,6 +26,9 @@ ref table FactStudents
 ref table FactAction
 ref table _Measures
 ref table DimKPI
+ref table DuckDB_v_avvik_budsjett_actual
+ref table DuckDB_v_evm_sammendrag
+ref table DuckDB_v_ytd_regnskap
 
 ref role Universitetsledelse
 ref role Dekan_HHU

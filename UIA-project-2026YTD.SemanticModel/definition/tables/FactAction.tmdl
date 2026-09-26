@@ -79,11 +79,12 @@ table FactAction
 	partition FactAction = m
 		mode: import
 		source =
-			let
-			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactAction.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"TiltakNavn", type text}, {"OrgKode", Int64.Type}, {"ForventetEffekt_MNOK", type number}, {"RealisertEffekt_MNOK", type number}, {"Frist", type text}, {"Status", type text}, {"Ansvarlig", type text}, {"RAG_Status", type text}})
-			in
-			    #"Changed Type"
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactAction.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"TiltakNavn", type text}, {"OrgKode", Int64.Type}, {"ForventetEffekt_MNOK", type number}, {"RealisertEffekt_MNOK", type number}, {"Frist", type text}, {"Status", type text}, {"Ansvarlig", type text}, {"RAG_Status", type text}})
+				in
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
