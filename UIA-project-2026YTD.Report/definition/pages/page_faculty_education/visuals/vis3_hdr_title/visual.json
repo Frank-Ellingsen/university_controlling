@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis3_hdr_title",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 10,
+    "width": 1540,
+    "height": 75,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "UNIVERSITETET I AGDER — FAKULTETSANALYSE: BEMANNING & STUDIEPRODUKSJON",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "16pt",
+                      "fontWeight": "bold",
+                      "color": "#0f172a"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Stillingsstruktur (UF/TA), kapasitetsutnyttelse, studentproduksjon (SPE60) og KD Resultatfinansiering",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#64748b"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

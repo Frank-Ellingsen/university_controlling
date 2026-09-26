@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis3_cht_kd_bevilgning",
+  "position": {
+    "x": 20,
+    "y": 680,
+    "z": 40,
+    "width": 930,
+    "height": 370,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Kortnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Kortnavn",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "KD Resultatbevilgning MNOK"
+                }
+              },
+              "queryRef": "_Measures.KD Resultatbevilgning MNOK",
+              "nativeQueryRef": "KD Resultatfinansiering (MNOK)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Estimert KD Resultatbevilgning 2025/2026 (MNOK)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

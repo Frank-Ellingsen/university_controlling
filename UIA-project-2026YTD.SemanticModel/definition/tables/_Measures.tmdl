@@ -351,6 +351,41 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: c7891238-be9b-4187-aae3-9d40c67805a9
 
+	measure 'BOA Inntekt (NFR/EU)' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'DimAccountHierarchy'[Nivaa2_Kontogruppe] = "34",
+			    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026"
+			)
+		formatString: #,##0.00
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b8a12352-0de1-43b4-8a30-4aff406f9680
+
+	measure 'Vakanser (Ubesatte stillinger)' =
+			CALCULATE(
+			    SUM('FactFTE'[Ubesatte_Vakanser]),
+			    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+			)
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: b8a12353-0de1-43b4-8a30-4aff406f9681
+
+	measure 'Ubenyttede Midler %' =
+			DIVIDE(MAX(0, [Sluttavvik (VAC)]), [Årsbudsjett (BAC)], 0)
+		formatString: 0.0%
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b8a12354-0de1-43b4-8a30-4aff406f9682
+
+	measure '5% Avsetningsgrense (F-05-20)' = [Årsbudsjett (BAC)] * 0.05
+		formatString: #,##0.00
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b8a12355-0de1-43b4-8a30-4aff406f9683
+
+	measure '5% Regel Status' =
+			IF([Ubenyttede Midler %] <= 0.05, "🟢 Innenfor 5% (F-05-20)", "🔴 Risiko for inndragning (>5%)")
+		displayFolder: _07 RAG & Design
+		lineageTag: b8a12356-0de1-43b4-8a30-4aff406f9684
+
 	column Column1
 		dataType: string
 		isHidden

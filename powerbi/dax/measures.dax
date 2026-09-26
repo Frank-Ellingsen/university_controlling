@@ -288,3 +288,26 @@ IF([Avvik YTD] <= 0, "#10b981",
         "#ef4444"
     )
 )
+
+BOA Inntekt (NFR/EU) = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert_MNOK]),
+    'DimAccountHierarchy'[Nivaa2_Kontogruppe] = "34",
+    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026"
+)
+
+Vakanser (Ubesatte stillinger) = 
+CALCULATE(
+    SUM('FactFTE'[Ubesatte_Vakanser]),
+    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+)
+
+Ubenyttede Midler % = 
+DIVIDE(MAX(0, [Sluttavvik (VAC)]), [Årsbudsjett (BAC)], 0)
+
+5% Avsetningsgrense (F-05-20) = 
+[Årsbudsjett (BAC)] * 0.05
+
+5% Regel Status = 
+IF([Ubenyttede Midler %] <= 0.05, "🟢 Innenfor 5% (F-05-20)", "🔴 Risiko for inndragning (>5%)")
+

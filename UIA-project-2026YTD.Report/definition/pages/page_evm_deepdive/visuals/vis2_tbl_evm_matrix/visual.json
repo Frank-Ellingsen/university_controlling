@@ -1,0 +1,187 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis2_tbl_evm_matrix",
+  "position": {
+    "x": 970,
+    "y": 680,
+    "z": 41,
+    "width": 930,
+    "height": 370,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDate"
+                    }
+                  },
+                  "Property": "MaanedNavn"
+                }
+              },
+              "queryRef": "DimDate.MaanedNavn",
+              "nativeQueryRef": "Måned",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Planned Value (PV)"
+                }
+              },
+              "queryRef": "_Measures.Planned Value (PV)",
+              "nativeQueryRef": "PV (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Earned Value (EV)"
+                }
+              },
+              "queryRef": "_Measures.Earned Value (EV)",
+              "nativeQueryRef": "EV (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual Cost (AC)"
+                }
+              },
+              "queryRef": "_Measures.Actual Cost (AC)",
+              "nativeQueryRef": "AC (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Cost Variance (CV)"
+                }
+              },
+              "queryRef": "_Measures.Cost Variance (CV)",
+              "nativeQueryRef": "CV (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Schedule Variance (SV)"
+                }
+              },
+              "queryRef": "_Measures.Schedule Variance (SV)",
+              "nativeQueryRef": "SV (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CPI"
+                }
+              },
+              "queryRef": "_Measures.CPI",
+              "nativeQueryRef": "CPI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPI"
+                }
+              },
+              "queryRef": "_Measures.SPI",
+              "nativeQueryRef": "SPI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "EAC (EVM)"
+                }
+              },
+              "queryRef": "_Measures.EAC (EVM)",
+              "nativeQueryRef": "EAC (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "VAC (EVM)"
+                }
+              },
+              "queryRef": "_Measures.VAC (EVM)",
+              "nativeQueryRef": "VAC (MNOK)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Månedlig EVM Styringsmatrise (MNOK og Indekser)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

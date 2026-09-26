@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis3_cht_unit_cost",
+  "position": {
+    "x": 970,
+    "y": 680,
+    "z": 41,
+    "width": 930,
+    "height": 370,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Kortnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Kortnavn",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Enhetskostnad pr SPE60"
+                }
+              },
+              "queryRef": "_Measures.Enhetskostnad pr SPE60",
+              "nativeQueryRef": "Enhetskostnad pr SPE60 (NOK)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Beregnet Enhetskostnad pr. Avlagt SPE60 (Kroner)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
