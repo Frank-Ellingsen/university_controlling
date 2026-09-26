@@ -311,3 +311,18 @@ DIVIDE(MAX(0, [Sluttavvik (VAC)]), [Årsbudsjett (BAC)], 0)
 5% Regel Status = 
 IF([Ubenyttede Midler %] <= 0.05, "🟢 Innenfor 5% (F-05-20)", "🔴 Risiko for inndragning (>5%)")
 
+Aktiv Enhet = 
+IF(
+    HASONEVALUE('DimOrganization'[Enhet]),
+    SELECTEDVALUE('DimOrganization'[Enhet]),
+    "Universitetet i Agder (Alle enheter)"
+)
+
+Aktiv Leder = 
+IF(
+    HASONEVALUE('DimOrganization'[Leder_Tittel]),
+    SELECTEDVALUE('DimOrganization'[Leder_Tittel]),
+    "Universitetsledelsen / Rektorat"
+)
+
+

@@ -26,5 +26,14 @@ ref table FactGL
 ref table FactStudents
 ref table _Measures
 
+ref role Universitetsledelse
+ref role Dekan_HHU
+ref role Dekan_TEK
+ref role Dekan_HEL
+ref role Dekan_SAM
+ref role Dekan_HUM
+ref role Direktor_Fellesdrift
+ref role Dynamisk_Leder_RLS
+
 ref cultureInfo en-US
 

@@ -1,0 +1,5 @@
+role Direktor_Fellesdrift
+	modelPermission: read
+
+	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1900
+

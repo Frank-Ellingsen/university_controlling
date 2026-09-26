@@ -1,0 +1,5 @@
+role Dekan_SAM
+	modelPermission: read
+
+	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1400
+

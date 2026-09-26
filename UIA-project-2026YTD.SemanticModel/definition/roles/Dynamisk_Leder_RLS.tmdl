@@ -1,0 +1,5 @@
+role Dynamisk_Leder_RLS
+	modelPermission: read
+
+	tablePermission DimOrganization = PATHCONTAINS('DimOrganization'[Leder_Epost], USERPRINCIPALNAME()) || USERPRINCIPALNAME() = "frank.ellingsen@uia.no"
+

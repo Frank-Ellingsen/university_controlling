@@ -604,19 +604,111 @@ def build_page_3():
 
     save_page_and_visuals("page_faculty_education", "Bemanning & Studieproduksjon", visuals)
 
+def build_page_4():
+    visuals = []
+    # 1. Header Textbox with Role Context
+    header_paragraphs = [
+        {
+            "textRuns": [
+                {
+                    "value": "UNIVERSITETET I AGDER — ROLLEBASERT LEDERPORTAL & FAKULTETSSTYRING",
+                    "textStyle": {
+                        "fontFamily": "Segoe UI",
+                        "fontSize": "16pt",
+                        "fontWeight": "bold",
+                        "color": "#0f172a"
+                    }
+                }
+            ]
+        },
+        {
+            "textRuns": [
+                {
+                    "value": "Målrettet virksomhets- og økonomioppfølging tilpasset dekaner, fakultetsdirektører og prosjektledere (RLS)",
+                    "textStyle": {
+                        "fontFamily": "Segoe UI",
+                        "fontSize": "10pt",
+                        "color": "#64748b"
+                    }
+                }
+            ]
+        }
+    ]
+    visuals.append(create_textbox_visual("vis4_hdr_title", 20, 20, 1400, 75, 10, header_paragraphs, 1))
+    visuals.append(create_slicer_visual("vis4_slc_enhet", 1440, 20, 460, 75, 15, "DimOrganization", "Enhet", "Aktiv Enhet (RLS)", 2))
+
+    # 2. Executive KPI Cards Row (Unit focus pr 30.09.2026)
+    kpis = [
+        ("vis4_kpi_actual", 20, "Actual YTD", "FAKTISK REGNSKAP YTD (MNOK)", 3),
+        ("vis4_kpi_budget", 399, "Budsjett YTD", "PERIODISERT BUDSJETT YTD (MNOK)", 4),
+        ("vis4_kpi_avvik", 778, "Avvik YTD", "NETTO AVVIK YTD (MNOK)", 5),
+        ("vis4_kpi_eac", 1157, "Forecast LE (EAC)", "PROGNOSE ÅRSSLUTT - EAC (MNOK)", 6),
+        ("vis4_kpi_5pct", 1536, "5% Regel Status", "5%-REGEL STATUS (F-05-20)", 7),
+    ]
+    for vname, vx, mname, title, tab in kpis:
+        visuals.append(create_card_visual(vname, vx, 110, 364, 100, 20, mname, title, tab))
+
+    # 3. Middle Section:
+    # 3a. Account structure & cost breakdown for the unit
+    cost_table_fields = [
+        {"type": "Column", "entity": "DimAccountHierarchy", "property": "Nivaa1_Navn", "label": "Hovedartskonto"},
+        {"type": "Column", "entity": "DimAccountHierarchy", "property": "Nivaa2_Navn", "label": "Kontogruppe"},
+        {"type": "Measure", "entity": "_Measures", "property": "Budsjett YTD", "label": "Budsjett YTD (MNOK)"},
+        {"type": "Measure", "entity": "_Measures", "property": "Actual YTD", "label": "Regnskap YTD (MNOK)"},
+        {"type": "Measure", "entity": "_Measures", "property": "Avvik YTD", "label": "Avvik YTD (MNOK)"},
+        {"type": "Measure", "entity": "_Measures", "property": "Avvik YTD %", "label": "Avvik %"},
+        {"type": "Measure", "entity": "_Measures", "property": "Årsbudsjett (BAC)", "label": "Årsbudsjett BAC"},
+        {"type": "Measure", "entity": "_Measures", "property": "Forecast LE (EAC)", "label": "Prognose EAC"},
+        {"type": "Measure", "entity": "_Measures", "property": "Sluttavvik (VAC)", "label": "Sluttavvik VAC"}
+    ]
+    visuals.append(create_table_visual("vis4_tbl_kontostruktur", 20, 230, 1180, 430, 30, cost_table_fields, "Enhetens Kontostruktur og Avviksfordeling (MNOK)", 8))
+
+    # 3b. Staffing Breakdown for Unit
+    bemanning_cat = {"entity": "DimOrganization", "property": "Kortnavn", "label": "Enhet"}
+    bemanning_measures = [
+        {"entity": "_Measures", "property": "Faglige Årsverk (UF)", "label": "Faglig (UF)"},
+        {"entity": "_Measures", "property": "Teknisk-Admin Årsverk (TA)", "label": "Teknisk-Admin (TA)"},
+        {"entity": "_Measures", "property": "Vakanser (Ubesatte stillinger)", "label": "Ubesatte Vakanser"}
+    ]
+    visuals.append(create_bar_chart_visual("vis4_cht_bemanning", 1220, 230, 680, 430, 31, bemanning_cat, bemanning_measures, "Enhetens Stillingsstruktur: UF vs TA vs Vakanser", 9))
+
+    # 4. Lower Section:
+    # 4a. Monthly actual vs budget profile
+    month_cat = {"entity": "DimDate", "property": "MaanedNavn", "label": "Måned"}
+    month_measures = [
+        {"entity": "_Measures", "property": "Actual YTD", "label": "Faktisk kostnad YTD"},
+        {"entity": "_Measures", "property": "Budsjett YTD", "label": "Budsjett YTD"}
+    ]
+    visuals.append(create_bar_chart_visual("vis4_cht_month_profile", 20, 680, 930, 370, 40, month_cat, month_measures, "Månedlig Kostnadsprofil vs Budsjett (MNOK)", 10))
+
+    # 4b. Education & BOA Grant Table
+    edu_table_fields = [
+        {"type": "Column", "entity": "DimOrganization", "property": "Kortnavn", "label": "Enhet"},
+        {"type": "Measure", "entity": "_Measures", "property": "Registrerte Studenter", "label": "Studenter"},
+        {"type": "Measure", "entity": "_Measures", "property": "Avlagte SPE60", "label": "Avlagte SPE60"},
+        {"type": "Measure", "entity": "_Measures", "property": "Studenter pr UF-Årsverk", "label": "Studenter / UF"},
+        {"type": "Measure", "entity": "_Measures", "property": "Enhetskostnad pr SPE60", "label": "Kr / SPE60"},
+        {"type": "Measure", "entity": "_Measures", "property": "KD Resultatbevilgning MNOK", "label": "KD Bevilgning (MNOK)"},
+        {"type": "Measure", "entity": "_Measures", "property": "BOA Inntekt (NFR/EU)", "label": "BOA Inntekt (MNOK)"}
+    ]
+    visuals.append(create_table_visual("vis4_tbl_produksjon_boa", 970, 680, 930, 370, 41, edu_table_fields, "Studieproduksjon, Enhetskostnad & BOA Tilskudd (MNOK)", 11))
+
+    save_page_and_visuals("page_role_portal", "Rollebasert Lederportal", visuals)
+
 def update_pages_metadata():
     pages_meta = {
         "$schema": PAGES_META_SCHEMA,
         "pageOrder": [
             "0a6c532bb128ac39b432",
             "page_evm_deepdive",
-            "page_faculty_education"
+            "page_faculty_education",
+            "page_role_portal"
         ],
         "activePageName": "0a6c532bb128ac39b432"
     }
     with open(PAGES_META_FILE, "w", encoding="utf-8") as f:
         json.dump(pages_meta, f, indent=2, ensure_ascii=False)
-    print(f"\n[METADATA] Updated {PAGES_META_FILE} with 3 pages in sequence.")
+    print(f"\n[METADATA] Updated {PAGES_META_FILE} with 4 pages in sequence.")
 
 if __name__ == "__main__":
     print("=" * 80)
@@ -625,6 +717,7 @@ if __name__ == "__main__":
     build_page_1()
     build_page_2()
     build_page_3()
+    build_page_4()
     update_pages_metadata()
     print("=" * 80)
     print("ALLE RAPPORTSIDER FULLFØRT UTEN AVBRUDD!")

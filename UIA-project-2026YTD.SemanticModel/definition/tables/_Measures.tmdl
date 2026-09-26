@@ -386,6 +386,24 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: b8a12356-0de1-43b4-8a30-4aff406f9684
 
+	measure 'Aktiv Enhet' =
+			IF(
+			    HASONEVALUE('DimOrganization'[Enhet]),
+			    SELECTEDVALUE('DimOrganization'[Enhet]),
+			    "Universitetet i Agder (Alle enheter)"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c8a12357-0de1-43b4-8a30-4aff406f9685
+
+	measure 'Aktiv Leder' =
+			IF(
+			    HASONEVALUE('DimOrganization'[Leder_Tittel]),
+			    SELECTEDVALUE('DimOrganization'[Leder_Tittel]),
+			    "Universitetsledelsen / Rektorat"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c8a12358-0de1-43b4-8a30-4aff406f9686
+
 	column Column1
 		dataType: string
 		isHidden

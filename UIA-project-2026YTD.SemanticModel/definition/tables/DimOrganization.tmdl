@@ -54,15 +54,30 @@ table DimOrganization
 
 		annotation SummarizationSetBy = Automatic
 
+	column Leder_Tittel
+		dataType: string
+		lineageTag: 52a12359-0de1-43b4-8a30-4aff406f9687
+		summarizeBy: none
+		sourceColumn: Leder_Tittel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Leder_Epost
+		dataType: string
+		lineageTag: 52a12360-0de1-43b4-8a30-4aff406f9688
+		summarizeBy: none
+		sourceColumn: Leder_Epost
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DimOrganization = m
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimOrganization.csv"),[Delimiter=";", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimOrganization.csv"),[Delimiter=";", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Kortnavn", type text}, {"OverordnetEnhet", Int64.Type}, {"Nivaa", Int64.Type}, {"Type", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Kortnavn", type text}, {"OverordnetEnhet", Int64.Type}, {"Nivaa", Int64.Type}, {"Type", type text}, {"Leder_Tittel", type text}, {"Leder_Epost", type text}})
 				in
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-
