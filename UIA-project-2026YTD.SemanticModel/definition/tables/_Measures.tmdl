@@ -542,17 +542,17 @@ table _Measures
 		lineageTag: b1a12373-0de1-43b4-8a30-4aff406f9701
 
 	measure 'CPI MoM Endring' = 0.01
-		formatString: +0.00;-0.00;0.00
+		formatString: "+0.00;-0.00;0.00"
 		displayFolder: _03 EVM
 		lineageTag: b1a12374-0de1-43b4-8a30-4aff406f9702
 
 	measure 'SPI MoM Endring' = 0.00
-		formatString: +0.00;-0.00;0.00
+		formatString: "+0.00;-0.00;0.00"
 		displayFolder: _03 EVM
 		lineageTag: b1a12375-0de1-43b4-8a30-4aff406f9703
 
 	measure 'Årsverk MoM Endring (FTE)' = 3.0
-		formatString: +0.0;-0.0;0.0
+		formatString: "+0.0;-0.0;0.0"
 		displayFolder: _04 Bemanning & FTE
 		lineageTag: b1a12376-0de1-43b4-8a30-4aff406f9704
 
