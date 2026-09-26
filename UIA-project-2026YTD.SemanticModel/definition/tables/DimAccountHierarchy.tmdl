@@ -1,10 +1,10 @@
 table DimAccountHierarchy
-	lineageTag: 04cdcedf-45f5-41b9-872b-801cbd7cffad
+	lineageTag: ba2293a5-5ea9-489f-a3a1-0eba7f75d53e
 
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: 03fa95f6-6a31-4133-9704-a51be17212ac
+		lineageTag: 2c7e08db-936c-4be0-a19b-0f8542b7fe44
 		summarizeBy: none
 		sourceColumn: Konto
 
@@ -12,7 +12,7 @@ table DimAccountHierarchy
 
 	column Kontonavn
 		dataType: string
-		lineageTag: 1a6b6350-5296-4613-af2b-0d35038ff418
+		lineageTag: ffb184c8-4602-40dd-bc3c-acbd4b009633
 		summarizeBy: none
 		sourceColumn: Kontonavn
 
@@ -21,7 +21,7 @@ table DimAccountHierarchy
 	column Nivaa1_Kontoklasse
 		dataType: int64
 		formatString: 0
-		lineageTag: 169957aa-c0f6-4853-b8ba-ed2fdf5464aa
+		lineageTag: 776ba8d6-8385-4c6c-9999-d12a6daefb0d
 		summarizeBy: none
 		sourceColumn: Nivaa1_Kontoklasse
 
@@ -29,7 +29,7 @@ table DimAccountHierarchy
 
 	column Nivaa1_Navn
 		dataType: string
-		lineageTag: 6c6146a9-0e31-4984-a249-fceaf0cd3b0c
+		lineageTag: ea4b754c-ce14-44e6-a1d7-de7b648ce8ea
 		summarizeBy: none
 		sourceColumn: Nivaa1_Navn
 
@@ -38,7 +38,7 @@ table DimAccountHierarchy
 	column Nivaa2_Kontogruppe
 		dataType: int64
 		formatString: 0
-		lineageTag: 83d66e1b-0fc2-4d85-a554-a388297aca81
+		lineageTag: fb3f1e20-ea32-4484-bec1-576e5283b76c
 		summarizeBy: none
 		sourceColumn: Nivaa2_Kontogruppe
 
@@ -46,7 +46,7 @@ table DimAccountHierarchy
 
 	column Nivaa2_Navn
 		dataType: string
-		lineageTag: 653193f6-5c41-448c-a764-6264e752e5a6
+		lineageTag: 706a0473-14c9-4ad8-8037-e6f974e7f2a2
 		summarizeBy: none
 		sourceColumn: Nivaa2_Navn
 
@@ -55,7 +55,7 @@ table DimAccountHierarchy
 	column Nivaa3_Standardkonto
 		dataType: int64
 		formatString: 0
-		lineageTag: b6d9bb73-c284-42c4-be0b-b809e5e37e1e
+		lineageTag: 9f238e72-9e69-4f88-9d28-e0dc96538204
 		summarizeBy: none
 		sourceColumn: Nivaa3_Standardkonto
 
@@ -63,7 +63,7 @@ table DimAccountHierarchy
 
 	column Nivaa3_Navn
 		dataType: string
-		lineageTag: b99341e1-9fb1-4db8-9240-fc5c14c4fc4d
+		lineageTag: dc8b0f74-e7de-4ec5-9000-97c476d3d7f6
 		summarizeBy: none
 		sourceColumn: Nivaa3_Navn
 
@@ -72,7 +72,7 @@ table DimAccountHierarchy
 	column Nivaa4_Underkonto
 		dataType: int64
 		formatString: 0
-		lineageTag: ca240d60-6151-4303-a989-cf37aefe313a
+		lineageTag: 897b8e91-a173-4c91-b70a-f6a618cd64f9
 		summarizeBy: none
 		sourceColumn: Nivaa4_Underkonto
 
@@ -80,7 +80,7 @@ table DimAccountHierarchy
 
 	column Nivaa4_Navn
 		dataType: string
-		lineageTag: fe0adbbb-af93-4347-96cd-8a252505670c
+		lineageTag: 3ff8a506-b867-420e-81d4-5b4d65ee1e9a
 		summarizeBy: none
 		sourceColumn: Nivaa4_Navn
 
@@ -88,7 +88,7 @@ table DimAccountHierarchy
 
 	column Kontotype
 		dataType: string
-		lineageTag: 0a90a18b-e810-43a1-950c-69685857bce1
+		lineageTag: 89d04e79-3218-4975-b1a2-e8e7a94e7537
 		summarizeBy: none
 		sourceColumn: Kontotype
 
@@ -96,7 +96,7 @@ table DimAccountHierarchy
 
 	column SRS_regnskapslinje
 		dataType: string
-		lineageTag: 354aaa5d-72d5-4c66-96cb-769eb99f6905
+		lineageTag: 005f11f6-0c6e-49c1-a963-f039c8f2f235
 		summarizeBy: none
 		sourceColumn: SRS_regnskapslinje
 

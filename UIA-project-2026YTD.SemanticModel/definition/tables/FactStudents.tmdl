@@ -1,10 +1,10 @@
 table FactStudents
-	lineageTag: 621a47b6-efb3-4d3a-a12d-89d42893e216
+	lineageTag: 904336ac-b83b-41ee-b023-198a022cf2ad
 
 	column Aar
 		dataType: int64
 		formatString: 0
-		lineageTag: 4af65bd3-2364-4fa4-81de-e87537f0ba04
+		lineageTag: 217579c3-36dd-470d-a5f2-0d13b0c6fb3f
 		summarizeBy: none
 		sourceColumn: Aar
 
@@ -13,7 +13,7 @@ table FactStudents
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: e8808b68-263b-480f-9556-d04289e3d97c
+		lineageTag: c1e7bf98-7b81-4c7e-99ca-5496c229e065
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -22,7 +22,7 @@ table FactStudents
 	column Registrerte_Studenter
 		dataType: int64
 		formatString: 0
-		lineageTag: 3f06875b-6792-4542-b95b-8503de261efd
+		lineageTag: f856c954-4ff4-4365-b59c-368bd0b5a366
 		summarizeBy: sum
 		sourceColumn: Registrerte_Studenter
 
@@ -31,7 +31,7 @@ table FactStudents
 	column Avlagte_Studiepoeng_Totalt
 		dataType: int64
 		formatString: 0
-		lineageTag: 40b48b37-8a89-4dcd-836e-9379c1f36768
+		lineageTag: 87fd915c-734c-4cdb-8c69-7e0868c9ef8d
 		summarizeBy: sum
 		sourceColumn: Avlagte_Studiepoeng_Totalt
 
@@ -40,7 +40,7 @@ table FactStudents
 	column SPE60_Helarsstudenter
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 92c89260-3cb0-43e1-a744-8b7617f52ebc
+		lineageTag: e68663f8-97e3-4786-b2be-4a9753b35787
 		summarizeBy: sum
 		sourceColumn: SPE60_Helarsstudenter
 
@@ -49,7 +49,7 @@ table FactStudents
 	column KD_Kategori1_SPE60
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 6f2d3c77-2933-4b36-b9a0-b7daf4d70166
+		lineageTag: f0429def-cf5f-47f7-8b6d-393ef13ef715
 		summarizeBy: sum
 		sourceColumn: KD_Kategori1_SPE60
 
@@ -58,7 +58,7 @@ table FactStudents
 	column KD_Kategori2_SPE60
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: a20f1402-045b-400a-8c27-e963323adb18
+		lineageTag: 84f79bc8-5e96-4657-a197-6fce01baddab
 		summarizeBy: sum
 		sourceColumn: KD_Kategori2_SPE60
 
@@ -67,7 +67,7 @@ table FactStudents
 	column KD_Kategori3_SPE60
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: ca8cddcd-2dce-4e3e-a36a-fac7470deefd
+		lineageTag: a06288a5-c5a9-4648-8aed-44b6c550a969
 		summarizeBy: sum
 		sourceColumn: KD_Kategori3_SPE60
 
@@ -76,7 +76,7 @@ table FactStudents
 	column Bestattandel_Pct
 		dataType: double
 		formatString: 0.0%
-		lineageTag: 1560ed8c-8e7e-4eef-8123-d230e139ceeb
+		lineageTag: f86816ff-172a-4374-a3aa-3548f1668af9
 		summarizeBy: average
 		sourceColumn: Bestattandel_Pct
 
@@ -85,7 +85,7 @@ table FactStudents
 	column Gjennomforing_Normert_Pct
 		dataType: double
 		formatString: 0.0%
-		lineageTag: 84ea8bf9-d6c2-43fe-89a6-37927a17bb50
+		lineageTag: ccb1ed6d-85f0-4e82-bc4b-64c31de620c1
 		summarizeBy: average
 		sourceColumn: Gjennomforing_Normert_Pct
 

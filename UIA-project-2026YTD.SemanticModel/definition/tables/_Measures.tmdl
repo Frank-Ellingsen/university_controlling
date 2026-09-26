@@ -1,5 +1,14 @@
 table _Measures
-	lineageTag: 25664629-a0c9-4850-9c45-4fa456b7afd3
+	lineageTag: 53bbfafa-fa80-4cf9-a89d-30d0248c1aee
+
+	column Column1
+		dataType: string
+		lineageTag: 4bf5fed7-64c3-4930-8595-6c0abff44d12
+		summarizeBy: none
+		sourceColumn: Column1
+		isHidden
+
+		annotation SummarizationSetBy = Automatic
 
 	measure 'Actual YTD' =
 			CALCULATE(
@@ -8,7 +17,7 @@ table _Measures
 			)
 		formatString: #,##0.00
 		displayFolder: _01 Regnskap & YTD
-		lineageTag: cc188bba-5bdc-472b-a0d1-b351ca07a8c2
+		lineageTag: c3fbaf22-88e9-4f86-a6be-7ea55c48d190
 
 	measure 'Budsjett YTD' =
 			CALCULATE(
@@ -17,17 +26,17 @@ table _Measures
 			)
 		formatString: #,##0.00
 		displayFolder: _01 Regnskap & YTD
-		lineageTag: d2d14057-1be0-4b7a-b506-2c44759b124b
+		lineageTag: fb3f9dee-2a3a-47bb-841b-4f1d2fd15bc2
 
 	measure 'Avvik YTD' = [Actual YTD] - [Budsjett YTD]
 		formatString: #,##0.00
 		displayFolder: _01 Regnskap & YTD
-		lineageTag: 0ff91b01-5b4c-4f40-b058-3dc8ea09ca28
+		lineageTag: 546a11cd-e92a-4981-90a1-b039b7ab7893
 
 	measure 'Avvik YTD %' = DIVIDE([Avvik YTD], ABS([Budsjett YTD]), 0)
 		formatString: 0.0%
 		displayFolder: _01 Regnskap & YTD
-		lineageTag: 2bfac7e3-fadc-4a1c-bd51-57da5f449113
+		lineageTag: afd33959-e009-4b6d-89ea-f1493368ff04
 
 	measure 'Forecast Q4' =
 			CALCULATE(
@@ -36,52 +45,52 @@ table _Measures
 			)
 		formatString: #,##0.00
 		displayFolder: _02 Prognose & EAC
-		lineageTag: 36dc4908-a34b-4de3-a7c5-d25ca5518a64
+		lineageTag: a793c3b1-0bf0-4d3d-a5f1-6956adbd7c7c
 
 	measure 'Forecast LE (EAC)' = [Actual YTD] + [Forecast Q4]
 		formatString: #,##0.00
 		displayFolder: _02 Prognose & EAC
-		lineageTag: 079f2a17-de7c-4668-bcbe-80078d8cfd3d
+		lineageTag: 6ac5faff-5a29-4e60-8e8a-ace8319dc64b
 
 	measure 'Årsbudsjett (BAC)' = SUM('FactBudget'[Budsjett_signert_MNOK])
 		formatString: #,##0.00
 		displayFolder: _02 Prognose & EAC
-		lineageTag: 9ec6de9c-d89c-4b54-b667-5b1c12547173
+		lineageTag: 0517c85c-ec01-454b-a01c-4570a3e462d3
 
 	measure 'Sluttavvik (VAC)' = [Årsbudsjett (BAC)] - [Forecast LE (EAC)]
 		formatString: #,##0.00
 		displayFolder: _02 Prognose & EAC
-		lineageTag: 967706d9-0852-402e-a49e-b1803bf57443
+		lineageTag: e717eedb-ed87-46a9-bf04-bad285d3b49a
 
 	measure 'VAC %' = DIVIDE([Sluttavvik (VAC)], ABS([Årsbudsjett (BAC)]), 0)
 		formatString: 0.0%
 		displayFolder: _02 Prognose & EAC
-		lineageTag: 693b30b3-332f-4701-9a1f-e837b2696f32
+		lineageTag: b9693502-c996-4259-99d8-11f809bb8413
 
 	measure 'Planned Value (PV)' = SUM('FactEVM'[Planned_Value_PV_MNOK])
 		formatString: #,##0.0
 		displayFolder: _03 EVM
-		lineageTag: 003851e0-8cdf-4732-973c-2eb8075fdb22
+		lineageTag: b64cc2b5-0de1-43b4-8a30-4aff406f9672
 
 	measure 'Earned Value (EV)' = SUM('FactEVM'[Earned_Value_EV_MNOK])
 		formatString: #,##0.0
 		displayFolder: _03 EVM
-		lineageTag: 096ebe8b-d998-46d3-a9bc-6d3b521dc250
+		lineageTag: d8dcba33-9bdc-420c-8458-800033dd1261
 
 	measure 'Actual Cost (AC)' = SUM('FactEVM'[Actual_Cost_AC_MNOK])
 		formatString: #,##0.0
 		displayFolder: _03 EVM
-		lineageTag: 7f55e474-1953-4a6c-b866-1240d8f1daac
+		lineageTag: d0792e3f-67b7-42d9-8059-5b8ba4fcc26c
 
 	measure 'CPI' = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
 		formatString: 0.00
 		displayFolder: _03 EVM
-		lineageTag: 5bd45195-1566-4100-8426-c6117ef4b632
+		lineageTag: 7a85ee1b-237b-4ca8-842b-73387db959de
 
 	measure 'SPI' = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
 		formatString: 0.00
 		displayFolder: _03 EVM
-		lineageTag: 87260a1c-f390-4367-856b-a037aa1ca10b
+		lineageTag: 787cd3ea-e14d-49d0-a3bc-3f2f6904dd62
 
 	measure 'Totale Årsverk' =
 			CALCULATE(
@@ -90,7 +99,7 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _04 Bemanning & FTE
-		lineageTag: 2f36eb8a-db03-4393-a569-d204061b5ba1
+		lineageTag: 99f5d39e-7e2c-405d-baa6-68d7ca035d62
 
 	measure 'Faglige Årsverk (UF)' =
 			CALCULATE(
@@ -99,7 +108,7 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _04 Bemanning & FTE
-		lineageTag: 5bf84158-4237-4026-b6f0-39b3261baa46
+		lineageTag: 37a8ec97-23da-4037-a89b-5c1bd612216c
 
 	measure 'Teknisk-Admin Årsverk (TA)' =
 			CALCULATE(
@@ -108,32 +117,32 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _04 Bemanning & FTE
-		lineageTag: 4ac505e6-d3ed-483e-858a-071d64d5ef28
+		lineageTag: 7cb5b19c-51de-40e6-b622-fcb02330233e
 
 	measure 'Faglig Andel %' = DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)
 		formatString: 0.0%
 		displayFolder: _04 Bemanning & FTE
-		lineageTag: 41e1a78f-657e-4120-9332-6166abf5eacc
+		lineageTag: d890e067-24a4-491f-b085-6afa979246f0
 
 	measure 'Registrerte Studenter' = SUM('FactStudents'[Registrerte_Studenter])
 		formatString: #,##0
 		displayFolder: _05 Utdanning
-		lineageTag: f7ab4022-c16b-446a-8f4f-372f0b1c44e4
+		lineageTag: 199396a1-3e3e-47f5-81e7-d0bc61922626
 
 	measure 'Avlagte SPE60' = SUM('FactStudents'[SPE60_Helarsstudenter])
 		formatString: #,##0.0
 		displayFolder: _05 Utdanning
-		lineageTag: 1673961b-ff27-48fe-bdba-bfa0f6299a19
+		lineageTag: 6aab23ae-a227-4c5c-a708-c6cd3fb02cea
 
 	measure 'Studenter pr UF-Årsverk' = DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)
 		formatString: #,##0.0
 		displayFolder: _05 Utdanning
-		lineageTag: de6d7b0a-d51c-41cb-8ec0-f4a402770528
+		lineageTag: c6b7be62-efb8-42ce-b370-98d126583089
 
 	measure 'Enhetskostnad pr SPE60' = DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)
 		formatString: #,##0
 		displayFolder: _05 Utdanning
-		lineageTag: d1d060be-fbb5-4dab-bf41-9b349dade131
+		lineageTag: a207d887-1806-4553-9466-d1c3d983cbb1
 
 	measure 'KD Resultatbevilgning MNOK' =
 			VAR Kat1 = SUM('FactStudents'[KD_Kategori1_SPE60]) * 54550
@@ -142,7 +151,7 @@ table _Measures
 			RETURN DIVIDE(Kat1 + Kat2 + Kat3, 1000000, 0)
 		formatString: #,##0.00
 		displayFolder: _05 Utdanning
-		lineageTag: ce151c21-de7c-477c-9b7f-ca74cd6d0d9f
+		lineageTag: b1ac72eb-aab0-48b4-803e-9e4ca8e03d4e
 
 	measure 'Forecast RAG Status' =
 			IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
@@ -151,7 +160,7 @@ table _Measures
 			    )
 			)
 		displayFolder: _06 RAG & Design
-		lineageTag: a4944328-169f-4d33-bd76-550216a922e7
+		lineageTag: 39dd7285-be9b-4187-aae3-9d40c67805a3
 
 	measure 'RAG Hex Color' =
 			IF([Sluttavvik (VAC)] >= 0, "#10b981",
@@ -160,15 +169,14 @@ table _Measures
 			    )
 			)
 		displayFolder: _06 RAG & Design
-		lineageTag: 39287350-ba51-4375-910d-9dfeacab4351
+		lineageTag: b50da885-c3c0-4773-aec3-b4a63980d094
 
 	partition _Measures = m
 		mode: import
 		source =
 			let
-			    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
-			    #"Removed Columns" = Table.RemoveColumns(Source,{{"Column1"}})
+			    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
 			in
-			    #"Removed Columns"
+			    Source
 
 	annotation PBI_ResultType = Table

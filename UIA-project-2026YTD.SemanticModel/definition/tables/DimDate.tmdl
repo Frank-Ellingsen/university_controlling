@@ -1,11 +1,11 @@
 table DimDate
-	lineageTag: 83b9a365-7f14-4f0e-b603-727fff328e8f
+	lineageTag: 1526b4e0-d867-4df1-8e8b-c4a28d1910ad
 	dataCategory: Time
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: aea30598-9e64-4633-a5d7-143671cf07ac
+		lineageTag: 95bf3f45-012f-490b-84be-919e4c7c9aa5
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -15,7 +15,7 @@ table DimDate
 		dataType: dateTime
 		formatString: yyyy-MM-dd
 		isKey
-		lineageTag: db017b4b-2c33-489d-952f-bd88e14700d4
+		lineageTag: 0d352500-d7af-435d-be14-4224704e5ae8
 		summarizeBy: none
 		sourceColumn: Dato
 
@@ -24,7 +24,7 @@ table DimDate
 	column Aar
 		dataType: int64
 		formatString: 0
-		lineageTag: 13801bfe-c830-463f-8082-791e6a92b42e
+		lineageTag: 2aa87c05-ccfc-4dc7-b892-55b352fab16f
 		summarizeBy: none
 		sourceColumn: Aar
 
@@ -33,7 +33,7 @@ table DimDate
 	column MaanedNummer
 		dataType: int64
 		formatString: 0
-		lineageTag: b1485a25-f1dd-43bb-8831-ebac09dd5891
+		lineageTag: 348e76a8-f1e9-4f09-a8be-fcc714066c66
 		summarizeBy: none
 		sourceColumn: MaanedNummer
 
@@ -42,7 +42,7 @@ table DimDate
 	column MaanedNavn
 		dataType: string
 		sortByColumn: MaanedNummer
-		lineageTag: 61edfba2-98f1-40cf-b590-58b5955c4a4a
+		lineageTag: af612590-59e4-4411-bbbc-163c103dee20
 		summarizeBy: none
 		sourceColumn: MaanedNavn
 
@@ -50,7 +50,7 @@ table DimDate
 
 	column Kvartal
 		dataType: string
-		lineageTag: 6714411a-29fc-4833-8a40-689bdd96b324
+		lineageTag: c59763db-38ee-4c3b-8fb2-e37fb210d844
 		summarizeBy: none
 		sourceColumn: Kvartal
 
@@ -58,7 +58,7 @@ table DimDate
 
 	column StatusPr30Sep
 		dataType: string
-		lineageTag: 4cf1c428-2834-4c2b-bcce-b11244e5fdcb
+		lineageTag: c0b54b06-abaf-42a7-8ac5-46948e50888f
 		summarizeBy: none
 		sourceColumn: StatusPr30Sep
 

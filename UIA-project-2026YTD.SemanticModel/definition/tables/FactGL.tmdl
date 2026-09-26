@@ -1,10 +1,10 @@
 table FactGL
-	lineageTag: 599e96e0-6367-49ed-9394-ab9ec441151c
+	lineageTag: f31cae70-4cc8-43f5-8e33-23bcba6a6fed
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: ecd9404e-721d-4333-b75f-4c3ba689c24f
+		lineageTag: 8e892a39-40bf-4ec1-8741-258636536922
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -13,7 +13,7 @@ table FactGL
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: b1410c2c-4ff8-4a21-b75f-560da25a8ec5
+		lineageTag: 2e92ab8a-b1f8-40a1-8937-5b1ad857ae21
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -22,7 +22,7 @@ table FactGL
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: b3692067-6dc9-4e44-9d98-8aab9dd0fea0
+		lineageTag: 140a9051-78f3-4b78-b1f3-0b28ba61bf27
 		summarizeBy: none
 		sourceColumn: Konto
 
@@ -30,7 +30,7 @@ table FactGL
 
 	column Kontonavn
 		dataType: string
-		lineageTag: e269d3bf-0803-42c5-a3cb-c62394a05319
+		lineageTag: 5311fd98-4fac-40db-9a63-730ebea2f06e
 		summarizeBy: none
 		sourceColumn: Kontonavn
 
@@ -38,7 +38,7 @@ table FactGL
 
 	column Artstype
 		dataType: string
-		lineageTag: f4c557cc-e78b-4de0-8a52-697c90aa7f30
+		lineageTag: 970638ed-c2c0-430f-a753-f9f4093ec715
 		summarizeBy: none
 		sourceColumn: Artstype
 
@@ -46,7 +46,7 @@ table FactGL
 
 	column Kategori
 		dataType: string
-		lineageTag: 51bfee3e-4200-4d0d-b37c-6e92646c8439
+		lineageTag: da7c6cdf-fd27-42c7-8149-94185cf8bd09
 		summarizeBy: none
 		sourceColumn: Kategori
 
@@ -55,7 +55,7 @@ table FactGL
 	column Belop_MNOK
 		dataType: double
 		formatString: #,##0.000
-		lineageTag: 9ae36310-625e-45d0-ab33-aa9756fb286b
+		lineageTag: 05c193b9-3540-4f1a-b259-57d3215a93a8
 		summarizeBy: sum
 		sourceColumn: Belop_MNOK
 
@@ -64,7 +64,7 @@ table FactGL
 	column Belop_signert_MNOK
 		dataType: double
 		formatString: #,##0.000
-		lineageTag: f6151d1e-6ac1-4973-8b33-3cef95fc427f
+		lineageTag: 537eb815-7876-43e9-946f-4e5eabfb942d
 		summarizeBy: sum
 		sourceColumn: Belop_signert_MNOK
 
@@ -72,7 +72,7 @@ table FactGL
 
 	column VersjonKode
 		dataType: string
-		lineageTag: 49212003-4ef1-4c28-a23f-44b58874d19d
+		lineageTag: 2245fca1-29ae-45be-a580-027298b173b7
 		summarizeBy: none
 		sourceColumn: VersjonKode
 

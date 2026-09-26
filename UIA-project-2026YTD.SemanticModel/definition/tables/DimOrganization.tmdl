@@ -1,10 +1,10 @@
 table DimOrganization
-	lineageTag: dde39e9f-9cef-4024-a7a8-a2e4906ece9b
+	lineageTag: 8f917836-e983-418d-88fb-8cc30a9ef67c
 
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: 6427c324-78db-45bd-b287-cad2613d04eb
+		lineageTag: e7d76d5f-72d5-45ed-a1a0-28a54e3984a6
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -12,7 +12,7 @@ table DimOrganization
 
 	column Enhet
 		dataType: string
-		lineageTag: 0218314f-2869-4d16-bcba-21c7b132282c
+		lineageTag: a6033af0-a21a-44f9-b750-5cc412192245
 		summarizeBy: none
 		sourceColumn: Enhet
 
@@ -20,7 +20,7 @@ table DimOrganization
 
 	column Kortnavn
 		dataType: string
-		lineageTag: e0c9852e-e539-40cb-b136-04a48ab78a25
+		lineageTag: aebc8a1c-1851-4faa-8485-d627f319c204
 		summarizeBy: none
 		sourceColumn: Kortnavn
 
@@ -29,7 +29,7 @@ table DimOrganization
 	column OverordnetEnhet
 		dataType: int64
 		formatString: 0
-		lineageTag: f7bf8813-c029-45b5-b2e3-83cd577393a4
+		lineageTag: 882c31c4-7a5a-4c66-b332-0b1d3b13dc11
 		summarizeBy: none
 		sourceColumn: OverordnetEnhet
 
@@ -38,7 +38,7 @@ table DimOrganization
 	column Nivaa
 		dataType: int64
 		formatString: 0
-		lineageTag: ffbce900-9b9c-4088-9c9d-3d193fa71002
+		lineageTag: b0745156-edb6-4d13-88b2-f80e78262617
 		summarizeBy: none
 		sourceColumn: Nivaa
 
@@ -46,7 +46,7 @@ table DimOrganization
 
 	column Type
 		dataType: string
-		lineageTag: 444b06b1-3c20-4d94-a50f-2a31b3713cff
+		lineageTag: bc79131a-1f3f-44f5-b8bd-4335ab700073
 		summarizeBy: none
 		sourceColumn: Type
 

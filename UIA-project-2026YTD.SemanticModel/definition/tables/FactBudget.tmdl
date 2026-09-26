@@ -1,10 +1,10 @@
 table FactBudget
-	lineageTag: 3aac8f50-5d66-4b3d-b858-b27b006247a9
+	lineageTag: 74cffa98-b916-4324-b274-2e26f16b8e32
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: eaf9d33a-b470-461d-8254-295821197ef5
+		lineageTag: 95525c26-8b96-40d0-949d-50a7eb6fa27b
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -13,7 +13,7 @@ table FactBudget
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: 0dd11fb0-b5c5-4c40-9da4-2dee6cc48b4d
+		lineageTag: fb2d1f49-6e5a-4a90-a247-098be4401f9d
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -22,7 +22,7 @@ table FactBudget
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: 33e41e13-a069-4c32-b68e-e4d3491dfd58
+		lineageTag: 04307525-d406-4cb8-ba27-46b38ebc2c4e
 		summarizeBy: none
 		sourceColumn: Konto
 
@@ -30,7 +30,7 @@ table FactBudget
 
 	column Kontonavn
 		dataType: string
-		lineageTag: 1769dc05-e2cf-4be6-8cba-54968c20cf4e
+		lineageTag: c3ee0a05-671a-45b4-ae25-baa5b5b054a3
 		summarizeBy: none
 		sourceColumn: Kontonavn
 
@@ -38,7 +38,7 @@ table FactBudget
 
 	column Artstype
 		dataType: string
-		lineageTag: 62433568-c360-48a3-be71-523282ed346d
+		lineageTag: 3a994210-5520-4d1c-b61f-9be7923a0853
 		summarizeBy: none
 		sourceColumn: Artstype
 
@@ -46,7 +46,7 @@ table FactBudget
 
 	column Kategori
 		dataType: string
-		lineageTag: 320c0569-c90f-4edf-b146-d4ae9c6ecc9c
+		lineageTag: 2efb1c85-1f12-4d34-b726-3e2aaa6d14d2
 		summarizeBy: none
 		sourceColumn: Kategori
 
@@ -55,7 +55,7 @@ table FactBudget
 	column Budsjett_MNOK
 		dataType: double
 		formatString: #,##0.000
-		lineageTag: 760383d1-66c1-4f5e-8369-c973aeb53f18
+		lineageTag: c7471c76-6231-4013-ac3c-71c7bb38dc6a
 		summarizeBy: sum
 		sourceColumn: Budsjett_MNOK
 
@@ -64,7 +64,7 @@ table FactBudget
 	column Budsjett_signert_MNOK
 		dataType: double
 		formatString: #,##0.000
-		lineageTag: ddc80117-cfe4-4a8e-a2e9-423454a8c5db
+		lineageTag: 1ca8c8e3-c35f-4a65-924c-7f37e7979ade
 		summarizeBy: sum
 		sourceColumn: Budsjett_signert_MNOK
 
@@ -72,7 +72,7 @@ table FactBudget
 
 	column VersjonKode
 		dataType: string
-		lineageTag: 17ff96d5-8e3e-4419-b7f6-b803f2433c6a
+		lineageTag: 3267e064-b1e8-42f9-b34e-1b36cd1ba0de
 		summarizeBy: none
 		sourceColumn: VersjonKode
 

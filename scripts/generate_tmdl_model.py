@@ -1092,6 +1092,15 @@ def generate():
     measures_tmdl = fill_uids("""table _Measures
 \tlineageTag: __UID__
 
+\tcolumn Column1
+\t\tdataType: string
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: Column1
+\t\tisHidden
+
+\t\tannotation SummarizationSetBy = Automatic
+
 \tmeasure 'Actual YTD' =
 \t\t\tCALCULATE(
 \t\t\t    SUM('FactGL'[Belop_signert_MNOK]),
@@ -1257,10 +1266,9 @@ def generate():
 \t\tmode: import
 \t\tsource =
 \t\t\tlet
-\t\t\t    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
-\t\t\t    #"Removed Columns" = Table.RemoveColumns(Source,{{"Column1"}})
+\t\t\t    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
 \t\t\tin
-\t\t\t    #"Removed Columns"
+\t\t\t    Source
 
 \tannotation PBI_ResultType = Table
 """)

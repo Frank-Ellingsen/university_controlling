@@ -1,10 +1,10 @@
 table FactFTE
-	lineageTag: 5c638e03-f473-421f-ae29-c610ea076fe6
+	lineageTag: 9cc8859c-7e24-47e6-ba1c-4fcd9018cc7b
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 35451bc9-b088-42d3-8323-e111e8fce5f6
+		lineageTag: b61a6caf-d35d-4bbb-b2ec-819d82a7b44b
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -13,7 +13,7 @@ table FactFTE
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: 00ea4972-d5ac-4f08-97a2-fc4808e4832f
+		lineageTag: fa96b859-f68c-474c-908e-4d35af40f377
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -22,7 +22,7 @@ table FactFTE
 	column Aarsverk_UF
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: ab502b36-169f-4a4e-8755-5626125baf55
+		lineageTag: 80b6af10-556f-4556-acbf-019c405152d0
 		summarizeBy: sum
 		sourceColumn: Aarsverk_UF
 
@@ -31,7 +31,7 @@ table FactFTE
 	column Aarsverk_TA
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: ba7c6390-5946-4351-8848-b58ac3308dc1
+		lineageTag: 3420f770-81a2-4769-8518-d67220c24e3a
 		summarizeBy: sum
 		sourceColumn: Aarsverk_TA
 
@@ -40,7 +40,7 @@ table FactFTE
 	column Aarsverk_Faktisk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: c82ca777-ddd0-4948-9f42-dc191ebe9fff
+		lineageTag: 986be88a-c60f-4f87-bca1-e6eaa32b9bef
 		summarizeBy: sum
 		sourceColumn: Aarsverk_Faktisk
 
@@ -49,7 +49,7 @@ table FactFTE
 	column Aarsverk_Budsjett
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 2afd86b8-7a88-44ea-bd0f-89118a5d4de0
+		lineageTag: abbbf583-7c06-440e-9a62-9bf17a38a0f5
 		summarizeBy: sum
 		sourceColumn: Aarsverk_Budsjett
 
@@ -58,7 +58,7 @@ table FactFTE
 	column Antall_Ansatte
 		dataType: int64
 		formatString: 0
-		lineageTag: 6e526ba1-c17d-4547-b7eb-fd92cee76f46
+		lineageTag: bfb06786-19fb-4518-a3b4-b875a747cd69
 		summarizeBy: sum
 		sourceColumn: Antall_Ansatte
 
@@ -67,7 +67,7 @@ table FactFTE
 	column Ubesatte_Vakanser
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 0ec64ac8-1b05-42e2-a008-b54e532718c6
+		lineageTag: 8005ce6a-8d63-4c9d-ba1c-ad41b841394e
 		summarizeBy: sum
 		sourceColumn: Ubesatte_Vakanser
 
@@ -76,7 +76,7 @@ table FactFTE
 	column Faglig_Andel_Pct
 		dataType: double
 		formatString: 0.0%
-		lineageTag: 14907054-60c7-4ee5-8bde-d8a9a00839ef
+		lineageTag: c6f7aafe-7875-496c-b698-b10693467ea7
 		summarizeBy: average
 		sourceColumn: Faglig_Andel_Pct
 
@@ -84,7 +84,7 @@ table FactFTE
 
 	column VersjonKode
 		dataType: string
-		lineageTag: a7422d8a-3cd6-4728-9197-5929b63290a5
+		lineageTag: b3bd9344-e263-4010-a867-6dd3eb8e8055
 		summarizeBy: none
 		sourceColumn: VersjonKode
 

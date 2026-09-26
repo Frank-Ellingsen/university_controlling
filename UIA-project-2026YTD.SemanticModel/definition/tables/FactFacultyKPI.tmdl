@@ -1,10 +1,10 @@
 table FactFacultyKPI
-	lineageTag: a32b3af0-199a-4732-8e9b-39985972977e
+	lineageTag: 668866d1-37db-42f1-aa49-9b3b352fc75e
 
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: 4866cc86-d937-4c61-9abb-5d76933d5e3e
+		lineageTag: 39f48b5e-bb45-48cb-a09f-211b0b5a49b0
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -12,7 +12,7 @@ table FactFacultyKPI
 
 	column Fakultet
 		dataType: string
-		lineageTag: 2682ef54-df57-4a3f-96d0-13a04feb22b9
+		lineageTag: b1008b57-c9ce-4ef3-9746-460df42399ce
 		summarizeBy: none
 		sourceColumn: Fakultet
 
@@ -21,7 +21,7 @@ table FactFacultyKPI
 	column Statlig_Bevilgning_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: 3f34af7b-94d5-49fe-bf13-a8769d16548b
+		lineageTag: 52e83c23-ce4b-4c16-8476-384ff76ceef5
 		summarizeBy: sum
 		sourceColumn: Statlig_Bevilgning_MNOK
 
@@ -30,7 +30,7 @@ table FactFacultyKPI
 	column BOA_Andre_Inntekt_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: 74506866-a475-4787-baff-3d921d6ab223
+		lineageTag: 2eb3e993-6918-4253-bab8-4dea90d0691b
 		summarizeBy: sum
 		sourceColumn: BOA_Andre_Inntekt_MNOK
 
@@ -39,7 +39,7 @@ table FactFacultyKPI
 	column Total_Inntekt_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: cb10ac78-a036-4b34-b10e-9ae3fadba576
+		lineageTag: cbc827b8-ea11-49d0-b4e6-252d2047df4d
 		summarizeBy: sum
 		sourceColumn: Total_Inntekt_MNOK
 
@@ -48,7 +48,7 @@ table FactFacultyKPI
 	column Lonnskostnader_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: 9701af81-802e-4acf-8779-c043ed366809
+		lineageTag: 95d24f0e-3dcf-4400-90da-7c56706f28c6
 		summarizeBy: sum
 		sourceColumn: Lonnskostnader_MNOK
 
@@ -57,7 +57,7 @@ table FactFacultyKPI
 	column Driftskostnader_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: 56dd5621-e793-4dc8-9348-ee45fe5e54fc
+		lineageTag: 3fe65903-606c-4579-8431-267ae071b5f8
 		summarizeBy: sum
 		sourceColumn: Driftskostnader_MNOK
 
@@ -66,7 +66,7 @@ table FactFacultyKPI
 	column Investeringer_Capex_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: 4da6207d-3c84-4c36-95f6-45b807dedf88
+		lineageTag: bc954c37-3889-4a4f-b0e0-a65d94049f86
 		summarizeBy: sum
 		sourceColumn: Investeringer_Capex_MNOK
 
@@ -75,7 +75,7 @@ table FactFacultyKPI
 	column Total_Kostnad_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: 37a0ab42-0114-4e11-b16b-67bedadc6dbe
+		lineageTag: 4333135a-6f7a-4495-97b5-ac770272f702
 		summarizeBy: sum
 		sourceColumn: Total_Kostnad_MNOK
 
@@ -84,7 +84,7 @@ table FactFacultyKPI
 	column Netto_Resultat_MNOK
 		dataType: double
 		formatString: #,##0.00
-		lineageTag: 1f1381e6-e094-4647-94eb-0f2ed780d27a
+		lineageTag: 972c6b71-3516-478b-b8fc-d50387c58873
 		summarizeBy: sum
 		sourceColumn: Netto_Resultat_MNOK
 
@@ -93,7 +93,7 @@ table FactFacultyKPI
 	column Lonnsandel_Pct
 		dataType: double
 		formatString: 0.0%
-		lineageTag: 95b095a3-03b6-4a13-b7ca-7d32f09b4083
+		lineageTag: 7a0db358-7e04-478b-b11f-475e8f1e8a54
 		summarizeBy: average
 		sourceColumn: Lonnsandel_Pct
 
@@ -102,7 +102,7 @@ table FactFacultyKPI
 	column Aarsverk_UF
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 87705bad-627f-4935-a14e-27fac7bb968f
+		lineageTag: 14175f78-7f0a-4505-ab7f-7072dbba93ef
 		summarizeBy: sum
 		sourceColumn: Aarsverk_UF
 
@@ -111,7 +111,7 @@ table FactFacultyKPI
 	column Aarsverk_TA
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 10c65853-012e-4f60-bea4-06758ac7e1fa
+		lineageTag: b5c63d66-6dea-4bcd-921c-fe2d0b452b0f
 		summarizeBy: sum
 		sourceColumn: Aarsverk_TA
 
@@ -120,7 +120,7 @@ table FactFacultyKPI
 	column Total_Aarsverk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: b0e05069-2f22-4faf-a139-ca99389037a0
+		lineageTag: a5a72ebb-8d37-41dc-a932-b7fda2e048f0
 		summarizeBy: sum
 		sourceColumn: Total_Aarsverk
 
@@ -129,7 +129,7 @@ table FactFacultyKPI
 	column Antall_Ansatte
 		dataType: int64
 		formatString: 0
-		lineageTag: 40b4d30a-98b4-4314-935c-26f2b6f82687
+		lineageTag: a9dda9a9-df22-40b1-90cb-30a38ff7b961
 		summarizeBy: sum
 		sourceColumn: Antall_Ansatte
 
@@ -138,7 +138,7 @@ table FactFacultyKPI
 	column Antall_Studenter
 		dataType: int64
 		formatString: 0
-		lineageTag: 14e14110-89b9-45b0-890d-a50b39afe69b
+		lineageTag: adf68cac-a2bb-417b-9f27-645c347181d6
 		summarizeBy: sum
 		sourceColumn: Antall_Studenter
 
@@ -147,7 +147,7 @@ table FactFacultyKPI
 	column SPE60_Helarsstudenter
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 66f2c347-40cc-4522-a0ef-7d87eb08a7f5
+		lineageTag: bb0e8505-a646-4681-acee-d834de732439
 		summarizeBy: sum
 		sourceColumn: SPE60_Helarsstudenter
 
@@ -156,7 +156,7 @@ table FactFacultyKPI
 	column Studenter_Pr_Faglig_AV
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 679379ba-c2e0-475f-8208-cb2afecf3c7b
+		lineageTag: 5114bef0-7e32-49f0-880f-a773b41b5a41
 		summarizeBy: average
 		sourceColumn: Studenter_Pr_Faglig_ÅV
 
@@ -165,7 +165,7 @@ table FactFacultyKPI
 	column Kostnad_Pr_SPE60_NOK
 		dataType: int64
 		formatString: #,##0
-		lineageTag: a319adc1-93da-4d07-9af0-1bb7afa38179
+		lineageTag: 87215f85-13f4-4bd7-8e6b-250285011af6
 		summarizeBy: average
 		sourceColumn: Kostnad_Pr_SPE60_NOK
 
@@ -173,7 +173,7 @@ table FactFacultyKPI
 
 	column RAG_Status
 		dataType: string
-		lineageTag: d983519f-37fd-4daa-bfa3-c0c8189aca3a
+		lineageTag: 52d327d4-d0b4-4dfc-a23e-46678afaf876
 		summarizeBy: none
 		sourceColumn: RAG_Status
 
