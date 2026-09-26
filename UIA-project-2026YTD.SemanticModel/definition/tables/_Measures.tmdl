@@ -73,6 +73,26 @@ table _Measures
 		displayFolder: _03 EVM
 		lineageTag: d0792e3f-67b7-42d9-8059-5b8ba4fcc26c
 
+	measure 'Cost Variance (CV)' = [Earned Value (EV)] - [Actual Cost (AC)]
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12345-0de1-43b4-8a30-4aff406f9673
+
+	measure 'Cost Variance (CV) %' = DIVIDE([Cost Variance (CV)], [Earned Value (EV)], 0)
+		formatString: 0.0%
+		displayFolder: _03 EVM
+		lineageTag: e8a12346-0de1-43b4-8a30-4aff406f9674
+
+	measure 'Schedule Variance (SV)' = [Earned Value (EV)] - [Planned Value (PV)]
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12347-0de1-43b4-8a30-4aff406f9675
+
+	measure 'Schedule Variance (SV) %' = DIVIDE([Schedule Variance (SV)], [Planned Value (PV)], 0)
+		formatString: 0.0%
+		displayFolder: _03 EVM
+		lineageTag: e8a12348-0de1-43b4-8a30-4aff406f9676
+
 	measure CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
 		formatString: 0.00
 		displayFolder: _03 EVM
@@ -82,6 +102,26 @@ table _Measures
 		formatString: 0.00
 		displayFolder: _03 EVM
 		lineageTag: 787cd3ea-e14d-49d0-a3bc-3f2f6904dd62
+
+	measure 'EAC (EVM)' = DIVIDE([Årsbudsjett (BAC)], [CPI], [Årsbudsjett (BAC)])
+		formatString: #,##0.00
+		displayFolder: _03 EVM
+		lineageTag: e8a12349-0de1-43b4-8a30-4aff406f9677
+
+	measure 'VAC (EVM)' = [Årsbudsjett (BAC)] - [EAC (EVM)]
+		formatString: #,##0.00
+		displayFolder: _03 EVM
+		lineageTag: e8a12350-0de1-43b4-8a30-4aff406f9678
+
+	measure 'TCPI (To-Complete Performance Index)' =
+			DIVIDE(
+			    [Årsbudsjett (BAC)] - [Earned Value (EV)],
+			    [Årsbudsjett (BAC)] - [Actual Cost (AC)],
+			    1
+			)
+		formatString: 0.00
+		displayFolder: _03 EVM
+		lineageTag: e8a12351-0de1-43b4-8a30-4aff406f9679
 
 	measure 'Totale Årsverk' =
 			CALCULATE(
@@ -115,6 +155,16 @@ table _Measures
 		displayFolder: _04 Bemanning & FTE
 		lineageTag: d890e067-24a4-491f-b085-6afa979246f0
 
+	measure 'Faglig Mål %' = 0.60
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d890e068-24a4-491f-b085-6afa979246f1
+
+	measure 'Årsverk Avvik fra Mål' = ([Totale Årsverk] * 0.60) - [Faglige Årsverk (UF)]
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d890e069-24a4-491f-b085-6afa979246f2
+
 	measure 'Registrerte Studenter' = SUM('FactStudents'[Registrerte_Studenter])
 		formatString: #,##0
 		displayFolder: _05 Utdanning
@@ -130,6 +180,11 @@ table _Measures
 		displayFolder: _05 Utdanning
 		lineageTag: c6b7be62-efb8-42ce-b370-98d126583089
 
+	measure 'SPE60 pr Student' = DIVIDE([Avlagte SPE60], [Registrerte Studenter], 0)
+		formatString: 0.00
+		displayFolder: _05 Utdanning
+		lineageTag: c6b7be63-efb8-42ce-b370-98d126583090
+
 	measure 'Enhetskostnad pr SPE60' = DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)
 		formatString: #,##0
 		displayFolder: _05 Utdanning
@@ -144,13 +199,102 @@ table _Measures
 		displayFolder: _05 Utdanning
 		lineageTag: b1ac72eb-aab0-48b4-803e-9e4ca8e03d4e
 
+	measure 'Scorecard KPI Verdi' =
+			SWITCH(
+			    SELECTEDVALUE('DimKPI'[KPI_ID]),
+			    1, [Actual YTD],
+			    2, [Budsjett YTD],
+			    3, [Avvik YTD],
+			    4, [Avvik YTD %],
+			    5, [Forecast LE (EAC)],
+			    6, [Årsbudsjett (BAC)],
+			    7, [Sluttavvik (VAC)],
+			    8, [VAC %],
+			    9, [Planned Value (PV)],
+			    10, [Earned Value (EV)],
+			    11, [Actual Cost (AC)],
+			    12, [CPI],
+			    13, [SPI],
+			    14, [Totale Årsverk],
+			    15, [Faglige Årsverk (UF)],
+			    16, [Teknisk-Admin Årsverk (TA)],
+			    17, [Faglig Andel %],
+			    18, [Registrerte Studenter],
+			    19, [Avlagte SPE60],
+			    20, [Studenter pr UF-Årsverk],
+			    21, [Enhetskostnad pr SPE60],
+			    22, [KD Resultatbevilgning MNOK],
+			    BLANK()
+			)
+		formatString: #,##0.00
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555551
+
+	measure 'Scorecard KPI Budsjett' =
+			SWITCH(
+			    SELECTEDVALUE('DimKPI'[KPI_ID]),
+			    1, [Budsjett YTD],
+			    5, [Årsbudsjett (BAC)],
+			    9, [Planned Value (PV)],
+			    10, [Planned Value (PV)],
+			    11, [Planned Value (PV)],
+			    12, 1.0,
+			    13, 1.0,
+			    17, 0.60,
+			    BLANK()
+			)
+		formatString: #,##0.00
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555552
+
+	measure 'Scorecard KPI Avvik' =
+			SWITCH(
+			    SELECTEDVALUE('DimKPI'[KPI_ID]),
+			    1, [Avvik YTD],
+			    3, [Avvik YTD],
+			    4, [Avvik YTD %],
+			    5, [Sluttavvik (VAC)],
+			    7, [Sluttavvik (VAC)],
+			    8, [VAC %],
+			    10, [Cost Variance (CV)],
+			    11, [Cost Variance (CV)],
+			    12, [CPI] - 1.0,
+			    13, [SPI] - 1.0,
+			    17, [Faglig Andel %] - 0.60,
+			    BLANK()
+			)
+		formatString: #,##0.00
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555553
+
+	measure 'Scorecard KPI RAG Status' =
+			VAR KpiId = SELECTEDVALUE('DimKPI'[KPI_ID])
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    KpiId IN {1, 3, 5, 7},
+			        IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
+			            IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)", "🔴 Kritisk overskridelse (> 5%)")),
+			    KpiId = 12,
+			        IF([CPI] >= 1.0, "🟢 Kostnadseffektiv (>= 1.0)",
+			            IF([CPI] >= 0.95, "🟡 Moderat avvik", "🔴 Kostnadsoverskridelse")),
+			    KpiId = 13,
+			        IF([SPI] >= 1.0, "🟢 I rute (>= 1.0)",
+			            IF([SPI] >= 0.95, "🟡 Moderat forsinket", "🔴 Kritisk forsinket")),
+			    KpiId = 17,
+			        IF([Faglig Andel %] >= 0.60, "🟢 Mål nådd (>= 60%)", "🟡 Under måltall (< 60%)"),
+			    "⚪ Nøytral"
+			)
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555554
+
 	measure 'Forecast RAG Status' =
 			IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
 			    IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)",
 			        "🔴 Kritisk overskridelse (> 5%)"
 			    )
 			)
-		displayFolder: _06 RAG & Design
+		displayFolder: _07 RAG & Design
 		lineageTag: 39dd7285-be9b-4187-aae3-9d40c67805a3
 
 	measure 'RAG Hex Color' =
@@ -159,8 +303,53 @@ table _Measures
 			        "#ef4444"
 			    )
 			)
-		displayFolder: _06 RAG & Design
+		displayFolder: _07 RAG & Design
 		lineageTag: b50da885-c3c0-4773-aec3-b4a63980d094
+
+	measure 'CPI RAG Status' =
+			IF([CPI] >= 1.0, "🟢 Effektiv (>= 1.0)",
+			    IF([CPI] >= 0.95, "🟡 Moderat avvik",
+			        "🔴 Kostnadsoverskridelse"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891234-be9b-4187-aae3-9d40c67805a5
+
+	measure 'SPI RAG Status' =
+			IF([SPI] >= 1.0, "🟢 I rute (>= 1.0)",
+			    IF([SPI] >= 0.95, "🟡 Moderat forsinket",
+			        "🔴 Kritisk forsinket"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891235-be9b-4187-aae3-9d40c67805a6
+
+	measure 'CPI Hex Color' =
+			IF([CPI] >= 1.0, "#10b981",
+			    IF([CPI] >= 0.95, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891236-be9b-4187-aae3-9d40c67805a7
+
+	measure 'SPI Hex Color' =
+			IF([SPI] >= 1.0, "#10b981",
+			    IF([SPI] >= 0.95, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891237-be9b-4187-aae3-9d40c67805a8
+
+	measure 'Avvik YTD Hex Color' =
+			IF([Avvik YTD] <= 0, "#10b981",
+			    IF([Avvik YTD %] <= 0.05, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891238-be9b-4187-aae3-9d40c67805a9
 
 	column Column1
 		dataType: string
@@ -180,4 +369,3 @@ table _Measures
 				    Source
 
 	annotation PBI_ResultType = Table
-

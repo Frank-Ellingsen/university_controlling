@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis_cht_bemanning",
+  "position": {
+    "x": 20,
+    "y": 680,
+    "z": 40,
+    "width": 930,
+    "height": 370,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Kortnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Kortnavn",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglige Årsverk (UF)"
+                }
+              },
+              "queryRef": "_Measures.Faglige Årsverk (UF)",
+              "nativeQueryRef": "Faglige årsverk (UF)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Teknisk-Admin Årsverk (TA)"
+                }
+              },
+              "queryRef": "_Measures.Teknisk-Admin Årsverk (TA)",
+              "nativeQueryRef": "Teknisk-administrative (TA)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bemanningsfordeling: Faglige årsverk (UF) vs Teknisk-Administrative (TA)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

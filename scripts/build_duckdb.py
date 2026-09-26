@@ -27,6 +27,7 @@ def build_database():
         "DimDate": "DimDate.csv",
         "DimForecastVersion": "DimForecastVersion.csv",
         "DimOrganization": "DimOrganization.csv",
+        "DimKPI": "DimKPI.csv",
         "FactBudget": "FactBudget.csv",
         "FactEVM": "FactEVM.csv",
         "FactFTE": "FactFTE.csv",

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis_cht_evm_scurve",
+  "position": {
+    "x": 1220,
+    "y": 230,
+    "z": 31,
+    "width": 680,
+    "height": 430,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDate"
+                    }
+                  },
+                  "Property": "MaanedNavn"
+                }
+              },
+              "queryRef": "DimDate.MaanedNavn",
+              "nativeQueryRef": "Måned",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Planned Value (PV)"
+                }
+              },
+              "queryRef": "_Measures.Planned Value (PV)",
+              "nativeQueryRef": "PV (Planlagt)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Earned Value (EV)"
+                }
+              },
+              "queryRef": "_Measures.Earned Value (EV)",
+              "nativeQueryRef": "EV (Opptjent)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual Cost (AC)"
+                }
+              },
+              "queryRef": "_Measures.Actual Cost (AC)",
+              "nativeQueryRef": "AC (Faktisk)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'EVM S-Kurve Trend 2026: Planlagt (PV) vs Opptjent (EV) vs Faktisk (AC)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

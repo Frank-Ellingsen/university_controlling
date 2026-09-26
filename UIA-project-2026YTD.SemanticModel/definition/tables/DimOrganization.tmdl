@@ -15,6 +15,7 @@ table DimOrganization
 		lineageTag: a6033af0-a21a-44f9-b750-5cc412192245
 		summarizeBy: none
 		sourceColumn: Enhet
+		sortByColumn: OrgKode
 
 		annotation SummarizationSetBy = Automatic
 
@@ -23,6 +24,7 @@ table DimOrganization
 		lineageTag: aebc8a1c-1851-4faa-8485-d627f319c204
 		summarizeBy: none
 		sourceColumn: Kortnavn
+		sortByColumn: OrgKode
 
 		annotation SummarizationSetBy = Automatic
 

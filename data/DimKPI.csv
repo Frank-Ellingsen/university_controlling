@@ -1,0 +1,23 @@
+KPI_ID;KPI_Gruppe;KPI_Navn;Enhet;Tufte_Format;Sortering;Beskrivelse
+1;01 Økonomi YTD;Regnskap YTD;MNOK;#,##0.00;10;Faktisk bokført netto kostnad pr. 30.09.2026
+2;01 Økonomi YTD;Budsjett YTD;MNOK;#,##0.00;20;Periodisert tildelt budsjett pr. 30.09.2026
+3;01 Økonomi YTD;Avvik YTD;MNOK;#,##0.00;30;Regnskap YTD minus Budsjett YTD
+4;01 Økonomi YTD;Avvik YTD %;%;0.0%;40;Avvik YTD i prosent av periodisert budsjett
+5;02 Prognose & EAC;Prognose LE (EAC);MNOK;#,##0.00;50;Siste estimat på total årskostnad (YTD regnskap + Q4 prognose)
+6;02 Prognose & EAC;Årsbudsjett (BAC);MNOK;#,##0.00;60;Opprinnelig vedtatt årsbudsjett (Budget at Completion)
+7;02 Prognose & EAC;Sluttavvik (VAC);MNOK;#,##0.00;70;Årsbudsjett minus Prognose LE (positiv = mindreforbruk)
+8;02 Prognose & EAC;VAC %;%;0.0%;80;Sluttavvik i prosent av årsbudsjett
+9;03 EVM Prosjekt;Planned Value (PV);MNOK;#,##0.0;90;Planlagt verdi av prosjektaktiviteter til dato
+10;03 EVM Prosjekt;Earned Value (EV);MNOK;#,##0.0;100;Opptjent verdi av fysisk levert arbeid til dato
+11;03 EVM Prosjekt;Actual Cost (AC);MNOK;#,##0.0;110;Faktiske påløpte prosjektkostnader til dato
+12;03 EVM Prosjekt;Cost Performance Index (CPI);Indeks;0.00;120;Kostnadseffektivitet (EV / AC, >= 1.0 er under/i budsjett)
+13;03 EVM Prosjekt;Schedule Performance Index (SPI);Indeks;0.00;130;Fremdriftseffektivitet (EV / PV, >= 1.0 er foran/i rute)
+14;04 Bemanning;Totale Årsverk (FTE);Årsverk;#,##0.0;140;Aktive årsverk registrert pr. 30.09.2026
+15;04 Bemanning;Faglige Årsverk (UF);Årsverk;#,##0.0;150;Undervisnings- og forskningsårsverk (UF)
+16;04 Bemanning;Teknisk-Admin Årsverk (TA);Årsverk;#,##0.0;160;Teknisk-administrative årsverk (TA)
+17;04 Bemanning;Faglig Andel (UF %);%;0.0%;170;Andel UF av totale årsverk (måltall >= 60%)
+18;05 Utdanning & Produksjon;Registrerte Studenter;Antall;#,##0;180;Totalt antall registrerte studenter høst 2026
+19;05 Utdanning & Produksjon;Avlagte SPE60 (Helårsstudenter);Studenter;#,##0.0;190;Produserte 60-studiepoengsenheter
+20;05 Utdanning & Produksjon;Studenter pr UF-Årsverk;Ratio;#,##0.0;200;Studenttetthet pr vitenskapelig ansatt
+21;05 Utdanning & Produksjon;Enhetskostnad pr SPE60;NOK;#,##0;210;Estimert totalkostnad pr helårsstudent
+22;05 Utdanning & Produksjon;KD Resultatbevilgning;MNOK;#,##0.00;220;Beregnet resultatfinansiering fra Kunnskapsdepartementet

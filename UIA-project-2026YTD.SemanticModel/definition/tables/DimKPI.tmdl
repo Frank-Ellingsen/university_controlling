@@ -1,0 +1,74 @@
+table DimKPI
+	lineageTag: e824b219-c128-4ef3-99b8-15cf4869c991
+
+	column KPI_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a3bf45c-0bc2-4dd2-8921-1ea407c74fa1
+		summarizeBy: none
+		sourceColumn: KPI_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column KPI_Gruppe
+		dataType: string
+		lineageTag: d85a9df6-2e8f-4318-8f85-0be155b9e763
+		summarizeBy: none
+		sourceColumn: KPI_Gruppe
+
+		annotation SummarizationSetBy = Automatic
+
+	column KPI_Navn
+		dataType: string
+		lineageTag: 6c7104e1-2fce-4279-880c-03d7c4908998
+		summarizeBy: none
+		sourceColumn: KPI_Navn
+		sortByColumn: Sortering
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enhet
+		dataType: string
+		lineageTag: 5ef379d3-5599-4706-96ec-8da781c7e2d4
+		summarizeBy: none
+		sourceColumn: Enhet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tufte_Format
+		dataType: string
+		lineageTag: b02424cf-4770-4f51-b842-8869cecf0789
+		summarizeBy: none
+		sourceColumn: Tufte_Format
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sortering
+		dataType: int64
+		formatString: 0
+		lineageTag: a7575191-4e78-433b-8263-8a3560ae89e7
+		summarizeBy: none
+		sourceColumn: Sortering
+
+		annotation SummarizationSetBy = Automatic
+
+	column Beskrivelse
+		dataType: string
+		lineageTag: f6e8b4fa-4cf6-44ce-bd83-7d72dfa64099
+		summarizeBy: none
+		sourceColumn: Beskrivelse
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimKPI = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimKPI.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"KPI_ID", Int64.Type}, {"KPI_Gruppe", type text}, {"KPI_Navn", type text}, {"Enhet", type text}, {"Tufte_Format", type text}, {"Sortering", Int64.Type}, {"Beskrivelse", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

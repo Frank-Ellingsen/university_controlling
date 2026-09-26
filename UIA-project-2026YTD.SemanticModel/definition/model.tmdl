@@ -11,12 +11,13 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate","DimForecastVersion","DimOrganization","FactBudget","FactEVM","FactFTE","FactFacultyKPI","FactGL","FactStudents","_Measures"]
+annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate","DimForecastVersion","DimOrganization","DimKPI","FactBudget","FactEVM","FactFTE","FactFacultyKPI","FactGL","FactStudents","_Measures"]
 
 ref table DimAccountHierarchy
 ref table DimDate
 ref table DimForecastVersion
 ref table DimOrganization
+ref table DimKPI
 ref table FactBudget
 ref table FactEVM
 ref table FactFTE

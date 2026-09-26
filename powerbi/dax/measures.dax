@@ -1,11 +1,11 @@
 // ==============================================================================
-// Universitetet i Agder (UiA) - Power BI DAX Måltallskatalog
-// Strukturert etter visningsmapper (Display Folders) for optimal modellorden
-// Forfatter: Frank Ellingsen (Project Controller)
+// University of Agder (UiA) - Enterprise & Project Controlling DAX Measure Library
+// Author: Frank Ellingsen (Financial & Project Controller)
+// Standard: Edward Tufte Data-Ink Principles | Norwegian SRS & KD Accounting Model
 // ==============================================================================
 
 // ------------------------------------------------------------------------------
-// Folder: _01 Regnskap & YTD (Base Accounting & YTD)
+// Folder: _01 Regnskap & YTD (Financial Performance pr. 30.09.2026)
 // ------------------------------------------------------------------------------
 
 Actual YTD = 
@@ -26,23 +26,9 @@ Avvik YTD =
 Avvik YTD % = 
 DIVIDE([Avvik YTD], ABS([Budsjett YTD]), 0)
 
-Actual YTD Kostnad = 
-CALCULATE(
-    SUM('FactGL'[Belop_MNOK]),
-    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026",
-    'FactGL'[Artstype] = "Kostnad"
-)
-
-Actual YTD Inntekt = 
-CALCULATE(
-    SUM('FactGL'[Belop_MNOK]),
-    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026",
-    'FactGL'[Artstype] = "Inntekt"
-)
-
 
 // ------------------------------------------------------------------------------
-// Folder: _02 Prognose & EAC (Forecast & Year-End Estimates)
+// Folder: _02 Prognose & EAC (Forecasting & Estimate at Completion)
 // ------------------------------------------------------------------------------
 
 Forecast Q4 = 
@@ -65,7 +51,7 @@ DIVIDE([Sluttavvik (VAC)], ABS([Årsbudsjett (BAC)]), 0)
 
 
 // ------------------------------------------------------------------------------
-// Folder: _03 EVM (Earned Value Management)
+// Folder: _03 EVM (Earned Value Management & Project Control)
 // ------------------------------------------------------------------------------
 
 Planned Value (PV) = 
@@ -77,17 +63,36 @@ SUM('FactEVM'[Earned_Value_EV_MNOK])
 Actual Cost (AC) = 
 SUM('FactEVM'[Actual_Cost_AC_MNOK])
 
+Cost Variance (CV) = 
+[Earned Value (EV)] - [Actual Cost (AC)]
+
+Cost Variance (CV) % = 
+DIVIDE([Cost Variance (CV)], [Earned Value (EV)], 0)
+
+Schedule Variance (SV) = 
+[Earned Value (EV)] - [Planned Value (PV)]
+
+Schedule Variance (SV) % = 
+DIVIDE([Schedule Variance (SV)], [Planned Value (PV)], 0)
+
 CPI = 
 DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
 
 SPI = 
 DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
 
-Cost Variance (CV) = 
-[Earned Value (EV)] - [Actual Cost (AC)]
+EAC (EVM) = 
+DIVIDE([Årsbudsjett (BAC)], [CPI], [Årsbudsjett (BAC)])
 
-Schedule Variance (SV) = 
-[Earned Value (EV)] - [Planned Value (PV)]
+VAC (EVM) = 
+[Årsbudsjett (BAC)] - [EAC (EVM)]
+
+TCPI (To-Complete Performance Index) = 
+DIVIDE(
+    [Årsbudsjett (BAC)] - [Earned Value (EV)],
+    [Årsbudsjett (BAC)] - [Actual Cost (AC)],
+    1
+)
 
 
 // ------------------------------------------------------------------------------
@@ -112,19 +117,14 @@ CALCULATE(
     'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
 )
 
-Ubesatte Vakanser = 
-CALCULATE(
-    SUM('FactFTE'[Ubesatte_Vakanser]),
-    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
-)
-
 Faglig Andel % = 
 DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)
 
-Lønnsandel % = 
-VAR Lonn = CALCULATE(SUM('FactGL'[Belop_MNOK]), 'DimAccountHierarchy'[Nivaa1_Navn] = "Lønnskostnader")
-VAR TotalKost = CALCULATE(SUM('FactGL'[Belop_MNOK]), 'FactGL'[Artstype] = "Kostnad")
-RETURN DIVIDE(Lonn, TotalKost, 0)
+Faglig Mål % = 
+0.60
+
+Årsverk Avvik fra Mål = 
+([Totale Årsverk] * 0.60) - [Faglige Årsverk (UF)]
 
 
 // ------------------------------------------------------------------------------
@@ -140,6 +140,9 @@ SUM('FactStudents'[SPE60_Helarsstudenter])
 Studenter pr UF-Årsverk = 
 DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)
 
+SPE60 pr Student = 
+DIVIDE([Avlagte SPE60], [Registrerte Studenter], 0)
+
 Enhetskostnad pr SPE60 = 
 DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)
 
@@ -151,7 +154,90 @@ RETURN DIVIDE(Kat1 + Kat2 + Kat3, 1000000, 0)
 
 
 // ------------------------------------------------------------------------------
-// Folder: _06 RAG & Betinget Formatering (RAG & Conditional Formatting)
+// Folder: _06 Scorecard & KPI (Universal Disconnected Metric Measures)
+// ------------------------------------------------------------------------------
+
+Scorecard KPI Verdi = 
+SWITCH(
+    SELECTEDVALUE('DimKPI'[KPI_ID]),
+    1, [Actual YTD],
+    2, [Budsjett YTD],
+    3, [Avvik YTD],
+    4, [Avvik YTD %],
+    5, [Forecast LE (EAC)],
+    6, [Årsbudsjett (BAC)],
+    7, [Sluttavvik (VAC)],
+    8, [VAC %],
+    9, [Planned Value (PV)],
+    10, [Earned Value (EV)],
+    11, [Actual Cost (AC)],
+    12, [CPI],
+    13, [SPI],
+    14, [Totale Årsverk],
+    15, [Faglige Årsverk (UF)],
+    16, [Teknisk-Admin Årsverk (TA)],
+    17, [Faglig Andel %],
+    18, [Registrerte Studenter],
+    19, [Avlagte SPE60],
+    20, [Studenter pr UF-Årsverk],
+    21, [Enhetskostnad pr SPE60],
+    22, [KD Resultatbevilgning MNOK],
+    BLANK()
+)
+
+Scorecard KPI Budsjett = 
+SWITCH(
+    SELECTEDVALUE('DimKPI'[KPI_ID]),
+    1, [Budsjett YTD],
+    5, [Årsbudsjett (BAC)],
+    9, [Planned Value (PV)],
+    10, [Planned Value (PV)],
+    11, [Planned Value (PV)],
+    12, 1.0,
+    13, 1.0,
+    17, 0.60,
+    BLANK()
+)
+
+Scorecard KPI Avvik = 
+SWITCH(
+    SELECTEDVALUE('DimKPI'[KPI_ID]),
+    1, [Avvik YTD],
+    3, [Avvik YTD],
+    4, [Avvik YTD %],
+    5, [Sluttavvik (VAC)],
+    7, [Sluttavvik (VAC)],
+    8, [VAC %],
+    10, [Cost Variance (CV)],
+    11, [Cost Variance (CV)],
+    12, [CPI] - 1.0,
+    13, [SPI] - 1.0,
+    17, [Faglig Andel %] - 0.60,
+    BLANK()
+)
+
+Scorecard KPI RAG Status = 
+VAR KpiId = SELECTEDVALUE('DimKPI'[KPI_ID])
+RETURN
+SWITCH(
+    TRUE(),
+    KpiId IN {1, 3, 5, 7},
+        IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
+            IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)", "🔴 Kritisk overskridelse (> 5%)")),
+    KpiId = 12,
+        IF([CPI] >= 1.0, "🟢 Kostnadseffektiv (>= 1.0)",
+            IF([CPI] >= 0.95, "🟡 Moderat avvik", "🔴 Kostnadsoverskridelse")),
+    KpiId = 13,
+        IF([SPI] >= 1.0, "🟢 I rute (>= 1.0)",
+            IF([SPI] >= 0.95, "🟡 Moderat forsinket", "🔴 Kritisk forsinket")),
+    KpiId = 17,
+        IF([Faglig Andel %] >= 0.60, "🟢 Mål nådd (>= 60%)", "🟡 Under måltall (< 60%)"),
+    "⚪ Nøytral"
+)
+
+
+// ------------------------------------------------------------------------------
+// Folder: _07 RAG & Betinget Formatering (Conditional Formatting & Hex Codes)
 // ------------------------------------------------------------------------------
 
 Forecast RAG Status = 
@@ -168,9 +254,37 @@ IF([Sluttavvik (VAC)] >= 0, "#10b981", // Emerald Green
     )
 )
 
+CPI RAG Status = 
+IF([CPI] >= 1.0, "🟢 Effektiv (>= 1.0)",
+    IF([CPI] >= 0.95, "🟡 Moderat avvik",
+        "🔴 Kostnadsoverskridelse"
+    )
+)
+
+SPI RAG Status = 
+IF([SPI] >= 1.0, "🟢 I rute (>= 1.0)",
+    IF([SPI] >= 0.95, "🟡 Moderat forsinket",
+        "🔴 Kritisk forsinket"
+    )
+)
+
 CPI Hex Color = 
 IF([CPI] >= 1.0, "#10b981",
     IF([CPI] >= 0.95, "#f59e0b",
+        "#ef4444"
+    )
+)
+
+SPI Hex Color = 
+IF([SPI] >= 1.0, "#10b981",
+    IF([SPI] >= 0.95, "#f59e0b",
+        "#ef4444"
+    )
+)
+
+Avvik YTD Hex Color = 
+IF([Avvik YTD] <= 0, "#10b981",
+    IF([Avvik YTD %] <= 0.05, "#f59e0b",
         "#ef4444"
     )
 )
