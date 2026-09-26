@@ -77,6 +77,94 @@
               "nativeQueryRef": "AC (Faktisk)"
             }
           ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Cost Variance (CV)"
+                }
+              },
+              "queryRef": "_Measures.Cost Variance (CV)",
+              "nativeQueryRef": "Cost Variance (CV)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Schedule Variance (SV)"
+                }
+              },
+              "queryRef": "_Measures.Schedule Variance (SV)",
+              "nativeQueryRef": "Schedule Variance (SV)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CPI"
+                }
+              },
+              "queryRef": "_Measures.CPI",
+              "nativeQueryRef": "CPI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPI"
+                }
+              },
+              "queryRef": "_Measures.SPI",
+              "nativeQueryRef": "SPI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CPI RAG Status"
+                }
+              },
+              "queryRef": "_Measures.CPI RAG Status",
+              "nativeQueryRef": "CPI Status"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPI RAG Status"
+                }
+              },
+              "queryRef": "_Measures.SPI RAG Status",
+              "nativeQueryRef": "SPI Status"
+            }
+          ]
         }
       }
     },
@@ -95,6 +183,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'EVM S-Kurve Trend 2026: BOA-portefølje [CPI: 0,95 TDI-fellen | SPI: 0,92 SRS 10 Risiko]'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

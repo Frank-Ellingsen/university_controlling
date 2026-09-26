@@ -94,6 +94,20 @@
                       "Entity": "_Measures"
                     }
                   },
+                  "Property": "Vakanser (Ubesatte stillinger)"
+                }
+              },
+              "queryRef": "_Measures.Vakanser (Ubesatte stillinger)",
+              "nativeQueryRef": "Vakanser"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
                   "Property": "Registrerte Studenter"
                 }
               },

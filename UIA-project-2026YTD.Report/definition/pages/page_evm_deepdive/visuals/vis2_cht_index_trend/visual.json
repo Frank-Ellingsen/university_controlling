@@ -63,6 +63,66 @@
               "nativeQueryRef": "SPI (Fremdriftseffektivitet)"
             }
           ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CPI MoM Endring"
+                }
+              },
+              "queryRef": "_Measures.CPI MoM Endring",
+              "nativeQueryRef": "CPI MoM Endring"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPI MoM Endring"
+                }
+              },
+              "queryRef": "_Measures.SPI MoM Endring",
+              "nativeQueryRef": "SPI MoM Endring"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CPI RAG Status"
+                }
+              },
+              "queryRef": "_Measures.CPI RAG Status",
+              "nativeQueryRef": "CPI RAG Status"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPI RAG Status"
+                }
+              },
+              "queryRef": "_Measures.SPI RAG Status",
+              "nativeQueryRef": "SPI RAG Status"
+            }
+          ]
         }
       }
     },
@@ -81,6 +141,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'Prestasjonsindekser over tid: CPI & SPI (Mål: >= 1.00)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

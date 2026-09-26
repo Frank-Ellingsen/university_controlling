@@ -63,6 +63,80 @@
               "nativeQueryRef": "Teknisk-administrative (TA)"
             }
           ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Totale Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Totale Årsverk",
+              "nativeQueryRef": "Totale Årsverk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglig Andel %"
+                }
+              },
+              "queryRef": "_Measures.Faglig Andel %",
+              "nativeQueryRef": "Faglig Andel %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Vakanser (Ubesatte stillinger)"
+                }
+              },
+              "queryRef": "_Measures.Vakanser (Ubesatte stillinger)",
+              "nativeQueryRef": "Vakanser"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Studenter pr UF-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Studenter pr UF-Årsverk",
+              "nativeQueryRef": "Studenter/UF Ratio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Lønnsandel %"
+                }
+              },
+              "queryRef": "_Measures.Lønnsandel %",
+              "nativeQueryRef": "Lønnsandel %"
+            }
+          ]
         }
       }
     },
@@ -81,6 +155,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'Kapasitetsstyring: Faglige årsverk (UF: 57,1 % / Mål >50 %) vs Teknisk-Administrative (TA)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

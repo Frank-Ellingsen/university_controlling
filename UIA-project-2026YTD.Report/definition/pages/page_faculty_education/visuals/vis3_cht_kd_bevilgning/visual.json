@@ -49,6 +49,38 @@
               "nativeQueryRef": "KD Resultatfinansiering (MNOK)"
             }
           ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Avlagte SPE60"
+                }
+              },
+              "queryRef": "_Measures.Avlagte SPE60",
+              "nativeQueryRef": "Avlagte SPE60"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Enhetskostnad pr SPE60"
+                }
+              },
+              "queryRef": "_Measures.Enhetskostnad pr SPE60",
+              "nativeQueryRef": "Kr/SPE60"
+            }
+          ]
         }
       }
     },
@@ -67,6 +99,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'Estimert KD Resultatbevilgning 2025/2026 (MNOK)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

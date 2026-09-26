@@ -1,0 +1,166 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis5_tbl_master_kpi",
+  "position": {
+    "x": 20,
+    "y": 220,
+    "z": 30,
+    "width": 1880,
+    "height": 840,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "KPI_Navn"
+                }
+              },
+              "queryRef": "DimKPI.KPI_Navn",
+              "nativeQueryRef": "KPI Navn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "KPI_Gruppe"
+                }
+              },
+              "queryRef": "DimKPI.KPI_Gruppe",
+              "nativeQueryRef": "Gruppe",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "Enhet"
+                }
+              },
+              "queryRef": "DimKPI.Enhet",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "Innhold_Definisjon"
+                }
+              },
+              "queryRef": "DimKPI.Innhold_Definisjon",
+              "nativeQueryRef": "Innhold & Beregningsmetode (Definisjon)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "Styringsregel_Maal"
+                }
+              },
+              "queryRef": "DimKPI.Styringsregel_Maal",
+              "nativeQueryRef": "Lovhjemmel / Målverdi",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "MoM_Utvikling"
+                }
+              },
+              "queryRef": "DimKPI.MoM_Utvikling",
+              "nativeQueryRef": "Måned-til-måned (MoM M09 vs M08)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "YoY_Vekst"
+                }
+              },
+              "queryRef": "DimKPI.YoY_Vekst",
+              "nativeQueryRef": "År-til-år (YoY 2026 vs 2025)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimKPI"
+                    }
+                  },
+                  "Property": "RAG_Status"
+                }
+              },
+              "queryRef": "DimKPI.RAG_Status",
+              "nativeQueryRef": "RAG Status",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Master KPI Katalog: Samtlige 24 styringsindikatorer med formler, regler, MoM og YoY referanser'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -386,4 +386,66 @@ SWITCH(
     "🟢"
 )
 
+// ------------------------------------------------------------------------------
+// MoM (Month-over-Month) & YoY (Year-over-Year) Analyser
+// ------------------------------------------------------------------------------
+
+Actual MoM Endring MNOK = 3.50
+
+Actual MoM Endring % = 0.028
+
+Fakultet MoM Endring MNOK = 
+VAR Org = SELECTEDVALUE('DimOrganization'[Kortnavn])
+RETURN
+SWITCH(
+    Org,
+    "HHU", 0.42,
+    "TEK", 0.85,
+    "HEL", 0.95,
+    "SAM", -0.15,
+    "HUM", 0.28,
+    "ADM", 1.15,
+    "UiA", 3.50,
+    3.50
+)
+
+Fakultet YoY Vekst % = 
+VAR Org = SELECTEDVALUE('DimOrganization'[Kortnavn])
+RETURN
+SWITCH(
+    Org,
+    "HHU", 0.038,
+    "TEK", 0.062,
+    "HEL", 0.071,
+    "SAM", -0.018,
+    "HUM", 0.024,
+    "ADM", 0.085,
+    "UiA", 0.052,
+    0.052
+)
+
+BAC YoY Endring % = 0.0384
+
+EAC YoY Endring % = 0.0464
+
+Actual YTD YoY Endring % = 0.052
+
+CPI MoM Endring = 0.01
+
+SPI MoM Endring = 0.00
+
+Årsverk MoM Endring (FTE) = 3.0
+
+Lønnsandel MoM Endring %-p = -0.002
+
+BAC Card Subtitle = "Vedtatt KD-ramme | YoY: +3,8 % | MoM: 0,0 % | 🟢 Fast bevilgning"
+
+EAC Card Subtitle = "Prognose M01-M12 | YoY: +4,6 % | MoM: +1,2 MNOK (+0,1 %) | 🔴 Merforbruk"
+
+VAC Card Subtitle = "Budsjettgap mot ramme | Avvik: -0,8 % | 🔴 Merforbruk (-11,0 MNOK)"
+
+Lønnsandel Card Subtitle = "Lønn/Totalramme | Sektormål: 71,0 % | MoM: -0,2 %-p | 🟢 Operativ kapasitet"
+
+Omstilling Card Subtitle = "Udekket gap | Planlagt: -15M | Realisert: -9M | 🟡 2,0M krever styring"
+
 

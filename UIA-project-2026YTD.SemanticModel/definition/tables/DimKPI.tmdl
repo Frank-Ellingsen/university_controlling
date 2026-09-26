@@ -60,15 +60,54 @@ table DimKPI
 
 		annotation SummarizationSetBy = Automatic
 
+	column Innhold_Definisjon
+		dataType: string
+		lineageTag: f6e8b4fa-4cf6-44ce-bd83-7d72dfa64100
+		summarizeBy: none
+		sourceColumn: Innhold_Definisjon
+
+		annotation SummarizationSetBy = Automatic
+
+	column Styringsregel_Maal
+		dataType: string
+		lineageTag: f6e8b4fa-4cf6-44ce-bd83-7d72dfa64101
+		summarizeBy: none
+		sourceColumn: Styringsregel_Maal
+
+		annotation SummarizationSetBy = Automatic
+
+	column MoM_Utvikling
+		dataType: string
+		lineageTag: f6e8b4fa-4cf6-44ce-bd83-7d72dfa64102
+		summarizeBy: none
+		sourceColumn: MoM_Utvikling
+
+		annotation SummarizationSetBy = Automatic
+
+	column YoY_Vekst
+		dataType: string
+		lineageTag: f6e8b4fa-4cf6-44ce-bd83-7d72dfa64103
+		summarizeBy: none
+		sourceColumn: YoY_Vekst
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Status
+		dataType: string
+		lineageTag: f6e8b4fa-4cf6-44ce-bd83-7d72dfa64104
+		summarizeBy: none
+		sourceColumn: RAG_Status
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DimKPI = m
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimKPI.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimKPI.csv"),[Delimiter=";", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"KPI_ID", Int64.Type}, {"KPI_Gruppe", type text}, {"KPI_Navn", type text}, {"Enhet", type text}, {"Tufte_Format", type text}, {"Sortering", Int64.Type}, {"Beskrivelse", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"KPI_ID", Int64.Type}, {"KPI_Gruppe", type text}, {"KPI_Navn", type text}, {"Enhet", type text}, {"Tufte_Format", type text}, {"Sortering", Int64.Type}, {"Beskrivelse", type text}, {"Innhold_Definisjon", type text}, {"Styringsregel_Maal", type text}, {"MoM_Utvikling", type text}, {"YoY_Vekst", type text}, {"RAG_Status", type text}})
 				in
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-

@@ -91,6 +91,94 @@
               "nativeQueryRef": "BAC (Totalramme)"
             }
           ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Cost Variance (CV)"
+                }
+              },
+              "queryRef": "_Measures.Cost Variance (CV)",
+              "nativeQueryRef": "Cost Variance (CV)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Schedule Variance (SV)"
+                }
+              },
+              "queryRef": "_Measures.Schedule Variance (SV)",
+              "nativeQueryRef": "Schedule Variance (SV)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "CPI"
+                }
+              },
+              "queryRef": "_Measures.CPI",
+              "nativeQueryRef": "CPI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPI"
+                }
+              },
+              "queryRef": "_Measures.SPI",
+              "nativeQueryRef": "SPI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "EAC (EVM)"
+                }
+              },
+              "queryRef": "_Measures.EAC (EVM)",
+              "nativeQueryRef": "EAC (EVM)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "VAC (EVM)"
+                }
+              },
+              "queryRef": "_Measures.VAC (EVM)",
+              "nativeQueryRef": "VAC (EVM)"
+            }
+          ]
         }
       }
     },
@@ -109,6 +197,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'Kumulativ EVM S-Kurve 2026: Planlagt (PV) vs Opptjent (EV) vs Faktisk (AC) vs BAC'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

@@ -77,6 +77,52 @@
               "nativeQueryRef": "Ubesatte Vakanser"
             }
           ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Totale Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Totale Årsverk",
+              "nativeQueryRef": "Totale Årsverk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglig Andel %"
+                }
+              },
+              "queryRef": "_Measures.Faglig Andel %",
+              "nativeQueryRef": "Faglig Andel %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Studenter pr UF-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Studenter pr UF-Årsverk",
+              "nativeQueryRef": "Studenter / UF"
+            }
+          ]
         }
       }
     },
@@ -95,6 +141,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'Enhetens Stillingsstruktur: UF vs TA vs Vakanser'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
                 }
               }
             }

@@ -94,6 +94,48 @@
                       "Entity": "_Measures"
                     }
                   },
+                  "Property": "Avvik YTD %"
+                }
+              },
+              "queryRef": "_Measures.Avvik YTD %",
+              "nativeQueryRef": "Avvik %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Fakultet MoM Endring MNOK"
+                }
+              },
+              "queryRef": "_Measures.Fakultet MoM Endring MNOK",
+              "nativeQueryRef": "MoM Endring"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Fakultet YoY Vekst %"
+                }
+              },
+              "queryRef": "_Measures.Fakultet YoY Vekst %",
+              "nativeQueryRef": "YoY Vekst %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
                   "Property": "Forecast LE (EAC)"
                 }
               },
@@ -160,7 +202,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fakultetsvis Avviksanalyse & Status M09 (Styrenotat Tabell 3: Enhetsvis gjennomgang)'"
+                  "Value": "'Fakultetsvis Avviksanalyse, MoM/YoY & Status M09 (Styrenotat Tabell 3)'"
                 }
               }
             }

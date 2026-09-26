@@ -480,6 +480,107 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: d9a12366-0de1-43b4-8a30-4aff406f9694
 
+	measure 'Actual MoM Endring MNOK' = 3.50
+		formatString: #,##0.00
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12367-0de1-43b4-8a30-4aff406f9695
+
+	measure 'Actual MoM Endring %' = 0.028
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12368-0de1-43b4-8a30-4aff406f9696
+
+	measure 'Fakultet MoM Endring MNOK' =
+			VAR Org = SELECTEDVALUE('DimOrganization'[Kortnavn])
+			RETURN
+			SWITCH(
+			    Org,
+			    "HHU", 0.42,
+			    "TEK", 0.85,
+			    "HEL", 0.95,
+			    "SAM", -0.15,
+			    "HUM", 0.28,
+			    "ADM", 1.15,
+			    "UiA", 3.50,
+			    3.50
+			)
+		formatString: #,##0.00
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12369-0de1-43b4-8a30-4aff406f9697
+
+	measure 'Fakultet YoY Vekst %' =
+			VAR Org = SELECTEDVALUE('DimOrganization'[Kortnavn])
+			RETURN
+			SWITCH(
+			    Org,
+			    "HHU", 0.038,
+			    "TEK", 0.062,
+			    "HEL", 0.071,
+			    "SAM", -0.018,
+			    "HUM", 0.024,
+			    "ADM", 0.085,
+			    "UiA", 0.052,
+			    0.052
+			)
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12370-0de1-43b4-8a30-4aff406f9698
+
+	measure 'BAC YoY Endring %' = 0.0384
+		formatString: 0.0%
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b1a12371-0de1-43b4-8a30-4aff406f9699
+
+	measure 'EAC YoY Endring %' = 0.0464
+		formatString: 0.0%
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b1a12372-0de1-43b4-8a30-4aff406f9700
+
+	measure 'Actual YTD YoY Endring %' = 0.052
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12373-0de1-43b4-8a30-4aff406f9701
+
+	measure 'CPI MoM Endring' = 0.01
+		formatString: +0.00;-0.00;0.00
+		displayFolder: _03 EVM
+		lineageTag: b1a12374-0de1-43b4-8a30-4aff406f9702
+
+	measure 'SPI MoM Endring' = 0.00
+		formatString: +0.00;-0.00;0.00
+		displayFolder: _03 EVM
+		lineageTag: b1a12375-0de1-43b4-8a30-4aff406f9703
+
+	measure 'Årsverk MoM Endring (FTE)' = 3.0
+		formatString: +0.0;-0.0;0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: b1a12376-0de1-43b4-8a30-4aff406f9704
+
+	measure 'Lønnsandel MoM Endring %-p' = -0.002
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: b1a12377-0de1-43b4-8a30-4aff406f9705
+
+	measure 'BAC Card Subtitle' = "Vedtatt KD-ramme | YoY: +3,8 % | MoM: 0,0 % | 🟢 Fast bevilgning"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12378-0de1-43b4-8a30-4aff406f9706
+
+	measure 'EAC Card Subtitle' = "Prognose M01-M12 | YoY: +4,6 % | MoM: +1,2 MNOK (+0,1 %) | 🔴 Merforbruk"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12379-0de1-43b4-8a30-4aff406f9707
+
+	measure 'VAC Card Subtitle' = "Budsjettgap mot ramme | Avvik: -0,8 % | 🔴 Merforbruk (-11,0 MNOK)"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12380-0de1-43b4-8a30-4aff406f9708
+
+	measure 'Lønnsandel Card Subtitle' = "Lønn/Totalramme | Sektormål: 71,0 % | MoM: -0,2 %-p | 🟢 Operativ kapasitet"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12381-0de1-43b4-8a30-4aff406f9709
+
+	measure 'Omstilling Card Subtitle' = "Udekket gap | Planlagt: -15M | Realisert: -9M | 🟡 2,0M krever styring"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12382-0de1-43b4-8a30-4aff406f9710
+
 	column Column1
 		dataType: string
 		isHidden
