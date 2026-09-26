@@ -1,0 +1,91 @@
+table FactBudget
+	lineageTag: 3aac8f50-5d66-4b3d-b858-b27b006247a9
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: eaf9d33a-b470-461d-8254-295821197ef5
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 0dd11fb0-b5c5-4c40-9da4-2dee6cc48b4d
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: 33e41e13-a069-4c32-b68e-e4d3491dfd58
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontonavn
+		dataType: string
+		lineageTag: 1769dc05-e2cf-4be6-8cba-54968c20cf4e
+		summarizeBy: none
+		sourceColumn: Kontonavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Artstype
+		dataType: string
+		lineageTag: 62433568-c360-48a3-be71-523282ed346d
+		summarizeBy: none
+		sourceColumn: Artstype
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kategori
+		dataType: string
+		lineageTag: 320c0569-c90f-4edf-b146-d4ae9c6ecc9c
+		summarizeBy: none
+		sourceColumn: Kategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjett_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: 760383d1-66c1-4f5e-8369-c973aeb53f18
+		summarizeBy: sum
+		sourceColumn: Budsjett_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjett_signert_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: ddc80117-cfe4-4a8e-a2e9-423454a8c5db
+		summarizeBy: sum
+		sourceColumn: Budsjett_signert_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 17ff96d5-8e3e-4419-b7f6-b803f2433c6a
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactBudget = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactBudget.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Artstype", type text}, {"Kategori", type text}, {"Budsjett_MNOK", type number}, {"Budsjett_signert_MNOK", type number}, {"VersjonKode", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

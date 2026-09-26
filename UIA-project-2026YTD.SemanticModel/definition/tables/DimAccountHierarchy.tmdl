@@ -1,0 +1,115 @@
+table DimAccountHierarchy
+	lineageTag: 04cdcedf-45f5-41b9-872b-801cbd7cffad
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: 03fa95f6-6a31-4133-9704-a51be17212ac
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontonavn
+		dataType: string
+		lineageTag: 1a6b6350-5296-4613-af2b-0d35038ff418
+		summarizeBy: none
+		sourceColumn: Kontonavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa1_Kontoklasse
+		dataType: int64
+		formatString: 0
+		lineageTag: 169957aa-c0f6-4853-b8ba-ed2fdf5464aa
+		summarizeBy: none
+		sourceColumn: Nivaa1_Kontoklasse
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa1_Navn
+		dataType: string
+		lineageTag: 6c6146a9-0e31-4984-a249-fceaf0cd3b0c
+		summarizeBy: none
+		sourceColumn: Nivaa1_Navn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa2_Kontogruppe
+		dataType: int64
+		formatString: 0
+		lineageTag: 83d66e1b-0fc2-4d85-a554-a388297aca81
+		summarizeBy: none
+		sourceColumn: Nivaa2_Kontogruppe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa2_Navn
+		dataType: string
+		lineageTag: 653193f6-5c41-448c-a764-6264e752e5a6
+		summarizeBy: none
+		sourceColumn: Nivaa2_Navn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa3_Standardkonto
+		dataType: int64
+		formatString: 0
+		lineageTag: b6d9bb73-c284-42c4-be0b-b809e5e37e1e
+		summarizeBy: none
+		sourceColumn: Nivaa3_Standardkonto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa3_Navn
+		dataType: string
+		lineageTag: b99341e1-9fb1-4db8-9240-fc5c14c4fc4d
+		summarizeBy: none
+		sourceColumn: Nivaa3_Navn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa4_Underkonto
+		dataType: int64
+		formatString: 0
+		lineageTag: ca240d60-6151-4303-a989-cf37aefe313a
+		summarizeBy: none
+		sourceColumn: Nivaa4_Underkonto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa4_Navn
+		dataType: string
+		lineageTag: fe0adbbb-af93-4347-96cd-8a252505670c
+		summarizeBy: none
+		sourceColumn: Nivaa4_Navn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontotype
+		dataType: string
+		lineageTag: 0a90a18b-e810-43a1-950c-69685857bce1
+		summarizeBy: none
+		sourceColumn: Kontotype
+
+		annotation SummarizationSetBy = Automatic
+
+	column SRS_regnskapslinje
+		dataType: string
+		lineageTag: 354aaa5d-72d5-4c66-96cb-769eb99f6905
+		summarizeBy: none
+		sourceColumn: SRS_regnskapslinje
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimAccountHierarchy = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimAccountHierarchy.csv"),[Delimiter=";", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Konto", Int64.Type}, {"Kontonavn", type text}, {"Nivaa1_Kontoklasse", Int64.Type}, {"Nivaa1_Navn", type text}, {"Nivaa2_Kontogruppe", Int64.Type}, {"Nivaa2_Navn", type text}, {"Nivaa3_Standardkonto", Int64.Type}, {"Nivaa3_Navn", type text}, {"Nivaa4_Underkonto", Int64.Type}, {"Nivaa4_Navn", type text}, {"Kontotype", type text}, {"SRS_regnskapslinje", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

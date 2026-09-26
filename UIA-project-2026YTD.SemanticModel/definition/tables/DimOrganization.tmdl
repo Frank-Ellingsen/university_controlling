@@ -1,0 +1,65 @@
+table DimOrganization
+	lineageTag: dde39e9f-9cef-4024-a7a8-a2e4906ece9b
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 6427c324-78db-45bd-b287-cad2613d04eb
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enhet
+		dataType: string
+		lineageTag: 0218314f-2869-4d16-bcba-21c7b132282c
+		summarizeBy: none
+		sourceColumn: Enhet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kortnavn
+		dataType: string
+		lineageTag: e0c9852e-e539-40cb-b136-04a48ab78a25
+		summarizeBy: none
+		sourceColumn: Kortnavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column OverordnetEnhet
+		dataType: int64
+		formatString: 0
+		lineageTag: f7bf8813-c029-45b5-b2e3-83cd577393a4
+		summarizeBy: none
+		sourceColumn: OverordnetEnhet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa
+		dataType: int64
+		formatString: 0
+		lineageTag: ffbce900-9b9c-4088-9c9d-3d193fa71002
+		summarizeBy: none
+		sourceColumn: Nivaa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 444b06b1-3c20-4d94-a50f-2a31b3713cff
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimOrganization = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimOrganization.csv"),[Delimiter=";", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Kortnavn", type text}, {"OverordnetEnhet", Int64.Type}, {"Nivaa", Int64.Type}, {"Type", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

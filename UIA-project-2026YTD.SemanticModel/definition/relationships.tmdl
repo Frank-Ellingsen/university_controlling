@@ -1,0 +1,47 @@
+relationship 2ab79ecc-ca9b-4cca-b85c-e845f5c79fc0
+	fromColumn: FactGL.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship a4477b81-6c4b-4217-8ada-39deade863c0
+	fromColumn: FactBudget.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship 980fea31-f2b2-4a70-a7ec-63512095781e
+	fromColumn: FactFTE.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship 6682f92a-fedf-4083-be95-3ee2b76faaed
+	fromColumn: FactStudents.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship df2a9344-a260-4cfa-a310-7ea3a9ddb4fd
+	fromColumn: FactFacultyKPI.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship e4cc2021-0119-4f4d-9e96-ff80f4cd47e2
+	fromColumn: FactGL.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship d2de3ac5-5298-4084-b537-d5ee3af27e22
+	fromColumn: FactBudget.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship bc020fd0-a235-45a0-8a8c-ca7b69f0ef2e
+	fromColumn: FactFTE.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship eb1cb93e-4769-4943-b731-ad50bdd52acf
+	fromColumn: FactEVM.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship 0a1df54a-1e0e-4814-9cb5-9d6f3d827c01
+	fromColumn: FactGL.VersjonKode
+	toColumn: DimForecastVersion.VersjonKode
+
+relationship 7cd89e49-dd67-48d2-b572-e9e38b8098e3
+	fromColumn: FactBudget.VersjonKode
+	toColumn: DimForecastVersion.VersjonKode
+
+relationship b9b4e842-16a8-42ef-aa3c-07ebb82cf5d0
+	fromColumn: FactGL.Konto
+	toColumn: DimAccountHierarchy.Konto

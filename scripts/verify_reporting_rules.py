@@ -137,7 +137,7 @@ def run_verification():
             f.Aarsverk_TA,
             f.Aarsverk_Faktisk,
             f.Ubesatte_Vakanser,
-            ROUND(f.Faglig_Andel_Pct * 100, 1) as FagligAndelPct
+            ROUND(f.Faglig_Andel_Pct, 1) as FagligAndelPct
         FROM FactFTE f
         JOIN DimOrganization o ON f.OrgKode = o.OrgKode
         WHERE f.DatoNokkel = 202609 AND f.VersjonKode = 'ACTUAL_YTD_SEP2026'

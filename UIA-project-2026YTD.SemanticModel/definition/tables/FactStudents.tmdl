@@ -1,0 +1,104 @@
+table FactStudents
+	lineageTag: 621a47b6-efb3-4d3a-a12d-89d42893e216
+
+	column Aar
+		dataType: int64
+		formatString: 0
+		lineageTag: 4af65bd3-2364-4fa4-81de-e87537f0ba04
+		summarizeBy: none
+		sourceColumn: Aar
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: e8808b68-263b-480f-9556-d04289e3d97c
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Registrerte_Studenter
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f06875b-6792-4542-b95b-8503de261efd
+		summarizeBy: sum
+		sourceColumn: Registrerte_Studenter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avlagte_Studiepoeng_Totalt
+		dataType: int64
+		formatString: 0
+		lineageTag: 40b48b37-8a89-4dcd-836e-9379c1f36768
+		summarizeBy: sum
+		sourceColumn: Avlagte_Studiepoeng_Totalt
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60_Helarsstudenter
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 92c89260-3cb0-43e1-a744-8b7617f52ebc
+		summarizeBy: sum
+		sourceColumn: SPE60_Helarsstudenter
+
+		annotation SummarizationSetBy = Automatic
+
+	column KD_Kategori1_SPE60
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 6f2d3c77-2933-4b36-b9a0-b7daf4d70166
+		summarizeBy: sum
+		sourceColumn: KD_Kategori1_SPE60
+
+		annotation SummarizationSetBy = Automatic
+
+	column KD_Kategori2_SPE60
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: a20f1402-045b-400a-8c27-e963323adb18
+		summarizeBy: sum
+		sourceColumn: KD_Kategori2_SPE60
+
+		annotation SummarizationSetBy = Automatic
+
+	column KD_Kategori3_SPE60
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: ca8cddcd-2dce-4e3e-a36a-fac7470deefd
+		summarizeBy: sum
+		sourceColumn: KD_Kategori3_SPE60
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bestattandel_Pct
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 1560ed8c-8e7e-4eef-8123-d230e139ceeb
+		summarizeBy: average
+		sourceColumn: Bestattandel_Pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gjennomforing_Normert_Pct
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 84ea8bf9-d6c2-43fe-89a6-37927a17bb50
+		summarizeBy: average
+		sourceColumn: Gjennomforing_Normert_Pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactStudents = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactStudents.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Aar", Int64.Type}, {"OrgKode", Int64.Type}, {"Registrerte_Studenter", Int64.Type}, {"Avlagte_Studiepoeng_Totalt", Int64.Type}, {"SPE60_Helarsstudenter", type number}, {"KD_Kategori1_SPE60", type number}, {"KD_Kategori2_SPE60", type number}, {"KD_Kategori3_SPE60", type number}, {"Bestattandel_Pct", type number}, {"Gjennomforing_Normert_Pct", type number}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

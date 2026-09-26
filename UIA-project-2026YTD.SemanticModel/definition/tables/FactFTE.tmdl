@@ -1,0 +1,103 @@
+table FactFTE
+	lineageTag: 5c638e03-f473-421f-ae29-c610ea076fe6
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 35451bc9-b088-42d3-8323-e111e8fce5f6
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 00ea4972-d5ac-4f08-97a2-fc4808e4832f
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_UF
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: ab502b36-169f-4a4e-8755-5626125baf55
+		summarizeBy: sum
+		sourceColumn: Aarsverk_UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_TA
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: ba7c6390-5946-4351-8848-b58ac3308dc1
+		summarizeBy: sum
+		sourceColumn: Aarsverk_TA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_Faktisk
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: c82ca777-ddd0-4948-9f42-dc191ebe9fff
+		summarizeBy: sum
+		sourceColumn: Aarsverk_Faktisk
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_Budsjett
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 2afd86b8-7a88-44ea-bd0f-89118a5d4de0
+		summarizeBy: sum
+		sourceColumn: Aarsverk_Budsjett
+
+		annotation SummarizationSetBy = Automatic
+
+	column Antall_Ansatte
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e526ba1-c17d-4547-b7eb-fd92cee76f46
+		summarizeBy: sum
+		sourceColumn: Antall_Ansatte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ubesatte_Vakanser
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 0ec64ac8-1b05-42e2-a008-b54e532718c6
+		summarizeBy: sum
+		sourceColumn: Ubesatte_Vakanser
+
+		annotation SummarizationSetBy = Automatic
+
+	column Faglig_Andel_Pct
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 14907054-60c7-4ee5-8bde-d8a9a00839ef
+		summarizeBy: average
+		sourceColumn: Faglig_Andel_Pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: a7422d8a-3cd6-4728-9197-5929b63290a5
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactFTE = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactFTE.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Aarsverk_UF", type number}, {"Aarsverk_TA", type number}, {"Aarsverk_Faktisk", type number}, {"Aarsverk_Budsjett", type number}, {"Antall_Ansatte", Int64.Type}, {"Ubesatte_Vakanser", type number}, {"Faglig_Andel_Pct", type number}, {"VersjonKode", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

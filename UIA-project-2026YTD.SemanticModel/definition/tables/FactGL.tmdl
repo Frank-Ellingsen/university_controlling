@@ -1,0 +1,91 @@
+table FactGL
+	lineageTag: 599e96e0-6367-49ed-9394-ab9ec441151c
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: ecd9404e-721d-4333-b75f-4c3ba689c24f
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: b1410c2c-4ff8-4a21-b75f-560da25a8ec5
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: b3692067-6dc9-4e44-9d98-8aab9dd0fea0
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontonavn
+		dataType: string
+		lineageTag: e269d3bf-0803-42c5-a3cb-c62394a05319
+		summarizeBy: none
+		sourceColumn: Kontonavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Artstype
+		dataType: string
+		lineageTag: f4c557cc-e78b-4de0-8a52-697c90aa7f30
+		summarizeBy: none
+		sourceColumn: Artstype
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kategori
+		dataType: string
+		lineageTag: 51bfee3e-4200-4d0d-b37c-6e92646c8439
+		summarizeBy: none
+		sourceColumn: Kategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column Belop_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: 9ae36310-625e-45d0-ab33-aa9756fb286b
+		summarizeBy: sum
+		sourceColumn: Belop_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Belop_signert_MNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: f6151d1e-6ac1-4973-8b33-3cef95fc427f
+		summarizeBy: sum
+		sourceColumn: Belop_signert_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 49212003-4ef1-4c28-a23f-44b58874d19d
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactGL = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactGL.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", Int64.Type}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Artstype", type text}, {"Kategori", type text}, {"Belop_MNOK", type number}, {"Belop_signert_MNOK", type number}, {"VersjonKode", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

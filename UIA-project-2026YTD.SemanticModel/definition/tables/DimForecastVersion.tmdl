@@ -1,0 +1,38 @@
+table DimForecastVersion
+	lineageTag: 4ad52690-1436-4545-92b8-5ebb153b9216
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 490c89bc-15c0-4d05-88e7-4e02d9ca5b25
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonNavn
+		dataType: string
+		lineageTag: 200d8c7e-418f-4a8f-ab23-7b58871f538d
+		summarizeBy: none
+		sourceColumn: VersjonNavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Beskrivelse
+		dataType: string
+		lineageTag: eacadd88-3cd8-4d8f-ae89-8e50f526a2d4
+		summarizeBy: none
+		sourceColumn: Beskrivelse
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimForecastVersion = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DimForecastVersion.csv"),[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"VersjonKode", type text}, {"VersjonNavn", type text}, {"Beskrivelse", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

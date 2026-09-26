@@ -11,5 +11,16 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref cultureInfo en-US
+ref table DimAccountHierarchy
+ref table DimDate
+ref table DimForecastVersion
+ref table DimOrganization
+ref table FactBudget
+ref table FactEVM
+ref table FactFTE
+ref table FactFacultyKPI
+ref table FactGL
+ref table FactStudents
+ref table _Measures
 
+ref cultureInfo en-US

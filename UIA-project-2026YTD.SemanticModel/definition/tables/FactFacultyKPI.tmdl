@@ -1,0 +1,192 @@
+table FactFacultyKPI
+	lineageTag: a32b3af0-199a-4732-8e9b-39985972977e
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 4866cc86-d937-4c61-9abb-5d76933d5e3e
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fakultet
+		dataType: string
+		lineageTag: 2682ef54-df57-4a3f-96d0-13a04feb22b9
+		summarizeBy: none
+		sourceColumn: Fakultet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Statlig_Bevilgning_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 3f34af7b-94d5-49fe-bf13-a8769d16548b
+		summarizeBy: sum
+		sourceColumn: Statlig_Bevilgning_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column BOA_Andre_Inntekt_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 74506866-a475-4787-baff-3d921d6ab223
+		summarizeBy: sum
+		sourceColumn: BOA_Andre_Inntekt_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Inntekt_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: cb10ac78-a036-4b34-b10e-9ae3fadba576
+		summarizeBy: sum
+		sourceColumn: Total_Inntekt_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lonnskostnader_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 9701af81-802e-4acf-8779-c043ed366809
+		summarizeBy: sum
+		sourceColumn: Lonnskostnader_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Driftskostnader_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 56dd5621-e793-4dc8-9348-ee45fe5e54fc
+		summarizeBy: sum
+		sourceColumn: Driftskostnader_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Investeringer_Capex_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 4da6207d-3c84-4c36-95f6-45b807dedf88
+		summarizeBy: sum
+		sourceColumn: Investeringer_Capex_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Kostnad_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 37a0ab42-0114-4e11-b16b-67bedadc6dbe
+		summarizeBy: sum
+		sourceColumn: Total_Kostnad_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Netto_Resultat_MNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 1f1381e6-e094-4647-94eb-0f2ed780d27a
+		summarizeBy: sum
+		sourceColumn: Netto_Resultat_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lonnsandel_Pct
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 95b095a3-03b6-4a13-b7ca-7d32f09b4083
+		summarizeBy: average
+		sourceColumn: Lonnsandel_Pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_UF
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 87705bad-627f-4935-a14e-27fac7bb968f
+		summarizeBy: sum
+		sourceColumn: Aarsverk_UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_TA
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 10c65853-012e-4f60-bea4-06758ac7e1fa
+		summarizeBy: sum
+		sourceColumn: Aarsverk_TA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Aarsverk
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: b0e05069-2f22-4faf-a139-ca99389037a0
+		summarizeBy: sum
+		sourceColumn: Total_Aarsverk
+
+		annotation SummarizationSetBy = Automatic
+
+	column Antall_Ansatte
+		dataType: int64
+		formatString: 0
+		lineageTag: 40b4d30a-98b4-4314-935c-26f2b6f82687
+		summarizeBy: sum
+		sourceColumn: Antall_Ansatte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Antall_Studenter
+		dataType: int64
+		formatString: 0
+		lineageTag: 14e14110-89b9-45b0-890d-a50b39afe69b
+		summarizeBy: sum
+		sourceColumn: Antall_Studenter
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60_Helarsstudenter
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 66f2c347-40cc-4522-a0ef-7d87eb08a7f5
+		summarizeBy: sum
+		sourceColumn: SPE60_Helarsstudenter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Studenter_Pr_Faglig_AV
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 679379ba-c2e0-475f-8208-cb2afecf3c7b
+		summarizeBy: average
+		sourceColumn: Studenter_Pr_Faglig_ÅV
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnad_Pr_SPE60_NOK
+		dataType: int64
+		formatString: #,##0
+		lineageTag: a319adc1-93da-4d07-9af0-1bb7afa38179
+		summarizeBy: average
+		sourceColumn: Kostnad_Pr_SPE60_NOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Status
+		dataType: string
+		lineageTag: d983519f-37fd-4daa-bfa3-c0c8189aca3a
+		summarizeBy: none
+		sourceColumn: RAG_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactFacultyKPI = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactFacultyKPI.csv"),[Delimiter=";", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Fakultet", type text}, {"Statlig_Bevilgning_MNOK", type number}, {"BOA_Andre_Inntekt_MNOK", type number}, {"Total_Inntekt_MNOK", type number}, {"Lonnskostnader_MNOK", type number}, {"Driftskostnader_MNOK", type number}, {"Investeringer_Capex_MNOK", type number}, {"Total_Kostnad_MNOK", type number}, {"Netto_Resultat_MNOK", type number}, {"Lonnsandel_Pct", type number}, {"Aarsverk_UF", type number}, {"Aarsverk_TA", type number}, {"Total_Aarsverk", type number}, {"Antall_Ansatte", Int64.Type}, {"Antall_Studenter", Int64.Type}, {"SPE60_Helarsstudenter", type number}, {"Studenter_Pr_Faglig_ÅV", type number}, {"Kostnad_Pr_SPE60_NOK", Int64.Type}, {"RAG_Status", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table
