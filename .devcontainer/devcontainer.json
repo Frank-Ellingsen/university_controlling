@@ -1,0 +1,26 @@
+{
+  "name": "UiA Controller Analytics (Python & DuckDB)",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "tobil.duckdb",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "forwardPorts": [8000],
+  "remoteUser": "controller"
+}

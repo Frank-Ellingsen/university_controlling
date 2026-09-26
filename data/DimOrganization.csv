@@ -1,0 +1,8 @@
+﻿OrgKode;Enhet;Kortnavn;OverordnetEnhet;Nivaa;Type
+1000;Universitetet i Agder (UiA);UiA;;1;Toppnivå
+1100;Handelshøyskolen ved UiA;HHU;1000;2;Fakultet
+1200;Fakultet for teknologi og realfag;TEK;1000;2;Fakultet
+1300;Fakultet for helse- og idrettsvitenskap;HEL;1000;2;Fakultet
+1400;Fakultet for samfunnsvitenskap;SAM;1000;2;Fakultet
+1500;Fakultet for humaniora og pedagogikk;HUM;1000;2;Fakultet
+1900;Fellesadministrasjon & Fellesdrift;ADM;1000;2;Fellesenhet

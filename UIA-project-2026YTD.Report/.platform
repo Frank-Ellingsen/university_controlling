@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "UIA-project-2026YTD"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3463b399-d4e5-4aa7-9ed0-002780240981"
+  }
+}

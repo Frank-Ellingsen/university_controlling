@@ -1,0 +1,30 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Power BI PBIP and Fabric items
+*.pbip text eol=lf
+*.pbir text eol=lf
+*.pbism text eol=lf
+*.tmdl text eol=lf
+*.json text eol=lf
+
+# Code and configuration
+*.py text eol=lf
+*.m text eol=lf
+*.dax text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+Dockerfile text eol=lf
+
+# Binary files
+*.pbix binary
+*.pdf binary
+*.xlsx binary
+*.xls binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.duckdb binary

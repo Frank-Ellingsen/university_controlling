@@ -1,0 +1,49 @@
+# ==============================================================================
+# Universitetet i Agder (UiA) - Docker Compose Orchestration
+# Starter controller-analytics container med direkte kobling til lokal Ollama/LM Studio
+# Forfatter: Frank Ellingsen (Project Controller)
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  controller-analytics:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: uia-controller-analytics
+    env_file:
+      - .env.example
+    environment:
+      - PYTHONUNBUFFERED=1
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    volumes:
+      # Bind-mount lokale mapper for umiddelbar oppdatering ved endring i data og skript
+      - ./data:/workspace/data
+      - ./scripts:/workspace/scripts
+      - ./powerbi:/workspace/powerbi
+      - ./references:/workspace/references
+      - ./docs:/workspace/docs
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      # Tillater containeren å kommunisere med lokal Ollama på vertmaskinen (Windows)
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    command: ["python", "scripts/verify_reporting_rules.py"]
+
+  # Tilleggstjeneste for interaktive tester og DuckDB ad-hoc spørringer
+  controller-shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: uia-controller-shell
+    env_file:
+      - .env.example
+    volumes:
+      - .:/workspace
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    profiles:
+      - dev
+    command: ["/bin/bash"]

@@ -1,0 +1,53 @@
+name: UiA Controller CI & Data Validation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-data-and-reports:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install duckdb==1.5.3 pandas openpyxl pyyaml pytest
+
+    - name: Run Data Integrity Unit Tests
+      run: |
+        python -m unittest scripts/test_data_integrity.py
+
+    - name: Run Controller Accounting & EVM Verification
+      run: |
+        python scripts/verify_reporting_rules.py
+
+    - name: Test DuckDB Database Build & Views
+      run: |
+        python scripts/build_duckdb.py
+
+    - name: Validate Power BI PBIP Structure
+      run: |
+        python -c "
+        import json, os
+        assert os.path.exists('UIA-project-2026YTD.pbip'), 'Missing UIA-project-2026YTD.pbip'
+        assert os.path.isdir('UIA-project-2026YTD.Report'), 'Missing Report folder'
+        assert os.path.isdir('UIA-project-2026YTD.SemanticModel'), 'Missing SemanticModel folder'
+        with open('UIA-project-2026YTD.pbip') as f:
+            data = json.load(f)
+            assert data['version'] == '1.0'
+        print('PBIP structure valid.')
+        "

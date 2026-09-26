@@ -1,0 +1,433 @@
+﻿DatoNokkel;OrgKode;Konto;Kontonavn;Artstype;Kategori;Budsjett_MNOK;Budsjett_signert_MNOK;VersjonKode
+202601;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202601;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202601;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202601;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202601;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202601;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202601;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202601;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202601;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202601;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202601;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202601;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202601;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202601;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202601;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202601;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202601;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202601;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202601;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202601;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202601;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202601;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202601;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202601;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202601;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202601;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202601;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202601;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202601;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202601;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202601;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202601;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202601;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202601;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202601;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202601;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202602;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202602;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202602;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202602;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202602;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202602;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202602;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202602;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202602;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202602;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202602;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202602;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202602;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202602;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202602;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202602;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202602;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202602;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202602;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202602;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202602;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202602;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202602;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202602;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202602;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202602;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202602;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202602;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202602;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202602;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202602;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202602;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202602;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202602;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202602;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202602;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202603;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202603;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202603;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202603;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202603;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202603;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202603;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202603;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202603;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202603;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202603;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202603;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202603;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202603;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202603;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202603;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202603;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202603;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202603;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202603;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202603;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202603;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202603;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202603;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202603;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202603;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202603;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202603;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202603;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202603;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202603;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202603;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202603;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202603;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202603;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202603;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202604;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202604;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202604;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202604;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202604;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202604;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202604;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202604;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202604;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202604;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202604;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202604;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202604;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202604;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202604;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202604;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202604;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202604;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202604;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202604;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202604;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202604;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202604;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202604;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202604;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202604;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202604;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202604;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202604;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202604;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202604;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202604;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202604;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202604;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202604;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202604;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202605;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202605;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202605;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202605;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202605;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202605;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202605;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202605;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202605;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202605;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202605;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202605;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202605;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202605;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202605;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202605;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202605;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202605;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202605;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202605;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202605;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202605;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202605;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202605;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202605;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202605;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202605;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202605;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202605;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202605;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202605;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202605;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202605;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202605;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202605;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202605;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202606;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202606;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202606;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202606;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;21.243;21.243;BUD2026
+202606;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202606;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202606;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202606;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202606;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202606;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;30.183;30.183;BUD2026
+202606;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202606;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202606;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202606;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202606;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202606;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;25.707;25.707;BUD2026
+202606;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202606;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202606;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202606;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202606;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202606;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.529;14.529;BUD2026
+202606;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202606;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202606;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202606;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202606;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202606;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;11.178;11.178;BUD2026
+202606;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202606;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202606;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202606;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202606;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202606;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;8.94;8.94;BUD2026
+202606;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202606;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202607;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202607;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202607;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202607;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202607;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202607;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202607;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202607;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202607;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202607;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202607;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202607;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202607;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202607;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202607;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202607;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202607;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202607;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202607;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202607;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202607;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202607;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202607;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202607;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202607;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202607;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202607;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202607;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202607;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202607;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202607;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202607;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202607;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202607;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202607;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202607;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202608;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202608;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202608;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202608;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202608;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202608;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202608;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202608;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202608;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202608;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202608;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202608;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202608;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202608;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202608;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202608;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202608;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202608;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202608;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202608;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202608;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202608;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202608;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202608;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202608;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202608;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202608;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202608;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202608;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202608;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202608;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202608;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202608;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202608;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202608;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202608;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202609;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202609;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202609;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202609;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202609;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202609;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202609;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202609;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202609;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202609;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202609;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202609;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202609;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202609;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202609;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202609;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202609;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202609;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202609;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202609;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202609;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202609;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202609;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202609;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202609;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202609;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202609;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202609;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202609;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202609;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202609;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202609;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202609;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202609;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202609;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202609;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202610;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202610;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202610;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202610;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202610;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202610;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202610;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202610;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202610;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202610;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202610;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202610;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202610;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202610;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202610;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202610;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202610;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202610;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202610;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202610;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202610;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202610;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202610;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202610;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202610;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202610;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202610;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202610;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202610;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202610;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202610;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202610;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202610;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202610;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202610;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202610;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202611;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202611;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202611;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202611;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202611;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202611;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202611;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202611;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202611;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202611;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202611;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202611;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202611;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202611;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202611;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202611;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202611;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202611;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202611;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202611;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202611;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202611;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202611;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202611;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202611;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202611;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202611;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202611;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202611;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202611;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202611;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202611;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202611;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202611;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202611;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202611;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202612;1100;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;20.567;-20.567;BUD2026
+202612;1100;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.833;-1.833;BUD2026
+202612;1100;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.65;-0.65;BUD2026
+202612;1100;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;14.162;14.162;BUD2026
+202612;1100;6300;Andre driftskostnader;Kostnad;Driftskostnader;5.407;5.407;BUD2026
+202612;1100;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.533;2.533;BUD2026
+202612;1200;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;27.767;-27.767;BUD2026
+202612;1200;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);4.0;-4.0;BUD2026
+202612;1200;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.633;-1.633;BUD2026
+202612;1200;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;20.122;20.122;BUD2026
+202612;1200;6300;Andre driftskostnader;Kostnad;Driftskostnader;7.684;7.684;BUD2026
+202612;1200;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);4.667;4.667;BUD2026
+202612;1300;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;23.65;-23.65;BUD2026
+202612;1300;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);2.083;-2.083;BUD2026
+202612;1300;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.233;-1.233;BUD2026
+202612;1300;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;17.138;17.138;BUD2026
+202612;1300;6300;Andre driftskostnader;Kostnad;Driftskostnader;6.545;6.545;BUD2026
+202612;1300;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);2.8;2.8;BUD2026
+202612;1400;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;13.367;-13.367;BUD2026
+202612;1400;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);1.25;-1.25;BUD2026
+202612;1400;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.742;-0.742;BUD2026
+202612;1400;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;9.686;9.686;BUD2026
+202612;1400;6300;Andre driftskostnader;Kostnad;Driftskostnader;3.7;3.7;BUD2026
+202612;1400;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026
+202612;1500;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;10.283;-10.283;BUD2026
+202612;1500;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.833;-0.833;BUD2026
+202612;1500;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;0.492;-0.492;BUD2026
+202612;1500;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;7.452;7.452;BUD2026
+202612;1500;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.846;2.846;BUD2026
+202612;1500;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);0.933;0.933;BUD2026
+202612;1900;3900;Inntekt fra bevilgninger;Inntekt;Statlig Bevilgning;7.2;-7.2;BUD2026
+202612;1900;3400;Tilskudd fra NFR/EU (BOA);Inntekt;Forskning (BOA);0.25;-0.25;BUD2026
+202612;1900;3670;Salgs- og oppdragsinntekt;Inntekt;Andre Inntekter;1.583;-1.583;BUD2026
+202612;1900;5000;Lønn og sosiale kostnader;Kostnad;Lønnskostnader;5.96;5.96;BUD2026
+202612;1900;6300;Andre driftskostnader;Kostnad;Driftskostnader;2.277;2.277;BUD2026
+202612;1900;6050;Investeringer og avskrivninger;Kostnad;Investeringer (Capex);1.2;1.2;BUD2026

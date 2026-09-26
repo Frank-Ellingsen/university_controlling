@@ -1,0 +1,176 @@
+// ==============================================================================
+// Universitetet i Agder (UiA) - Power BI DAX Måltallskatalog
+// Strukturert etter visningsmapper (Display Folders) for optimal modellorden
+// Forfatter: Frank Ellingsen (Project Controller)
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// Folder: _01 Regnskap & YTD (Base Accounting & YTD)
+// ------------------------------------------------------------------------------
+
+Actual YTD = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert_MNOK]),
+    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026"
+)
+
+Budsjett YTD = 
+CALCULATE(
+    SUM('FactBudget'[Budsjett_signert_MNOK]),
+    'DimDate'[StatusPr30Sep] = "Actual"
+)
+
+Avvik YTD = 
+[Actual YTD] - [Budsjett YTD]
+
+Avvik YTD % = 
+DIVIDE([Avvik YTD], ABS([Budsjett YTD]), 0)
+
+Actual YTD Kostnad = 
+CALCULATE(
+    SUM('FactGL'[Belop_MNOK]),
+    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026",
+    'FactGL'[Artstype] = "Kostnad"
+)
+
+Actual YTD Inntekt = 
+CALCULATE(
+    SUM('FactGL'[Belop_MNOK]),
+    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026",
+    'FactGL'[Artstype] = "Inntekt"
+)
+
+
+// ------------------------------------------------------------------------------
+// Folder: _02 Prognose & EAC (Forecast & Year-End Estimates)
+// ------------------------------------------------------------------------------
+
+Forecast Q4 = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert_MNOK]),
+    'FactGL'[VersjonKode] = "FC_Q4_2026"
+)
+
+Forecast LE (EAC) = 
+[Actual YTD] + [Forecast Q4]
+
+Årsbudsjett (BAC) = 
+SUM('FactBudget'[Budsjett_signert_MNOK])
+
+Sluttavvik (VAC) = 
+[Årsbudsjett (BAC)] - [Forecast LE (EAC)]
+
+VAC % = 
+DIVIDE([Sluttavvik (VAC)], ABS([Årsbudsjett (BAC)]), 0)
+
+
+// ------------------------------------------------------------------------------
+// Folder: _03 EVM (Earned Value Management)
+// ------------------------------------------------------------------------------
+
+Planned Value (PV) = 
+SUM('FactEVM'[Planned_Value_PV_MNOK])
+
+Earned Value (EV) = 
+SUM('FactEVM'[Earned_Value_EV_MNOK])
+
+Actual Cost (AC) = 
+SUM('FactEVM'[Actual_Cost_AC_MNOK])
+
+CPI = 
+DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
+
+SPI = 
+DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
+
+Cost Variance (CV) = 
+[Earned Value (EV)] - [Actual Cost (AC)]
+
+Schedule Variance (SV) = 
+[Earned Value (EV)] - [Planned Value (PV)]
+
+
+// ------------------------------------------------------------------------------
+// Folder: _04 Bemanning & FTE (Staffing & Capacity KPIs)
+// ------------------------------------------------------------------------------
+
+Totale Årsverk = 
+CALCULATE(
+    SUM('FactFTE'[Aarsverk_Faktisk]),
+    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+)
+
+Faglige Årsverk (UF) = 
+CALCULATE(
+    SUM('FactFTE'[Aarsverk_UF]),
+    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+)
+
+Teknisk-Admin Årsverk (TA) = 
+CALCULATE(
+    SUM('FactFTE'[Aarsverk_TA]),
+    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+)
+
+Ubesatte Vakanser = 
+CALCULATE(
+    SUM('FactFTE'[Ubesatte_Vakanser]),
+    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+)
+
+Faglig Andel % = 
+DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)
+
+Lønnsandel % = 
+VAR Lonn = CALCULATE(SUM('FactGL'[Belop_MNOK]), 'DimAccountHierarchy'[Nivaa1_Navn] = "Lønnskostnader")
+VAR TotalKost = CALCULATE(SUM('FactGL'[Belop_MNOK]), 'FactGL'[Artstype] = "Kostnad")
+RETURN DIVIDE(Lonn, TotalKost, 0)
+
+
+// ------------------------------------------------------------------------------
+// Folder: _05 Utdanning & Studiepoeng (Student & Production KPIs)
+// ------------------------------------------------------------------------------
+
+Registrerte Studenter = 
+SUM('FactStudents'[Registrerte_Studenter])
+
+Avlagte SPE60 = 
+SUM('FactStudents'[SPE60_Helarsstudenter])
+
+Studenter pr UF-Årsverk = 
+DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)
+
+Enhetskostnad pr SPE60 = 
+DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)
+
+KD Resultatbevilgning MNOK = 
+VAR Kat1 = SUM('FactStudents'[KD_Kategori1_SPE60]) * 54550
+VAR Kat2 = SUM('FactStudents'[KD_Kategori2_SPE60]) * 81800
+VAR Kat3 = SUM('FactStudents'[KD_Kategori3_SPE60]) * 190900
+RETURN DIVIDE(Kat1 + Kat2 + Kat3, 1000000, 0)
+
+
+// ------------------------------------------------------------------------------
+// Folder: _06 RAG & Betinget Formatering (RAG & Conditional Formatting)
+// ------------------------------------------------------------------------------
+
+Forecast RAG Status = 
+IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
+    IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)",
+        "🔴 Kritisk overskridelse (> 5%)"
+    )
+)
+
+RAG Hex Color = 
+IF([Sluttavvik (VAC)] >= 0, "#10b981", // Emerald Green
+    IF([VAC %] >= -0.05, "#f59e0b", // Amber Warning
+        "#ef4444" // Crimson Alert
+    )
+)
+
+CPI Hex Color = 
+IF([CPI] >= 1.0, "#10b981",
+    IF([CPI] >= 0.95, "#f59e0b",
+        "#ef4444"
+    )
+)

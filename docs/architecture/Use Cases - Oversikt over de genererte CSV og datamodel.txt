@@ -1,0 +1,33 @@
+Oversikt over de genererte CSV-tabellene og Use Cases
+1. Faktatabeller (Fact Tables)
+FactGL.csv (Regnskap / Actuals 2026)
+Inneholder regnskapstransaksjoner per måned for 2026 med spesifikke posteringer for:
+Use Case 1 (F-05-20 Avsetningskontroll): Akkumulert ubenyttet rammebevilgning (konto 2080) som overstiger 5 %-grensen ved Q2/Q3 for FAK-TR pga. utstyrsforsinkelser.
+Use Case 2 (SRS 10 Motsatt sammenstilling): Periodisert inntektsføring av NFR/EU-bidragsmidler (konto 3400/3420) direkte motløpende prosjektkostnader, samt balanseføring av mottatt forskuddsbetaling (konto 2180).
+Use Case 3 (SRS 9 Oppdragsforskning & Tapskontrakter): Oppdrag EVU001 med merforbruk som utløser umiddelbar avsetning for forventet tap (konto 7790/2800).
+Use Case 4 (SRS 17 Aktivering av anleggsmidler): Investering i ny serverpark på kr 1 200 000 (>50k kr) aktivert på konto 1250 mot kontofinansiering (2050), samt månedlige ordinære avskrivninger (6050).
+Use Case 5 (FOA Anskaffelsesavvik): Konsulentinnleie på konto 6710 (kr 620 000 eks. mva.) uten rammeavtale, flagget for anbudsoppfølging.
+Use Case 6 (Lønnsavvik & Sykepenger): Overtid praksisoppfølging (konto 5050) og NAV-sykepengerefusjoner (konto 5800).
+FactBudget.csv (Budsjett, Forecasts & Langtidsprognoser)
+Inneholder tall for alle styringsscenarier:
+BUD2026: Vedtatt årsbudsjett 2026.
+FC1_2026 & FC2_2026: Rullende prognoser etter T1 (april) og T2 (august).
+LE_2026: Latest Estimate for årsavslutning (Q4).
+PROG2027, PROG2028, PROG2029: 3-årige langtidsprognoser basert på KDs nye modell.
+FactFTE.csv (Årsverk & Bemanningsanalyse)
+Sammenligner faktiske årsverk (Actual) mot budsjett og prognose for stillingsgruppene PROF, FORST, REKR, ADM og TEK, og synliggjør vakanser og ubesatte stipendiatstillinger.
+FactStudyPoints.csv (Studiepoeng & KDs 2025-modell)
+Beregner avlagte studiepoeng (SPE60) og inntekt for utdanninger i Kategori 1 (kr 54 550), Kategori 2 (kr 81 800) og Kategori 3 (kr 190 900), og simulerer frafall og fallende studenttall for Samfunnsvitenskap (I013BA).
+FactAction.csv (Omstillingstiltak / FactAction)
+Kobler 6 konkrete tiltaksplaner direkte til avvikene i regnskapet og budsjettet, med oppfølging av ansvarlig rolle, start-/fristdatoer, forventet vs. realisert kroneeffekt, prioritet og RAG-status.
+FactProjectBOA.csv (BOA Prosjektcontrolling & TDI-kalkyle)
+Gjennomfører TDI-kalkyle (frikjøp, direkte drift, overhead/IK ~22 %, leiested) for NFR-, EU- og oppdragsprosjekter. Måler % tid gått vs. % budsjett forbrukt og angir RAG-status (Grønn, Gul, Rød).
+2. Dimensjonstabeller (Dim Tables) & Relasjoner
+DimOrganization.csv: UiA-organisasjonsstruktur (Fakultet, Institutt, Koststed og skille mellom Drift/Prosjekt).
+DimAccount.csv & DimAccountClass.csv: Norsk standard kontoplan med SRS-regnskapslinjer og balansekontoer.
+DimProject.csv: Prosjektregister (DRIFT, INV001, NFR001, EU001, EVU001, osv.).
+DimStudyProgram.csv: Studieprogram ved UiA med nivaa, normerte poeng og KDs kategoriplassering.
+DimPositionGroup.csv: Stillingsgrupper (Vitenskapelig, Rekruttering, Teknisk-administrativ).
+DimForecastVersion.csv: Versjonsstyring for budsjett og prognoser.
+DimDate.csv: Datoserie for periodene 2026–2029 (DatoNokkel, År, Kvartal, ÅrMåned).
+Relationships.csv: Definerer kardinalitet og kryssfiltrering for importering til Power BI desktop.

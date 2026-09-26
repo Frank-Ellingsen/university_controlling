@@ -1,0 +1,48 @@
+# Power BI PBIP Desktop Cache & User Settings
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/editorSettings.json
+*.tmp
+temp/
+
+# Excel & Office temporary lock files
+~$*
+*.~*
+
+# Local Analytical Databases
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.sqlite3
+*.db
+
+# Python & Testing artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets & Local Environment
+.env
+.env.local
+.env.*.local
+
+# OS Artifacts
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+
+# IDE Artifacts
+.idea/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
