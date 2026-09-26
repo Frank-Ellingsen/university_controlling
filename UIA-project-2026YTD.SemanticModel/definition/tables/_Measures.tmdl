@@ -6,7 +6,7 @@ table _Measures
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: c3fbaf22-88e9-4f86-a6be-7ea55c48d190
 
@@ -15,12 +15,12 @@ table _Measures
 			    SUM('FactBudget'[Budsjett_signert_MNOK]),
 			    'DimDate'[StatusPr30Sep] = "Actual"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: fb3f9dee-2a3a-47bb-841b-4f1d2fd15bc2
 
 	measure 'Avvik YTD' = [Actual YTD] - [Budsjett YTD]
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: 546a11cd-e92a-4981-90a1-b039b7ab7893
 
@@ -34,22 +34,22 @@ table _Measures
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[VersjonKode] = "FC_Q4_2026"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _02 Prognose & EAC
 		lineageTag: a793c3b1-0bf0-4d3d-a5f1-6956adbd7c7c
 
 	measure 'Forecast LE (EAC)' = [Actual YTD] + [Forecast Q4]
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _02 Prognose & EAC
 		lineageTag: 6ac5faff-5a29-4e60-8e8a-ace8319dc64b
 
 	measure 'Årsbudsjett (BAC)' = SUM('FactBudget'[Budsjett_signert_MNOK])
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _02 Prognose & EAC
 		lineageTag: 0517c85c-ec01-454b-a01c-4570a3e462d3
 
 	measure 'Sluttavvik (VAC)' = [Årsbudsjett (BAC)] - [Forecast LE (EAC)]
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _02 Prognose & EAC
 		lineageTag: e717eedb-ed87-46a9-bf04-bad285d3b49a
 
@@ -140,7 +140,7 @@ table _Measures
 			VAR Kat2 = SUM('FactStudents'[KD_Kategori2_SPE60]) * 81800
 			VAR Kat3 = SUM('FactStudents'[KD_Kategori3_SPE60]) * 190900
 			RETURN DIVIDE(Kat1 + Kat2 + Kat3, 1000000, 0)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _05 Utdanning
 		lineageTag: b1ac72eb-aab0-48b4-803e-9e4ca8e03d4e
 
@@ -183,12 +183,12 @@ table _Measures
 		lineageTag: e8a12348-0de1-43b4-8a30-4aff406f9676
 
 	measure 'EAC (EVM)' = DIVIDE([Årsbudsjett (BAC)], [CPI], [Årsbudsjett (BAC)])
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _03 EVM
 		lineageTag: e8a12349-0de1-43b4-8a30-4aff406f9677
 
 	measure 'VAC (EVM)' = [Årsbudsjett (BAC)] - [EAC (EVM)]
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _03 EVM
 		lineageTag: e8a12350-0de1-43b4-8a30-4aff406f9678
 
@@ -237,11 +237,13 @@ table _Measures
 			    15, [Faglige Årsverk (UF)],
 			    16, [Teknisk-Admin Årsverk (TA)],
 			    17, [Faglig Andel %],
-			    18, [Registrerte Studenter],
-			    19, [Avlagte SPE60],
-			    20, [Studenter pr UF-Årsverk],
-			    21, [Enhetskostnad pr SPE60],
-			    22, [KD Resultatbevilgning MNOK],
+			    18, [Lønnsandel %],
+			    19, [Registrerte Studenter],
+			    20, [Avlagte SPE60],
+			    21, [Studenter pr UF-Årsverk],
+			    22, [Enhetskostnad pr SPE60],
+			    23, [KD Resultatbevilgning MNOK],
+			    24, [Omstilling Udekket Gap],
 			    BLANK()
 			)
 		formatString: #,##0.00
@@ -259,6 +261,7 @@ table _Measures
 			    12, 1.0,
 			    13, 1.0,
 			    17, 0.60,
+			    18, 0.71,
 			    BLANK()
 			)
 		formatString: #,##0.00
@@ -279,6 +282,8 @@ table _Measures
 			    12, [CPI] - 1.0,
 			    13, [SPI] - 1.0,
 			    17, [Faglig Andel %] - 0.60,
+			    18, [Lønnsandel %] - 0.71,
+			    24, [Omstilling Udekket Gap],
 			    BLANK()
 			)
 		formatString: #,##0.00
@@ -301,6 +306,10 @@ table _Measures
 			            IF([SPI] >= 0.95, "🟡 Moderat forsinket", "🔴 Kritisk forsinket")),
 			    KpiId = 17,
 			        IF([Faglig Andel %] >= 0.60, "🟢 Mål nådd (>= 60%)", "🟡 Under måltall (< 60%)"),
+			    KpiId = 18,
+			        IF([Lønnsandel %] <= 0.71, "🟢 Under sektormål (<= 71%)", "🔴 Over sektormål (> 71%)"),
+			    KpiId = 24,
+			        IF([Omstilling Udekket Gap] <= 0, "🟢 Gap lukket", "🟡 Udekket gap krever styring"),
 			    "⚪ Nøytral"
 			)
 		displayFolder: _06 Scorecard & KPI
@@ -357,7 +366,7 @@ table _Measures
 			    'DimAccountHierarchy'[Nivaa2_Kontogruppe] = "34",
 			    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: b8a12352-0de1-43b4-8a30-4aff406f9680
 
@@ -376,7 +385,7 @@ table _Measures
 		lineageTag: b8a12354-0de1-43b4-8a30-4aff406f9682
 
 	measure '5% Avsetningsgrense (F-05-20)' = [Årsbudsjett (BAC)] * 0.05
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _02 Prognose & EAC
 		lineageTag: b8a12355-0de1-43b4-8a30-4aff406f9683
 
@@ -481,7 +490,7 @@ table _Measures
 		lineageTag: d9a12366-0de1-43b4-8a30-4aff406f9694
 
 	measure 'Actual MoM Endring MNOK' = 3.50
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: b1a12367-0de1-43b4-8a30-4aff406f9695
 
@@ -504,7 +513,7 @@ table _Measures
 			    "UiA", 3.50,
 			    3.50
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: b1a12369-0de1-43b4-8a30-4aff406f9697
 
@@ -542,17 +551,17 @@ table _Measures
 		lineageTag: b1a12373-0de1-43b4-8a30-4aff406f9701
 
 	measure 'CPI MoM Endring' = 0.01
-		formatString: +0.00;-0.00;0.00
+		formatString: "+0.00;-0.00;0.00"
 		displayFolder: _03 EVM
 		lineageTag: b1a12374-0de1-43b4-8a30-4aff406f9702
 
 	measure 'SPI MoM Endring' = 0.00
-		formatString: +0.00;-0.00;0.00
+		formatString: "+0.00;-0.00;0.00"
 		displayFolder: _03 EVM
 		lineageTag: b1a12375-0de1-43b4-8a30-4aff406f9703
 
 	measure 'Årsverk MoM Endring (FTE)' = 3.0
-		formatString: +0.0;-0.0;0.0
+		formatString: "+0.0;-0.0;0.0"
 		displayFolder: _04 Bemanning & FTE
 		lineageTag: b1a12376-0de1-43b4-8a30-4aff406f9704
 
@@ -582,8 +591,8 @@ table _Measures
 		lineageTag: b1a12382-0de1-43b4-8a30-4aff406f9710
 
 	measure 'Revenue Variance Indicator' =
-			VAR Budget = [Årsbudsjett (BAC)]
-			VAR Forecast = [Forecast LE (EAC)]
+			VAR Budget = 1433.0
+			VAR Forecast = [Total Inntekt MNOK]
 			VAR Diff = Forecast - Budget
 			VAR Pct = DIVIDE(Diff, Budget, 0)
 			RETURN
@@ -635,7 +644,7 @@ table _Measures
 			    'DimDate'[Dato] <= MaxDate,
 			    ALLSELECTED('DimDate')
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _02 Prognose & EAC
 		lineageTag: e1a12389-0de1-43b4-8a30-4aff406f9717
 
@@ -647,7 +656,7 @@ table _Measures
 			    'DimDate'[Dato] <= MaxDate,
 			    ALLSELECTED('DimDate')
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _02 Prognose & EAC
 		lineageTag: e1a12390-0de1-43b4-8a30-4aff406f9718
 
@@ -666,7 +675,7 @@ table _Measures
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Kategori] = "Lønnskostnader"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12394-0de1-43b4-8a30-4aff406f9722
 
@@ -675,7 +684,7 @@ table _Measures
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Kategori] = "Driftskostnader"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12395-0de1-43b4-8a30-4aff406f9723
 
@@ -684,7 +693,7 @@ table _Measures
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Kategori] = "Investeringer (Capex)"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12396-0de1-43b4-8a30-4aff406f9724
 
@@ -693,7 +702,7 @@ table _Measures
 			    SUM('FactGL'[Belop_signert_MNOK]),
 			    'FactGL'[Artstype] = "Kostnad"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12397-0de1-43b4-8a30-4aff406f9725
 
@@ -702,7 +711,7 @@ table _Measures
 			    SUM('FactGL'[Belop_MNOK]),
 			    'FactGL'[Artstype] = "Inntekt"
 			)
-		formatString: #,##0.00
+		formatString: #,##0.0
 		displayFolder: _01 Regnskap & YTD
 		lineageTag: e1a12398-0de1-43b4-8a30-4aff406f9726
 

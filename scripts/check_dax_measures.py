@@ -19,7 +19,7 @@ for line in content.splitlines():
         current_m = m.group(1).strip()
         current_lines = [m.group(2).strip()] if m.group(2).strip() else []
     elif current_m:
-        if line.startswith("\t\t") and not line.strip().startswith(("formatString:", "displayFolder:", "lineageTag:", "annotation")):
+        if line.startswith("\t\t") and not line.strip().startswith(("formatString:", "formatStringDefinition", "displayFolder:", "lineageTag:", "annotation")):
             current_lines.append(line.strip())
         elif line.startswith("\t") and not line.startswith("\t\t"):
             # next measure or property

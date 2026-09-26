@@ -177,11 +177,13 @@ SWITCH(
     15, [Faglige Årsverk (UF)],
     16, [Teknisk-Admin Årsverk (TA)],
     17, [Faglig Andel %],
-    18, [Registrerte Studenter],
-    19, [Avlagte SPE60],
-    20, [Studenter pr UF-Årsverk],
-    21, [Enhetskostnad pr SPE60],
-    22, [KD Resultatbevilgning MNOK],
+    18, [Lønnsandel %],
+    19, [Registrerte Studenter],
+    20, [Avlagte SPE60],
+    21, [Studenter pr UF-Årsverk],
+    22, [Enhetskostnad pr SPE60],
+    23, [KD Resultatbevilgning MNOK],
+    24, [Omstilling Udekket Gap],
     BLANK()
 )
 
@@ -196,6 +198,7 @@ SWITCH(
     12, 1.0,
     13, 1.0,
     17, 0.60,
+    18, 0.71,
     BLANK()
 )
 
@@ -213,6 +216,8 @@ SWITCH(
     12, [CPI] - 1.0,
     13, [SPI] - 1.0,
     17, [Faglig Andel %] - 0.60,
+    18, [Lønnsandel %] - 0.71,
+    24, [Omstilling Udekket Gap],
     BLANK()
 )
 
@@ -232,6 +237,10 @@ SWITCH(
             IF([SPI] >= 0.95, "🟡 Moderat forsinket", "🔴 Kritisk forsinket")),
     KpiId = 17,
         IF([Faglig Andel %] >= 0.60, "🟢 Mål nådd (>= 60%)", "🟡 Under måltall (< 60%)"),
+    KpiId = 18,
+        IF([Lønnsandel %] <= 0.71, "🟢 Under sektormål (<= 71%)", "🔴 Over sektormål (> 71%)"),
+    KpiId = 24,
+        IF([Omstilling Udekket Gap] <= 0, "🟢 Gap lukket", "🟡 Udekket gap krever styring"),
     "⚪ Nøytral"
 )
 
@@ -453,8 +462,8 @@ Omstilling Card Subtitle = "Udekket gap | Planlagt: -15M | Realisert: -9M | 🟡
 // ------------------------------------------------------------------------------
 
 Revenue Variance Indicator = 
-VAR Budget = [Årsbudsjett (BAC)]
-VAR Forecast = [Forecast LE (EAC)]
+VAR Budget = 1433.0
+VAR Forecast = [Total Inntekt MNOK]
 VAR Diff = Forecast - Budget
 VAR Pct = DIVIDE(Diff, Budget, 0)
 RETURN

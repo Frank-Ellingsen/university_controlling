@@ -23,17 +23,33 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Forecast LE (EAC)"
+                  "Property": "Total Inntekt MNOK"
                 }
               },
-              "queryRef": "_Measures.Forecast LE (EAC)",
-              "nativeQueryRef": "Forecast LE (EAC)"
+              "queryRef": "_Measures.Total Inntekt MNOK",
+              "nativeQueryRef": "Total Inntekt MNOK"
             }
           ]
         }
       }
     },
     "objects": {
+      "value": [
+        {
+          "properties": {
+            "displayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
       "accentBar": [
         {
           "properties": {

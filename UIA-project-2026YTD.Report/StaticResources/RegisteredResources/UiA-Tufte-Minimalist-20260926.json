@@ -114,6 +114,7 @@
                 "color": "#1E293B"
               }
             },
+            "displayUnits": 0,
             "$id": "default"
           }
         ],
@@ -133,6 +134,15 @@
           {
             "show": false,
             "$id": "default"
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "displayUnits": 0
           }
         ]
       }

@@ -61,6 +61,19 @@ def create_card_visual(name, x, y, width, height, z, measure_name, title_text, t
                     "text": {"expr": {"Literal": {"Value": f"'{title_text}'"}}}
                 }
             }
+        ],
+        "labels": [
+            {
+                "properties": {
+                    "displayUnits": {
+                        "expr": {
+                            "Literal": {
+                                "Value": "0D"
+                            }
+                        }
+                    }
+                }
+            }
         ]
     }
     if subtitle_text:
