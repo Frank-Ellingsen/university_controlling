@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "vis_kpi_students_spe",
   "position": {
     "x": 1540,
     "y": 105,
     "z": 20,
-    "width": 360,
     "height": 115,
+    "width": 360,
     "tabOrder": 9
   },
   "visual": {
@@ -36,15 +36,7 @@
     "objects": {
       "value": [
         {
-          "properties": {
-            "displayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "id": "default"
           }
@@ -126,7 +118,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'12 750 SPE60 | 14,6 Studenter/UF-ÅV (Mål: 15-20)'"
+                  "Value": "'🟢 10 850 SPE60 | 🟡 14,8 Studenter/UF-ÅV | YoY: ▲ +1,8 %'"
                 }
               }
             }

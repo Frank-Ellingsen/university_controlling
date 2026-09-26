@@ -91,9 +91,9 @@ table DuckDB_v_avvik_budsjett_actual
 		mode: import
 		source =
 				let
-				    Source = Python.Execute("import duckdb#(lf)con = duckdb.connect(r'C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb', read_only=True)#(lf)df = con.execute('SELECT * FROM v_avvik_budsjett_actual').df()#(lf)con.close()"),
-				    df_Table = Source{[Name="df"]}[Value],
-				    #"Changed Type" = Table.TransformColumnTypes(df_Table,{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Fakultet", type text}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Kontoklasse", type text}, {"Actual_YTD_MNOK", type number}, {"Budsjett_YTD_MNOK", type number}, {"Avvik_YTD_MNOK", type number}, {"Avvik_YTD_Pct", type number}})
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DuckDB_v_avvik_budsjett_actual.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"Enhet", type text}, {"Fakultet", type text}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Kontoklasse", type text}, {"Actual_YTD_MNOK", type number}, {"Budsjett_YTD_MNOK", type number}, {"Avvik_YTD_MNOK", type number}, {"Avvik_YTD_Pct", type number}})
 				in
 				    #"Changed Type"
 

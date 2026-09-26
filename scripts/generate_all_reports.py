@@ -509,11 +509,11 @@ def build_page_1():
 
     # 2. Top Section: 5 KPI Cards (3-Second Snapshot, Y = 105 px, Height = 115 px, Width = 360 px each)
     kpis = [
-        ("vis_kpi_total_revenue", 20, "Total Inntekt MNOK", "TOTAL INNTEKT (RAMME 2026)", "Budsjett: 1 433,0 MNOK | ▲ +0,0 % (Fast basis)", 5),
-        ("vis_kpi_net_result_vac", 400, "Sluttavvik (VAC)", "NETTO DRIFTSRESULTAT (VAC)", "YTD per Sept: -11,0 MNOK (Dekkes av F-05-20)", 6),
-        ("vis_kpi_staffing_fte", 780, "Totale Årsverk", "ÅRSVERK & LØNNSANDEL", "874 UF / 366 TA | Lønnsandel: 65,4 % (Mål: 71 %)", 7),
-        ("vis_kpi_evm_cpi", 1160, "CPI", "EVM EFFEKTIVITET (CPI / SPI)", "SPI (Tidsfremdrift): 0,92 | 5 % Kostnadsoverskridelse", 8),
-        ("vis_kpi_students_spe", 1540, "Registrerte Studenter", "STUDENTER & PRODUKSJON (SPE60)", "12 750 SPE60 | 14,6 Studenter/UF-ÅV (Mål: 15-20)", 9),
+        ("vis_kpi_total_revenue", 20, "Total Inntekt MNOK", "TOTAL INNTEKT (RAMME 2026)", "🟢 Budsj: ▲ +0,0 % | 🟢 YoY: ▲ +3,2 % | MoM: ▲ +2,8 %", 5),
+        ("vis_kpi_net_result_vac", 400, "Sluttavvik (VAC)", "NETTO DRIFTSRESULTAT (VAC)", "🔴 Sluttavvik: -11,0 MNOK (-0,8 %) | YTD: -11,0 MNOK (Dekkes av F-05-20)", 6),
+        ("vis_kpi_staffing_fte", 780, "Totale Årsverk", "ÅRSVERK & LØNNSANDEL", "🟢 Lønnsandel: 65,4 % | 948 UF / 292 TA | YoY: +12 ÅV", 7),
+        ("vis_kpi_evm_cpi", 1160, "CPI", "EVM EFFEKTIVITET (CPI / SPI)", "🟡 CPI: 0,95 | SPI: 0,92 (Tidsfremdrift) | 🔴 5 % Kostnadsoverskridelse", 8),
+        ("vis_kpi_students_spe", 1540, "Registrerte Studenter", "STUDENTER & PRODUKSJON (SPE60)", "🟢 10 850 SPE60 | 🟡 14,8 Studenter/UF-ÅV | YoY: ▲ +1,8 %", 9),
     ]
     for vname, vx, mname, title, subtitle, tab in kpis:
         visuals.append(create_card_visual(vname, vx, 105, 360, 115, 20, mname, title, tab, subtitle_text=subtitle))

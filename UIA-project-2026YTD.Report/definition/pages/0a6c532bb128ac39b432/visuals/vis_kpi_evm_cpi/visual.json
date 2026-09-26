@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "vis_kpi_evm_cpi",
   "position": {
     "x": 1160,
     "y": 105,
     "z": 20,
-    "width": 360,
     "height": 115,
+    "width": 360,
     "tabOrder": 8
   },
   "visual": {
@@ -36,15 +36,7 @@
     "objects": {
       "value": [
         {
-          "properties": {
-            "displayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "id": "default"
           }
@@ -126,7 +118,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'SPI (Tidsfremdrift): 0,92 | 5 % Kostnadsoverskridelse'"
+                  "Value": "'🟡 CPI: 0,95 | SPI: 0,92 (Tidsfremdrift) | 🔴 5 % Kostnadsoverskridelse'"
                 }
               }
             }

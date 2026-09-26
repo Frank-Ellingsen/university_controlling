@@ -146,9 +146,9 @@ table DuckDB_v_evm_sammendrag
 		mode: import
 		source =
 				let
-				    Source = Python.Execute("import duckdb#(lf)con = duckdb.connect(r'C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb', read_only=True)#(lf)df = con.execute('SELECT * FROM v_evm_sammendrag').df()#(lf)con.close()"),
-				    df_Table = Source{[Name="df"]}[Value],
-				    #"Changed Type" = Table.TransformColumnTypes(df_Table,{{"DatoNokkel", Int64.Type}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"OrgKode", Int64.Type}, {"Enhet", type text}, {"PV", type number}, {"EV", type number}, {"AC", type number}, {"BAC", type number}, {"EAC", type number}, {"ETC", type number}, {"CPI", type number}, {"SPI", type number}, {"VAC", type number}, {"Cost_Variance_CV", type number}, {"Schedule_Variance_SV", type number}})
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DuckDB_v_evm_sammendrag.csv"),[Delimiter=";", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"OrgKode", Int64.Type}, {"Enhet", type text}, {"PV", type number}, {"EV", type number}, {"AC", type number}, {"BAC", type number}, {"EAC", type number}, {"ETC", type number}, {"CPI", type number}, {"SPI", type number}, {"VAC", type number}, {"Cost_Variance_CV", type number}, {"Schedule_Variance_SV", type number}})
 				in
 				    #"Changed Type"
 

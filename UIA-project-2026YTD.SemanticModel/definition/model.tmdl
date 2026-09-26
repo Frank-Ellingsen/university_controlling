@@ -23,12 +23,14 @@ ref table FactFTE
 ref table FactFacultyKPI
 ref table FactGL
 ref table FactStudents
-ref table FactAction
 ref table _Measures
 ref table DimKPI
+ref table FactAction
 ref table DuckDB_v_avvik_budsjett_actual
 ref table DuckDB_v_evm_sammendrag
 ref table DuckDB_v_ytd_regnskap
+ref table DateTableTemplate_9006dab9-accc-4df6-ad9e-9c470fb4410c
+ref table LocalDateTable_de090892-faea-4b86-a5de-ddb616e0a41f
 
 ref role Universitetsledelse
 ref role Dekan_HHU

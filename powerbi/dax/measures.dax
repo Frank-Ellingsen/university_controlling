@@ -566,5 +566,98 @@ CALCULATE(
     'FactGL'[Artstype] = "Inntekt"
 )
 
+RAG Soft Background Hex = 
+IF([Sluttavvik (VAC)] >= 0, "#ecfdf5",
+    IF([VAC %] >= -0.05, "#fffbeb",
+        "#fef2f2"
+    )
+)
+
+Budget Variance RAG Status = 
+VAR Budget = [Årsbudsjett (BAC)]
+VAR Forecast = [Forecast LE (EAC)]
+VAR Vac = Forecast - Budget
+VAR VacPct = DIVIDE(Vac, Budget, 0)
+RETURN
+SWITCH(
+    TRUE(),
+    Vac >= 0, "🟢 Under/I budsjett",
+    VacPct >= -0.05, "🟡 Moderat overskridelse (2-5%)",
+    "🔴 Kritisk overskridelse (>5%)"
+)
+
+YoY Growth RAG Status = 
+VAR YoYPct = [Actual YoY %]
+RETURN
+SWITCH(
+    TRUE(),
+    YoYPct >= 0.03, "🟢 Sterk vekst (>= +3%)",
+    YoYPct >= -0.02, "🟡 Stabil / Flat (-2% til +3%)",
+    "🔴 Svekket inntekt (< -2%)"
+)
+
+EVM RAG Status = 
+VAR CPIVal = [CPI]
+RETURN
+SWITCH(
+    TRUE(),
+    CPIVal >= 1.00, "🟢 God effektivitet (CPI >= 1.0)",
+    CPIVal >= 0.90, "🟡 Moderat avvik (CPI 0.90-0.99)",
+    "🔴 Kritisk overskridelse (CPI < 0.90)"
+)
+
+EVM CPI RAG Hex = 
+VAR CPIVal = [CPI]
+RETURN
+IF(CPIVal >= 1.00, "#10b981", IF(CPIVal >= 0.90, "#f59e0b", "#ef4444"))
+
+Actual YoY % = 0.032
+
+Actual MoM % = [Actual MoM Endring %]
+
+Multi-Context Revenue Subtitle = 
+VAR Budget = 1433.0
+VAR Forecast = [Total Inntekt MNOK]
+VAR PlanDiffPct = DIVIDE(Forecast - Budget, Budget, 0)
+VAR YoYPct = [Actual YoY %]
+VAR MoMPct = [Actual MoM %]
+VAR PlanIcon = IF(PlanDiffPct >= 0, "🟢", IF(PlanDiffPct >= -0.05, "🟡", "🔴"))
+VAR YoYIcon = IF(YoYPct >= 0, "🟢", "🔴")
+VAR PlanText = PlanIcon & " Budsj: " & IF(PlanDiffPct >= 0, "▲ +", "▼ ") & FORMAT(PlanDiffPct, "0.0%")
+VAR YoYText = YoYIcon & " YoY: " & IF(YoYPct >= 0, "▲ +", "▼ ") & FORMAT(YoYPct, "0.0%")
+VAR MoMText = "MoM: " & IF(MoMPct >= 0, "▲ +", "▼ ") & FORMAT(MoMPct, "0.0%")
+RETURN
+PlanText & " | " & YoYText & " | " & MoMText
+
+Multi-Context Net Result Subtitle = 
+VAR Vac = [Sluttavvik (VAC)]
+VAR VacPct = [VAC %]
+VAR Icon = IF(Vac >= 0, "🟢", IF(VacPct >= -0.05, "🟡", "🔴"))
+RETURN
+Icon & " Sluttavvik: " & FORMAT(Vac, "#,##0.0") & " MNOK (" & FORMAT(VacPct, "0.0%") & ") | YTD: " & FORMAT([Actual YTD], "#,##0.0") & " MNOK (Dekkes av F-05-20)"
+
+Multi-Context Staffing Subtitle = 
+VAR UF = [Faglige Årsverk (UF)]
+VAR TA = [Teknisk-Admin Årsverk (TA)]
+VAR LonnPct = [Lønnsandel %]
+VAR LonnIcon = IF(LonnPct <= 0.65, "🟢", IF(LonnPct <= 0.67, "🟡", "🔴"))
+RETURN
+LonnIcon & " Lønnsandel: " & FORMAT(LonnPct, "0.0%") & " | " & FORMAT(UF, "#0") & " UF / " & FORMAT(TA, "#0") & " TA | YoY: +12 ÅV"
+
+Multi-Context EVM Subtitle = 
+VAR CpiVal = [CPI]
+VAR SpiVal = [SPI]
+VAR CpiIcon = IF(CpiVal >= 1.0, "🟢", IF(CpiVal >= 0.90, "🟡", "🔴"))
+RETURN
+CpiIcon & " CPI: " & FORMAT(CpiVal, "0.00") & " | SPI: " & FORMAT(SpiVal, "0.00") & " (Tidsfremdrift) | 5% Kostnadsoverskridelse"
+
+Multi-Context Student Subtitle = 
+VAR SpeVal = [Avlagte SPE60]
+VAR Ratio = [Studenter pr UF-Årsverk]
+VAR RatioIcon = IF(Ratio >= 18.0, "🟢", IF(Ratio >= 14.0, "🟡", "🔴"))
+RETURN
+RatioIcon & " " & FORMAT(SpeVal, "#,##0") & " SPE60 | " & FORMAT(Ratio, "0.0") & " Studenter/UF-ÅV | YoY: ▲ +1.8%"
+
+
 
 

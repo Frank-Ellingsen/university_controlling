@@ -50,3 +50,8 @@ relationship a48f1234-dc97-432f-86f8-3fa87f8d14d9
 	fromColumn: FactAction.OrgKode
 	toColumn: DimOrganization.OrgKode
 
+relationship 251941bd-69ab-4028-aa84-634863a9a810
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DuckDB_v_ytd_regnskap.Dato
+	toColumn: LocalDateTable_de090892-faea-4b86-a5de-ddb616e0a41f.Date
+

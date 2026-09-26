@@ -5,7 +5,7 @@ table DuckDB_v_ytd_regnskap
 		dataType: int64
 		formatString: 0
 		lineageTag: d091507b-2238-48ca-a6e6-effff8c7ad9e
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: DatoNokkel
 
 		annotation SummarizationSetBy = Automatic
@@ -17,7 +17,14 @@ table DuckDB_v_ytd_regnskap
 		summarizeBy: none
 		sourceColumn: Dato
 
+		variation Variation
+			isDefault
+			relationship: 251941bd-69ab-4028-aa84-634863a9a810
+			defaultHierarchy: LocalDateTable_de090892-faea-4b86-a5de-ddb616e0a41f.'Date Hierarchy'
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column MaanedNavn
 		dataType: string
@@ -39,7 +46,7 @@ table DuckDB_v_ytd_regnskap
 		dataType: int64
 		formatString: 0
 		lineageTag: a5987120-f0fb-4a9e-8bfb-dde13364e8f5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: OrgKode
 
 		annotation SummarizationSetBy = Automatic
@@ -64,7 +71,7 @@ table DuckDB_v_ytd_regnskap
 		dataType: int64
 		formatString: 0
 		lineageTag: bf909bcd-8367-49a4-8565-31ee59868f99
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Konto
 
 		annotation SummarizationSetBy = Automatic
@@ -147,9 +154,9 @@ table DuckDB_v_ytd_regnskap
 		mode: import
 		source =
 				let
-				    Source = Python.Execute("import duckdb#(lf)con = duckdb.connect(r'C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb', read_only=True)#(lf)df = con.execute('SELECT * FROM v_ytd_regnskap').df()#(lf)con.close()"),
-				    df_Table = Source{[Name="df"]}[Value],
-				    #"Changed Type" = Table.TransformColumnTypes(df_Table,{{"DatoNokkel", Int64.Type}, {"Dato", type date}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"OrgKode", Int64.Type}, {"Enhet", type text}, {"FakultetKort", type text}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Kontoklasse", type text}, {"Kontogruppe", type text}, {"SRS_regnskapslinje", type text}, {"Artstype", type text}, {"Kategori", type text}, {"Belop_MNOK", type number}, {"Belop_signert_MNOK", type number}, {"VersjonKode", type text}})
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\DuckDB_v_ytd_regnskap.csv"),[Delimiter=";", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"Dato", type date}, {"MaanedNavn", type text}, {"Kvartal", type text}, {"OrgKode", Int64.Type}, {"Enhet", type text}, {"FakultetKort", type text}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"Kontoklasse", type text}, {"Kontogruppe", type text}, {"SRS_regnskapslinje", type text}, {"Artstype", type text}, {"Kategori", type text}, {"Belop_MNOK", type number}, {"Belop_signert_MNOK", type number}, {"VersjonKode", type text}})
 				in
 				    #"Changed Type"
 
