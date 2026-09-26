@@ -3,3 +3,5 @@ role Direktor_Fellesdrift
 
 	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1900
 
+	annotation PBI_Id = 1797bdb5b9ac4cc0a34f57f8442b5ff1
+

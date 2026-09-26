@@ -73,26 +73,6 @@ table _Measures
 		displayFolder: _03 EVM
 		lineageTag: d0792e3f-67b7-42d9-8059-5b8ba4fcc26c
 
-	measure 'Cost Variance (CV)' = [Earned Value (EV)] - [Actual Cost (AC)]
-		formatString: #,##0.0
-		displayFolder: _03 EVM
-		lineageTag: e8a12345-0de1-43b4-8a30-4aff406f9673
-
-	measure 'Cost Variance (CV) %' = DIVIDE([Cost Variance (CV)], [Earned Value (EV)], 0)
-		formatString: 0.0%
-		displayFolder: _03 EVM
-		lineageTag: e8a12346-0de1-43b4-8a30-4aff406f9674
-
-	measure 'Schedule Variance (SV)' = [Earned Value (EV)] - [Planned Value (PV)]
-		formatString: #,##0.0
-		displayFolder: _03 EVM
-		lineageTag: e8a12347-0de1-43b4-8a30-4aff406f9675
-
-	measure 'Schedule Variance (SV) %' = DIVIDE([Schedule Variance (SV)], [Planned Value (PV)], 0)
-		formatString: 0.0%
-		displayFolder: _03 EVM
-		lineageTag: e8a12348-0de1-43b4-8a30-4aff406f9676
-
 	measure CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
 		formatString: 0.00
 		displayFolder: _03 EVM
@@ -102,26 +82,6 @@ table _Measures
 		formatString: 0.00
 		displayFolder: _03 EVM
 		lineageTag: 787cd3ea-e14d-49d0-a3bc-3f2f6904dd62
-
-	measure 'EAC (EVM)' = DIVIDE([Årsbudsjett (BAC)], [CPI], [Årsbudsjett (BAC)])
-		formatString: #,##0.00
-		displayFolder: _03 EVM
-		lineageTag: e8a12349-0de1-43b4-8a30-4aff406f9677
-
-	measure 'VAC (EVM)' = [Årsbudsjett (BAC)] - [EAC (EVM)]
-		formatString: #,##0.00
-		displayFolder: _03 EVM
-		lineageTag: e8a12350-0de1-43b4-8a30-4aff406f9678
-
-	measure 'TCPI (To-Complete Performance Index)' =
-			DIVIDE(
-			    [Årsbudsjett (BAC)] - [Earned Value (EV)],
-			    [Årsbudsjett (BAC)] - [Actual Cost (AC)],
-			    1
-			)
-		formatString: 0.00
-		displayFolder: _03 EVM
-		lineageTag: e8a12351-0de1-43b4-8a30-4aff406f9679
 
 	measure 'Totale Årsverk' =
 			CALCULATE(
@@ -155,16 +115,6 @@ table _Measures
 		displayFolder: _04 Bemanning & FTE
 		lineageTag: d890e067-24a4-491f-b085-6afa979246f0
 
-	measure 'Faglig Mål %' = 0.60
-		formatString: 0.0%
-		displayFolder: _04 Bemanning & FTE
-		lineageTag: d890e068-24a4-491f-b085-6afa979246f1
-
-	measure 'Årsverk Avvik fra Mål' = ([Totale Årsverk] * 0.60) - [Faglige Årsverk (UF)]
-		formatString: #,##0.0
-		displayFolder: _04 Bemanning & FTE
-		lineageTag: d890e069-24a4-491f-b085-6afa979246f2
-
 	measure 'Registrerte Studenter' = SUM('FactStudents'[Registrerte_Studenter])
 		formatString: #,##0
 		displayFolder: _05 Utdanning
@@ -180,11 +130,6 @@ table _Measures
 		displayFolder: _05 Utdanning
 		lineageTag: c6b7be62-efb8-42ce-b370-98d126583089
 
-	measure 'SPE60 pr Student' = DIVIDE([Avlagte SPE60], [Registrerte Studenter], 0)
-		formatString: 0.00
-		displayFolder: _05 Utdanning
-		lineageTag: c6b7be63-efb8-42ce-b370-98d126583090
-
 	measure 'Enhetskostnad pr SPE60' = DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)
 		formatString: #,##0
 		displayFolder: _05 Utdanning
@@ -198,6 +143,79 @@ table _Measures
 		formatString: #,##0.00
 		displayFolder: _05 Utdanning
 		lineageTag: b1ac72eb-aab0-48b4-803e-9e4ca8e03d4e
+
+	measure 'Forecast RAG Status' =
+			IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
+			    IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)",
+			        "🔴 Kritisk overskridelse (> 5%)"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: 39dd7285-be9b-4187-aae3-9d40c67805a3
+
+	measure 'RAG Hex Color' =
+			IF([Sluttavvik (VAC)] >= 0, "#10b981",
+			    IF([VAC %] >= -0.05, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: b50da885-c3c0-4773-aec3-b4a63980d094
+
+	measure 'Cost Variance (CV)' = [Earned Value (EV)] - [Actual Cost (AC)]
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12345-0de1-43b4-8a30-4aff406f9673
+
+	measure 'Cost Variance (CV) %' = DIVIDE([Cost Variance (CV)], [Earned Value (EV)], 0)
+		formatString: 0.0%
+		displayFolder: _03 EVM
+		lineageTag: e8a12346-0de1-43b4-8a30-4aff406f9674
+
+	measure 'Schedule Variance (SV)' = [Earned Value (EV)] - [Planned Value (PV)]
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12347-0de1-43b4-8a30-4aff406f9675
+
+	measure 'Schedule Variance (SV) %' = DIVIDE([Schedule Variance (SV)], [Planned Value (PV)], 0)
+		formatString: 0.0%
+		displayFolder: _03 EVM
+		lineageTag: e8a12348-0de1-43b4-8a30-4aff406f9676
+
+	measure 'EAC (EVM)' = DIVIDE([Årsbudsjett (BAC)], [CPI], [Årsbudsjett (BAC)])
+		formatString: #,##0.00
+		displayFolder: _03 EVM
+		lineageTag: e8a12349-0de1-43b4-8a30-4aff406f9677
+
+	measure 'VAC (EVM)' = [Årsbudsjett (BAC)] - [EAC (EVM)]
+		formatString: #,##0.00
+		displayFolder: _03 EVM
+		lineageTag: e8a12350-0de1-43b4-8a30-4aff406f9678
+
+	measure 'TCPI (To-Complete Performance Index)' =
+			DIVIDE(
+			    [Årsbudsjett (BAC)] - [Earned Value (EV)],
+			    [Årsbudsjett (BAC)] - [Actual Cost (AC)],
+			    1
+			)
+		formatString: 0.00
+		displayFolder: _03 EVM
+		lineageTag: e8a12351-0de1-43b4-8a30-4aff406f9679
+
+	measure 'Faglig Mål %' = 0.60
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d890e068-24a4-491f-b085-6afa979246f1
+
+	measure 'Årsverk Avvik fra Mål' = ([Totale Årsverk] * 0.60) - [Faglige Årsverk (UF)]
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d890e069-24a4-491f-b085-6afa979246f2
+
+	measure 'SPE60 pr Student' = DIVIDE([Avlagte SPE60], [Registrerte Studenter], 0)
+		formatString: 0.00
+		displayFolder: _05 Utdanning
+		lineageTag: c6b7be63-efb8-42ce-b370-98d126583090
 
 	measure 'Scorecard KPI Verdi' =
 			SWITCH(
@@ -288,24 +306,6 @@ table _Measures
 		displayFolder: _06 Scorecard & KPI
 		lineageTag: f1111111-2222-3333-4444-555555555554
 
-	measure 'Forecast RAG Status' =
-			IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
-			    IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)",
-			        "🔴 Kritisk overskridelse (> 5%)"
-			    )
-			)
-		displayFolder: _07 RAG & Design
-		lineageTag: 39dd7285-be9b-4187-aae3-9d40c67805a3
-
-	measure 'RAG Hex Color' =
-			IF([Sluttavvik (VAC)] >= 0, "#10b981",
-			    IF([VAC %] >= -0.05, "#f59e0b",
-			        "#ef4444"
-			    )
-			)
-		displayFolder: _07 RAG & Design
-		lineageTag: b50da885-c3c0-4773-aec3-b4a63980d094
-
 	measure 'CPI RAG Status' =
 			IF([CPI] >= 1.0, "🟢 Effektiv (>= 1.0)",
 			    IF([CPI] >= 0.95, "🟡 Moderat avvik",
@@ -370,8 +370,7 @@ table _Measures
 		displayFolder: _04 Bemanning & FTE
 		lineageTag: b8a12353-0de1-43b4-8a30-4aff406f9681
 
-	measure 'Ubenyttede Midler %' =
-			DIVIDE(MAX(0, [Sluttavvik (VAC)]), [Årsbudsjett (BAC)], 0)
+	measure 'Ubenyttede Midler %' = DIVIDE(MAX(0, [Sluttavvik (VAC)]), [Årsbudsjett (BAC)], 0)
 		formatString: 0.0%
 		displayFolder: _02 Prognose & EAC
 		lineageTag: b8a12354-0de1-43b4-8a30-4aff406f9682
@@ -381,8 +380,7 @@ table _Measures
 		displayFolder: _02 Prognose & EAC
 		lineageTag: b8a12355-0de1-43b4-8a30-4aff406f9683
 
-	measure '5% Regel Status' =
-			IF([Ubenyttede Midler %] <= 0.05, "🟢 Innenfor 5% (F-05-20)", "🔴 Risiko for inndragning (>5%)")
+	measure '5% Regel Status' = IF([Ubenyttede Midler %] <= 0.05, "🟢 Innenfor 5% (F-05-20)", "🔴 Risiko for inndragning (>5%)")
 		displayFolder: _07 RAG & Design
 		lineageTag: b8a12356-0de1-43b4-8a30-4aff406f9684
 
@@ -422,3 +420,4 @@ table _Measures
 				    Source
 
 	annotation PBI_ResultType = Table
+

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "vis_tbl_hovedoversikt",
   "position": {
     "x": 20,
     "y": 230,
     "z": 30,
-    "width": 1180,
     "height": 430,
+    "width": 1180,
     "tabOrder": 9
   },
   "visual": {
@@ -42,7 +42,8 @@
                 }
               },
               "queryRef": "_Measures.Budsjett YTD",
-              "nativeQueryRef": "Budsjett YTD (MNOK)"
+              "nativeQueryRef": "Budsjett YTD (MNOK)",
+              "active": false
             },
             {
               "field": {
@@ -56,7 +57,8 @@
                 }
               },
               "queryRef": "_Measures.Actual YTD",
-              "nativeQueryRef": "Regnskap YTD (MNOK)"
+              "nativeQueryRef": "Regnskap YTD (MNOK)",
+              "active": false
             },
             {
               "field": {
@@ -70,7 +72,8 @@
                 }
               },
               "queryRef": "_Measures.Avvik YTD",
-              "nativeQueryRef": "Avvik YTD (MNOK)"
+              "nativeQueryRef": "Avvik YTD (MNOK)",
+              "active": false
             },
             {
               "field": {
@@ -84,7 +87,8 @@
                 }
               },
               "queryRef": "_Measures.Avvik YTD %",
-              "nativeQueryRef": "Avvik %"
+              "nativeQueryRef": "Avvik %",
+              "active": false
             },
             {
               "field": {
@@ -98,7 +102,8 @@
                 }
               },
               "queryRef": "_Measures.Årsbudsjett (BAC)",
-              "nativeQueryRef": "Årsbudsjett BAC"
+              "nativeQueryRef": "Årsbudsjett BAC",
+              "active": false
             },
             {
               "field": {
@@ -112,7 +117,8 @@
                 }
               },
               "queryRef": "_Measures.Forecast LE (EAC)",
-              "nativeQueryRef": "Prognose EAC"
+              "nativeQueryRef": "Prognose EAC",
+              "active": false
             },
             {
               "field": {
@@ -126,7 +132,8 @@
                 }
               },
               "queryRef": "_Measures.Sluttavvik (VAC)",
-              "nativeQueryRef": "Sluttavvik VAC"
+              "nativeQueryRef": "Sluttavvik VAC",
+              "active": false
             },
             {
               "field": {
@@ -140,7 +147,8 @@
                 }
               },
               "queryRef": "_Measures.CPI",
-              "nativeQueryRef": "CPI"
+              "nativeQueryRef": "CPI",
+              "active": false
             },
             {
               "field": {
@@ -154,7 +162,8 @@
                 }
               },
               "queryRef": "_Measures.SPI",
-              "nativeQueryRef": "SPI"
+              "nativeQueryRef": "SPI",
+              "active": false
             },
             {
               "field": {
@@ -168,33 +177,12 @@
                 }
               },
               "queryRef": "_Measures.Forecast RAG Status",
-              "nativeQueryRef": "Status"
+              "nativeQueryRef": "Status",
+              "active": false
             }
           ]
         }
       }
-    },
-    "objects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Total KPI-Oversikt per Fakultet og Enhet (MNOK / Indeks)'"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   }

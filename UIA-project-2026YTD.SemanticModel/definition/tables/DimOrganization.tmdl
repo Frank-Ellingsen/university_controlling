@@ -81,3 +81,4 @@ table DimOrganization
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

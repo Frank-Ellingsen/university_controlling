@@ -3,3 +3,5 @@ role Dekan_HUM
 
 	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1500
 
+	annotation PBI_Id = d74ace077cfd470180c845e7d870bcd2
+

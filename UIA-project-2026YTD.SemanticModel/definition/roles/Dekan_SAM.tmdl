@@ -3,3 +3,5 @@ role Dekan_SAM
 
 	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1400
 
+	annotation PBI_Id = 6c1453a83304436cbe032f2144e75ffa
+

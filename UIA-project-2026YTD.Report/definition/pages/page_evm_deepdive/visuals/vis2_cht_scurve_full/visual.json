@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "vis2_cht_scurve_full",
   "position": {
     "x": 20,
     "y": 230,
     "z": 30,
-    "width": 1180,
     "height": 430,
+    "width": 1180,
     "tabOrder": 9
   },
   "visual": {
@@ -93,28 +93,6 @@
           ]
         }
       }
-    },
-    "objects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Kumulativ EVM S-Kurve 2026: Planlagt (PV) vs Opptjent (EV) vs Faktisk (AC) vs BAC'"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   }
