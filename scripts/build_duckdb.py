@@ -33,7 +33,8 @@ def build_database():
         "FactFTE": "FactFTE.csv",
         "FactFacultyKPI": "FactFacultyKPI.csv",
         "FactGL": "FactGL.csv",
-        "FactStudents": "FactStudents.csv"
+        "FactStudents": "FactStudents.csv",
+        "FactAction": "FactAction.csv"
     }
     
     print("\n[1/3] Importerer CSV-filer til basistabeller...")

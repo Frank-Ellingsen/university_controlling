@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "vis_kpi_vac",
   "position": {
-    "x": 778,
-    "y": 110,
+    "x": 780,
+    "y": 202,
     "z": 20,
-    "height": 100,
-    "width": 364,
-    "tabOrder": 6
+    "width": 360,
+    "height": 96,
+    "tabOrder": 7
   },
   "visual": {
     "visualType": "card",
@@ -32,6 +32,28 @@
           ]
         }
       }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'NETTO AVVIK / VAC (MNOK)'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

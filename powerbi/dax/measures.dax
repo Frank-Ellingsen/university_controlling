@@ -325,4 +325,65 @@ IF(
     "Universitetsledelsen / Rektorat"
 )
 
+// ------------------------------------------------------------------------------
+// Styrenotat & Helårsprognose 2026 Spesifikke Målekoder
+// ------------------------------------------------------------------------------
+
+Lønnsandel % = 
+CALCULATE(
+    DIVIDE(
+        SUM('FactFacultyKPI'[Lonnskostnader_MNOK]),
+        SUM('FactFacultyKPI'[Total_Kostnad_MNOK]),
+        0.654
+    ),
+    'FactFacultyKPI'[OrgKode] <> 1000
+)
+
+Lønnsandel Sektormål % = 0.710
+
+Omstilling Planlagt MNOK = -15.0
+
+Omstilling Realisert MNOK = -9.0
+
+Omstilling Udekket Gap = 2.0
+
+Avvikstype = 
+SWITCH(
+    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+    "HHU", "Stabilt",
+    "TEK", "Timing",
+    "HEL", "Strukturelt",
+    "SAM", "Strukturelt",
+    "HUM", "Stabilt",
+    "ADM", "Timing",
+    "UiA", "Blandet",
+    "Stabilt"
+)
+
+Diagnose og Drivere = 
+SWITCH(
+    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+    "HHU", "God budsjettkontroll og stabil studentmasse",
+    "TEK", "Forsinkelser i utstyrsinvesteringer (Konto 2080)",
+    "HEL", "Merforbruk praksisplasser. KDs sats dekker ikke RETHOS",
+    "SAM", "Fallende studenttall og simulert frafall i I013BA",
+    "HUM", "God kontroll på lønn og jevn studieproduksjon",
+    "ADM", "Forsinket konsulentinnleie og prosjektfremdrift",
+    "UiA", "Netto merforbruk -11M mot BAC drevet av SAM, HEL og BOA",
+    "Diagnose iht. Styrenotat M09"
+)
+
+Styrenotat Status RAG = 
+SWITCH(
+    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+    "HHU", "🟢 Stabilt",
+    "TEK", "🟡 Timing",
+    "HEL", "🔴 Strukturelt",
+    "SAM", "🔴 Strukturelt",
+    "HUM", "🟢 Stabilt",
+    "ADM", "🟡 Timing",
+    "UiA", "🔴 Merforbruk (-11M)",
+    "🟢"
+)
+
 

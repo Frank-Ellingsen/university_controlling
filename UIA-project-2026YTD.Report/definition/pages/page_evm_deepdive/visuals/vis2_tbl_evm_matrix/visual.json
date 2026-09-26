@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "vis2_tbl_evm_matrix",
   "position": {
     "x": 970,
     "y": 680,
     "z": 41,
-    "height": 370,
     "width": 930,
+    "height": 370,
     "tabOrder": 12
   },
   "visual": {
@@ -42,8 +42,7 @@
                 }
               },
               "queryRef": "_Measures.Planned Value (PV)",
-              "nativeQueryRef": "PV (MNOK)",
-              "active": false
+              "nativeQueryRef": "PV (MNOK)"
             },
             {
               "field": {
@@ -57,8 +56,7 @@
                 }
               },
               "queryRef": "_Measures.Earned Value (EV)",
-              "nativeQueryRef": "EV (MNOK)",
-              "active": false
+              "nativeQueryRef": "EV (MNOK)"
             },
             {
               "field": {
@@ -72,8 +70,7 @@
                 }
               },
               "queryRef": "_Measures.Actual Cost (AC)",
-              "nativeQueryRef": "AC (MNOK)",
-              "active": false
+              "nativeQueryRef": "AC (MNOK)"
             },
             {
               "field": {
@@ -87,8 +84,7 @@
                 }
               },
               "queryRef": "_Measures.Cost Variance (CV)",
-              "nativeQueryRef": "CV (MNOK)",
-              "active": false
+              "nativeQueryRef": "CV (MNOK)"
             },
             {
               "field": {
@@ -102,8 +98,7 @@
                 }
               },
               "queryRef": "_Measures.Schedule Variance (SV)",
-              "nativeQueryRef": "SV (MNOK)",
-              "active": false
+              "nativeQueryRef": "SV (MNOK)"
             },
             {
               "field": {
@@ -117,8 +112,7 @@
                 }
               },
               "queryRef": "_Measures.CPI",
-              "nativeQueryRef": "CPI",
-              "active": false
+              "nativeQueryRef": "CPI"
             },
             {
               "field": {
@@ -132,8 +126,7 @@
                 }
               },
               "queryRef": "_Measures.SPI",
-              "nativeQueryRef": "SPI",
-              "active": false
+              "nativeQueryRef": "SPI"
             },
             {
               "field": {
@@ -147,8 +140,7 @@
                 }
               },
               "queryRef": "_Measures.EAC (EVM)",
-              "nativeQueryRef": "EAC (MNOK)",
-              "active": false
+              "nativeQueryRef": "EAC (MNOK)"
             },
             {
               "field": {
@@ -162,12 +154,33 @@
                 }
               },
               "queryRef": "_Measures.VAC (EVM)",
-              "nativeQueryRef": "VAC (MNOK)",
-              "active": false
+              "nativeQueryRef": "VAC (MNOK)"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Månedlig EVM Styringsmatrise (MNOK og Indekser)'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

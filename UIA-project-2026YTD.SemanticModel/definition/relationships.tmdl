@@ -46,3 +46,7 @@ relationship 6448ec67-dc97-432f-86f8-3fa87f8d14d8
 	fromColumn: FactGL.Konto
 	toColumn: DimAccountHierarchy.Konto
 
+relationship a48f1234-dc97-432f-86f8-3fa87f8d14d9
+	fromColumn: FactAction.OrgKode
+	toColumn: DimOrganization.OrgKode
+

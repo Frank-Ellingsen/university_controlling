@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis_txt_exec_summary",
+  "position": {
+    "x": 20,
+    "y": 98,
+    "z": 18,
+    "width": 1880,
+    "height": 96,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "STRATEGISK DIAGNOSE M09: NETTO NEGATIVT SLUTTAVVIK PÅ -11,0 MNOK MOT BAC (VEDTATT RAMME 1 433 MNOK VS EAC 1 444 MNOK)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10.5pt",
+                      "fontWeight": "bold",
+                      "color": "#0f172a"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• KD 2025 Ny Modell: Basisbevilgningen (1 234 MNOK) ligger fast. Statlig risiko er flyttet til UiA; marginale endringer i produksjon slår direkte inn i bunnlinjen.\n• Tre Kritiske Avviksdrivere: 1) Svikt i studiepoeng ved SAM (prosjekt I013BA). 2) Praksisunderfinansiering ved HEL (RETHOS overstiger marginal sats). 3) Fremdriftsavvik i BOA med TDI-overheadtap (CPI 0,95 / SPI 0,92 iht. SRS 10).\n• Iverksatte Omstillingstiltak (FactAction): -15,0 MNOK planlagt | -9,0 MNOK sikret per M09 | Udekket gap: 2,0 MNOK krever skjerpet vakansestyring i Q4.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "8.5pt",
+                      "color": "#1e293b"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

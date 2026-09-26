@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "vis3_tbl_faculty_kpi",
   "position": {
     "x": 20,
     "y": 230,
     "z": 30,
-    "height": 430,
     "width": 1180,
+    "height": 430,
     "tabOrder": 8
   },
   "visual": {
@@ -42,8 +42,7 @@
                 }
               },
               "queryRef": "_Measures.Totale Årsverk",
-              "nativeQueryRef": "Totale Årsverk",
-              "active": false
+              "nativeQueryRef": "Totale Årsverk"
             },
             {
               "field": {
@@ -57,8 +56,7 @@
                 }
               },
               "queryRef": "_Measures.Faglige Årsverk (UF)",
-              "nativeQueryRef": "Faglig (UF)",
-              "active": false
+              "nativeQueryRef": "Faglig (UF)"
             },
             {
               "field": {
@@ -72,8 +70,7 @@
                 }
               },
               "queryRef": "_Measures.Teknisk-Admin Årsverk (TA)",
-              "nativeQueryRef": "Teknisk-Admin (TA)",
-              "active": false
+              "nativeQueryRef": "Teknisk-Admin (TA)"
             },
             {
               "field": {
@@ -87,8 +84,7 @@
                 }
               },
               "queryRef": "_Measures.Faglig Andel %",
-              "nativeQueryRef": "Faglig Andel %",
-              "active": false
+              "nativeQueryRef": "Faglig Andel %"
             },
             {
               "field": {
@@ -102,8 +98,7 @@
                 }
               },
               "queryRef": "_Measures.Registrerte Studenter",
-              "nativeQueryRef": "Studenter",
-              "active": false
+              "nativeQueryRef": "Studenter"
             },
             {
               "field": {
@@ -117,8 +112,7 @@
                 }
               },
               "queryRef": "_Measures.Avlagte SPE60",
-              "nativeQueryRef": "SPE60",
-              "active": false
+              "nativeQueryRef": "SPE60"
             },
             {
               "field": {
@@ -132,8 +126,7 @@
                 }
               },
               "queryRef": "_Measures.Studenter pr UF-Årsverk",
-              "nativeQueryRef": "Studenter / UF",
-              "active": false
+              "nativeQueryRef": "Studenter / UF"
             },
             {
               "field": {
@@ -147,8 +140,7 @@
                 }
               },
               "queryRef": "_Measures.Enhetskostnad pr SPE60",
-              "nativeQueryRef": "Kr / SPE60",
-              "active": false
+              "nativeQueryRef": "Kr / SPE60"
             },
             {
               "field": {
@@ -162,12 +154,33 @@
                 }
               },
               "queryRef": "_Measures.KD Resultatbevilgning MNOK",
-              "nativeQueryRef": "KD Bevilgning (MNOK)",
-              "active": false
+              "nativeQueryRef": "KD Bevilgning (MNOK)"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fakultetsoversikt: Bemanning, Produksjon og Finansiering'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

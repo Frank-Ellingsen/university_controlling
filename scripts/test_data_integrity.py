@@ -20,7 +20,7 @@ class TestDataIntegrity(unittest.TestCase):
         tables = [
             "DimAccountHierarchy", "DimDate", "DimForecastVersion",
             "DimOrganization", "FactBudget", "FactEVM", "FactFTE",
-            "FactFacultyKPI", "FactGL", "FactStudents"
+            "FactFacultyKPI", "FactGL", "FactStudents", "FactAction"
         ]
         for t in tables:
             csv_path = DATA_DIR / f"{t}.csv"
@@ -28,7 +28,7 @@ class TestDataIntegrity(unittest.TestCase):
 
     def test_org_kode_referential_integrity(self):
         """Alle OrgKode i faktatabeller må finnes i DimOrganization."""
-        facts = ["FactGL", "FactBudget", "FactFTE", "FactFacultyKPI", "FactStudents"]
+        facts = ["FactGL", "FactBudget", "FactFTE", "FactFacultyKPI", "FactStudents", "FactAction"]
         for f in facts:
             missing = self.con.execute(f"""
                 SELECT DISTINCT f.OrgKode 

@@ -1,0 +1,89 @@
+table FactAction
+	lineageTag: e4a70921-1234-4567-89ab-cdef01234567
+
+	column TiltakID
+		dataType: string
+		lineageTag: e4a70922-1234-4567-89ab-cdef01234568
+		summarizeBy: none
+		sourceColumn: TiltakID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TiltakNavn
+		dataType: string
+		lineageTag: e4a70923-1234-4567-89ab-cdef01234569
+		summarizeBy: none
+		sourceColumn: TiltakNavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: e4a70924-1234-4567-89ab-cdef01234570
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForventetEffekt_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: e4a70925-1234-4567-89ab-cdef01234571
+		summarizeBy: sum
+		sourceColumn: ForventetEffekt_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column RealisertEffekt_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: e4a70926-1234-4567-89ab-cdef01234572
+		summarizeBy: sum
+		sourceColumn: RealisertEffekt_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Frist
+		dataType: string
+		lineageTag: e4a70927-1234-4567-89ab-cdef01234573
+		summarizeBy: none
+		sourceColumn: Frist
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: e4a70928-1234-4567-89ab-cdef01234574
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ansvarlig
+		dataType: string
+		lineageTag: e4a70929-1234-4567-89ab-cdef01234575
+		summarizeBy: none
+		sourceColumn: Ansvarlig
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Status
+		dataType: string
+		lineageTag: e4a70930-1234-4567-89ab-cdef01234576
+		summarizeBy: none
+		sourceColumn: RAG_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactAction = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\data\FactAction.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"TiltakNavn", type text}, {"OrgKode", Int64.Type}, {"ForventetEffekt_MNOK", type number}, {"RealisertEffekt_MNOK", type number}, {"Frist", type text}, {"Status", type text}, {"Ansvarlig", type text}, {"RAG_Status", type text}})
+			in
+			    #"Changed Type"
+
+	annotation PBI_ResultType = Table

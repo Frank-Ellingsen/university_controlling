@@ -1,0 +1,6 @@
+TiltakID;TiltakNavn;OrgKode;ForventetEffekt_MNOK;RealisertEffekt_MNOK;Frist;Status;Ansvarlig;RAG_Status
+T001;Vakansestopp administrative stillinger;1900;-4.0;-3.5;Q3 2026;Realisert;Dir. Fellestj.;🟢 Realisert
+T002;Reduksjon i konsulentbruk og eksterne tjenester;1900;-3.0;-2.0;Q4 2026;Pågår;Øk.dir.;🟡 Pågår
+T003;Studieporteføljejustering og sammenslåing av emner (SAM);1400;-3.5;-2.0;Q1 2027;Vedtatt;Dekan SAM;🟢 Vedtatt
+T004;Skjerpet prosjektoppfølging og TDI-kostnadsdekning (BOA);1000;-2.5;-1.0;Q4 2026;Pågår;Forskningsdir.;🟡 Pågår
+T005;Optimalisering av praksisavtaler og RETHOS-rammer (HEL);1300;-2.0;-0.5;Q2 2027;Risiko;Dekan HEL;🔴 Risiko

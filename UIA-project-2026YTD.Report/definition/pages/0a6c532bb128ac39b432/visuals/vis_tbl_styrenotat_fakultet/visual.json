@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "vis_tbl_hovedoversikt",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis_tbl_styrenotat_fakultet",
   "position": {
     "x": 20,
-    "y": 230,
+    "y": 306,
     "z": 30,
-    "height": 430,
-    "width": 1180,
-    "tabOrder": 9
+    "width": 1190,
+    "height": 380,
+    "tabOrder": 10
   },
   "visual": {
     "visualType": "tableEx",
@@ -38,12 +38,25 @@
                       "Entity": "_Measures"
                     }
                   },
+                  "Property": "Avvikstype"
+                }
+              },
+              "queryRef": "_Measures.Avvikstype",
+              "nativeQueryRef": "Avvikstype"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
                   "Property": "Budsjett YTD"
                 }
               },
               "queryRef": "_Measures.Budsjett YTD",
-              "nativeQueryRef": "Budsjett YTD (MNOK)",
-              "active": false
+              "nativeQueryRef": "Budsjett YTD"
             },
             {
               "field": {
@@ -57,8 +70,7 @@
                 }
               },
               "queryRef": "_Measures.Actual YTD",
-              "nativeQueryRef": "Regnskap YTD (MNOK)",
-              "active": false
+              "nativeQueryRef": "Regnskap YTD"
             },
             {
               "field": {
@@ -72,38 +84,7 @@
                 }
               },
               "queryRef": "_Measures.Avvik YTD",
-              "nativeQueryRef": "Avvik YTD (MNOK)",
-              "active": false
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Avvik YTD %"
-                }
-              },
-              "queryRef": "_Measures.Avvik YTD %",
-              "nativeQueryRef": "Avvik %",
-              "active": false
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Årsbudsjett (BAC)"
-                }
-              },
-              "queryRef": "_Measures.Årsbudsjett (BAC)",
-              "nativeQueryRef": "Årsbudsjett BAC",
-              "active": false
+              "nativeQueryRef": "Avvik YTD"
             },
             {
               "field": {
@@ -117,8 +98,7 @@
                 }
               },
               "queryRef": "_Measures.Forecast LE (EAC)",
-              "nativeQueryRef": "Prognose EAC",
-              "active": false
+              "nativeQueryRef": "Prognose EAC"
             },
             {
               "field": {
@@ -132,8 +112,7 @@
                 }
               },
               "queryRef": "_Measures.Sluttavvik (VAC)",
-              "nativeQueryRef": "Sluttavvik VAC",
-              "active": false
+              "nativeQueryRef": "Sluttavvik VAC"
             },
             {
               "field": {
@@ -143,12 +122,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "CPI"
+                  "Property": "Diagnose og Drivere"
                 }
               },
-              "queryRef": "_Measures.CPI",
-              "nativeQueryRef": "CPI",
-              "active": false
+              "queryRef": "_Measures.Diagnose og Drivere",
+              "nativeQueryRef": "Analyse og Drivere (Styrenotat §3)"
             },
             {
               "field": {
@@ -158,31 +136,37 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "SPI"
+                  "Property": "Styrenotat Status RAG"
                 }
               },
-              "queryRef": "_Measures.SPI",
-              "nativeQueryRef": "SPI",
-              "active": false
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Forecast RAG Status"
-                }
-              },
-              "queryRef": "_Measures.Forecast RAG Status",
-              "nativeQueryRef": "Status",
-              "active": false
+              "queryRef": "_Measures.Styrenotat Status RAG",
+              "nativeQueryRef": "Status"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fakultetsvis Avviksanalyse & Status M09 (Styrenotat Tabell 3: Enhetsvis gjennomgang)'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

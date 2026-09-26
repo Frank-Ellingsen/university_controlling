@@ -1087,6 +1087,102 @@ def generate():
     print("  - FactStudents.tmdl generert")
 
     # -------------------------------------------------------------------------
+    # 10b. FactAction (Omstillingstiltak)
+    # -------------------------------------------------------------------------
+    fact_action = fill_uids("""table FactAction
+\tlineageTag: __UID__
+
+\tcolumn TiltakID
+\t\tdataType: string
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: TiltakID
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn TiltakNavn
+\t\tdataType: string
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: TiltakNavn
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn OrgKode
+\t\tdataType: int64
+\t\tformatString: 0
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: OrgKode
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn ForventetEffekt_MNOK
+\t\tdataType: double
+\t\tformatString: #,##0.0
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: sum
+\t\tsourceColumn: ForventetEffekt_MNOK
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn RealisertEffekt_MNOK
+\t\tdataType: double
+\t\tformatString: #,##0.0
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: sum
+\t\tsourceColumn: RealisertEffekt_MNOK
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn Frist
+\t\tdataType: string
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: Frist
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn Status
+\t\tdataType: string
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: Status
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn Ansvarlig
+\t\tdataType: string
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: Ansvarlig
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tcolumn RAG_Status
+\t\tdataType: string
+\t\tlineageTag: __UID__
+\t\tsummarizeBy: none
+\t\tsourceColumn: RAG_Status
+
+\t\tannotation SummarizationSetBy = Automatic
+
+\tpartition FactAction = m
+\t\tmode: import
+\t\tsource =
+\t\t\tlet
+\t\t\t    Source = Csv.Document(File.Contents("C:\\Users\\frank\\Desktop\\UIA2\\data\\FactAction.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+\t\t\t    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+\t\t\t    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"TiltakNavn", type text}, {"OrgKode", Int64.Type}, {"ForventetEffekt_MNOK", type number}, {"RealisertEffekt_MNOK", type number}, {"Frist", type text}, {"Status", type text}, {"Ansvarlig", type text}, {"RAG_Status", type text}})
+\t\t\tin
+\t\t\t    #"Changed Type"
+
+\tannotation PBI_ResultType = Table
+""")
+    (TABLES_DIR / "FactAction.tmdl").write_text(fact_action, encoding="utf-8")
+    print("  - FactAction.tmdl generert")
+
+    # -------------------------------------------------------------------------
     # 11. _Measures
     # -------------------------------------------------------------------------
     measures_tmdl = fill_uids("""table _Measures
@@ -1327,7 +1423,7 @@ relationship __UID__
 \ttoColumn: DimAccountHierarchy.Konto
 """)
     (SEMANTIC_DIR / "relationships.tmdl").write_text(rel_content, encoding="utf-8")
-    print("  - relationships.tmdl generert (12 stjernemodell-relasjoner)")
+    print("  - relationships.tmdl generert (13 stjernemodell-relasjoner)")
 
     # -------------------------------------------------------------------------
     # 13. model.tmdl oppdatering
@@ -1360,7 +1456,7 @@ ref table _Measures
 ref cultureInfo en-US
 """
     (SEMANTIC_DIR / "model.tmdl").write_text(model_content, encoding="utf-8")
-    print("  - model.tmdl oppdatert med referanser til alle 11 tabeller")
+    print("  - model.tmdl oppdatert med referanser til alle 13 tabeller og 8 RLS-roller")
     print("\n" + "=" * 80)
     print("TMDL DATAMODELL FULLFØRT.")
     print("=" * 80)

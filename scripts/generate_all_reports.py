@@ -331,6 +331,13 @@ def save_page_and_visuals(page_name, display_name, visuals):
     visuals_dir = page_dir / "visuals"
     visuals_dir.mkdir(parents=True, exist_ok=True)
 
+    # Clean obsolete visual folders
+    active_visual_names = {vis["name"] for vis in visuals}
+    for existing_item in visuals_dir.iterdir():
+        if existing_item.is_dir() and existing_item.name not in active_visual_names:
+            import shutil
+            shutil.rmtree(existing_item)
+
     # page.json
     page_json = {
         "$schema": PAGE_SCHEMA,
@@ -355,15 +362,15 @@ def save_page_and_visuals(page_name, display_name, visuals):
 
 def build_page_1():
     visuals = []
-    # 1. Header Textbox
+    # 1. Header Textbox (Matching Styrenotat and PDF Title Slide)
     header_paragraphs = [
         {
             "textRuns": [
                 {
-                    "value": "UNIVERSITETET I AGDER — VIRKSOMHETS- OG PROSJEKTOVERSIKT 2026",
+                    "value": "ØKONOMISK STATUS OG HELÅRSPROGNOSE 2026 — BESLUTNINGSGRUNNLAG FOR UNIVERSITETSSTYRET",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
-                        "fontSize": "16pt",
+                        "fontSize": "15pt",
                         "fontWeight": "bold",
                         "color": "#0f172a"
                     }
@@ -373,46 +380,87 @@ def build_page_1():
         {
             "textRuns": [
                 {
-                    "value": "Rullet lederoversikt pr. 30.09.2026 (YTD Q3) | Regnskap, Prognose (EAC), EVM Prosjektkontroll, Bemanning & Studieproduksjon",
+                    "value": "En diagnostisk gjennomgang av faktisk innføring, ressursforbruk og iverksatte omstillingstiltak | Status pr. M09 (30.09.2026)",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "10pt",
+                        "fontWeight": "bold",
+                        "color": "#334155"
+                    }
+                }
+            ]
+        },
+        {
+            "textRuns": [
+                {
+                    "value": "Rapporteringsansvarlig: Virksomhetsstyring og Økonomi | Universitetet i Agder | Framlegg for: Universitetsstyret 15.10.2026",
+                    "textStyle": {
+                        "fontFamily": "Segoe UI",
+                        "fontSize": "8.5pt",
                         "color": "#64748b"
                     }
                 }
             ]
         }
     ]
-    visuals.append(create_textbox_visual("vis_hdr_title", 20, 20, 1300, 75, 10, header_paragraphs, 1))
-    visuals.append(create_slicer_visual("vis_slc_enhet", 1340, 20, 320, 75, 15, "DimOrganization", "Enhet", "Filtrer Enhet", 2))
-    visuals.append(create_slicer_visual("vis_slc_kvartal", 1680, 20, 220, 75, 16, "DimDate", "Kvartal", "Kvartal", 3))
+    visuals.append(create_textbox_visual("vis_hdr_board_title", 20, 12, 1280, 80, 10, header_paragraphs, 1))
+    visuals.append(create_slicer_visual("vis_slc_enhet", 1315, 12, 345, 80, 15, "DimOrganization", "Enhet", "Filtrer Enhet", 2))
+    visuals.append(create_slicer_visual("vis_slc_kvartal", 1675, 12, 225, 80, 16, "DimDate", "Kvartal", "Kvartal", 3))
 
-    # 2. KPI Cards Row
+    # 2. Strategic Executive Summary Banner (Translating Section 1 of Styrenotat & Slide 2/3 of PDF)
+    summary_paragraphs = [
+        {
+            "textRuns": [
+                {
+                    "value": "STRATEGISK DIAGNOSE M09: NETTO NEGATIVT SLUTTAVVIK PÅ -11,0 MNOK MOT BAC (VEDTATT RAMME 1 433 MNOK VS EAC 1 444 MNOK)",
+                    "textStyle": {
+                        "fontFamily": "Segoe UI",
+                        "fontSize": "10.5pt",
+                        "fontWeight": "bold",
+                        "color": "#0f172a"
+                    }
+                }
+            ]
+        },
+        {
+            "textRuns": [
+                {
+                    "value": "• KD 2025 Ny Modell: Basisbevilgningen (1 234 MNOK) ligger fast. Statlig risiko er flyttet til UiA; marginale endringer i produksjon slår direkte inn i bunnlinjen.\n• Tre Kritiske Avviksdrivere: 1) Svikt i studiepoeng ved SAM (prosjekt I013BA). 2) Praksisunderfinansiering ved HEL (RETHOS overstiger marginal sats). 3) Fremdriftsavvik i BOA med TDI-overheadtap (CPI 0,95 / SPI 0,92 iht. SRS 10).\n• Iverksatte Omstillingstiltak (FactAction): -15,0 MNOK planlagt | -9,0 MNOK sikret per M09 | Udekket gap: 2,0 MNOK krever skjerpet vakansestyring i Q4.",
+                    "textStyle": {
+                        "fontFamily": "Segoe UI",
+                        "fontSize": "8.5pt",
+                        "color": "#1e293b"
+                    }
+                }
+            ]
+        }
+    ]
+    visuals.append(create_textbox_visual("vis_txt_exec_summary", 20, 98, 1880, 96, 18, summary_paragraphs, 4))
+
+    # 3. Executive KPI Cards Row (The Board Big 5)
     kpis = [
-        ("vis_kpi_actual_ytd", 20, "Actual YTD", "REGNSKAP YTD (MNOK)", 4),
-        ("vis_kpi_eac", 399, "Forecast LE (EAC)", "PROGNOSE ÅRSSLUTT - EAC (MNOK)", 5),
-        ("vis_kpi_vac", 778, "Sluttavvik (VAC)", "SLUTTAVVIK - VAC (MNOK)", 6),
-        ("vis_kpi_cpi", 1157, "CPI", "EVM KOSTNADSINDEKS (CPI)", 7),
-        ("vis_kpi_aarsverk", 1536, "Totale Årsverk", "AKTIVE ÅRSVERK (FTE)", 8),
+        ("vis_kpi_bac", 20, "Årsbudsjett (BAC)", "BAC — VEDTATT ÅRSRAMME 2026 (MNOK)", 5),
+        ("vis_kpi_eac", 400, "Forecast LE (EAC)", "EAC — PROGNOSE SLUTTKOSTNAD (MNOK)", 6),
+        ("vis_kpi_vac", 780, "Sluttavvik (VAC)", "NETTO AVVIK / VAC (MNOK)", 7),
+        ("vis_kpi_lonnsandel", 1160, "Lønnsandel %", "LØNNSANDEL % (SEKTORMÅL: 71,0 %)", 8),
+        ("vis_kpi_omstilling_gap", 1540, "Omstilling Udekket Gap", "UDEKKET OMSTILLINGSGAP (MNOK)", 9),
     ]
     for vname, vx, mname, title, tab in kpis:
-        visuals.append(create_card_visual(vname, vx, 110, 364, 100, 20, mname, title, tab))
+        visuals.append(create_card_visual(vname, vx, 202, 360, 96, 20, mname, title, tab))
 
-    # 3. Middle Section: Table & EVM S-Curve
+    # 4. Middle Section: Strategic Faculty Diagnostic Table & EVM S-Curve
     table_fields = [
         {"type": "Column", "entity": "DimOrganization", "property": "Kortnavn", "label": "Enhet"},
-        {"type": "Measure", "entity": "_Measures", "property": "Budsjett YTD", "label": "Budsjett YTD (MNOK)"},
-        {"type": "Measure", "entity": "_Measures", "property": "Actual YTD", "label": "Regnskap YTD (MNOK)"},
-        {"type": "Measure", "entity": "_Measures", "property": "Avvik YTD", "label": "Avvik YTD (MNOK)"},
-        {"type": "Measure", "entity": "_Measures", "property": "Avvik YTD %", "label": "Avvik %"},
-        {"type": "Measure", "entity": "_Measures", "property": "Årsbudsjett (BAC)", "label": "Årsbudsjett BAC"},
+        {"type": "Measure", "entity": "_Measures", "property": "Avvikstype", "label": "Avvikstype"},
+        {"type": "Measure", "entity": "_Measures", "property": "Budsjett YTD", "label": "Budsjett YTD"},
+        {"type": "Measure", "entity": "_Measures", "property": "Actual YTD", "label": "Regnskap YTD"},
+        {"type": "Measure", "entity": "_Measures", "property": "Avvik YTD", "label": "Avvik YTD"},
         {"type": "Measure", "entity": "_Measures", "property": "Forecast LE (EAC)", "label": "Prognose EAC"},
         {"type": "Measure", "entity": "_Measures", "property": "Sluttavvik (VAC)", "label": "Sluttavvik VAC"},
-        {"type": "Measure", "entity": "_Measures", "property": "CPI", "label": "CPI"},
-        {"type": "Measure", "entity": "_Measures", "property": "SPI", "label": "SPI"},
-        {"type": "Measure", "entity": "_Measures", "property": "Forecast RAG Status", "label": "Status"}
+        {"type": "Measure", "entity": "_Measures", "property": "Diagnose og Drivere", "label": "Analyse og Drivere (Styrenotat §3)"},
+        {"type": "Measure", "entity": "_Measures", "property": "Styrenotat Status RAG", "label": "Status"}
     ]
-    visuals.append(create_table_visual("vis_tbl_hovedoversikt", 20, 230, 1180, 430, 30, table_fields, "Total KPI-Oversikt per Fakultet og Enhet (MNOK / Indeks)", 9))
+    visuals.append(create_table_visual("vis_tbl_styrenotat_fakultet", 20, 306, 1190, 380, 30, table_fields, "Fakultetsvis Avviksanalyse & Status M09 (Styrenotat Tabell 3: Enhetsvis gjennomgang)", 10))
 
     scurve_cat = {"entity": "DimDate", "property": "MaanedNavn", "label": "Måned"}
     scurve_measures = [
@@ -420,23 +468,29 @@ def build_page_1():
         {"entity": "_Measures", "property": "Earned Value (EV)", "label": "EV (Opptjent)"},
         {"entity": "_Measures", "property": "Actual Cost (AC)", "label": "AC (Faktisk)"}
     ]
-    visuals.append(create_line_chart_visual("vis_cht_evm_scurve", 1220, 230, 680, 430, 31, scurve_cat, scurve_measures, "EVM S-Kurve Trend 2026: Planlagt (PV) vs Opptjent (EV) vs Faktisk (AC)", 10))
+    visuals.append(create_line_chart_visual("vis_cht_evm_scurve", 1225, 306, 675, 380, 31, scurve_cat, scurve_measures, "EVM S-Kurve Trend 2026: BOA-portefølje [CPI: 0,95 TDI-fellen | SPI: 0,92 SRS 10 Risiko]", 11))
 
-    # 4. Lower Section
+    # 5. Lower Section: Kapasitetsstyring & Action Tracker
     bemanning_cat = {"entity": "DimOrganization", "property": "Kortnavn", "label": "Enhet"}
     bemanning_measures = [
         {"entity": "_Measures", "property": "Faglige Årsverk (UF)", "label": "Faglige årsverk (UF)"},
         {"entity": "_Measures", "property": "Teknisk-Admin Årsverk (TA)", "label": "Teknisk-administrative (TA)"}
     ]
-    visuals.append(create_bar_chart_visual("vis_cht_bemanning", 20, 680, 930, 370, 40, bemanning_cat, bemanning_measures, "Bemanningsfordeling: Faglige årsverk (UF) vs Teknisk-Administrative (TA)", 11))
+    visuals.append(create_bar_chart_visual("vis_cht_bemanning", 20, 694, 910, 374, 40, bemanning_cat, bemanning_measures, "Kapasitetsstyring: Faglige årsverk (UF: 57,1 % / Mål >50 %) vs Teknisk-Administrative (TA)", 12))
 
-    cost_cat = {"entity": "DimAccountHierarchy", "property": "Nivaa1_Navn", "label": "Kontokategori"}
-    cost_measures = [
-        {"entity": "_Measures", "property": "Avvik YTD", "label": "Avvik YTD (MNOK)"}
+    action_table_fields = [
+        {"type": "Column", "entity": "FactAction", "property": "TiltakID", "label": "ID"},
+        {"type": "Column", "entity": "FactAction", "property": "TiltakNavn", "label": "Tiltak (Beskrivelse)"},
+        {"type": "Column", "entity": "FactAction", "property": "ForventetEffekt_MNOK", "label": "Planlagt (MNOK)"},
+        {"type": "Column", "entity": "FactAction", "property": "RealisertEffekt_MNOK", "label": "Realisert (MNOK)"},
+        {"type": "Column", "entity": "FactAction", "property": "Frist", "label": "Frist"},
+        {"type": "Column", "entity": "FactAction", "property": "Status", "label": "Status"},
+        {"type": "Column", "entity": "FactAction", "property": "Ansvarlig", "label": "Ansvarlig"},
+        {"type": "Column", "entity": "FactAction", "property": "RAG_Status", "label": "RAG"}
     ]
-    visuals.append(create_bar_chart_visual("vis_cht_avvik_art", 970, 680, 930, 370, 41, cost_cat, cost_measures, "Regnskapsavvik YTD fordelt på Hovedartskontoer (MNOK)", 12))
+    visuals.append(create_table_visual("vis_tbl_action_tracker", 945, 694, 955, 374, 41, action_table_fields, "Handlingsplan og Omstillingstiltak (Action Tracker iht. Styrenotat §6 & Slide 10: -15M planlagt / -9M realisert)", 13))
 
-    save_page_and_visuals("0a6c532bb128ac39b432", "Virksomhets- og Prosjektoversikt 2026", visuals)
+    save_page_and_visuals("0a6c532bb128ac39b432", "Økonomisk Status og Helårsprognose 2026", visuals)
 
 def build_page_2():
     visuals = []

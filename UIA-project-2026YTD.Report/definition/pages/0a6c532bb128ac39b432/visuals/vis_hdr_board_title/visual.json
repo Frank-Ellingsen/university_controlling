@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis_hdr_board_title",
+  "position": {
+    "x": 20,
+    "y": 12,
+    "z": 10,
+    "width": 1280,
+    "height": 80,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "ØKONOMISK STATUS OG HELÅRSPROGNOSE 2026 — BESLUTNINGSGRUNNLAG FOR UNIVERSITETSSTYRET",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "15pt",
+                      "fontWeight": "bold",
+                      "color": "#0f172a"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "En diagnostisk gjennomgang av faktisk innføring, ressursforbruk og iverksatte omstillingstiltak | Status pr. M09 (30.09.2026)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "fontWeight": "bold",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Rapporteringsansvarlig: Virksomhetsstyring og Økonomi | Universitetet i Agder | Framlegg for: Universitetsstyret 15.10.2026",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "8.5pt",
+                      "color": "#64748b"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": false
+  }
+}

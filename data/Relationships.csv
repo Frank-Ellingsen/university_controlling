@@ -1,4 +1,4 @@
-﻿FraTabell;FraKolonne;TilTabell;TilKolonne;Kardinalitet;Kryssfiltrering
+FraTabell;FraKolonne;TilTabell;TilKolonne;Kardinalitet;Kryssfiltrering
 DimOrganization;OrgKode;FactGL;OrgKode;1:*;Enkel (Dim -> Fact)
 DimOrganization;OrgKode;FactBudget;OrgKode;1:*;Enkel (Dim -> Fact)
 DimOrganization;OrgKode;FactFTE;OrgKode;1:*;Enkel (Dim -> Fact)
@@ -11,3 +11,4 @@ DimDate;DatoNokkel;FactEVM;DatoNokkel;1:*;Enkel (Dim -> Fact)
 DimForecastVersion;VersjonKode;FactGL;VersjonKode;1:*;Enkel (Dim -> Fact)
 DimForecastVersion;VersjonKode;FactBudget;VersjonKode;1:*;Enkel (Dim -> Fact)
 DimAccountHierarchy;Konto;FactGL;Konto;1:*;Enkel (Dim -> Fact)
+DimOrganization;OrgKode;FactAction;OrgKode;1:*;Enkel (Dim -> Fact)

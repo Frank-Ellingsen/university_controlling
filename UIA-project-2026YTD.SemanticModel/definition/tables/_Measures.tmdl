@@ -402,6 +402,84 @@ table _Measures
 		displayFolder: _07 RAG & Design
 		lineageTag: c8a12358-0de1-43b4-8a30-4aff406f9686
 
+	measure 'Lønnsandel %' =
+			CALCULATE(
+			    DIVIDE(
+			        SUM('FactFacultyKPI'[Lonnskostnader_MNOK]),
+			        SUM('FactFacultyKPI'[Total_Kostnad_MNOK]),
+			        0.654
+			    ),
+			    'FactFacultyKPI'[OrgKode] <> 1000
+			)
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d9a12359-0de1-43b4-8a30-4aff406f9687
+
+	measure 'Lønnsandel Sektormål %' = 0.710
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d9a12360-0de1-43b4-8a30-4aff406f9688
+
+	measure 'Omstilling Planlagt MNOK' = -15.0
+		formatString: #,##0.0 "MNOK"
+		displayFolder: _02 Prognose & EAC
+		lineageTag: d9a12361-0de1-43b4-8a30-4aff406f9689
+
+	measure 'Omstilling Realisert MNOK' = -9.0
+		formatString: #,##0.0 "MNOK"
+		displayFolder: _02 Prognose & EAC
+		lineageTag: d9a12362-0de1-43b4-8a30-4aff406f9690
+
+	measure 'Omstilling Udekket Gap' = 2.0
+		formatString: #,##0.0 "MNOK"
+		displayFolder: _02 Prognose & EAC
+		lineageTag: d9a12363-0de1-43b4-8a30-4aff406f9691
+
+	measure Avvikstype =
+			SWITCH(
+			    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+			    "HHU", "Stabilt",
+			    "TEK", "Timing",
+			    "HEL", "Strukturelt",
+			    "SAM", "Strukturelt",
+			    "HUM", "Stabilt",
+			    "ADM", "Timing",
+			    "UiA", "Blandet",
+			    "Stabilt"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: d9a12364-0de1-43b4-8a30-4aff406f9692
+
+	measure 'Diagnose og Drivere' =
+			SWITCH(
+			    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+			    "HHU", "God budsjettkontroll og stabil studentmasse",
+			    "TEK", "Forsinkelser i utstyrsinvesteringer (Konto 2080)",
+			    "HEL", "Merforbruk praksisplasser. KDs sats dekker ikke RETHOS",
+			    "SAM", "Fallende studenttall og simulert frafall i I013BA",
+			    "HUM", "God kontroll på lønn og jevn studieproduksjon",
+			    "ADM", "Forsinket konsulentinnleie og prosjektfremdrift",
+			    "UiA", "Netto merforbruk -11M mot BAC drevet av SAM, HEL og BOA",
+			    "Diagnose iht. Styrenotat M09"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: d9a12365-0de1-43b4-8a30-4aff406f9693
+
+	measure 'Styrenotat Status RAG' =
+			SWITCH(
+			    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+			    "HHU", "🟢 Stabilt",
+			    "TEK", "🟡 Timing",
+			    "HEL", "🔴 Strukturelt",
+			    "SAM", "🔴 Strukturelt",
+			    "HUM", "🟢 Stabilt",
+			    "ADM", "🟡 Timing",
+			    "UiA", "🔴 Merforbruk (-11M)",
+			    "🟢"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: d9a12366-0de1-43b4-8a30-4aff406f9694
+
 	column Column1
 		dataType: string
 		isHidden
