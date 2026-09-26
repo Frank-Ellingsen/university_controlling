@@ -69,6 +69,7 @@ c:\Users\frank\Desktop\UIA2\
 │   │   └── dax_guide.md                 # Detaljert måltallsbeskrivelse og implementasjonssteg
 │   ├── powerquery/
 │   │   ├── import_all_tables.m          # Power Query M-skript med dynamisk DataFolder-parameter
+│   │   ├── duckdb_bridge.m              # Power Query M DuckDB-bro for direkte SQL-spørringer
 │   │   └── Account_Hierarchy_PowerBI.md # Veileder for denormalisering av kontoplanhierarki
 │   ├── themes/
 │   │   └── tufte_minimalist_theme.json  # Eget Edward Tufte minimalist-tema for Power BI
@@ -90,11 +91,13 @@ c:\Users\frank\Desktop\UIA2\
 │
 ├── docs/                                # Prosjektdokumentasjon og arkitektur
 │   ├── architecture/                    # Flytdiagrammer og use-case beskrivelser
+│   ├── duckdb_powerbi_bridge_guide.md   # Veileder for Power BI Desktop -> DuckDB Bridge
 │   └── reporting_standard_tufte.md      # Edward Tufte Data-Ink standard for styre- og ledermøter
 │
 ├── scripts/                             # Python-automatisering og DuckDB analyse
 │   ├── verify_reporting_rules.py        # Kjører kontroller for 5%-regel, SRS, EVM og KD-modell
 │   ├── build_duckdb.py                  # Bygger lokal database uia_analytics.duckdb med visninger
+│   ├── duckdb_pbi_bridge.py             # Validerings- og spørrehjelper for Power BI DuckDB-bro
 │   └── test_data_integrity.py           # Pytest/Unittest-suite for fremmednøkler og datakvalitet
 │
 ├── overall.md                           # Overordnet faglig rammeverk og kompetanseveileder
@@ -165,6 +168,17 @@ Oppretter databasen `uia_analytics.duckdb` med tre ferdige analytiske visninger:
 ```bash
 python -m unittest scripts/test_data_integrity.py
 ```
+
+### 4.4 Koble Power BI Desktop til DuckDB (The DuckDB Bridge)
+For å utnytte DuckDBs lynraske OLAP-beregninger direkte i Power BI Desktop uten å gå via CSV-filer:
+1. **Verifiser tilkoblingen**:
+   ```bash
+   python scripts/duckdb_pbi_bridge.py
+   ```
+2. **Bruk Power Query M-modulen**:
+   * Åpne [`powerbi/powerquery/duckdb_bridge.m`](powerbi/powerquery/duckdb_bridge.m) for ferdig M-kode.
+   * Se komplett oppsettveileder i [`docs/duckdb_powerbi_bridge_guide.md`](docs/duckdb_powerbi_bridge_guide.md).
+   * Importer ferdige visninger som `v_avvik_budsjett_actual`, `v_evm_sammendrag` og `v_ytd_regnskap` direkte inn i modellen via Power BI Python Scripting.
 
 ---
 
