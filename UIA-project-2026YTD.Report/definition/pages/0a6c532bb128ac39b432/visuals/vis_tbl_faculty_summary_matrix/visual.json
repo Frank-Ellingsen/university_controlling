@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "vis_tbl_styrenotat_fakultet",
+  "name": "vis_tbl_faculty_summary_matrix",
   "position": {
     "x": 20,
-    "y": 306,
-    "z": 30,
-    "width": 1190,
-    "height": 380,
-    "tabOrder": 10
+    "y": 650,
+    "z": 40,
+    "width": 1880,
+    "height": 410,
+    "tabOrder": 12
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -23,12 +23,29 @@
                       "Entity": "DimOrganization"
                     }
                   },
-                  "Property": "Kortnavn"
+                  "Property": "Enhet"
                 }
               },
-              "queryRef": "DimOrganization.Kortnavn",
-              "nativeQueryRef": "Enhet",
-              "active": true
+              "queryRef": "DimOrganization.Enhet",
+              "nativeQueryRef": "Fakultet / Enhet"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Inntekt MNOK"
+                }
+              },
+              "queryRef": "_Measures.Total Inntekt MNOK",
+              "nativeQueryRef": "Total Inntekt (MNOK)"
             },
             {
               "field": {
@@ -38,11 +55,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Avvikstype"
+                  "Property": "Actual/FC Lønn"
                 }
               },
-              "queryRef": "_Measures.Avvikstype",
-              "nativeQueryRef": "Avvikstype"
+              "queryRef": "_Measures.Actual/FC Lønn",
+              "nativeQueryRef": "Lønnskostnad (MNOK)"
             },
             {
               "field": {
@@ -52,11 +69,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Budsjett YTD"
+                  "Property": "Actual/FC Drift"
                 }
               },
-              "queryRef": "_Measures.Budsjett YTD",
-              "nativeQueryRef": "Budsjett YTD"
+              "queryRef": "_Measures.Actual/FC Drift",
+              "nativeQueryRef": "Driftskostnad (MNOK)"
             },
             {
               "field": {
@@ -66,81 +83,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Actual YTD"
+                  "Property": "Actual/FC Capex"
                 }
               },
-              "queryRef": "_Measures.Actual YTD",
-              "nativeQueryRef": "Regnskap YTD"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Avvik YTD"
-                }
-              },
-              "queryRef": "_Measures.Avvik YTD",
-              "nativeQueryRef": "Avvik YTD"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Avvik YTD %"
-                }
-              },
-              "queryRef": "_Measures.Avvik YTD %",
-              "nativeQueryRef": "Avvik %"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Fakultet MoM Endring MNOK"
-                }
-              },
-              "queryRef": "_Measures.Fakultet MoM Endring MNOK",
-              "nativeQueryRef": "MoM Endring"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Fakultet YoY Vekst %"
-                }
-              },
-              "queryRef": "_Measures.Fakultet YoY Vekst %",
-              "nativeQueryRef": "YoY Vekst %"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Forecast LE (EAC)"
-                }
-              },
-              "queryRef": "_Measures.Forecast LE (EAC)",
-              "nativeQueryRef": "Prognose EAC"
+              "queryRef": "_Measures.Actual/FC Capex",
+              "nativeQueryRef": "Investeringer Capex (MNOK)"
             },
             {
               "field": {
@@ -154,7 +101,49 @@
                 }
               },
               "queryRef": "_Measures.Sluttavvik (VAC)",
-              "nativeQueryRef": "Sluttavvik VAC"
+              "nativeQueryRef": "Netto Resultat VAC (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglige Årsverk (UF)"
+                }
+              },
+              "queryRef": "_Measures.Faglige Årsverk (UF)",
+              "nativeQueryRef": "UF-Årsverk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Studenter pr UF-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Studenter pr UF-Årsverk",
+              "nativeQueryRef": "Studenter / UF-ÅV"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Forecast RAG Status"
+                }
+              },
+              "queryRef": "_Measures.Forecast RAG Status",
+              "nativeQueryRef": "RAG Status"
             },
             {
               "field": {
@@ -168,27 +157,26 @@
                 }
               },
               "queryRef": "_Measures.Diagnose og Drivere",
-              "nativeQueryRef": "Analyse og Drivere (Styrenotat §3)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Styrenotat Status RAG"
-                }
-              },
-              "queryRef": "_Measures.Styrenotat Status RAG",
-              "nativeQueryRef": "Status"
+              "nativeQueryRef": "Strategisk Diagnose"
             }
           ]
         }
       }
     },
-    "objects": {
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -202,7 +190,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fakultetsvis Avviksanalyse, MoM/YoY & Status M09 (Styrenotat Tabell 3)'"
+                  "Value": "'Fakultetsoversikt: Totalregnskap, Stillingsstruktur og Styringsdiagnose (300-sekunders dybdeanalyse)'"
                 }
               }
             }

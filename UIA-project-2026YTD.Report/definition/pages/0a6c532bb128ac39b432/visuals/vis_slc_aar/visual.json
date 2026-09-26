@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "vis_slc_kvartal",
+  "name": "vis_slc_aar",
   "position": {
-    "x": 1675,
-    "y": 12,
-    "z": 16,
-    "width": 225,
-    "height": 80,
-    "tabOrder": 3
+    "x": 1220,
+    "y": 15,
+    "z": 15,
+    "width": 200,
+    "height": 75,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "DimDate"
                     }
                   },
-                  "Property": "Kvartal"
+                  "Property": "Aar"
                 }
               },
-              "queryRef": "DimDate.Kvartal",
-              "nativeQueryRef": "Kvartal",
+              "queryRef": "DimDate.Aar",
+              "nativeQueryRef": "Aar",
               "active": true
             }
           ]
@@ -35,7 +35,20 @@
       }
     },
     "objects": {
-      "title": [
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Single'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
         {
           "properties": {
             "show": {
@@ -48,7 +61,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Kvartal'"
+                  "Value": "'Regnskapsår'"
                 }
               }
             }

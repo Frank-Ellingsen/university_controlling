@@ -448,4 +448,114 @@ Lønnsandel Card Subtitle = "Lønn/Totalramme | Sektormål: 71,0 % | MoM: -0,2 %
 
 Omstilling Card Subtitle = "Udekket gap | Planlagt: -15M | Realisert: -9M | 🟡 2,0M krever styring"
 
+// ------------------------------------------------------------------------------
+// Folder: dashboard_skills.md Measures
+// ------------------------------------------------------------------------------
+
+Revenue Variance Indicator = 
+VAR Budget = [Årsbudsjett (BAC)]
+VAR Forecast = [Forecast LE (EAC)]
+VAR Diff = Forecast - Budget
+VAR Pct = DIVIDE(Diff, Budget, 0)
+RETURN
+"Budsjett: " & FORMAT(Budget, "#,##0.0") & " MNOK | " &
+IF(Diff >= 0, "▲ +" & FORMAT(Pct, "0.0%"), "▼ " & FORMAT(Pct, "0.0%"))
+
+Net Result Status Text = 
+VAR YTDResult = [Actual YTD]
+RETURN
+"YTD per Sept: " & FORMAT(YTDResult, "#,##0.0") & " MNOK (Dekkes av F-05-20)"
+
+Staffing Card Subtitle = 
+VAR UF = [Faglige Årsverk (UF)]
+VAR TA = [Teknisk-Admin Årsverk (TA)]
+VAR LonnPct = [Lønnsandel %]
+RETURN
+FORMAT(UF, "#0") & " UF / " & FORMAT(TA, "#0") & " TA | Lønnsandel: " & FORMAT(LonnPct, "0.0%")
+
+EVM Status Subtitle = 
+VAR SPIVal = [SPI]
+RETURN
+"SPI (Tidsfremdrift): " & FORMAT(SPIVal, "0.00") & " | 5% Kostnadsoverskridelse"
+
+Student KPI Subtitle = 
+VAR SPE = [Avlagte SPE60]
+VAR Ratio = [Studenter pr UF-Årsverk]
+RETURN
+FORMAT(SPE, "#,##0") & " SPE60 | " & FORMAT(Ratio, "0.0") & " Studenter/UF-ÅV"
+
+Faculty Bar Color = 
+IF([Sluttavvik (VAC)] >= 0, "#10b981", "#ef4444")
+
+Cumulative Actual & Forecast = 
+VAR MaxDate = MAX('DimDate'[Dato])
+RETURN
+CALCULATE(
+    [Forecast LE (EAC)],
+    'DimDate'[Dato] <= MaxDate,
+    ALLSELECTED('DimDate')
+)
+
+Cumulative Budget = 
+VAR MaxDate = MAX('DimDate'[Dato])
+RETURN
+CALCULATE(
+    [Årsbudsjett (BAC)],
+    'DimDate'[Dato] <= MaxDate,
+    ALLSELECTED('DimDate')
+)
+
+KPI Card Border Color = 
+SWITCH(
+    TRUE(),
+    [VAC %] < -0.05, "#EF4444",
+    [VAC %] < 0.00, "#F59E0B",
+    "#10B981"
+)
+
+Forecast RAG Status = 
+IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
+    IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)",
+        "🔴 Kritisk overskridelse (> 5%)"
+    )
+)
+
+RAG Hex Color = 
+IF([Sluttavvik (VAC)] >= 0, "#10b981",
+    IF([VAC %] >= -0.05, "#f59e0b",
+        "#ef4444"
+    )
+)
+
+Actual/FC Lønn = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert_MNOK]),
+    'FactGL'[Kategori] = "Lønnskostnader"
+)
+
+Actual/FC Drift = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert_MNOK]),
+    'FactGL'[Kategori] = "Driftskostnader"
+)
+
+Actual/FC Capex = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert_MNOK]),
+    'FactGL'[Kategori] = "Investeringer (Capex)"
+)
+
+Faktiske & Prognostiserte Driftskostnader = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert_MNOK]),
+    'FactGL'[Artstype] = "Kostnad"
+)
+
+Total Inntekt MNOK = 
+CALCULATE(
+    SUM('FactGL'[Belop_MNOK]),
+    'FactGL'[Artstype] = "Inntekt"
+)
+
+
 

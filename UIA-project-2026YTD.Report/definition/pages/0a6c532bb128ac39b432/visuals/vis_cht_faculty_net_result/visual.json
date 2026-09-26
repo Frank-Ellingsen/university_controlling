@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
-  "name": "vis_cht_evm_scurve",
+  "name": "vis_cht_faculty_net_result",
   "position": {
-    "x": 1225,
-    "y": 306,
+    "x": 1160,
+    "y": 235,
     "z": 31,
-    "width": 675,
-    "height": 380,
+    "width": 740,
+    "height": 400,
     "tabOrder": 11
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimDate"
+                      "Entity": "DimOrganization"
                     }
                   },
-                  "Property": "MaanedNavn"
+                  "Property": "Kortnavn"
                 }
               },
-              "queryRef": "DimDate.MaanedNavn",
-              "nativeQueryRef": "Måned",
+              "queryRef": "DimOrganization.Kortnavn",
+              "nativeQueryRef": "Fakultet",
               "active": true
             }
           ]
@@ -42,39 +42,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Planned Value (PV)"
+                  "Property": "Sluttavvik (VAC)"
                 }
               },
-              "queryRef": "_Measures.Planned Value (PV)",
-              "nativeQueryRef": "PV (Planlagt)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Earned Value (EV)"
-                }
-              },
-              "queryRef": "_Measures.Earned Value (EV)",
-              "nativeQueryRef": "EV (Opptjent)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Actual Cost (AC)"
-                }
-              },
-              "queryRef": "_Measures.Actual Cost (AC)",
-              "nativeQueryRef": "AC (Faktisk)"
+              "queryRef": "_Measures.Sluttavvik (VAC)",
+              "nativeQueryRef": "Sluttavvik (VAC MNOK)"
             }
           ]
         },
@@ -88,11 +60,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Cost Variance (CV)"
+                  "Property": "Total Inntekt MNOK"
                 }
               },
-              "queryRef": "_Measures.Cost Variance (CV)",
-              "nativeQueryRef": "Cost Variance (CV)"
+              "queryRef": "_Measures.Total Inntekt MNOK",
+              "nativeQueryRef": "Total Inntekt"
             },
             {
               "field": {
@@ -102,11 +74,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Schedule Variance (SV)"
+                  "Property": "Forecast LE (EAC)"
                 }
               },
-              "queryRef": "_Measures.Schedule Variance (SV)",
-              "nativeQueryRef": "Schedule Variance (SV)"
+              "queryRef": "_Measures.Forecast LE (EAC)",
+              "nativeQueryRef": "Prognose (EAC)"
             },
             {
               "field": {
@@ -116,11 +88,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "CPI"
+                  "Property": "Årsbudsjett (BAC)"
                 }
               },
-              "queryRef": "_Measures.CPI",
-              "nativeQueryRef": "CPI"
+              "queryRef": "_Measures.Årsbudsjett (BAC)",
+              "nativeQueryRef": "Årsbudsjett (BAC)"
             },
             {
               "field": {
@@ -130,45 +102,17 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "SPI"
+                  "Property": "Forecast RAG Status"
                 }
               },
-              "queryRef": "_Measures.SPI",
-              "nativeQueryRef": "SPI"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "CPI RAG Status"
-                }
-              },
-              "queryRef": "_Measures.CPI RAG Status",
-              "nativeQueryRef": "CPI Status"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "SPI RAG Status"
-                }
-              },
-              "queryRef": "_Measures.SPI RAG Status",
-              "nativeQueryRef": "SPI Status"
+              "queryRef": "_Measures.Forecast RAG Status",
+              "nativeQueryRef": "RAG Status"
             }
           ]
         }
       }
     },
-    "objects": {
+    "visualContainerObjects": {
       "title": [
         {
           "properties": {
@@ -182,13 +126,15 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'EVM S-Kurve Trend 2026: BOA-portefølje [CPI: 0,95 TDI-fellen | SPI: 0,92 SRS 10 Risiko]'"
+                  "Value": "'Fakultetsvis Netto Sluttavvik (VAC MNOK) — Merforbruk vs. Mindreforbruk'"
                 }
               }
             }
           }
         }
-      ],
+      ]
+    },
+    "objects": {
       "legend": [
         {
           "properties": {

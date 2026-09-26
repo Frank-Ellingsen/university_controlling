@@ -3,10 +3,10 @@
   "name": "vis_hdr_board_title",
   "position": {
     "x": 20,
-    "y": 12,
+    "y": 15,
     "z": 10,
-    "width": 1280,
-    "height": 80,
+    "width": 1180,
+    "height": 75,
     "tabOrder": 1
   },
   "visual": {
@@ -19,12 +19,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "ØKONOMISK STATUS OG HELÅRSPROGNOSE 2026 — BESLUTNINGSGRUNNLAG FOR UNIVERSITETSSTYRET",
+                    "value": "UiA Board Executive Dashboard 2026 — Helårsstatus & Prognose",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "15pt",
                       "fontWeight": "bold",
-                      "color": "#0f172a"
+                      "color": "#1E293B"
                     }
                   }
                 ]
@@ -32,24 +32,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "En diagnostisk gjennomgang av faktisk innføring, ressursforbruk og iverksatte omstillingstiltak | Status pr. M09 (30.09.2026)",
+                    "value": "Cutoff: 30. september 2026 (M09) | Status iht. KD 2025, SRS 10 BOA og F-05-20 (5 %-regelen) | 3-30-300 Styringsmodell",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
-                      "fontWeight": "bold",
-                      "color": "#334155"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Rapporteringsansvarlig: Virksomhetsstyring og Økonomi | Universitetet i Agder | Framlegg for: Universitetsstyret 15.10.2026",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "8.5pt",
-                      "color": "#64748b"
+                      "fontSize": "9pt",
+                      "color": "#64748B"
                     }
                   }
                 ]
