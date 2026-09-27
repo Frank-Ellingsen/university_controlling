@@ -1,7 +1,7 @@
-# BOA-Prosjektcontrolling og TDI-Modellen ved Universitetet i Agder
+# BOA-Prosjektcontrolling og TDI-Modellen ved Universitetet
 
 ## Oversikt over BOA (Bidrags- og Oppdragsfinansiert Aktivitet)
-BOA-virksomheten ved UiA omfatter all eksternt finansiert forskning, utvikling og utdanning. Prosjektcontrolleren har ansvaret for økonomisk oppfølging fra søknads- og kalkylefase, gjennom gjennomføring og periodisering, til sluttrapportering og revisjon.
+BOA-virksomheten ved universitetet omfatter all eksternt finansiert forskning, utvikling og utdanning. Prosjektcontrolleren har ansvaret for økonomisk oppfølging fra søknads- og kalkylefase, gjennom gjennomføring og periodisering, til sluttrapportering og revisjon.
 
 ---
 

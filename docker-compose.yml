@@ -1,5 +1,5 @@
 # ==============================================================================
-# Universitetet i Agder (UiA) - Docker Compose Orchestration
+# University - Docker Compose Orchestration
 # Starter controller-analytics container med direkte kobling til lokal Ollama/LM Studio
 # Forfatter: Frank Ellingsen (Project Controller)
 # ==============================================================================
@@ -11,7 +11,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: uia-controller-analytics
+    container_name: university-controller-analytics
     env_file:
       - .env.example
     environment:
@@ -37,7 +37,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: uia-controller-shell
+    container_name: university-controller-shell
     env_file:
       - .env.example
     volumes:

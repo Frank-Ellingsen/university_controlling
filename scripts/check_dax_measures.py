@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 BASE_DIR = Path(r"c:\Users\frank\Desktop\UIA2")
-measures_file = BASE_DIR / "UIA-project-2026YTD.SemanticModel" / "definition" / "tables" / "_Measures.tmdl"
+measures_file = BASE_DIR / "University-project-2026YTD.SemanticModel" / "definition" / "tables" / "_Measures.tmdl"
 
 content = measures_file.read_text(encoding="utf-8")
 
@@ -55,7 +55,7 @@ for err in errors:
 # Check references inside measures
 all_declared = set(measures.keys())
 all_tables = {}
-tables_dir = BASE_DIR / "UIA-project-2026YTD.SemanticModel" / "definition" / "tables"
+tables_dir = BASE_DIR / "University-project-2026YTD.SemanticModel" / "definition" / "tables"
 for t_file in tables_dir.glob("*.tmdl"):
     t_name = t_file.stem
     cols = set()

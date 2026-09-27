@@ -1,6 +1,6 @@
 # Veileder: Koble Power BI Desktop til DuckDB («The DuckDB Bridge»)
 
-Denne veilederen beskriver hvordan du etablerer en direkte tilkobling (**bro**) mellom **Power BI Desktop** og den lokale analytiske databasen **DuckDB** (`uia_analytics.duckdb`) på denne maskinen.
+Denne veilederen beskriver hvordan du etablerer en direkte tilkobling (**bro**) mellom **Power BI Desktop** og den lokale analytiske databasen **DuckDB** (`university_analytics.duckdb`) på denne maskinen.
 
 ---
 
@@ -13,7 +13,7 @@ Denne veilederen beskriver hvordan du etablerer en direkte tilkobling (**bro**) 
                      |  (scripts/build_duckdb.py)
                      v
 +------------------------------------------+
-|      DuckDB (uia_analytics.duckdb)       |
+|      DuckDB (university_analytics.duckdb)       |
 |  - Kolonneorientert OLAP-motor (C++)     |
 |  - Analytiske views (Avvik, EVM, SRS)   |
 +------------------------------------------+
@@ -45,7 +45,7 @@ Denne veilederen beskriver hvordan du etablerer en direkte tilkobling (**bro**) 
 
 Alt er allerede installert og verifisert på maskinen:
 * **Python**: 3.12 (med `duckdb==1.5.3` og `pandas==3.0.3`).
-* **Database**: `C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb`.
+* **Database**: `C:\Users\frank\Desktop\UIA2\university_analytics.duckdb`.
 * **Verifiseringsskript**: [scripts/duckdb_pbi_bridge.py](file:///c:/Users/frank/Desktop/UIA2/scripts/duckdb_pbi_bridge.py).
 
 Kjør verifiseringen i terminalen når som helst:
@@ -76,7 +76,7 @@ Dette er den raskeste måten for ad-hoc analyse:
    ```python
    import duckdb
    
-   db_path = r"C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb"
+   db_path = r"C:\Users\frank\Desktop\UIA2\university_analytics.duckdb"
    con = duckdb.connect(db_path, read_only=True)
    
    # Henter de 3 viktigste analytiske visningene
@@ -104,7 +104,7 @@ I mappen `powerbi/powerquery/` finner du den komplette M-koden: [duckdb_bridge.m
 #### Eksempel: Budsjettavvik per Fakultet
 ```m
 let
-    DuckDBPath = "C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb",
+    DuckDBPath = "C:\Users\frank\Desktop\UIA2\university_analytics.duckdb",
     Source = Python.Execute(
         "import duckdb#(lf)" & 
         "con = duckdb.connect(r'" & DuckDBPath & "', read_only=True)#(lf)" & 

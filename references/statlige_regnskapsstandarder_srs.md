@@ -1,7 +1,7 @@
-# Statlige Regnskapsstandarder (SRS) ved Universitetet i Agder
+# Statlige Regnskapsstandarder (SRS) ved Universitetet
 
 ## Oversikt over anvendte SRS-standarder
-Universitetet i Agder (UiA) avlegger regnskap i samsvar med de statlige regnskapsstandardene (SRS) fastsatt av Finansdepartementet og forvaltet av DFØ. Hovedprinsippet er **periodisering (opptjeningsprinsippet)**, til forskjell fra statens tradisjonelle kontantprinsipp.
+Universitetet (University) avlegger regnskap i samsvar med de statlige regnskapsstandardene (SRS) fastsatt av Finansdepartementet og forvaltet av DFØ. Hovedprinsippet er **periodisering (opptjeningsprinsippet)**, til forskjell fra statens tradisjonelle kontantprinsipp.
 
 ---
 

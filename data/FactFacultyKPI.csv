@@ -1,8 +1,8 @@
-﻿OrgKode;Fakultet;Statlig_Bevilgning_MNOK;BOA_Andre_Inntekt_MNOK;Total_Inntekt_MNOK;Lonnskostnader_MNOK;Driftskostnader_MNOK;Investeringer_Capex_MNOK;Total_Kostnad_MNOK;Netto_Resultat_MNOK;Lonnsandel_Pct;Aarsverk_UF;Aarsverk_TA;Total_Aarsverk;Antall_Ansatte;Antall_Studenter;SPE60_Helarsstudenter;Studenter_Pr_Faglig_ÅV;Kostnad_Pr_SPE60_NOK;RAG_Status
-1100;Handelshøyskolen ved UiA (HHU);246.8;29.8;276.6;179.4;64.6;30.4;274.4;2.2;65.4;155.0;75.0;230.0;252;3450;3120.0;22.3;87948;🟢 I balanse
+OrgKode;Fakultet;Statlig_Bevilgning_MNOK;BOA_Andre_Inntekt_MNOK;Total_Inntekt_MNOK;Lonnskostnader_MNOK;Driftskostnader_MNOK;Investeringer_Capex_MNOK;Total_Kostnad_MNOK;Netto_Resultat_MNOK;Lonnsandel_Pct;Aarsverk_UF;Aarsverk_TA;Total_Aarsverk;Antall_Ansatte;Antall_Studenter;SPE60_Helarsstudenter;Studenter_Pr_Faglig_ÅV;Kostnad_Pr_SPE60_NOK;RAG_Status
+1100;Handelshøyskolen (HHU);246.8;29.8;276.6;179.4;64.6;30.4;274.4;2.2;65.4;155.0;75.0;230.0;252;3450;3120.0;22.3;87948;🟢 I balanse
 1200;Fakultet for teknologi og realfag (TEK);333.2;67.6;400.8;254.9;91.8;56.0;402.7;-1.9;63.3;230.0;95.0;325.0;358;3210;2940.0;14.0;136972;🟡 Moderat avvik
 1300;Fakultet for helse- og idrettsvitenskap (HEL);283.8;39.8;323.6;217.1;78.2;33.6;328.9;-5.3;66.0;195.0;80.0;275.0;301;3100;2850.0;15.9;115403;🔴 Merforbruk
 1400;Fakultet for samfunnsvitenskap (SAM);160.4;23.9;184.3;122.7;44.2;14.4;181.3;3.0;67.7;115.0;45.0;160.0;176;2320;2110.0;20.2;85924;🟢 Overskudd
 1500;Fakultet for humaniora og pedagogikk (HUM);123.4;15.9;139.3;94.4;34.0;11.2;139.6;-0.3;67.6;95.0;35.0;130.0;142;1920;1730.0;20.2;80693;🟢 I balanse
 1900;Fellesadministrasjon & Fellesdrift (ADM);86.4;22.0;108.4;75.5;27.2;14.4;117.1;-8.7;64.5;0.0;120.0;120.0;129;0;0.0;0.0;0;🔴 Felleskostnader
-1000;TOTALT UNIVERSITETET I AGDER (UiA);1234.0;199.0;1433.0;944.0;340.0;160.0;1444.0;-11.0;65.4;790.0;450.0;1240.0;1358;14000;12750.0;17.7;113255;🔴 Netto underdekning (-11M)
+1000;TOTALT UNIVERSITY (UNIV);1234.0;199.0;1433.0;944.0;340.0;160.0;1444.0;-11.0;65.4;790.0;450.0;1240.0;1358;14000;12750.0;17.7;113255;🔴 Netto underdekning (-11M)

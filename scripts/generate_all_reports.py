@@ -18,8 +18,8 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(r"c:\Users\frank\Desktop\UIA2")
-PAGES_META_FILE = BASE_DIR / "UIA-project-2026YTD.Report" / "definition" / "pages" / "pages.json"
-PAGES_ROOT = BASE_DIR / "UIA-project-2026YTD.Report" / "definition" / "pages"
+PAGES_META_FILE = BASE_DIR / "University-project-2026YTD.Report" / "definition" / "pages" / "pages.json"
+PAGES_ROOT = BASE_DIR / "University-project-2026YTD.Report" / "definition" / "pages"
 
 PAGE_SCHEMA = "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json"
 CONTAINER_SCHEMA = "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json"
@@ -472,12 +472,12 @@ def save_page_and_visuals(page_name, display_name, visuals):
 
 def build_page_1():
     visuals = []
-    # 1. Header Textbox (Matching dashboard_skills.md: UiA Board Executive Dashboard 2026 | Cutoff: 30. Sept 2026)
+    # 1. Header Textbox (Matching dashboard_skills.md: University Board Executive Dashboard 2026 | Cutoff: 30. Sept 2026)
     header_paragraphs = [
         {
             "textRuns": [
                 {
-                    "value": "UiA Board Executive Dashboard 2026 — Helårsstatus & Prognose",
+                    "value": "University Board Executive Dashboard 2026 — Helårsstatus & Prognose",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "15pt",
@@ -562,7 +562,7 @@ def build_page_1():
     ]
     visuals.append(create_table_visual("vis_tbl_faculty_summary_matrix", 20, 650, 1880, 410, 40, matrix_fields, "Fakultetsoversikt: Totalregnskap, Stillingsstruktur og Styringsdiagnose (300-sekunders dybdeanalyse)", 12))
 
-    save_page_and_visuals("0a6c532bb128ac39b432", "UiA Board Executive Dashboard 2026", visuals)
+    save_page_and_visuals("0a6c532bb128ac39b432", "University Board Executive Dashboard 2026", visuals)
 
 def build_page_2():
     visuals = []
@@ -571,7 +571,7 @@ def build_page_2():
         {
             "textRuns": [
                 {
-                    "value": "UNIVERSITETET I AGDER — PROSJEKTSTYRING & EVM DYBDEANALYSE 2026",
+                    "value": "UNIVERSITY — PROSJEKTSTYRING & EVM DYBDEANALYSE 2026",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "16pt",
@@ -675,7 +675,7 @@ def build_page_3():
         {
             "textRuns": [
                 {
-                    "value": "UNIVERSITETET I AGDER — FAKULTETSANALYSE: BEMANNING & STUDIEPRODUKSJON",
+                    "value": "UNIVERSITY — FAKULTETSANALYSE: BEMANNING & STUDIEPRODUKSJON",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "16pt",
@@ -705,7 +705,7 @@ def build_page_3():
     kpis = [
         ("vis3_kpi_total_fte", 20, "Totale Årsverk", "TOTALE ÅRSVERK (FTE)", "MoM: +3.0 FTE | YoY: +1.2% | Sektormål: Stramhet | RAG: 🟢", 3),
         ("vis3_kpi_uf_fte", 399, "Faglige Årsverk (UF)", "FAGLIGE ÅRSVERK (UF)", "Vitenskapelig bemanning | MoM: +2.0 FTE | RAG: 🟢", 4),
-        ("vis3_kpi_uf_pct", 778, "Faglig Andel %", "FAGLIG ANDEL (MÅL: >= 60%)", "Kapasitetsandel UF | UiA Mål: >= 60.0% | Status: 57.1% | RAG: 🟡", 5),
+        ("vis3_kpi_uf_pct", 778, "Faglig Andel %", "FAGLIG ANDEL (MÅL: >= 60%)", "Kapasitetsandel UF | Mål: >= 60.0% | Status: 57.1% | RAG: 🟡", 5),
         ("vis3_kpi_students", 1157, "Registrerte Studenter", "REGISTRERTE STUDENTER", "Total studentmasse | YoY: +0.8% | RAG: 🟢", 6),
         ("vis3_kpi_spe60", 1536, "Avlagte SPE60", "AVLAGTE SPE60 (HELÅRSSTUDENTER)", "Helårsstudiepoeng | YoY: -1.5% svikt SAM/I013BA | RAG: 🔴", 7),
     ]
@@ -770,7 +770,7 @@ def build_page_4():
         {
             "textRuns": [
                 {
-                    "value": "UNIVERSITETET I AGDER — ROLLEBASERT LEDERPORTAL & FAKULTETSSTYRING",
+                    "value": "UNIVERSITY — ROLLEBASERT LEDERPORTAL & FAKULTETSSTYRING",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "16pt",
@@ -867,7 +867,7 @@ def build_page_5_kpi_dictionary():
         {
             "textRuns": [
                 {
-                    "value": "UNIVERSITETET I AGDER — KPI METADATAGUIDE, INNHOLDSDEFINISJONER & STYRINGSREGLER",
+                    "value": "UNIVERSITY — KPI METADATAGUIDE, INNHOLDSDEFINISJONER & STYRINGSREGLER",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "16pt",
@@ -899,7 +899,7 @@ def build_page_5_kpi_dictionary():
         {
             "textRuns": [
                 {
-                    "value": "LOVPÅLAGT RAMMEVERK & DEFINISJONSBASIS FOR ØKONOMISTYRING VED UNIVERSITETET I AGDER",
+                    "value": "LOVPÅLAGT RAMMEVERK & DEFINISJONSBASIS FOR ØKONOMISTYRING VED UNIVERSITETET",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "10.5pt",
@@ -912,7 +912,7 @@ def build_page_5_kpi_dictionary():
         {
             "textRuns": [
                 {
-                    "value": "• KD 2025 Finansieringsmodell: Ny resultatmodell med faste satser pr. avlagt studiepoeng (SPE60). Historiske overgangsordninger er faset ut; statlig risiko er overført til UiA. Produksjonssvikt i SAM/I013BA gir umiddelbart inntektstap i rammebevilgningen.\n• SRS 10 Opptjeningsprinsipp: Inntektsføring av bidrags- og oppdragsfinansiert aktivitet (BOA) baseres på faktisk prosjektfremdrift (Earned Value). Prosjekter med fremdriftshefte (SPI < 1.00) utløser TDI-overheadsvikt og marginunderskudd.\n• F-05-20 Finansdepartementets 5%-Regel: Netto overføring av ubrukte bevilgninger til påfølgende år kan ikke overskride 5 % av samlet statstilskudd. Netto akkumulerte avsetninger ved UiA utgjør 3,4 % (41,4 MNOK) — tilfredsstillende margin (🟢).\n• RAG-kriterier iht. Edward Tufte: 🟢 Normal drift/iht. ramme | 🟡 Observasjonspost/omstilling under oppfølging | 🔴 Kritisk avvik som krever umiddelbar dekan- og styreaksjon.",
+                    "value": "• KD 2025 Finansieringsmodell: Ny resultatmodell med faste satser pr. avlagt studiepoeng (SPE60). Historiske overgangsordninger er faset ut; statlig risiko er overført til universitetet. Produksjonssvikt i SAM/I013BA gir umiddelbart inntektstap i rammebevilgningen.\n• SRS 10 Opptjeningsprinsipp: Inntektsføring av bidrags- og oppdragsfinansiert aktivitet (BOA) baseres på faktisk prosjektfremdrift (Earned Value). Prosjekter med fremdriftshefte (SPI < 1.00) utløser TDI-overheadsvikt og marginunderskudd.\n• F-05-20 Finansdepartementets 5%-Regel: Netto overføring av ubrukte bevilgninger til påfølgende år kan ikke overskride 5 % av samlet statstilskudd. Netto akkumulerte avsetninger ved universitetet utgjør 3,4 % (41,4 MNOK) — tilfredsstillende margin (🟢).\n• RAG-kriterier iht. Edward Tufte: 🟢 Normal drift/iht. ramme | 🟡 Observasjonspost/omstilling under oppfølging | 🔴 Kritisk avvik som krever umiddelbar dekan- og styreaksjon.",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "8.5pt",

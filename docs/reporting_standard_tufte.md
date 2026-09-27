@@ -1,6 +1,6 @@
-# Edward Tufte Data-Ink Standard for UiA Rapportering
+# Edward Tufte Data-Ink Standard for University Rapportering
 
-Dette dokumentet definerer de visuelle standardene for rapportering ved Universitetet i Agder (UiA), basert på prinsippene til **Edward Tufte** (The Visual Display of Quantitative Information).
+Dette dokumentet definerer de visuelle standardene for rapportering ved University, basert på prinsippene til **Edward Tufte** (The Visual Display of Quantitative Information).
 
 Målet er å maksimere **Data-Ink Ratio**:
 $$\text{Data-Ink Ratio} = \frac{\text{Data-Ink (blekk brukt til faktisk datainformasjon)}}{\text{Total Ink (samlet grafisk blekk i rapporten)}}$$

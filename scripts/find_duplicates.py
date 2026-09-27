@@ -3,7 +3,7 @@ import re
 from collections import defaultdict
 
 def check_all_tmdl():
-    base_dir = r'UIA-project-2026YTD.SemanticModel'
+    base_dir = r'University-project-2026YTD.SemanticModel'
     measures = defaultdict(list)
     
     for root, dirs, files in os.walk(base_dir):

@@ -1,8 +1,8 @@
 OrgKode;Enhet;Kortnavn;OverordnetEnhet;Nivaa;Type;Leder_Tittel;Leder_Epost
-1000;Universitetet i Agder (UiA);UiA;;1;Toppnivå;Rektor / Universitetsdirektør;rektor@uia.no,frank.ellingsen@uia.no
-1100;Handelshøyskolen ved UiA;HHU;1000;2;Fakultet;Dekan HHU;dekan.hhu@uia.no
-1200;Fakultet for teknologi og realfag;TEK;1000;2;Fakultet;Dekan TEK;dekan.tek@uia.no
-1300;Fakultet for helse- og idrettsvitenskap;HEL;1000;2;Fakultet;Dekan HEL;dekan.hel@uia.no
-1400;Fakultet for samfunnsvitenskap;SAM;1000;2;Fakultet;Dekan SAM;dekan.sam@uia.no
-1500;Fakultet for humaniora og pedagogikk;HUM;1000;2;Fakultet;Dekan HUM;dekan.hum@uia.no
-1900;Fellesadministrasjon & Fellesdrift;ADM;1000;2;Fellesenhet;Direktør Fellesdrift;direktor.adm@uia.no
+1000;University;UNIV;;1;Toppnivå;Rektor / Universitetsdirektør;rektor@university.no,frank.ellingsen@university.no
+1100;Handelshøyskolen;HHU;1000;2;Fakultet;Dekan HHU;dekan.hhu@university.no
+1200;Fakultet for teknologi og realfag;TEK;1000;2;Fakultet;Dekan TEK;dekan.tek@university.no
+1300;Fakultet for helse- og idrettsvitenskap;HEL;1000;2;Fakultet;Dekan HEL;dekan.hel@university.no
+1400;Fakultet for samfunnsvitenskap;SAM;1000;2;Fakultet;Dekan SAM;dekan.sam@university.no
+1500;Fakultet for humaniora og pedagogikk;HUM;1000;2;Fakultet;Dekan HUM;dekan.hum@university.no
+1900;Fellesadministrasjon & Fellesdrift;ADM;1000;2;Fellesenhet;Direktør Fellesdrift;direktor.adm@university.no

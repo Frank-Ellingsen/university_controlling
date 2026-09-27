@@ -1,0 +1,112 @@
+Læreplan: Kompetanseutvikling for Controller ved University (Universitetet)
+Denne læreplanen er utviklet for å profesjonalisere og styrke controller-funksjonen ved universitetet. Formålet er å flytte controllerens fokus fra retrospektiv kontroll til proaktiv, strategisk beslutningsstøtte i en sektor preget av betydelige regulatoriske endringer og strammere økonomiske rammer.
+1. Modul 1: Rettslige rammebetingelser og statlig normhierarki
+Analytisk innledning Det statlige normhierarkiet definerer ikke bare begrensningene for universitetets økonomi, men utgjør selve fundamentet for institusjonens handlingsrom. For en controller er juridisk forståelse kritisk; uten innsikt i tildelingsbrev, bevilgningsreglement og Universitets- og høyskoleloven (UHL), risikerer man suboptimale beslutninger. Controlleren må fungere som en garantist for at økonomiske disposisjoner er i overensstemmelse med statens intensjoner, samtidig som man sikrer at universitetet utnytter de fullmaktene som ligger i nettobudsjetteringsordningen.
+Mål og læringsutbytte
+Kunnskaper: Inngående forståelse av UHL, Reglement for økonomistyring (§§ 4 og 14), og KDs Virksomhets- og økonomiinstruks.
+Ferdigheter: Evne til å tolke tildelingsbrevets rammer og anvende disse på fakultetsnivå.
+Generell kompetanse: Profesjonell rolleforståelse som strategisk vokter av statlige midler.
+Sentrale begreper og regelverk
+Universitets- og høyskoleloven (UHL): Lovmessig hjemmel for universitetets virksomhet.
+Reglement for økonomistyring: Særlig fokus på kravet til effektiv ressursbruk og dokumentasjon.
+Tildelingsbrev: Årlig styringsdokument fra KD som definerer mål og økonomiske rammer.
+Analyse av tildelingsbrev og avsetninger: "So what?"-faktoren Controlleren skal beherske logikken bak 5 %-regelen (F-05-20). Regelen begrenser overføring av ubrukte midler, noe som skaper et betydelig press på langsiktig investeringsplanlegging. Strategisk konsekvens: Manglende planlegging fører ofte til "desember-panikk" og kortsiktig utstyrskjøp for å unngå inndragning av midler. Controlleren må derfor veilede ledelsen i å etablere flerårige investeringsbudsjetter som sikrer jevn ressursbruk og hindrer tap av bevilgningsmidler.
+Praktisk case: Investeringsvurdering Vurder en planlagt lab-oppgradering til 2 millioner kroner i november. Analyser prosjektet opp mot Lov om offentlige anskaffelser (FOA) og sjekk om utgiften vil føre til at enheten faller under eller over 5 %-grensen for overføring i tildelingsbrevet.
+Evaluering
+[ ] Kan redegjøre for risikoen ved brudd på 5 %-regelen.
+[ ] Forklarer controllerens rolle i kvalitetssikring av anskaffelsesprosesser.
+Når de rettslige rammene er forstått, må controlleren beherske dualiteten i hvordan disse rammene speiles i regnskapet.
+2. Modul 2: Statlige Regnskapsstandarder (SRS) og regnskapsmessig dualitet
+Analytisk innledning Overgangen fra kontantprinsippet til periodiseringsprinsippet (SRS) er strategisk avgjørende for å gi et rettvisende bilde av universitetets ressursbruk. Regnskapsmessig dualitet – skillet mellom kontantbasert bevilgningsrapportering og periodisert virksomhetsregnskap – er nødvendig for å synliggjøre faktiske kostnader over tid, særlig ved store investeringer og flerårig prosjektaktivitet. Dette sikrer at ledelsen ser den reelle kostnaden ved drift, ikke bare likviditetsbevegelsene.
+Mål og læringsutbytte
+Beherske skillet mellom SRS-basert årsregnskap og kontantbasert S-rapport.
+Anvende spesifikke standarder for korrekt periodisering av inntekter og kostnader.
+Teknisk dypdykk i SRS
+Standard
+Navn
+Strategisk betydning
+SRS 1
+Virksomhetsregnskapet
+Gir oversikt over ressursbruk uavhengig av kontantstrøm.
+SRS 10
+Motsatt sammenstilling
+Kritisk for bevilgningsinntekter; sikrer at inntekt følger kostnad.
+SRS 9
+Oppdragsforskning
+Håndterer risiko gjennom tapsavsetning og korrekt inntektsføring.
+SRS 17/25
+Anleggsmidler/Lønn
+Sikrer korrekt periodisering av avskrivninger og feriepengeforpliktelser.
+Den regnskapsmessige dualiteten Controlleren må kunne navigere mellom to logikker:
+Virksomhetsregnskapet (SRS): Viser faktiske påløpte kostnader i perioden.
+Bevilgningsrapportering (S-rapport): Viser bruk av statens tildeling etter kontantprinsippet.
+Kontrolløvelse: SRS 10 og prosjektdrift Et prosjekt har påløpte kostnader på 500 000 kr, men midlene er ikke utbetalt fra bidragsyter. Forklar, med utgangspunkt i SRS 10 (Motsatt sammenstilling), hvorfor prosjektet kan ha høye påløpte kostnader i regnskapet, men samtidig utløse utfordringer i bevilgningslogikken dersom dokumentasjonskravene for inntektsføring ikke er møtt.
+Evaluering
+[ ] Kan avstemme periodiseringsavvik mellom SRS og S-rapport.
+[ ] Demonstrerer korrekt bruk av SRS 10 for bevilgningsinntekter.
+Forståelsen av regnskapsmessig dualitet er en forutsetning for å analysere de nye finansieringsmodellene fra departementet.
+3. Modul 3: Finansieringsmodeller – Fra KD til intern fordeling ved universitetet
+Analytisk innledning Finansieringsmodellen fra 2025 markerer et skifte der "lukkede rammer" avvikles til fordel for en styrket basisbevilgning. Dette gir universitetet økt forutsigbarhet, men flytter samtidig risikoen fra staten til institusjonen. Controlleren må forstå at KDs nye satser er incentivmidler for endring, ikke nødvendigvis en refleksjon av de faktiske kostnadene ved utdanningene.
+Mål og læringsutbytte
+Beregne økonomiske konsekvenser av endringer i studiepoengproduksjon.
+Forstå og anvende prinsippet om nettobudsjettering.
+KDs 2025-modell og nettobudsjetteringslogikken Modellen opererer med tre kategorier:
+Kat. 1: 54 550 kr (Humaniora/Samfunnsfag).
+Kat. 2: 81 800 kr (Realfag/Helse/Profesjon).
+Kat. 3: 190 900 kr (Medisin/Odontologi).
+Viktig presisering: Satsene anvendes kun ved volumendringer (nettobudsjettering). Dagens studieplasser ligger fast i basisbevilgningen. Som vist i saken ved Psykologisk institutt (Source 1), vil det å bruke de nye lave satsene som grunnlag for internfordeling av eksisterende plasser undervurdere de reelle kostnadene og svekke intern legitimitet.
+Analyse: Reelle kostnader vs. KD-satser KD har eksplisitt uttalt at satsene ikke uttrykker faktiske kostnader. Controlleren må derfor utvikle interne modeller som broer gapet mellom de statlige insentivsatsene og instituttets reelle driftskostnader.
+Case-oppgave: Dimensjoneringsrisiko Et institutt planlegger å øke opptaket på et profesjonsstudium (Kat. 2). Beregn marginalinntekten mot de reelle kostnadene for undervisning og klinisk praksis. Vurder om nettobudsjetteringsprinsippet gjør utvidelsen økonomisk bærekraftig.
+Evaluering
+[ ] Forklarer hvorfor interne fordelingsnøkler må skille mellom KD-satser og reelle kostnader.
+[ ] Kan beregne effekten av volumendringer under 2025-modellen.
+Fordi basisbevilgningen nå dekker mer av den faste driften, blir korrekt styring av eksternfinansiert aktivitet (BOA) enda viktigere for instituttets fleksibilitet.
+4. Modul 4: Prosjektcontrolling for BOA (Bidrags- og Oppdragsaktivitet)
+Analytisk innledning BOA-aktivitet er avgjørende for universitetets forskningskraft og strategiske handlingsrom. Feilaktig skille mellom bidrag og oppdrag medfører ikke bare økonomisk risiko, men også juridisk risiko knyttet til statsstøtteregelverket. Controlleren må sikre at prosjekter prises korrekt gjennom TDI-modellen for å unngå at basisbevilgningen utilsiktet subsidierer eksterne oppdragsgivere.
+Mål og læringsutbytte
+Beherske TDI-modellen (Totalkostnadsmodellen) og Unit4 ERP-arbeidsflyt.
+Bruke BOA som et strategisk verktøy for personalkostnadshåndtering.
+Strategisk verktøy: Frikjøp (Buy-out) Lønn utgjør ca. 71 % av universitetets kostnader (se Modul 5). Controlleren skal bruke frikjøp som et aktivt verktøy i prosjektplanlegging. Ved å budsjettere vitenskapelig ansattes tid inn i eksterne prosjekter, flyttes lønnskostnader fra basisbudsjettet til ekstern finansiering, noe som frigjør midler til andre strategiske formål ved instituttet.
+TDI og Unit4 ERP
+Direkte drift: Spesifikke prosjektkostnader.
+Indirekte kostnader (Overhead): Dekning av felleskostnader (IT, bygg, admin).
+Leiested: Fakturering av lab/infrastruktur.
+Praktisk øvelse: EU-budsjettering Sett opp et budsjett for et Horisont Europa-prosjekt i Unit4. Beregn korrekt overhead og vis hvordan "frikjøp" av en professor i 20 % stilling reduserer presset på instituttets basisramme.
+Evaluering
+[ ] Kan skille mellom bidrag og oppdrag ut fra kontrakt og økonomisk risiko.
+[ ] Utarbeider korrekte TDI-budsjetter som inkluderer full overhead-dekning.
+Når både drifts- og prosjektøkonomi er under kontroll, må controlleren syntetisere denne informasjonen for ledelsen.
+5. Modul 5: Virksomhetsstyring, rullende prognoser og risikostyring
+Analytisk innledning Controlleren fungerer som en strategisk navigatør gjennom "styringshjulet". Verdien av en controller ligger ikke i å konstatere et historisk avvik, men i å presentere fremtidig handlingsrom. I en sektor der lønn utgjør ca. 71 % av kostnadene, er rullende prognoser (LE) det viktigste verktøyet for å håndtere risiko for strukturelle underskudd og sikre forsvarlig ansettelsespolitikk.
+Mål og læringsutbytte
+Utføre driverbasert prognosearbeid med fokus på lønn og bemanning.
+Anvende risikostyring (COSO) og internkontroll som styringsverktøy.
+Styringshjulet: Fra data til handling Prossesen følger sekvensen: Actual -> Budget -> Forecast (LE) -> Action. I "Action"-fasen er controllerens oppgave å levere beslutningsstøtte. Dette innebærer å presentere alternativer for ledelsen, for eksempel: "Ved dagens prognose har vi et merforbruk på 1,4m. Ledelsen bør vurdere å utsette ansettelse X eller øke frikjøp på prosjekt Y."
+Risikostyring og internkontroll
+Avviksanalyse: Skille mellom timing-avvik (forsinkelser) og strukturelle avvik (permanente kostnadsøkninger).
+RAG-status (Red-Amber-Green): Visuell kommunikasjon av risiko til dekan og instituttleder.
+BtB (Behov til betaling): Kvalitetssikring av rutinene for å sikre korrekt fullmaktsutøvelse.
+Case: Beslutningsstøtte ved merforbruk En T2-prognose viser et avvik på 1,2 millioner i lønn. Identifiser om dette skyldes lønnsglidning (strukturelt) eller manglende frikjøp (timing). Foreslå to konkrete tiltak (handlingsalternativer) for ledelsen.
+Evaluering
+[ ] Kan gjennomføre en driverbasert lønnsprognose.
+[ ] Presenterer avvik med konkrete forslag til ledelsestiltak.
+Digital arkitektur og visualisering er de verktøyene som gjør denne innsikten tilgjengelig og forståelig for beslutningstakere.
+6. Modul 6: Rapporteringsarkitektur, Power BI og beslutningsstøtte
+Analytisk innledning Transformasjonen fra databehandler til beslutningsstøttepartner fullføres gjennom effektiv utnyttelse av rapporteringsarkitekturen. Ved å bruke visuelle verktøy som Power BI, kan controlleren omdanne komplekse datasett til styringsinformasjon som er tilpasset ulike ledernivåer. Målet er å skape en "Controller Cockpit" som sikrer datakvalitet og fokuserer ledelsens oppmerksomhet der behovet for handling er størst.
+Mål og læringsutbytte
+Design av målrettede dashbord i Power BI.
+Avansert datatransformasjon med Power Query.
+Rapporthierarkiet og tekniske krav Controlleren må beherske Power Query for å koble data fra Unit4 ERP med eksterne kilder for driverbasert analyse (f.eks. SPE-produksjon per ansatt).
+Instituttleder: Operativ oversikt (prosjektsaldo, frikjøpsgrad).
+Dekan: Taktisk ressursstyring (lønnandeler, fakultetets samlede likviditet).
+Universitetsstyret: Strategisk risiko (avsetningsnivåer, måloppnåelse i utviklingsavtaler).
+Sluttoppgave: Design av dashbord Skisser et dashbord for et fakultetsstyre i 2025 som viser:
+SPE-produksjon (vurdert mot nettobudsjetteringsrammen).
+Lønnsandel (mot målet om maks 71 %).
+BOA-dekningsgrad (overhead og frikjøp).
+Evaluering og sertifisering som Controller ved universitetet For godkjent kompetanseutviklingsløp kreves:
+[ ] Dokumentert ferdighet i Power Query for datatransformasjon.
+[ ] Evne til å lede en fullstendig prognoseprosess (LE).
+[ ] Demonstrert forståelse for spenningen mellom KD-satser og reelle kostnader.
+[ ] Integritet i utøvelse av internkontroll og prosessforbedring.
+Dette læreplanverket sikrer at universitetets controllere ikke bare teller penger, men aktivt bidrar til å forme universitetets fremtid gjennom innsikt, kontroll og strategisk rådgivning.

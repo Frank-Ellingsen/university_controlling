@@ -1,5 +1,5 @@
 """
-Bygger lokal analytisk database (DuckDB) for UiA Controlling.
+Bygger lokal analytisk database (DuckDB) for University Controlling.
 Leser alle CSV-filer fra data/ og oppretter relasjonstabeller samt
 optimaliserte analytiske visninger (views) for rask ad-hoc analyse og BI-støtte.
 
@@ -12,7 +12,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
-DB_FILE = BASE_DIR / "uia_analytics.duckdb"
+DB_FILE = BASE_DIR / "university_analytics.duckdb"
 
 def build_database():
     print("=" * 80)

@@ -1,4 +1,4 @@
-# Controller Kompetansekart & Fagprofil (UiA & Statlig Sektor)
+# Controller Kompetansekart & Fagprofil (University & Statlig Sektor)
 
 ## 1. Faglige Controller-ferdigheter
 * **Økonomistyring, budsjettering og forecasting**: Driverbasert modellering, rullende prognoser (LE), avviksanalyse og flerårig økonomisk planlegging.

@@ -377,10 +377,10 @@ NIVÅ 4: DRILL-THROUGH DYBDEANALYSER
 
 * TMDL (Tabular Model Definition Language):
   Det deklarative språket som definerer tabeller, kolonner, relasjoner, hierarkier og DAX-mål
-  i mappen `UIA-Controller-Prosjekt.SemanticModel/definition/`.
+  i mappen `University-project-2026YTD.SemanticModel/definition/`.
 
 * PBIR (Power BI Enhanced Report Format):
-  JSON-basert rapportformat (`UIA-Controller-Prosjekt.Report/definition/`) som definerer visuals,
+  JSON-basert rapportformat (`University-project-2026YTD.Report/definition/`) som definerer visuals,
   layouts, fargepaletter og feltprojiseringer uavhengig av binære PBIX-filer.
 
 * Stjerneskjema (Star Schema / Fact Constellation):

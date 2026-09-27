@@ -1,5 +1,5 @@
 {
-  "name": "UiA Controller Analytics (Python & DuckDB)",
+  "name": "University Controller Analytics (Python & DuckDB)",
   "build": {
     "dockerfile": "../Dockerfile",
     "context": ".."

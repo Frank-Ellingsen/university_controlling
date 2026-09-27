@@ -3,7 +3,7 @@ import re
 from collections import Counter, defaultdict
 
 def validate():
-    base_dir = r"UIA-project-2026YTD.SemanticModel\definition"
+    base_dir = r"University-project-2026YTD.SemanticModel\definition"
     
     measures = defaultdict(list)
     columns_per_table = defaultdict(lambda: defaultdict(list))

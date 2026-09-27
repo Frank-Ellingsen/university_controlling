@@ -5,7 +5,7 @@ from pathlib import Path
 BASE_DIR = Path(r"c:\Users\frank\Desktop\UIA2")
 
 # 1. Read all declared measures
-measures_file = BASE_DIR / "UIA-project-2026YTD.SemanticModel" / "definition" / "tables" / "_Measures.tmdl"
+measures_file = BASE_DIR / "University-project-2026YTD.SemanticModel" / "definition" / "tables" / "_Measures.tmdl"
 lines = measures_file.read_text(encoding="utf-8").splitlines()
 declared_measures = set()
 for line in lines:
@@ -20,7 +20,7 @@ print(f"Declared measures in TMDL: {len(declared_measures)}")
 
 # 2. Read all column names in all TMDL tables
 columns_by_table = {}
-tables_dir = BASE_DIR / "UIA-project-2026YTD.SemanticModel" / "definition" / "tables"
+tables_dir = BASE_DIR / "University-project-2026YTD.SemanticModel" / "definition" / "tables"
 for t_file in tables_dir.glob("*.tmdl"):
     t_name = t_file.stem
     columns = set()
@@ -34,8 +34,8 @@ for t_file in tables_dir.glob("*.tmdl"):
 
 print("Tables found:", list(columns_by_table.keys()))
 
-# 3. Check every visual in every page in UIA-project-2026YTD.Report
-report_pages_dir = BASE_DIR / "UIA-project-2026YTD.Report" / "definition" / "pages"
+# 3. Check every visual in every page in University-project-2026YTD.Report
+report_pages_dir = BASE_DIR / "University-project-2026YTD.Report" / "definition" / "pages"
 invalid_references = []
 
 for v_file in report_pages_dir.glob("**/visual.json"):

@@ -10,7 +10,7 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(r"c:\Users\frank\Desktop\UIA2")
-PAGE_DIR = BASE_DIR / "UIA-project-2026YTD.Report" / "definition" / "pages" / "0a6c532bb128ac39b432"
+PAGE_DIR = BASE_DIR / "University-project-2026YTD.Report" / "definition" / "pages" / "0a6c532bb128ac39b432"
 VISUALS_DIR = PAGE_DIR / "visuals"
 
 SCHEMA_URL = "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json"
@@ -344,7 +344,7 @@ def build_all_visuals():
         {
             "textRuns": [
                 {
-                    "value": "UNIVERSITETET I AGDER — VIRKSOMHETS- OG PROSJEKTOVERSIKT 2026",
+                    "value": "UNIVERSITY — VIRKSOMHETS- OG PROSJEKTOVERSIKT 2026",
                     "textStyle": {
                         "fontFamily": "Segoe UI",
                         "fontSize": "16pt",

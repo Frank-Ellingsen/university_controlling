@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-pages_dir = Path(r"UIA-project-2026YTD.Report\definition\pages")
+pages_dir = Path(r"University-project-2026YTD.Report\definition\pages")
 
 cards_updated = []
 for v_file in sorted(pages_dir.glob("**/vis*kpi*/visual.json")):

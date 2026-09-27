@@ -1,5 +1,5 @@
 """
-Verifiseringsskript for Rapporteringsregler ved Universitetet i Agder (UiA)
+Verifiseringsskript for Rapporteringsregler ved University
 Kjøres lokalt med DuckDB for øyeblikkelig validering av regnskapsdata,
 prognoser, EVM-beregninger og statlige krav (SRS og F-05-20).
 
@@ -16,7 +16,7 @@ DATA_DIR = BASE_DIR / "data"
 
 def run_verification():
     print("=" * 80)
-    print("UiA CONTROLLER RAPPORTVALIDERINGS- OG KONTROLLMOTOR (DUCKDB)")
+    print("UNIVERSITY CONTROLLER RAPPORTVALIDERINGS- OG KONTROLLMOTOR (DUCKDB)")
     print("=" * 80)
     
     con = duckdb.connect(database=":memory:")

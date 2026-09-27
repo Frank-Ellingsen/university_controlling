@@ -1,6 +1,6 @@
-# Veileder for DAX-måltall (UiA Prosjekt- og Virksomhetsrapportering)
+# Veileder for DAX-måltall (University Prosjekt- og Virksomhetsrapportering)
 
-Denne veilederen beskriver implementering og forretningslogikk for de 25 sentrale DAX-måltallene i Power BI-prosjektet `UIA-project-2026YTD.pbip`.
+Denne veilederen beskriver implementering og forretningslogikk for de 25 sentrale DAX-måltallene i Power BI-prosjektet `University-project-2026YTD.pbip`.
 
 ---
 
@@ -21,7 +21,7 @@ For å sikre ryddig modellering i Power BI Desktop (Model View), er måltallene 
 
 ## 2. Implementering i Power BI Desktop
 
-1. Åpne **Power BI Desktop** via `UIA-project-2026YTD.pbip`.
+1. Åpne **Power BI Desktop** via `University-project-2026YTD.pbip`.
 2. Gå til **Home > Enter Data** og opprett en tom tabell med navn `_Measures`.
 3. Opprett nye mål (New Measure) ved å kopiere kodene fra [`powerbi/dax/measures.dax`](./measures.dax).
 4. I **Model View**: Marker hvert mål og angi verdien under **Properties > Display folder** (f.eks. `_01 Regnskap & YTD`).

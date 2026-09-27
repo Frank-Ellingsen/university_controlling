@@ -1,5 +1,5 @@
 """
-Automatisk integritets- og referansetest for UiA Controlling datasett.
+Automatisk integritets- og referansetest for University Controlling datasett.
 Tester primær-/fremmednøkler, manglende verdier og matematiske formler (EVM).
 
 Kjøres i CI/CD pipeline (GitHub Actions) eller lokalt med:

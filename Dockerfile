@@ -1,5 +1,5 @@
 # ==============================================================================
-# Universitetet i Agder (UiA) - Controller Analytics & AI Pipeline
+# University - Controller Analytics & AI Pipeline
 # Produksjons- og utviklingscontainer basert på Python 3.12 og DuckDB
 # Forfatter: Frank Ellingsen (Project Controller)
 # ==============================================================================

@@ -1,13 +1,13 @@
-komplett og avstemt økonomisk og operasjonell modell for Universitetet i Agder (UiA) for hele 2026, basert på faktiske regnskapstall (Actual) per 30. september 2026 (M01–M09) samt rullende prognose (Forecast) for 4. kvartal (M10–M12) [1].
+komplett og avstemt økonomisk og operasjonell modell for Universitetet (University) for hele 2026, basert på faktiske regnskapstall (Actual) per 30. september 2026 (M01–M09) samt rullende prognose (Forecast) for 4. kvartal (M10–M12) [1].
 Settet med 11 realistiske CSV-filer er publisert i Studio-panelet [1, 2]. Filene er bygget som et stjerneskjema (Star Schema) klart til direkte import i Power BI, og muliggjør både konsoliderte nøkkeltall og sømløs drill-down til hvert enkelt fakultet [2].
 
-1. Overordnet Økonomisk Status for UiA (Helåret 2026)
+1. Overordnet Økonomisk Status for Universitetet (Helåret 2026)
    Regnskap YTD per 30. september (M01–M09): Samlede inntekter utgjør 1 072,1 MNOK mot samlede drifts- og investeringskostnader på 1 092,0 MNOK, som gir et akkumulert merforbruk YTD på -19,9 MNOK [1].
    Prognose Q4 (M10–M12 / ETC): Forventede inntekter i 4. kvartal utgjør 360,9 MNOK mot forventet ressursbruk på 352,0 MNOK [1]. Gjenstående estimat for fullføring (ETC per desember) er 100,0 MNOK [1].
    Helårsprognose (Latest Estimate / EAC): Samlede helårsinntekter estimeres til 1 433,0 MNOK mot samlede utgifter på 1 444,0 MNOK [1]. Dette gir et netto helårsavvik (VAC) på -11,0 MNOK mot vedtatt årsbudsjett (BAC 1 433,0 MNOK), som dekkes inn ved bruk av opptjent formålskapital i tråd med avsetningsregelverket (Cirkulære F-05-20) [1].
    Earned Value Management (EVM): Ved kontrollcutoff (M11) måles en kostnadsindeks (CPI) på 0,95 og en fremdriftsindeks (SPI) på 0,92, noe som indikerer et moderat kostnadsoverskridelsestrykk på 5 % [1].
 2. Fakultetsvis Hovedoversikt: Økonomi, Bemanningsvolum og Studenter
-   Følgende tabell viser den fullstendige fordelingen på tvers av samtlige hovedenheter ved UiA for hele 2026 [1, 2]:
+   Følgende tabell viser den fullstendige fordelingen på tvers av samtlige hovedenheter ved universitetet for hele 2026 [1, 2]:
    Fakultet / Enhet
    Statlig Ramme (MNOK)
    BOA / Andre (MNOK)
@@ -25,7 +25,7 @@ Settet med 11 realistiske CSV-filer er publisert i Studio-panelet [1, 2]. Filene
    Antall Studenter
    SPE60 (Helårsstud.)
    Studenter pr UF-ÅV
-   Handelshøyskolen ved UiA (HHU)
+   Handelshøyskolen (HHU)
    246,8
    29,8
    276,6
@@ -127,7 +127,7 @@ Settet med 11 realistiske CSV-filer er publisert i Studio-panelet [1, 2]. Filene
    0
    0,0
    0,0
-   TOTALT UNIVERSITETET I AGDER
+   TOTALT UNIVERSITETET (UNIVERSITY)
    1 234,0
    199,0
    1 433,0

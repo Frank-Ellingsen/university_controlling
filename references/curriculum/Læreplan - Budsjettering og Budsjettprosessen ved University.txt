@@ -1,0 +1,112 @@
+Læreplan: Budsjettering og Budsjettprosessen ved University (Universitetet)
+1. Introduksjon og overordnet formål
+Velkommen til denne læreplanen, utformet for å profesjonalisere rollen som controller og økonomileder ved University (Universitetet). Som økonomer i UH-sektoren forvalter vi ikke bare tall; vi forvalter selve fundamentet for universitetets faglige autonomi. I en tid der finansieringssystemene er i støpeskjeen, kreves det at vi løfter blikket fra regnearkene og forstår de strategiske mekanismene som styrer oss.
+Målet med dette løpet er å gi deg dyp innsikt i de sektorspesifikke rammebetingelsene. Du skal lære å koble de overordnede målene i våre utviklingsavtaler med departementet direkte til den operative budsjettplanleggingen. En controller som forstår hvorfor midlene tildeles, er i stand til å oversette tørre budsjettrammer til reelt handlingsrom for dekaner og instituttledere.
+For å mestre det interne handlingsrommet som vi presenterer i Modul 1, må vi først forstå de ytre rammene og de statlige spillereglene som legger premissene for hver krone universitetet mottar.
+2. Modul 1: Rammebetingelser og Statlig Økonomistyring
+Strategisk kontekst
+Statlig økonomistyring har beveget seg bort fra detaljstyring av enkelte utgiftsposter mot «styring i det store». For oss betyr dette at tildelingsbrevet fra Kunnskapsdepartementet (KD) er det absolutte startpunktet. Det er her de politiske forventningene og de økonomiske rammene for universitetet defineres. Som seniorrådgiver er din oppgave å lese dette brevet ikke bare som et tildelingsdokument, men som et strategisk kart.
+Læringsmål
+Etter denne modulen skal du:
+Beherske flyten i bevilgningsprosessen, med særlig vekt på Kap. 260 i statsbudsjettet.
+Forstå mekanismene bak lønns- og prisvekst (deflator) og hvordan nasjonale føringer påvirker rammen.
+Kunne anvende avsetningsreglementet strategisk for å styre risiko.
+Sentralt innhold
+Bevilgningsprosessen: Veien fra Stortingets budsjettvedtak via KD til universitetets styre, som vedtar den interne fordelingen.
+Prinsippet om nettobudsjettering: Dette er kritisk: Eksisterende volum ligger i utgangspunktet fast. Bevilgningen endres kun ved endrede resultater eller nye politiske satsinger. Her ligger det en latent risiko; dersom produksjonen faller, kuttes det etter de nye satsene, som kan være lavere enn de historiske verdiene på dine studieplasser.
+Avsetningsreglementet og 5 %-regelen: Basert på F-05-20 må vi håndtere ubrukte midler. Som controller må du bruke 5 %-regelen som et skjold. For høye avsetninger er en strategisk risiko; det signaliserer manglende gjennomføringsevne og gjør institusjonen sårbar for fremtidige kutt i statsbudsjettet.
+"So What?"-laget
+Overgangen til styrket basisbevilgning gir oss bedre forutsigbarhet, men det krever også strengere intern kontroll. Når «lukkede rammer» forsvinner, må vi selv sikre at basisbevilgningen investeres i faglig kvalitet som bærer frukter over tid.
+Praktisk øvelse: Case – Strategisk analyse av tildelingsbrev
+Analyser årets tildelingsbrev til universitetet. Identifiser og prioriter de tre viktigste økonomiske føringene. Se spesifikt etter:
+Øremerkede midler (f.eks. desentralisert utdanning).
+Generelle kutt eller effektiviseringskrav.
+Nye studieplasser og hvilke krav til resultater som medfølger.
+Overgang: Når de statlige rammene er tolket, må vi se på hvordan disse midlene faktisk fordeles internt gjennom vår finansieringsmodell.
+3. Modul 2: Finansieringsmodeller og Driverbasert Budsjettfordeling
+Strategisk kontekst
+Det er en konstant spenning mellom KDs standardiserte kategorier og våre reelle kostnader. Den nye modellen fra 2025 er et rendyrket insentivsystem. Som din mentor i dette faget vil jeg understreke: Satsene er ikke en prislapp på hva studiet koster, men en belønning for produksjon.
+Læringsmål
+Skille mellom KDs 2025-modell og universitetets interne fordelingsnøkler.
+Analysere effekten av endret produksjon på fremtidig handlingsrom.
+Sentralt innhold
+KDs modell fra 2025 opererer med tre kategorier som erstatter de tidligere seks (A–F). Den «lukkede rammen» (publisering og BOA) er nå innlemmet i basisbevilgningen basert på et treårig gjennomsnitt (2020–2022).
+Kategori (Ny 2025-modell)
+Fagområder (Eksempler)
+Sats per 60 studiepoeng (Endring)
+Kategori 1
+Humaniora, samfunnsfag, økonomi
+54 550 kr
+Kategori 2
+Realfag, helse-, lærerutdanning, profesjonsstudier i psykologi
+81 800 kr
+Kategori 3
+Medisin, odontologi, veterinær
+190 900 kr
+Driverbasert logikk: Budsjettet styres av studiepoengproduksjon, avlagte grader og doktorgrader.
+Viktig nyanse: Disse satsene gjelder kun for endringer i produksjon. Eksisterende volum verdsettes ikke automatisk etter disse satsene; de ligger fast i basisbevilgningen.
+"So What?"-laget
+Ved å fjerne resultatbasert uttelling for publisering og BOA-inntekter i den nasjonale modellen, flyttes den økonomiske risikoen for forskning helt over på institusjonen. Den automatiske «pengemaskinen» for artikler er borte. Skal et institutt vokse i forskning nå, må det argumenteres for via Utviklingsavtalen eller gjennom strategiske midler i basis.
+Praktisk øvelse: Case – Resultatfall
+Et institutt innen helsefag (Kategori 2) opplever en 5 % nedgang i studiepoengproduksjon. Beregn budsjetteffekten ved neste tildeling og forklar ledelsen hvorfor det nå er kritisk å stabilisere gjennomføringen fremfor å bare øke opptaket.
+Overgang: Fra de teoretiske inntektsstrømmene må vi bevege oss til der pengene faktisk brukes: i menneskelige ressurser.
+4. Modul 3: Bemanningsplanlegging, Drift og Prosjektøkonomi (BOA)
+Strategisk kontekst
+Lønn utgjør ca. 71 % av universitetets kostnader. Det betyr at vakansestyring er ditt viktigste styringsverktøy. Som controller er du vaktbikkja som sikrer at vi ikke ansetter oss inn i et uføre vi ikke kan reversere.
+Læringsmål
+Beherske årsverksplanlegging og forstå økonomien i rekrutteringsstillinger.
+Anvende TDI-modellen (Total og Direkte Inntekt) for BOA-prosjekter.
+Sentralt innhold
+Årsverksplanlegging: Systematisk styring av faste og midlertidige årsverk. Stipendiater og postdoktorer er forskningsressurser, men de er også langsiktige økonomiske forpliktelser.
+TDI-modellen og Overhead: Eksterne prosjekter skal dekke sine egne kostnader pluss en andel til fellesutgifter (husleie, IT, administrasjon).
+Den doble belastningen: Vær oppmerksom på spenningen der store institutter må bygge opp egen lokal støtte (f.eks. HR-ressurser eller PhD-oppfølging) fordi de sentrale tjenestene er for generelle. Samtidig betaler de en intern «skatt» til sentraladministrasjonen. Som controller må du synliggjøre denne kostnaden når du vurderer instituttets handlingsrom.
+"So What?"-laget
+En controller må se rekruttering i et 5-årsperspektiv. Har vi bæreevne til å beholde kompetansen når ekstern finansiering løper ut, eller når rekrutteringsperioden er over?
+Praktisk øvelse: Bemannings- og sårbarhetsanalyse
+Et institutt har 75 % lønnskostnader og tre ledige professorhjemler. Basert på gjeldende overhead-satser fra TDI-modellen: Har de råd til å lyse ut to nye PhD-stillinger uten at det går på bekostning av driftsmidlene til eksisterende stab? Sett opp en enkel tabell som viser balansen.
+Overgang: Denne detaljplanleggingen må inn i en strukturert tidslinje – universitetets årshjul.
+5. Modul 4: Årshjul, Systemstøtte og Budsjettprosess
+Strategisk kontekst
+Koordinering er nøkkelen til kvalitet. Budsjettering er ikke en isolert øvelse, men en prosess som starter med de strategiske prioriteringene i Utviklingsavtalen. Din rolle er å være prosessdriveren som sikrer sporbarhet og ryddig dokumentasjon.
+Læringsmål
+Kunnskap om budsjettfasene Q1–Q4.
+Operasjonell bruk av Unit4 UBW Planlegger.
+Sentralt innhold
+Årshjulet ved universitetet:
+Q1: Rammeavklaring. Her møtes Utviklingsavtalens mål og de økonomiske realitetene.
+Q2-Q3: Datainnhenting og detaljplanlegging i enhetene.
+Q4: Konsolidering, styrebehandling og «frys» av budsjettet.
+Systemstøtte: Vi bruker Unit4 UBW som primærverktøy for planlegging. For beslutningsstøtte og visualisering benyttes FactAction og Power BI.
+5-årige langtidsprognoser: Dette er controllerens viktigste verktøy ved store investeringer eller omstilling. Du må kunne vise ledelsen konsekvensene av dagens valg fem år frem i tid.
+"So What?"-laget
+Ryddig dokumentasjon er ikke bare for revisjonens skyld. Det handler om internkontroll. Du skal kunne svare på: Hvor kom tallet fra? Hvilke forutsetninger la vi til grunn? Bruk versjonskontroll strengt – unngå "budsjett_v7_final_REVIDERT.xlsx".
+Praktisk øvelse: Sjekkliste for kvalitetssikring
+Utarbeid en sjekkliste på fem punkter som du bruker før du konsoliderer et instituttbudsjett. Inkluder punkter om samsvar mellom årsverksplan og lønnsbudsjett, samt realisme i studiepoengprognosene.
+Overgang: Et vedtatt budsjett er bare startskuddet. Den virkelige styringen skjer gjennom oppfølgingen.
+6. Modul 5: Budsjettoppfølging, Styringshjul og Rullende Prognoser
+Strategisk kontekst
+Når året starter, går vi fra planlegging til analyse. En god controller konstaterer ikke bare at det er et avvik; hen forklarer hvorfor det skjedde og foreslår hva ledelsen bør gjøre med det.
+Læringsmål
+Gjennomføre avviksanalyse basert på volum, pris og aktivitet.
+Utarbeide rullende prognoser (Latest Estimate – LE).
+Sentralt innhold
+Actual vs. Budget: Bryt ned avvikene. Er det et volumavvik (færre ansatte enn planlagt), et prisavvik (lønnsforskjeller eller uforutsett prisstigning) eller et aktivitetsavvik (forsinkelser i prosjekter)?
+Rapporteringssyklus: Vi skiller mellom tertialrapporter (T1/T2) og løpende prognoser (LE1/LE2). T1/T2 er formell rapportering til styret/KD, mens LE er vårt interne verktøy for dynamisk styring.
+Beslutningsstøtte: Bruk FactAction for å visualisere trender. Din verdi ligger i å presentere et handlingsrom, ikke bare en tabell med røde tall.
+"So What?"-laget
+Du er brobyggeren i ledelsesmøtene. Tallene skal oversettes til tiltak. Hvis LE viser et forventet merforbruk på slutten av året, må du kunne presentere to konkrete alternativer (f.eks. utsettelse av rekruttering vs. reduksjon i driftsmidler).
+Praktisk øvelse: Månedsrapport med brobygging
+Utform en kort månedsrapport for et institutt med et negativt avvik på 1 million kroner på lønn. Forklar årsaken (f.eks. manglende frikjøp i BOA-prosjekter) og foreslå to tiltak for å hente inn beløpet før Q4.
+7. Avsluttende vurdering og sertifisering
+Fullført læreplan leder frem til en intern sertifisering som samsvarer med kravene til en Seniorrådgiver (kode 1364). Dette innebærer at du forventes å være en problemløser som håndterer komplekse saker uten ferdige oppskrifter.
+Evalueringen består av:
+Godkjente løsninger på de praktiske casene i alle moduler.
+En avsluttende prosjektoppgave: Utarbeidelse av en 5-årig langtidsprognose for din egen enhet, inkludert en sårbarhetsanalyse knyttet til den nye finansieringsmodellen.
+Din verktøykasse
+Du skal nå beherske og aktivt bruke:
+Tildelingsbrevet og Kap. 260 som rammeverk.
+KDs 2025-kategorier som grunnlag for inntektsanalyser.
+TDI-modellen for korrekt prosjektoppfølging.
+Unit4 UBW, Power BI og FactAction som dine operative systemer.
+Vakansestyring som ditt primære verktøy for økonomisk kontroll.
+Som sertifisert controller er du ikke lenger en som bare følger oppskrifter; du er en strategisk rådgiver som ruster universitetet for fremtidens utfordringer.

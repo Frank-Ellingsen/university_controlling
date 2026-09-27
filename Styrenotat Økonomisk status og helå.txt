@@ -25,7 +25,7 @@ Lønnsandel %
 Under sektormålet (~71 %), indikerer operativ kapasitet.
 Overordnet status viser at vi må foreta et dypere dykk i prosjektgjennomføring og fakultetenes strukturelle rammer for å sikre langsiktig balanse.
 2. Prosjektstyring og Earned Value Management (EVM)
-Bidrags- og oppdragsfinansiert aktivitet (BOA) er fundamentet for UiAs forskningskraft. For å sikre reell styring benytter vi Earned Value Management (EVM), som kobler økonomisk forbruk mot faktisk faglig fremdrift.
+Bidrags- og oppdragsfinansiert aktivitet (BOA) er fundamentet for universitetets forskningskraft. For å sikre reell styring benytter vi Earned Value Management (EVM), som kobler økonomisk forbruk mot faktisk faglig fremdrift.
 Per 30. september er porteføljens CPI (Cost Performance Index) på 0,95 og SPI (Schedule Performance Index) på 0,92.
 Strategisk analyse («So What?»):
 CPI < 1,00 (TDI-fellen): En CPI på 0,95 betyr at prosjektene er mindre effektive enn budsjettert. Dette er kritisk fordi det uthuler evnen til å dekke indirekte kostnader (TDI/overhead). I realiteten må basisbevilgningen nå subsidiere felleskostnader (IT, areal, adm.) for eksterne prosjekter, noe som reduserer midler til kjernevirksomheten.

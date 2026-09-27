@@ -1,7 +1,7 @@
 // ==============================================================================
-// Universitetet i Agder (UiA) - Power Query M: DuckDB Python Bridge
+// University - Power Query M: DuckDB Python Bridge
 // Kobler Power BI Desktop direkte til den lokale DuckDB-analysedatabasen
-// (uia_analytics.duckdb) via Python-motoren.
+// (university_analytics.duckdb) via Python-motoren.
 //
 // Forfatter: Frank Ellingsen (Project Controller)
 // ==============================================================================
@@ -10,7 +10,7 @@
 // Parameter: DuckDBDatabasePath
 // ------------------------------------------------------------------------------
 let
-    DuckDBDatabasePath = "C:\Users\frank\Desktop\UIA2\uia_analytics.duckdb" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+    DuckDBDatabasePath = "C:\Users\frank\Desktop\UIA2\university_analytics.duckdb" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 in
     DuckDBDatabasePath
 

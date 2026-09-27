@@ -1,4 +1,4 @@
-name: UiA Controller CI & Data Validation
+name: University Controller CI & Data Validation
 
 on:
   push:
@@ -43,10 +43,10 @@ jobs:
       run: |
         python -c "
         import json, os
-        assert os.path.exists('UIA-project-2026YTD.pbip'), 'Missing UIA-project-2026YTD.pbip'
-        assert os.path.isdir('UIA-project-2026YTD.Report'), 'Missing Report folder'
-        assert os.path.isdir('UIA-project-2026YTD.SemanticModel'), 'Missing SemanticModel folder'
-        with open('UIA-project-2026YTD.pbip') as f:
+        assert os.path.exists('University-project-2026YTD.pbip'), 'Missing University-project-2026YTD.pbip'
+        assert os.path.isdir('University-project-2026YTD.Report'), 'Missing Report folder'
+        assert os.path.isdir('University-project-2026YTD.SemanticModel'), 'Missing SemanticModel folder'
+        with open('University-project-2026YTD.pbip') as f:
             data = json.load(f)
             assert data['version'] == '1.0'
         print('PBIP structure valid.')

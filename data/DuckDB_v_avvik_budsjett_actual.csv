@@ -1,37 +1,37 @@
 OrgKode;Enhet;Fakultet;Konto;Kontonavn;Kontoklasse;Actual_YTD_MNOK;Budsjett_YTD_MNOK;Avvik_YTD_MNOK;Avvik_YTD_Pct
-1900;Fellesadministrasjon & Fellesdrift;ADM;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-2.154;-2.25;0.096;4.27
-1100;Handelshøyskolen ved UiA;HHU;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-5.973;-5.85;-0.123;-2.1
-1100;Handelshøyskolen ved UiA;HHU;3900;Inntekt fra bevilgninger;Salgs- og driftsinntekt;-185.1;-185.103;0.003;0.0
-1100;Handelshøyskolen ved UiA;HHU;5000;Lonn fast ansatte;Lønnskostnad;137.304;134.539;2.765;2.06
-1100;Handelshøyskolen ved UiA;HHU;6050;Avskrivning driftslosore/inventar/IKT;Annen driftskostnad;21.85;22.797;-0.947;-4.15
-1100;Handelshøyskolen ved UiA;HHU;6300;Leie lokaler;Annen driftskostnad;48.355;48.663;-0.308;-0.63
-1300;Fakultet for helse- og idrettsvitenskap;HEL;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-17.967;-18.747;0.78;4.16
-1200;Fakultet for teknologi og realfag;TEK;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-15.01;-14.697;-0.313;-2.13
+1200;Fakultet for teknologi og realfag;TEK;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-34.498;-36.0;1.502;4.17
+1500;Fakultet for humaniora og pedagogikk;HUM;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-4.518;-4.428;-0.09;-2.03
 1900;Fellesadministrasjon & Fellesdrift;ADM;3900;Inntekt fra bevilgninger;Salgs- og driftsinntekt;-64.803;-64.8;-0.003;-0.0
-1200;Fakultet for teknologi og realfag;TEK;5000;Lonn fast ansatte;Lønnskostnad;195.092;191.159;3.933;2.06
+1500;Fakultet for humaniora og pedagogikk;HUM;5000;Lonn fast ansatte;Lønnskostnad;72.25;70.794;1.456;2.06
 1900;Fellesadministrasjon & Fellesdrift;ADM;6050;Avskrivning driftslosore/inventar/IKT;Annen driftskostnad;10.35;10.8;-0.45;-4.17
 1900;Fellesadministrasjon & Fellesdrift;ADM;6300;Leie lokaler;Annen driftskostnad;20.36;20.493;-0.133;-0.65
-1500;Fakultet for humaniora og pedagogikk;HUM;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-7.188;-7.497;0.309;4.12
-1900;Fellesadministrasjon & Fellesdrift;ADM;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-14.55;-14.247;-0.303;-2.13
+1100;Handelshøyskolen;HHU;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-15.812;-16.497;0.685;4.15
+1400;Fakultet for samfunnsvitenskap;SAM;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-6.814;-6.678;-0.136;-2.04
 1300;Fakultet for helse- og idrettsvitenskap;HEL;3900;Inntekt fra bevilgninger;Salgs- og driftsinntekt;-212.847;-212.85;0.003;0.0
-1900;Fellesadministrasjon & Fellesdrift;ADM;5000;Lonn fast ansatte;Lønnskostnad;57.783;56.62;1.163;2.05
+1400;Fakultet for samfunnsvitenskap;SAM;5000;Lonn fast ansatte;Lønnskostnad;93.908;92.017;1.891;2.06
 1300;Fakultet for helse- og idrettsvitenskap;HEL;6050;Avskrivning driftslosore/inventar/IKT;Annen driftskostnad;24.15;25.2;-1.05;-4.17
 1300;Fakultet for helse- og idrettsvitenskap;HEL;6300;Leie lokaler;Annen driftskostnad;58.535;58.905;-0.37;-0.63
-1400;Fakultet for samfunnsvitenskap;SAM;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-10.78;-11.25;0.47;4.18
-1300;Fakultet for helse- og idrettsvitenskap;HEL;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-11.333;-11.097;-0.236;-2.13
+1900;Fellesadministrasjon & Fellesdrift;ADM;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-2.154;-2.25;0.096;4.27
+1900;Fellesadministrasjon & Fellesdrift;ADM;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-14.55;-14.247;-0.303;-2.13
 1200;Fakultet for teknologi og realfag;TEK;3900;Inntekt fra bevilgninger;Salgs- og driftsinntekt;-249.903;-249.903;-0.0;-0.0
-1300;Fakultet for helse- og idrettsvitenskap;HEL;5000;Lonn fast ansatte;Lønnskostnad;166.158;162.811;3.347;2.06
+1900;Fellesadministrasjon & Fellesdrift;ADM;5000;Lonn fast ansatte;Lønnskostnad;57.783;56.62;1.163;2.05
 1200;Fakultet for teknologi og realfag;TEK;6050;Avskrivning driftslosore/inventar/IKT;Annen driftskostnad;40.25;42.003;-1.753;-4.17
 1200;Fakultet for teknologi og realfag;TEK;6300;Leie lokaler;Annen driftskostnad;68.715;69.156;-0.441;-0.64
-1100;Handelshøyskolen ved UiA;HHU;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-15.812;-16.497;0.685;4.15
-1500;Fakultet for humaniora og pedagogikk;HUM;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-4.518;-4.428;-0.09;-2.03
+1300;Fakultet for helse- og idrettsvitenskap;HEL;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-17.967;-18.747;0.78;4.16
+1300;Fakultet for helse- og idrettsvitenskap;HEL;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-11.333;-11.097;-0.236;-2.13
 1500;Fakultet for humaniora og pedagogikk;HUM;3900;Inntekt fra bevilgninger;Salgs- og driftsinntekt;-92.55;-92.547;-0.003;-0.0
-1500;Fakultet for humaniora og pedagogikk;HUM;5000;Lonn fast ansatte;Lønnskostnad;72.25;70.794;1.456;2.06
+1300;Fakultet for helse- og idrettsvitenskap;HEL;5000;Lonn fast ansatte;Lønnskostnad;166.158;162.811;3.347;2.06
 1500;Fakultet for humaniora og pedagogikk;HUM;6050;Avskrivning driftslosore/inventar/IKT;Annen driftskostnad;8.05;8.397;-0.347;-4.13
 1500;Fakultet for humaniora og pedagogikk;HUM;6300;Leie lokaler;Annen driftskostnad;25.45;25.614;-0.164;-0.64
-1200;Fakultet for teknologi og realfag;TEK;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-34.498;-36.0;1.502;4.17
-1400;Fakultet for samfunnsvitenskap;SAM;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-6.814;-6.678;-0.136;-2.04
+1500;Fakultet for humaniora og pedagogikk;HUM;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-7.188;-7.497;0.309;4.12
+1100;Handelshøyskolen;HHU;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-5.973;-5.85;-0.123;-2.1
 1400;Fakultet for samfunnsvitenskap;SAM;3900;Inntekt fra bevilgninger;Salgs- og driftsinntekt;-120.297;-120.303;0.006;0.0
-1400;Fakultet for samfunnsvitenskap;SAM;5000;Lonn fast ansatte;Lønnskostnad;93.908;92.017;1.891;2.06
+1100;Handelshøyskolen;HHU;5000;Lonn fast ansatte;Lønnskostnad;137.304;134.539;2.765;2.06
 1400;Fakultet for samfunnsvitenskap;SAM;6050;Avskrivning driftslosore/inventar/IKT;Annen driftskostnad;10.35;10.8;-0.45;-4.17
 1400;Fakultet for samfunnsvitenskap;SAM;6300;Leie lokaler;Annen driftskostnad;33.085;33.3;-0.215;-0.65
+1400;Fakultet for samfunnsvitenskap;SAM;3400;Tilskudd fra Norges forskningsråd;Salgs- og driftsinntekt;-10.78;-11.25;0.47;4.18
+1200;Fakultet for teknologi og realfag;TEK;3670;Annen driftsrelatert inntekt;Salgs- og driftsinntekt;-15.01;-14.697;-0.313;-2.13
+1100;Handelshøyskolen;HHU;3900;Inntekt fra bevilgninger;Salgs- og driftsinntekt;-185.1;-185.103;0.003;0.0
+1200;Fakultet for teknologi og realfag;TEK;5000;Lonn fast ansatte;Lønnskostnad;195.092;191.159;3.933;2.06
+1100;Handelshøyskolen;HHU;6050;Avskrivning driftslosore/inventar/IKT;Annen driftskostnad;21.85;22.797;-0.947;-4.15
+1100;Handelshøyskolen;HHU;6300;Leie lokaler;Annen driftskostnad;48.355;48.663;-0.308;-0.63

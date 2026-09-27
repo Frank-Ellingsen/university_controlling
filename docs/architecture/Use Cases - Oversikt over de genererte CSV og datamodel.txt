@@ -23,10 +23,10 @@ Kobler 6 konkrete tiltaksplaner direkte til avvikene i regnskapet og budsjettet,
 FactProjectBOA.csv (BOA Prosjektcontrolling & TDI-kalkyle)
 Gjennomfører TDI-kalkyle (frikjøp, direkte drift, overhead/IK ~22 %, leiested) for NFR-, EU- og oppdragsprosjekter. Måler % tid gått vs. % budsjett forbrukt og angir RAG-status (Grønn, Gul, Rød).
 2. Dimensjonstabeller (Dim Tables) & Relasjoner
-DimOrganization.csv: UiA-organisasjonsstruktur (Fakultet, Institutt, Koststed og skille mellom Drift/Prosjekt).
+DimOrganization.csv: Organisasjonsstruktur (Fakultet, Institutt, Koststed og skille mellom Drift/Prosjekt).
 DimAccount.csv & DimAccountClass.csv: Norsk standard kontoplan med SRS-regnskapslinjer og balansekontoer.
 DimProject.csv: Prosjektregister (DRIFT, INV001, NFR001, EU001, EVU001, osv.).
-DimStudyProgram.csv: Studieprogram ved UiA med nivaa, normerte poeng og KDs kategoriplassering.
+DimStudyProgram.csv: Studieprogram ved universitetet med nivaa, normerte poeng og KDs kategoriplassering.
 DimPositionGroup.csv: Stillingsgrupper (Vitenskapelig, Rekruttering, Teknisk-administrativ).
 DimForecastVersion.csv: Versjonsstyring for budsjett og prognoser.
 DimDate.csv: Datoserie for periodene 2026–2029 (DatoNokkel, År, Kvartal, ÅrMåned).

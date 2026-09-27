@@ -1,5 +1,5 @@
 """
-Export analytical views from uia_analytics.duckdb to CSV files in data/
+Export analytical views from university_analytics.duckdb to CSV files in data/
 This allows Power BI Desktop to load without requiring Python.Execute
 or Native Database Query security permissions.
 """
@@ -7,7 +7,7 @@ import os
 import duckdb
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "uia_analytics.duckdb")
+DB_PATH = os.path.join(BASE_DIR, "university_analytics.duckdb")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
 VIEWS = {

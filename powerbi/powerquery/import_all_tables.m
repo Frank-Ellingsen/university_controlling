@@ -1,5 +1,5 @@
 // ==============================================================================
-// Universitetet i Agder (UiA) - Power Query M Importskript
+// University - Power Query M Importskript
 // Inneholder spørringer for alle dimensjons- og faktatabeller
 // Forfatter: Frank Ellingsen (Project Controller)
 // ==============================================================================

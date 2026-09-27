@@ -1,0 +1,854 @@
+table _Measures
+	lineageTag: 53bbfafa-fa80-4cf9-a89d-30d0248c1aee
+
+	measure 'Actual YTD' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: c3fbaf22-88e9-4f86-a6be-7ea55c48d190
+
+	measure 'Budsjett YTD' =
+			CALCULATE(
+			    SUM('FactBudget'[Budsjett_signert_MNOK]),
+			    'DimDate'[StatusPr30Sep] = "Actual"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: fb3f9dee-2a3a-47bb-841b-4f1d2fd15bc2
+
+	measure 'Avvik YTD' = [Actual YTD] - [Budsjett YTD]
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: 546a11cd-e92a-4981-90a1-b039b7ab7893
+
+	measure 'Avvik YTD %' = DIVIDE([Avvik YTD], ABS([Budsjett YTD]), 0)
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: afd33959-e009-4b6d-89ea-f1493368ff04
+
+	measure 'Forecast Q4' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'FactGL'[VersjonKode] = "FC_Q4_2026"
+			)
+		formatString: #,##0.0
+		displayFolder: _02 Prognose & EAC
+		lineageTag: a793c3b1-0bf0-4d3d-a5f1-6956adbd7c7c
+
+	measure 'Forecast LE (EAC)' = [Actual YTD] + [Forecast Q4]
+		formatString: #,##0.0
+		displayFolder: _02 Prognose & EAC
+		lineageTag: 6ac5faff-5a29-4e60-8e8a-ace8319dc64b
+
+	measure 'Årsbudsjett (BAC)' = SUM('FactBudget'[Budsjett_signert_MNOK])
+		formatString: #,##0.0
+		displayFolder: _02 Prognose & EAC
+		lineageTag: 0517c85c-ec01-454b-a01c-4570a3e462d3
+
+	measure 'Sluttavvik (VAC)' = [Årsbudsjett (BAC)] - [Forecast LE (EAC)]
+		formatString: #,##0.0
+		displayFolder: _02 Prognose & EAC
+		lineageTag: e717eedb-ed87-46a9-bf04-bad285d3b49a
+
+	measure 'VAC %' = DIVIDE([Sluttavvik (VAC)], ABS([Årsbudsjett (BAC)]), 0)
+		formatString: 0.0%
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b9693502-c996-4259-99d8-11f809bb8413
+
+	measure 'Planned Value (PV)' = SUM('FactEVM'[Planned_Value_PV_MNOK])
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: b64cc2b5-0de1-43b4-8a30-4aff406f9672
+
+	measure 'Earned Value (EV)' = SUM('FactEVM'[Earned_Value_EV_MNOK])
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: d8dcba33-9bdc-420c-8458-800033dd1261
+
+	measure 'Actual Cost (AC)' = SUM('FactEVM'[Actual_Cost_AC_MNOK])
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: d0792e3f-67b7-42d9-8059-5b8ba4fcc26c
+
+	measure CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
+		formatString: 0.00
+		displayFolder: _03 EVM
+		lineageTag: 7a85ee1b-237b-4ca8-842b-73387db959de
+
+	measure SPI = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
+		formatString: 0.00
+		displayFolder: _03 EVM
+		lineageTag: 787cd3ea-e14d-49d0-a3bc-3f2f6904dd62
+
+	measure 'Totale Årsverk' =
+			CALCULATE(
+			    SUM('FactFTE'[Aarsverk_Faktisk]),
+			    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+			)
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: 99f5d39e-7e2c-405d-baa6-68d7ca035d62
+
+	measure 'Faglige Årsverk (UF)' =
+			CALCULATE(
+			    SUM('FactFTE'[Aarsverk_UF]),
+			    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+			)
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: 37a8ec97-23da-4037-a89b-5c1bd612216c
+
+	measure 'Teknisk-Admin Årsverk (TA)' =
+			CALCULATE(
+			    SUM('FactFTE'[Aarsverk_TA]),
+			    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+			)
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: 7cb5b19c-51de-40e6-b622-fcb02330233e
+
+	measure 'Faglig Andel %' = DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d890e067-24a4-491f-b085-6afa979246f0
+
+	measure 'Registrerte Studenter' = SUM('FactStudents'[Registrerte_Studenter])
+		formatString: #,##0
+		displayFolder: _05 Utdanning
+		lineageTag: 199396a1-3e3e-47f5-81e7-d0bc61922626
+
+	measure 'Avlagte SPE60' = SUM('FactStudents'[SPE60_Helarsstudenter])
+		formatString: #,##0.0
+		displayFolder: _05 Utdanning
+		lineageTag: 6aab23ae-a227-4c5c-a708-c6cd3fb02cea
+
+	measure 'Studenter pr UF-Årsverk' = DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)
+		formatString: #,##0.0
+		displayFolder: _05 Utdanning
+		lineageTag: c6b7be62-efb8-42ce-b370-98d126583089
+
+	measure 'Enhetskostnad pr SPE60' = DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)
+		formatString: #,##0
+		displayFolder: _05 Utdanning
+		lineageTag: a207d887-1806-4553-9466-d1c3d983cbb1
+
+	measure 'KD Resultatbevilgning MNOK' =
+			VAR Kat1 = SUM('FactStudents'[KD_Kategori1_SPE60]) * 54550
+			VAR Kat2 = SUM('FactStudents'[KD_Kategori2_SPE60]) * 81800
+			VAR Kat3 = SUM('FactStudents'[KD_Kategori3_SPE60]) * 190900
+			RETURN DIVIDE(Kat1 + Kat2 + Kat3, 1000000, 0)
+		formatString: #,##0.0
+		displayFolder: _05 Utdanning
+		lineageTag: b1ac72eb-aab0-48b4-803e-9e4ca8e03d4e
+
+	measure 'Forecast RAG Status' =
+			IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
+			    IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)",
+			        "🔴 Kritisk overskridelse (> 5%)"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: 39dd7285-be9b-4187-aae3-9d40c67805a3
+
+	measure 'RAG Hex Color' =
+			IF([Sluttavvik (VAC)] >= 0, "#10b981",
+			    IF([VAC %] >= -0.05, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: b50da885-c3c0-4773-aec3-b4a63980d094
+
+	measure 'Cost Variance (CV)' = [Earned Value (EV)] - [Actual Cost (AC)]
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12345-0de1-43b4-8a30-4aff406f9673
+
+	measure 'Cost Variance (CV) %' = DIVIDE([Cost Variance (CV)], [Earned Value (EV)], 0)
+		formatString: 0.0%
+		displayFolder: _03 EVM
+		lineageTag: e8a12346-0de1-43b4-8a30-4aff406f9674
+
+	measure 'Schedule Variance (SV)' = [Earned Value (EV)] - [Planned Value (PV)]
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12347-0de1-43b4-8a30-4aff406f9675
+
+	measure 'Schedule Variance (SV) %' = DIVIDE([Schedule Variance (SV)], [Planned Value (PV)], 0)
+		formatString: 0.0%
+		displayFolder: _03 EVM
+		lineageTag: e8a12348-0de1-43b4-8a30-4aff406f9676
+
+	measure 'EAC (EVM)' = DIVIDE([Årsbudsjett (BAC)], [CPI], [Årsbudsjett (BAC)])
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12349-0de1-43b4-8a30-4aff406f9677
+
+	measure 'VAC (EVM)' = [Årsbudsjett (BAC)] - [EAC (EVM)]
+		formatString: #,##0.0
+		displayFolder: _03 EVM
+		lineageTag: e8a12350-0de1-43b4-8a30-4aff406f9678
+
+	measure 'TCPI (To-Complete Performance Index)' =
+			DIVIDE(
+			    [Årsbudsjett (BAC)] - [Earned Value (EV)],
+			    [Årsbudsjett (BAC)] - [Actual Cost (AC)],
+			    1
+			)
+		formatString: 0.00
+		displayFolder: _03 EVM
+		lineageTag: e8a12351-0de1-43b4-8a30-4aff406f9679
+
+	measure 'Faglig Mål %' = 0.60
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d890e068-24a4-491f-b085-6afa979246f1
+
+	measure 'Årsverk Avvik fra Mål' = ([Totale Årsverk] * 0.60) - [Faglige Årsverk (UF)]
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d890e069-24a4-491f-b085-6afa979246f2
+
+	measure 'SPE60 pr Student' = DIVIDE([Avlagte SPE60], [Registrerte Studenter], 0)
+		formatString: 0.00
+		displayFolder: _05 Utdanning
+		lineageTag: c6b7be63-efb8-42ce-b370-98d126583090
+
+	measure 'Scorecard KPI Verdi' =
+			SWITCH(
+			    SELECTEDVALUE('DimKPI'[KPI_ID]),
+			    1, [Actual YTD],
+			    2, [Budsjett YTD],
+			    3, [Avvik YTD],
+			    4, [Avvik YTD %],
+			    5, [Forecast LE (EAC)],
+			    6, [Årsbudsjett (BAC)],
+			    7, [Sluttavvik (VAC)],
+			    8, [VAC %],
+			    9, [Planned Value (PV)],
+			    10, [Earned Value (EV)],
+			    11, [Actual Cost (AC)],
+			    12, [CPI],
+			    13, [SPI],
+			    14, [Totale Årsverk],
+			    15, [Faglige Årsverk (UF)],
+			    16, [Teknisk-Admin Årsverk (TA)],
+			    17, [Faglig Andel %],
+			    18, [Lønnsandel %],
+			    19, [Registrerte Studenter],
+			    20, [Avlagte SPE60],
+			    21, [Studenter pr UF-Årsverk],
+			    22, [Enhetskostnad pr SPE60],
+			    23, [KD Resultatbevilgning MNOK],
+			    24, [Omstilling Udekket Gap],
+			    BLANK()
+			)
+		formatString: #,##0.00
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555551
+
+	measure 'Scorecard KPI Budsjett' =
+			SWITCH(
+			    SELECTEDVALUE('DimKPI'[KPI_ID]),
+			    1, [Budsjett YTD],
+			    5, [Årsbudsjett (BAC)],
+			    9, [Planned Value (PV)],
+			    10, [Planned Value (PV)],
+			    11, [Planned Value (PV)],
+			    12, 1.0,
+			    13, 1.0,
+			    17, 0.60,
+			    18, 0.71,
+			    BLANK()
+			)
+		formatString: #,##0.00
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555552
+
+	measure 'Scorecard KPI Avvik' =
+			SWITCH(
+			    SELECTEDVALUE('DimKPI'[KPI_ID]),
+			    1, [Avvik YTD],
+			    3, [Avvik YTD],
+			    4, [Avvik YTD %],
+			    5, [Sluttavvik (VAC)],
+			    7, [Sluttavvik (VAC)],
+			    8, [VAC %],
+			    10, [Cost Variance (CV)],
+			    11, [Cost Variance (CV)],
+			    12, [CPI] - 1.0,
+			    13, [SPI] - 1.0,
+			    17, [Faglig Andel %] - 0.60,
+			    18, [Lønnsandel %] - 0.71,
+			    24, [Omstilling Udekket Gap],
+			    BLANK()
+			)
+		formatString: #,##0.00
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555553
+
+	measure 'Scorecard KPI RAG Status' =
+			VAR KpiId = SELECTEDVALUE('DimKPI'[KPI_ID])
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    KpiId IN {1, 3, 5, 7},
+			        IF([Sluttavvik (VAC)] >= 0, "🟢 Under/I budsjett",
+			            IF([VAC %] >= -0.05, "🟡 Moderat overskridelse (< 5%)", "🔴 Kritisk overskridelse (> 5%)")),
+			    KpiId = 12,
+			        IF([CPI] >= 1.0, "🟢 Kostnadseffektiv (>= 1.0)",
+			            IF([CPI] >= 0.95, "🟡 Moderat avvik", "🔴 Kostnadsoverskridelse")),
+			    KpiId = 13,
+			        IF([SPI] >= 1.0, "🟢 I rute (>= 1.0)",
+			            IF([SPI] >= 0.95, "🟡 Moderat forsinket", "🔴 Kritisk forsinket")),
+			    KpiId = 17,
+			        IF([Faglig Andel %] >= 0.60, "🟢 Mål nådd (>= 60%)", "🟡 Under måltall (< 60%)"),
+			    KpiId = 18,
+			        IF([Lønnsandel %] <= 0.71, "🟢 Under sektormål (<= 71%)", "🔴 Over sektormål (> 71%)"),
+			    KpiId = 24,
+			        IF([Omstilling Udekket Gap] <= 0, "🟢 Gap lukket", "🟡 Udekket gap krever styring"),
+			    "⚪ Nøytral"
+			)
+		displayFolder: _06 Scorecard & KPI
+		lineageTag: f1111111-2222-3333-4444-555555555554
+
+	measure 'CPI RAG Status' =
+			IF([CPI] >= 1.0, "🟢 Effektiv (>= 1.0)",
+			    IF([CPI] >= 0.95, "🟡 Moderat avvik",
+			        "🔴 Kostnadsoverskridelse"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891234-be9b-4187-aae3-9d40c67805a5
+
+	measure 'SPI RAG Status' =
+			IF([SPI] >= 1.0, "🟢 I rute (>= 1.0)",
+			    IF([SPI] >= 0.95, "🟡 Moderat forsinket",
+			        "🔴 Kritisk forsinket"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891235-be9b-4187-aae3-9d40c67805a6
+
+	measure 'CPI Hex Color' =
+			IF([CPI] >= 1.0, "#10b981",
+			    IF([CPI] >= 0.95, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891236-be9b-4187-aae3-9d40c67805a7
+
+	measure 'SPI Hex Color' =
+			IF([SPI] >= 1.0, "#10b981",
+			    IF([SPI] >= 0.95, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891237-be9b-4187-aae3-9d40c67805a8
+
+	measure 'Avvik YTD Hex Color' =
+			IF([Avvik YTD] <= 0, "#10b981",
+			    IF([Avvik YTD %] <= 0.05, "#f59e0b",
+			        "#ef4444"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c7891238-be9b-4187-aae3-9d40c67805a9
+
+	measure 'BOA Inntekt (NFR/EU)' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'DimAccountHierarchy'[Nivaa2_Kontogruppe] = "34",
+			    'FactGL'[VersjonKode] = "ACTUAL_YTD_SEP2026"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b8a12352-0de1-43b4-8a30-4aff406f9680
+
+	measure 'Vakanser (Ubesatte stillinger)' =
+			CALCULATE(
+			    SUM('FactFTE'[Ubesatte_Vakanser]),
+			    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+			)
+		formatString: #,##0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: b8a12353-0de1-43b4-8a30-4aff406f9681
+
+	measure 'Ubenyttede Midler %' = DIVIDE(MAX(0, [Sluttavvik (VAC)]), [Årsbudsjett (BAC)], 0)
+		formatString: 0.0%
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b8a12354-0de1-43b4-8a30-4aff406f9682
+
+	measure '5% Avsetningsgrense (F-05-20)' = [Årsbudsjett (BAC)] * 0.05
+		formatString: #,##0.0
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b8a12355-0de1-43b4-8a30-4aff406f9683
+
+	measure '5% Regel Status' = IF([Ubenyttede Midler %] <= 0.05, "🟢 Innenfor 5% (F-05-20)", "🔴 Risiko for inndragning (>5%)")
+		displayFolder: _07 RAG & Design
+		lineageTag: b8a12356-0de1-43b4-8a30-4aff406f9684
+
+	measure 'Aktiv Enhet' =
+			IF(
+			    HASONEVALUE('DimOrganization'[Enhet]),
+			    SELECTEDVALUE('DimOrganization'[Enhet]),
+			    "Universitetet (Alle enheter)"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c8a12357-0de1-43b4-8a30-4aff406f9685
+
+	measure 'Aktiv Leder' =
+			IF(
+			    HASONEVALUE('DimOrganization'[Leder_Tittel]),
+			    SELECTEDVALUE('DimOrganization'[Leder_Tittel]),
+			    "Universitetsledelsen / Rektorat"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: c8a12358-0de1-43b4-8a30-4aff406f9686
+
+	measure 'Lønnsandel %' =
+			CALCULATE(
+			    DIVIDE(
+			        SUM('FactFacultyKPI'[Lonnskostnader_MNOK]),
+			        SUM('FactFacultyKPI'[Total_Kostnad_MNOK]),
+			        0.654
+			    ),
+			    'FactFacultyKPI'[OrgKode] <> 1000
+			)
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d9a12359-0de1-43b4-8a30-4aff406f9687
+
+	measure 'Lønnsandel Sektormål %' = 0.710
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: d9a12360-0de1-43b4-8a30-4aff406f9688
+
+	measure 'Omstilling Planlagt MNOK' = -15.0
+		formatString: #,##0.0 "MNOK"
+		displayFolder: _02 Prognose & EAC
+		lineageTag: d9a12361-0de1-43b4-8a30-4aff406f9689
+
+	measure 'Omstilling Realisert MNOK' = -9.0
+		formatString: #,##0.0 "MNOK"
+		displayFolder: _02 Prognose & EAC
+		lineageTag: d9a12362-0de1-43b4-8a30-4aff406f9690
+
+	measure 'Omstilling Udekket Gap' = 2.0
+		formatString: #,##0.0 "MNOK"
+		displayFolder: _02 Prognose & EAC
+		lineageTag: d9a12363-0de1-43b4-8a30-4aff406f9691
+
+	measure Avvikstype =
+			SWITCH(
+			    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+			    "HHU", "Stabilt",
+			    "TEK", "Timing",
+			    "HEL", "Strukturelt",
+			    "SAM", "Strukturelt",
+			    "HUM", "Stabilt",
+			    "ADM", "Timing",
+			    "UNIV", "Blandet",
+			    "Stabilt"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: d9a12364-0de1-43b4-8a30-4aff406f9692
+
+	measure 'Diagnose og Drivere' =
+			SWITCH(
+			    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+			    "HHU", "God budsjettkontroll og stabil studentmasse",
+			    "TEK", "Forsinkelser i utstyrsinvesteringer (Konto 2080)",
+			    "HEL", "Merforbruk praksisplasser. KDs sats dekker ikke RETHOS",
+			    "SAM", "Fallende studenttall og simulert frafall i I013BA",
+			    "HUM", "God kontroll på lønn og jevn studieproduksjon",
+			    "ADM", "Forsinket konsulentinnleie og prosjektfremdrift",
+			    "UNIV", "Netto merforbruk -11M mot BAC drevet av SAM, HEL og BOA",
+			    "Diagnose iht. Styrenotat M09"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: d9a12365-0de1-43b4-8a30-4aff406f9693
+
+	measure 'Styrenotat Status RAG' =
+			SWITCH(
+			    SELECTEDVALUE('DimOrganization'[Kortnavn]),
+			    "HHU", "🟢 Stabilt",
+			    "TEK", "🟡 Timing",
+			    "HEL", "🔴 Strukturelt",
+			    "SAM", "🔴 Strukturelt",
+			    "HUM", "🟢 Stabilt",
+			    "ADM", "🟡 Timing",
+			    "UNIV", "🔴 Merforbruk (-11M)",
+			    "🟢"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: d9a12366-0de1-43b4-8a30-4aff406f9694
+
+	measure 'Actual MoM Endring MNOK' = 3.50
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12367-0de1-43b4-8a30-4aff406f9695
+
+	measure 'Actual MoM Endring %' = 0.028
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12368-0de1-43b4-8a30-4aff406f9696
+
+	measure 'Fakultet MoM Endring MNOK' =
+			VAR Org = SELECTEDVALUE('DimOrganization'[Kortnavn])
+			RETURN
+			SWITCH(
+			    Org,
+			    "HHU", 0.42,
+			    "TEK", 0.85,
+			    "HEL", 0.95,
+			    "SAM", -0.15,
+			    "HUM", 0.28,
+			    "ADM", 1.15,
+			    "UNIV", 3.50,
+			    3.50
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12369-0de1-43b4-8a30-4aff406f9697
+
+	measure 'Fakultet YoY Vekst %' =
+			VAR Org = SELECTEDVALUE('DimOrganization'[Kortnavn])
+			RETURN
+			SWITCH(
+			    Org,
+			    "HHU", 0.038,
+			    "TEK", 0.062,
+			    "HEL", 0.071,
+			    "SAM", -0.018,
+			    "HUM", 0.024,
+			    "ADM", 0.085,
+			    "UNIV", 0.052,
+			    0.052
+			)
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12370-0de1-43b4-8a30-4aff406f9698
+
+	measure 'BAC YoY Endring %' = 0.0384
+		formatString: 0.0%
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b1a12371-0de1-43b4-8a30-4aff406f9699
+
+	measure 'EAC YoY Endring %' = 0.0464
+		formatString: 0.0%
+		displayFolder: _02 Prognose & EAC
+		lineageTag: b1a12372-0de1-43b4-8a30-4aff406f9700
+
+	measure 'Actual YTD YoY Endring %' = 0.052
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: b1a12373-0de1-43b4-8a30-4aff406f9701
+
+	measure 'CPI MoM Endring' = 0.01
+		formatString: +0.00;-0.00;0.00
+		displayFolder: _03 EVM
+		lineageTag: b1a12374-0de1-43b4-8a30-4aff406f9702
+
+	measure 'SPI MoM Endring' = 0.00
+		formatString: +0.00;-0.00;0.00
+		displayFolder: _03 EVM
+		lineageTag: b1a12375-0de1-43b4-8a30-4aff406f9703
+
+	measure 'Årsverk MoM Endring (FTE)' = 3.0
+		formatString: +0.0;-0.0;0.0
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: b1a12376-0de1-43b4-8a30-4aff406f9704
+
+	measure 'Lønnsandel MoM Endring %-p' = -0.002
+		formatString: 0.0%
+		displayFolder: _04 Bemanning & FTE
+		lineageTag: b1a12377-0de1-43b4-8a30-4aff406f9705
+
+	measure 'BAC Card Subtitle' = "Vedtatt KD-ramme | YoY: +3,8 % | MoM: 0,0 % | 🟢 Fast bevilgning"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12378-0de1-43b4-8a30-4aff406f9706
+
+	measure 'EAC Card Subtitle' = "Prognose M01-M12 | YoY: +4,6 % | MoM: +1,2 MNOK (+0,1 %) | 🔴 Merforbruk"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12379-0de1-43b4-8a30-4aff406f9707
+
+	measure 'VAC Card Subtitle' = "Budsjettgap mot ramme | Avvik: -0,8 % | 🔴 Merforbruk (-11,0 MNOK)"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12380-0de1-43b4-8a30-4aff406f9708
+
+	measure 'Lønnsandel Card Subtitle' = "Lønn/Totalramme | Sektormål: 71,0 % | MoM: -0,2 %-p | 🟢 Operativ kapasitet"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12381-0de1-43b4-8a30-4aff406f9709
+
+	measure 'Omstilling Card Subtitle' = "Udekket gap | Planlagt: -15M | Realisert: -9M | 🟡 2,0M krever styring"
+		displayFolder: _07 RAG & Design
+		lineageTag: b1a12382-0de1-43b4-8a30-4aff406f9710
+
+	measure 'Revenue Variance Indicator' =
+			VAR Budget = 1433.0
+			VAR Forecast = [Total Inntekt MNOK]
+			VAR Diff = Forecast - Budget
+			VAR Pct = DIVIDE(Diff, Budget, 0)
+			RETURN
+			"Budsjett: " & FORMAT(Budget, "#,##0.0") & " MNOK | " &
+			IF(Diff >= 0, "▲ +" & FORMAT(Pct, "0.0%"), "▼ " & FORMAT(Pct, "0.0%"))
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12383-0de1-43b4-8a30-4aff406f9711
+
+	measure 'Net Result Status Text' =
+			VAR YTDResult = [Actual YTD]
+			RETURN
+			"YTD per Sept: " & FORMAT(YTDResult, "#,##0.0") & " MNOK (Dekkes av F-05-20)"
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12384-0de1-43b4-8a30-4aff406f9712
+
+	measure 'Staffing Card Subtitle' =
+			VAR UF = [Faglige Årsverk (UF)]
+			VAR TA = [Teknisk-Admin Årsverk (TA)]
+			VAR LonnPct = [Lønnsandel %]
+			RETURN
+			FORMAT(UF, "#0") & " UF / " & FORMAT(TA, "#0") & " TA | Lønnsandel: " & FORMAT(LonnPct, "0.0%")
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12385-0de1-43b4-8a30-4aff406f9713
+
+	measure 'EVM Status Subtitle' =
+			VAR SPIVal = [SPI]
+			RETURN
+			"SPI (Tidsfremdrift): " & FORMAT(SPIVal, "0.00") & " | 5% Kostnadsoverskridelse"
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12386-0de1-43b4-8a30-4aff406f9714
+
+	measure 'Student KPI Subtitle' =
+			VAR SPE = [Avlagte SPE60]
+			VAR Ratio = [Studenter pr UF-Årsverk]
+			RETURN
+			FORMAT(SPE, "#,##0") & " SPE60 | " & FORMAT(Ratio, "0.0") & " Studenter/UF-ÅV"
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12387-0de1-43b4-8a30-4aff406f9715
+
+	measure 'Faculty Bar Color' = IF([Sluttavvik (VAC)] >= 0, "#10b981", "#ef4444")
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12388-0de1-43b4-8a30-4aff406f9716
+
+	measure 'Cumulative Actual & Forecast' =
+			VAR MaxDate = MAX('DimDate'[Dato])
+			RETURN
+			CALCULATE(
+			    [Forecast LE (EAC)],
+			    'DimDate'[Dato] <= MaxDate,
+			    ALLSELECTED('DimDate')
+			)
+		formatString: #,##0.0
+		displayFolder: _02 Prognose & EAC
+		lineageTag: e1a12389-0de1-43b4-8a30-4aff406f9717
+
+	measure 'Cumulative Budget' =
+			VAR MaxDate = MAX('DimDate'[Dato])
+			RETURN
+			CALCULATE(
+			    [Årsbudsjett (BAC)],
+			    'DimDate'[Dato] <= MaxDate,
+			    ALLSELECTED('DimDate')
+			)
+		formatString: #,##0.0
+		displayFolder: _02 Prognose & EAC
+		lineageTag: e1a12390-0de1-43b4-8a30-4aff406f9718
+
+	measure 'KPI Card Border Color' =
+			SWITCH(
+			    TRUE(),
+			    [VAC %] < -0.05, "#EF4444",
+			    [VAC %] < 0.00, "#F59E0B",
+			    "#10B981"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12391-0de1-43b4-8a30-4aff406f9719
+
+	measure 'Budget Variance RAG Status' = 
+			VAR Budget = [Årsbudsjett (BAC)]
+			VAR Forecast = [Forecast LE (EAC)]
+			VAR Vac = Forecast - Budget
+			VAR VacPct = DIVIDE(Vac, Budget, 0)
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Vac >= 0, "🟢 Under/I budsjett",
+			    VacPct >= -0.05, "🟡 Moderat overskridelse (2-5%)",
+			    "🔴 Kritisk overskridelse (>5%)"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12400-0de1-43b4-8a30-4aff406f9728
+
+	measure 'YoY Growth RAG Status' = 
+			VAR YoYPct = [Actual YoY %]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    YoYPct >= 0.03, "🟢 Sterk vekst (>= +3%)",
+			    YoYPct >= -0.02, "🟡 Stabil / Flat (-2% til +3%)",
+			    "🔴 Svekket inntekt (< -2%)"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12401-0de1-43b4-8a30-4aff406f9729
+
+	measure 'RAG Soft Background Hex' = 
+			IF([Sluttavvik (VAC)] >= 0, "#ecfdf5",
+			    IF([VAC %] >= -0.05, "#fffbeb",
+			        "#fef2f2"
+			    )
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12399-0de1-43b4-8a30-4aff406f9727
+
+	measure 'EVM RAG Status' = 
+			VAR CPIVal = [CPI]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    CPIVal >= 1.00, "🟢 God effektivitet (CPI >= 1.0)",
+			    CPIVal >= 0.90, "🟡 Moderat avvik (CPI 0.90-0.99)",
+			    "🔴 Kritisk overskridelse (CPI < 0.90)"
+			)
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12402-0de1-43b4-8a30-4aff406f9730
+
+	measure 'EVM CPI RAG Hex' = 
+			VAR CPIVal = [CPI]
+			RETURN
+			IF(CPIVal >= 1.00, "#10b981", IF(CPIVal >= 0.90, "#f59e0b", "#ef4444"))
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12403-0de1-43b4-8a30-4aff406f9731
+
+	measure 'Actual YoY %' = 0.032
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: e1a12404-0de1-43b4-8a30-4aff406f9732
+
+	measure 'Actual MoM %' = [Actual MoM Endring %]
+		formatString: 0.0%
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: e1a12405-0de1-43b4-8a30-4aff406f9733
+
+	measure 'Multi-Context Revenue Subtitle' = 
+			VAR Budget = 1433.0
+			VAR Forecast = [Total Inntekt MNOK]
+			VAR PlanDiffPct = DIVIDE(Forecast - Budget, Budget, 0)
+			VAR YoYPct = [Actual YoY %]
+			VAR MoMPct = [Actual MoM %]
+			VAR PlanIcon = IF(PlanDiffPct >= 0, "🟢", IF(PlanDiffPct >= -0.05, "🟡", "🔴"))
+			VAR YoYIcon = IF(YoYPct >= 0, "🟢", "🔴")
+			VAR PlanText = PlanIcon & " Budsj: " & IF(PlanDiffPct >= 0, "▲ +", "▼ ") & FORMAT(PlanDiffPct, "0.0%")
+			VAR YoYText = YoYIcon & " YoY: " & IF(YoYPct >= 0, "▲ +", "▼ ") & FORMAT(YoYPct, "0.0%")
+			VAR MoMText = "MoM: " & IF(MoMPct >= 0, "▲ +", "▼ ") & FORMAT(MoMPct, "0.0%")
+			RETURN
+			PlanText & " | " & YoYText & " | " & MoMText
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12406-0de1-43b4-8a30-4aff406f9734
+
+	measure 'Multi-Context Net Result Subtitle' = 
+			VAR Vac = [Sluttavvik (VAC)]
+			VAR VacPct = [VAC %]
+			VAR Icon = IF(Vac >= 0, "🟢", IF(VacPct >= -0.05, "🟡", "🔴"))
+			RETURN
+			Icon & " Sluttavvik: " & FORMAT(Vac, "#,##0.0") & " MNOK (" & FORMAT(VacPct, "0.0%") & ") | YTD: " & FORMAT([Actual YTD], "#,##0.0") & " MNOK (Dekkes av F-05-20)"
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12407-0de1-43b4-8a30-4aff406f9735
+
+	measure 'Multi-Context Staffing Subtitle' = 
+			VAR UF = [Faglige Årsverk (UF)]
+			VAR TA = [Teknisk-Admin Årsverk (TA)]
+			VAR LonnPct = [Lønnsandel %]
+			VAR LonnIcon = IF(LonnPct <= 0.65, "🟢", IF(LonnPct <= 0.67, "🟡", "🔴"))
+			RETURN
+			LonnIcon & " Lønnsandel: " & FORMAT(LonnPct, "0.0%") & " | " & FORMAT(UF, "#0") & " UF / " & FORMAT(TA, "#0") & " TA | YoY: +12 ÅV"
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12408-0de1-43b4-8a30-4aff406f9736
+
+	measure 'Multi-Context EVM Subtitle' = 
+			VAR CpiVal = [CPI]
+			VAR SpiVal = [SPI]
+			VAR CpiIcon = IF(CpiVal >= 1.0, "🟢", IF(CpiVal >= 0.90, "🟡", "🔴"))
+			RETURN
+			CpiIcon & " CPI: " & FORMAT(CpiVal, "0.00") & " | SPI: " & FORMAT(SpiVal, "0.00") & " (Tidsfremdrift) | 5% Kostnadsoverskridelse"
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12409-0de1-43b4-8a30-4aff406f9737
+
+	measure 'Multi-Context Student Subtitle' = 
+			VAR SpeVal = [Avlagte SPE60]
+			VAR Ratio = [Studenter pr UF-Årsverk]
+			VAR RatioIcon = IF(Ratio >= 18.0, "🟢", IF(Ratio >= 14.0, "🟡", "🔴"))
+			RETURN
+			RatioIcon & " " & FORMAT(SpeVal, "#,##0") & " SPE60 | " & FORMAT(Ratio, "0.0") & " Studenter/UF-ÅV | YoY: ▲ +1.8%"
+		displayFolder: _07 RAG & Design
+		lineageTag: e1a12410-0de1-43b4-8a30-4aff406f9738
+
+	measure 'Actual/FC Lønn' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'FactGL'[Kategori] = "Lønnskostnader"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: e1a12394-0de1-43b4-8a30-4aff406f9722
+
+	measure 'Actual/FC Drift' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'FactGL'[Kategori] = "Driftskostnader"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: e1a12395-0de1-43b4-8a30-4aff406f9723
+
+	measure 'Actual/FC Capex' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'FactGL'[Kategori] = "Investeringer (Capex)"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: e1a12396-0de1-43b4-8a30-4aff406f9724
+
+	measure 'Faktiske & Prognostiserte Driftskostnader' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_signert_MNOK]),
+			    'FactGL'[Artstype] = "Kostnad"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: e1a12397-0de1-43b4-8a30-4aff406f9725
+
+	measure 'Total Inntekt MNOK' =
+			CALCULATE(
+			    SUM('FactGL'[Belop_MNOK]),
+			    'FactGL'[Artstype] = "Inntekt"
+			)
+		formatString: #,##0.0
+		displayFolder: _01 Regnskap & YTD
+		lineageTag: e1a12398-0de1-43b4-8a30-4aff406f9726
+
+	column Column1
+		dataType: string
+		isHidden
+		lineageTag: 4bf5fed7-64c3-4930-8595-6c0abff44d12
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

@@ -1,5 +1,5 @@
 // ==============================================================================
-// University of Agder (UiA) - Enterprise & Project Controlling DAX Measure Library
+// University - Enterprise & Project Controlling DAX Measure Library
 // Author: Frank Ellingsen (Financial & Project Controller)
 // Standard: Edward Tufte Data-Ink Principles | Norwegian SRS & KD Accounting Model
 // ==============================================================================
@@ -324,7 +324,7 @@ Aktiv Enhet =
 IF(
     HASONEVALUE('DimOrganization'[Enhet]),
     SELECTEDVALUE('DimOrganization'[Enhet]),
-    "Universitetet i Agder (Alle enheter)"
+    "Universitetet (Alle enheter)"
 )
 
 Aktiv Leder = 
@@ -365,7 +365,7 @@ SWITCH(
     "SAM", "Strukturelt",
     "HUM", "Stabilt",
     "ADM", "Timing",
-    "UiA", "Blandet",
+    "UNIV", "Blandet",
     "Stabilt"
 )
 
@@ -378,7 +378,7 @@ SWITCH(
     "SAM", "Fallende studenttall og simulert frafall i I013BA",
     "HUM", "God kontroll på lønn og jevn studieproduksjon",
     "ADM", "Forsinket konsulentinnleie og prosjektfremdrift",
-    "UiA", "Netto merforbruk -11M mot BAC drevet av SAM, HEL og BOA",
+    "UNIV", "Netto merforbruk -11M mot BAC drevet av SAM, HEL og BOA",
     "Diagnose iht. Styrenotat M09"
 )
 
@@ -391,7 +391,7 @@ SWITCH(
     "SAM", "🔴 Strukturelt",
     "HUM", "🟢 Stabilt",
     "ADM", "🟡 Timing",
-    "UiA", "🔴 Merforbruk (-11M)",
+    "UNIV", "🔴 Merforbruk (-11M)",
     "🟢"
 )
 
@@ -414,7 +414,7 @@ SWITCH(
     "SAM", -0.15,
     "HUM", 0.28,
     "ADM", 1.15,
-    "UiA", 3.50,
+    "UNIV", 3.50,
     3.50
 )
 
@@ -429,7 +429,7 @@ SWITCH(
     "SAM", -0.018,
     "HUM", 0.024,
     "ADM", 0.085,
-    "UiA", 0.052,
+    "UNIV", 0.052,
     0.052
 )
 

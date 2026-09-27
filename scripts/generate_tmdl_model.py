@@ -1,7 +1,7 @@
 """
-Generator for TMDL (Tabular Model Definition Language) for UiA Power BI Semantisk Modell.
+Generator for TMDL (Tabular Model Definition Language) for University Power BI Semantisk Modell.
 Genererer komplette TMDL-tabellfiler, relasjoner og måltall direkte inn i:
-UIA-project-2026YTD.SemanticModel/definition/
+University-project-2026YTD.SemanticModel/definition/
 
 Forfatter: Frank Ellingsen (Project Controller)
 """
@@ -10,7 +10,7 @@ import uuid
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SEMANTIC_DIR = BASE_DIR / "UIA-project-2026YTD.SemanticModel" / "definition"
+SEMANTIC_DIR = BASE_DIR / "University-project-2026YTD.SemanticModel" / "definition"
 TABLES_DIR = SEMANTIC_DIR / "tables"
 
 def uid():

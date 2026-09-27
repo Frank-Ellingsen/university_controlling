@@ -1,4 +1,4 @@
-# Universitetet i Agder (UiA) – Prosjekt- og Virksomhetscontrolling 2026 YTD
+# University – Prosjekt- og Virksomhetscontrolling 2026 YTD
 
 [![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-blue?logo=python)](https://www.python.org/)
 [![DuckDB](https://img.shields.io/badge/DuckDB-1.5.3-yellow?logo=duckdb)](https://duckdb.org/)
@@ -11,7 +11,7 @@
 
 ## 1. Prosjektoversikt
 
-Dette repositoriet samler og standardiserer controlling, virksomhetsstyring og prosjektøkonomi for **Universitetet i Agder (UiA)** for regnskapsåret 2026 YTD (per 30. september 2026).
+Dette repositoriet samler og standardiserer controlling, virksomhetsstyring og prosjektøkonomi for **University** for regnskapsåret 2026 YTD (per 30. september 2026).
 
 Prosjektet er bygget med moderne, versjonskontrollert BI-arkitektur (**Power BI Project - PBIP**) i kombinasjon med **DuckDB** for lokal-først dataanalyse, containerisert kjøremiljø (**Docker / DevContainer**), og helautomatisert kvalitetssikring i **GitHub Actions**.
 
@@ -44,15 +44,15 @@ c:\Users\frank\Desktop\UIA2\
 ├── Dockerfile                           # Container med Python 3.12, DuckDB, Pandas og Pytest
 ├── docker-compose.yml                   # Orkestrering med bind-mounts og Ollama-integrasjon
 │
-├── UIA-project-2026YTD.pbip             # Power BI Project (dobbeltklikk for å åpne i Desktop)
-├── UIA-project-2026YTD.Report/          # Rapportdefinisjon (visuals, sider, tema)
-├── UIA-project-2026YTD.SemanticModel/   # Semantisk modell i TMDL-format (Fabric Git-kompatibel)
+├── University-project-2026YTD.pbip             # Power BI Project (dobbeltklikk for å åpne i Desktop)
+├── University-project-2026YTD.Report/          # Rapportdefinisjon (visuals, sider, tema)
+├── University-project-2026YTD.SemanticModel/   # Semantisk modell i TMDL-format (Fabric Git-kompatibel)
 │
 ├── data/                                # Rensede semikolondelilte CSV-datasett for BI & SQL
 │   ├── DimAccountHierarchy.csv          # Kontoplanhierarki (Nivå 1-4, SRS-regnskapslinjer)
 │   ├── DimDate.csv                      # Datotabell (Måned, Kvartal, Status Actual vs Forecast)
 │   ├── DimForecastVersion.csv           # Versjonsstyring (BUD2026, ACTUAL_YTD_SEP2026, FC_Q4_2026)
-│   ├── DimOrganization.csv             # UiA-organisasjonsstruktur (Fakulteter og fellestjenester)
+│   ├── DimOrganization.csv             # Organisasjonsstruktur (Fakulteter og fellestjenester)
 │   ├── FactBudget.csv                   # Vedtatt årsbudsjett 2026
 │   ├── FactEVM.csv                      # Earned Value Management tidsserier
 │   ├── FactFTE.csv                      # Bemanningsdata og årsverk (UF vs TA, vakanser)
@@ -74,17 +74,17 @@ c:\Users\frank\Desktop\UIA2\
 │   ├── themes/
 │   │   └── tufte_minimalist_theme.json  # Eget Edward Tufte minimalist-tema for Power BI
 │   └── archive/
-│       └── UIA-rapport-2026YTD.pbix     # Sikkerhetskopiert opprinnelig PBIX
+│       └── University-rapport-2026YTD.pbix     # Sikkerhetskopiert opprinnelig PBIX
 │
 ├── references/                          # Faglige veiledere, regelverk og pensum (jf. overall.md)
-│   ├── veileder_kontroll_og_rapportering_uia.md
+│   ├── veileder_kontroll_og_rapportering_university.md
 │   ├── kd_finansieringsmodell_2025.md
 │   ├── statlige_regnskapsstandarder_srs.md
 │   ├── boa_tdi_modell.md
 │   ├── femprosent_regelen_og_note15.md
 │   ├── controller_kompetansekart.md
-│   ├── uia-2026-mocup-nøkkeltall.md
-│   ├── UIA_styrenotat.md
+│   ├── university-2026-mocup-nøkkeltall.md
+│   ├── university_styrenotat.md
 │   ├── rapp_akk.md
 │   ├── curriculum/                      # Læreplaner og ordliste for controller-opplæring
 │   └── pdf/                             # Offisielle PDF-kilder (Årsrapport, SRS-notater, Kontoplan)
@@ -96,7 +96,7 @@ c:\Users\frank\Desktop\UIA2\
 │
 ├── scripts/                             # Python-automatisering og DuckDB analyse
 │   ├── verify_reporting_rules.py        # Kjører kontroller for 5%-regel, SRS, EVM og KD-modell
-│   ├── build_duckdb.py                  # Bygger lokal database uia_analytics.duckdb med visninger
+│   ├── build_duckdb.py                  # Bygger lokal database university_analytics.duckdb med visninger
 │   ├── duckdb_pbi_bridge.py             # Validerings- og spørrehjelper for Power BI DuckDB-bro
 │   └── test_data_integrity.py           # Pytest/Unittest-suite for fremmednøkler og datakvalitet
 │
@@ -106,15 +106,15 @@ c:\Users\frank\Desktop\UIA2\
 
 ---
 
-## 3. Komme i Gang med Power BI Project (`UIA-project-2026YTD.pbip`)
+## 3. Komme i Gang med Power BI Project (`University-project-2026YTD.pbip`)
 
 Power BI Desktop støtter nå Git-integrert utviklermodus via filformatet `.pbip`. Dette muliggjør ren tekstbasert versjonskontroll (TMDL og JSON) uten binære flettestridigheter.
 
 ### 3.1 Åpne prosjektet
-1. Dobbeltklikk på [`UIA-project-2026YTD.pbip`](./UIA-project-2026YTD.pbip) direkte i prosjektets rotmappe.
+1. Dobbeltklikk på [`University-project-2026YTD.pbip`](./University-project-2026YTD.pbip) direkte i prosjektets rotmappe.
 2. Power BI Desktop vil åpne rapporten og laste inn den semantiske modellen fra undermappene:
-   * `UIA-project-2026YTD.Report/`
-   * `UIA-project-2026YTD.SemanticModel/`
+   * `University-project-2026YTD.Report/`
+   * `University-project-2026YTD.SemanticModel/`
 
 ### 3.2 Importere data via Power Query
 Hvis tabellene skal oppdateres fra CSV-filene:
@@ -159,7 +159,7 @@ Dette skriptet verifiserer:
 ```bash
 python scripts/build_duckdb.py
 ```
-Oppretter databasen `uia_analytics.duckdb` med tre ferdige analytiske visninger:
+Oppretter databasen `university_analytics.duckdb` med tre ferdige analytiske visninger:
 * `v_ytd_regnskap`: Komplett transaksjonsbilde koblet mot dimensjoner.
 * `v_avvik_budsjett_actual`: Automatisk avviksberegning i MNOK og prosent.
 * `v_evm_sammendrag`: Månedlig EVM-oversikt med kostnads- og tidsavvik.
@@ -231,4 +231,4 @@ Les full standard i [`docs/reporting_standard_tufte.md`](docs/reporting_standard
 
 * **Forfatter**: Frank Ellingsen
 * **Rolle**: Senior Financial Controller & BI-spesialist / Project Controller
-* **Kontekst**: Universitetet i Agder (UiA) / Statlig sektor / Prosjekt- og virksomhetsstyring
+* **Kontekst**: University / Statlig sektor / Prosjekt- og virksomhetsstyring

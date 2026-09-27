@@ -57,7 +57,7 @@ SWITCH(
     "#10B981"                  // Green
 )
 Summary Layout Grid Mapping+---------------------------------------------------------------------------------------------------+
-| UiA Board Executive Dashboard 2026 | Cutoff: 30. Sept 2026 | Slicers: [Year: 2026] [Faculty: All] |
+| University Board Executive Dashboard 2026 | Cutoff: 30. Sept 2026 | Slicers: [Year: 2026] [Faculty: All] |
 +---------------------------------------------------------------------------------------------------+
 | [ CARD 1 ]          | [ CARD 2 ]          | [ CARD 3 ]          | [ CARD 4 ]        | [ CARD 5 ]  |
 | Total Revenue       | Net Result (VAC)    | Total FTEs / Staff  | CPI / SPI         | Students    |

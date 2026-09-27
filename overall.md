@@ -1,15 +1,15 @@
 ---
-name: uia-kontroll-og-rapportering
+name: university-kontroll-og-rapportering
 description: >-
-  Veileder og faglig regelverk for controlling, økonomistyring og rapportering ved Universitetet i Agder (UiA).
+  Veileder og faglig regelverk for controlling, økonomistyring og rapportering ved University.
   Bruk denne ferdigheten når du analyserer statlig regnskap (SRS 1, 9, 10, 17), vurderer KD finansieringsmodellen 2025,
   beregner studiepoengsatser (SPE60 Kat 1/2/3), kontrollerer 5 %-regelen for ubrukte bevilgningsmidler (F-05-20),
   gjennomfører prosjektcontrolling for BOA etter TDI-modellen, tertialrapportering (T1/T2/LE) og Note 15.
 ---
 
-# Controller- og Rapporteringsferdigheter ved Universitetet i Agder (UiA)
+# Controller- og Rapporteringsferdigheter ved University
 
-Denne ferdigheten standardiserer og profesjonaliserer controllerfunksjonen ved Universitetet i Agder (UiA) og tilsvarende statlige utdanningsinstitusjoner. Som seniorcontroller fungerer du som strategisk beslutningsstøtte og økonomisk problemløser som transformerer komplekse regnskapsdata til handlingsrettet styringsinformasjon.
+Denne ferdigheten standardiserer og profesjonaliserer controllerfunksjonen ved University og tilsvarende statlige utdanningsinstitusjoner. Som seniorcontroller fungerer du som strategisk beslutningsstøtte og økonomisk problemløser som transformerer komplekse regnskapsdata til handlingsrettet styringsinformasjon.
 
 ---
 
@@ -29,7 +29,7 @@ Fra 2025 innfører Kunnskapsdepartementet (KD) en ny finansieringsmodell:
 
 ### 1.2 Statlige Regnskapsstandarder (SRS)
 All regnskapsførsel skjer etter opptjeningsprinsippet (SRS):
-| Standard | Beskrivelse & Anvendelse ved UiA |
+| Standard | Beskrivelse & Anvendelse ved Universitetet |
 | :--- | :--- |
 | **SRS 1** | Presentasjon av virksomhetsregnskapet. Sikrer konsistent oppstilling av opptjening og kostnader. |
 | **SRS 9** | Inntekt fra transaksjonsbaserte hendelser. Benyttes for **Oppdragsaktivitet** (fullføringsgrad/leverte tjenester). |
@@ -98,7 +98,7 @@ Ved årsslutt kvalitetssikrer controlleren **Note 15 i virksomhetsregnskapet**:
 ---
 
 ## 5. Tilhørende Ressurser & Referanser
-* 📄 [Full Veileder for UiA (Markdown)](./references/veileder_kontroll_og_rapportering_uia.md)
+* 📄 [Full Veileder for University (Markdown)](./references/veileder_kontroll_og_rapportering_university.md)
 * 📄 [KD Finansieringsmodell 2025 Retningslinjer](./references/kd_finansieringsmodell_2025.md)
 * 📄 [Statlige Regnskapsstandarder (SRS 1, 9, 10, 17)](./references/statlige_regnskapsstandarder_srs.md)
 * 📄 [BOA & TDI Modellen](./references/boa_tdi_modell.md)

@@ -1,0 +1,7 @@
+role Dynamisk_Leder_RLS
+	modelPermission: read
+
+	tablePermission DimOrganization = PATHCONTAINS('DimOrganization'[Leder_Epost], USERPRINCIPALNAME()) || USERPRINCIPALNAME() = "frank.ellingsen@university.no"
+
+	annotation PBI_Id = 393e07949a664375a06050e3318c746f
+

@@ -2,7 +2,7 @@
 DuckDB to Power BI Desktop Bridge Helper
 ----------------------------------------
 Gir verifisering og standardiserte spørringer for å koble Power BI Desktop
-opp mot den lokale DuckDB-analysedatabasen (uia_analytics.duckdb) via Python M-skript.
+opp mot den lokale DuckDB-analysedatabasen (university_analytics.duckdb) via Python M-skript.
 
 Forfatter: Frank Ellingsen (Project Controller)
 """
@@ -13,7 +13,7 @@ import pandas as pd
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DEFAULT_DB_PATH = BASE_DIR / "uia_analytics.duckdb"
+DEFAULT_DB_PATH = BASE_DIR / "university_analytics.duckdb"
 
 def get_duckdb_connection(db_path: str = None, read_only: bool = True):
     path = db_path or str(DEFAULT_DB_PATH)
@@ -55,7 +55,7 @@ def verify_bridge():
     print(f"[OK] Pandas Versjon: {pd.__version__}\n")
     
     tables = get_available_views_and_tables()
-    print(f"Fant {len(tables)} tabeller/visninger i uia_analytics.duckdb:")
+    print(f"Fant {len(tables)} tabeller/visninger i university_analytics.duckdb:")
     for name, cnt in sorted(tables.items()):
         prefix = "  [VIEW ]" if name.startswith("v_") else "  [TABLE]"
         print(f"{prefix} {name:<26}: {cnt:>6} rader")
