@@ -1,15 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
-    "customTheme": {
-      "name": "University-Tufte-Minimalist-20260926.json",
-      "reportVersionAtImport": {
-        "visual": "2.12.0",
-        "report": "3.4.0",
-        "page": "2.3.1"
-      },
-      "type": "RegisteredResources"
-    },
     "baseTheme": {
       "name": "Fluent2-CY26SU08",
       "reportVersionAtImport": {
@@ -18,6 +9,15 @@
         "page": "2.3.1"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "University-Tufte-Minimalist-20260926.json",
+      "reportVersionAtImport": {
+        "visual": "2.12.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -28,6 +28,19 @@
             "expr": {
               "Literal": {
                 "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
               }
             }
           }

@@ -4,6 +4,9 @@
 **/.pbi/editorSettings.json
 *.tmp
 temp/
+UIA-project-2026YTD.pbip
+UIA-report-2026YTD.pbix
+
 
 # Excel & Office temporary lock files
 ~$*
