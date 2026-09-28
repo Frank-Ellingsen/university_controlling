@@ -9,7 +9,33 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDL-Extension"]
+
+annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate","DimDate_2027","DimForecastVersion","DimOrganization","FactAction","FactAction_2027","FactBudget","FactBudget_2027","FactEVM","FactFTE","FactFTE_2027","FactGL","FactStudents","FactStudents_2027","_Measures"]
+
+ref table DimAccountHierarchy
+ref table DimDate
+ref table DimDate_2027
+ref table DimForecastVersion
+ref table DimOrganization
+ref table FactAction
+ref table FactAction_2027
+ref table FactBudget
+ref table FactBudget_2027
+ref table FactEVM
+ref table FactFTE
+ref table FactFTE_2027
+ref table FactGL
+ref table FactStudents
+ref table FactStudents_2027
+ref table _Measures
+
+ref role Universitetsledelse
+ref role Dekan_HHU
+ref role Instituttleder_K11000
+ref role Instituttleder_K12000
+ref role Instituttleder_K13000
+ref role Administrasjon_K10000
 
 ref cultureInfo en-US
 

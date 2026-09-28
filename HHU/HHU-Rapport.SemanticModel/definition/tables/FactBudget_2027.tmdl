@@ -1,0 +1,82 @@
+table FactBudget_2027
+	lineageTag: 65ac2cc7-007a-425b-8111-ae525aada4d3
+
+	column BudsjettNokkel
+		dataType: string
+		lineageTag: f315ae90-7264-4385-af73-10de7c4a48b0
+		summarizeBy: none
+		sourceColumn: BudsjettNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e5ceed0-2ac6-4130-b9a7-645b41fa6087
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 21776838-d43b-4548-b503-a7102993357f
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: be09c421-c6ad-4ed3-bbce-16a7e625ebcb
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 00cdc443-46e9-41e2-a5ad-102d7eb75a46
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettBelop
+		dataType: double
+		formatString: #,##0
+		lineageTag: 0d402100-bba6-4525-bdc7-170b4cc86659
+		summarizeBy: sum
+		sourceColumn: BudsjettBelop
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valuta
+		dataType: string
+		lineageTag: 79a479a2-e82d-479f-bb0a-547612c3c551
+		summarizeBy: none
+		sourceColumn: Valuta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kommentar
+		dataType: string
+		lineageTag: 680267f1-9501-4e01-a45f-7b5e1fff18f5
+		summarizeBy: none
+		sourceColumn: Kommentar
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactBudget_2027 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactBudget_2027.csv"),[Delimiter=";", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"BudsjettNokkel", type text}, {"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Konto", Int64.Type}, {"VersjonKode", type text}, {"BudsjettBelop", type number}, {"Valuta", type text}, {"Kommentar", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

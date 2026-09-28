@@ -1,0 +1,194 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_evm_matrix",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 40,
+    "height": 410,
+    "width": 1880,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDate"
+                    }
+                  },
+                  "Property": "MaanedNavn"
+                }
+              },
+              "queryRef": "DimDate.MaanedNavn",
+              "nativeQueryRef": "Måned"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "BAC_BudgetAtCompletion"
+                }
+              },
+              "queryRef": "FactEVM.BAC_BudgetAtCompletion",
+              "nativeQueryRef": "BAC (NOK)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "PlannedValue_PV"
+                }
+              },
+              "queryRef": "FactEVM.PlannedValue_PV",
+              "nativeQueryRef": "Planned Value (PV)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "EarnedValue_EV"
+                }
+              },
+              "queryRef": "FactEVM.EarnedValue_EV",
+              "nativeQueryRef": "Earned Value (EV)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "ActualCost_AC"
+                }
+              },
+              "queryRef": "FactEVM.ActualCost_AC",
+              "nativeQueryRef": "Actual Cost (AC)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "EstimateAtCompletion_EAC"
+                }
+              },
+              "queryRef": "FactEVM.EstimateAtCompletion_EAC",
+              "nativeQueryRef": "EAC (NOK)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "VarianceAtCompletion_VAC"
+                }
+              },
+              "queryRef": "FactEVM.VarianceAtCompletion_VAC",
+              "nativeQueryRef": "VAC (NOK)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "CostPerformanceIndex_CPI"
+                }
+              },
+              "queryRef": "FactEVM.CostPerformanceIndex_CPI",
+              "nativeQueryRef": "CPI"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEVM"
+                    }
+                  },
+                  "Property": "SchedulePerformanceIndex_SPI"
+                }
+              },
+              "queryRef": "FactEVM.SchedulePerformanceIndex_SPI",
+              "nativeQueryRef": "SPI"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Månedlig Earned Value Prosjektlogg (NOK og Nøkkeltall)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,56 @@
+table DimAccountHierarchy
+	lineageTag: 8782fa3d-7c39-47a8-b5e9-e95cc3bd3e2f
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fc70cc9-c30c-4a24-a6cf-54e26fc018ff
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontonavn
+		dataType: string
+		lineageTag: d81981b3-62bd-4a41-803f-d685ba5b529f
+		summarizeBy: none
+		sourceColumn: Kontonavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa1_Navn
+		dataType: string
+		lineageTag: a1d300a1-f5a7-48b8-8df9-148374d25634
+		summarizeBy: none
+		sourceColumn: Nivaa1_Navn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontotype
+		dataType: string
+		lineageTag: 57d1ed1f-03a6-4c6b-9d29-15b870f3b5db
+		summarizeBy: none
+		sourceColumn: Kontotype
+
+		annotation SummarizationSetBy = Automatic
+
+	column SRS_regnskapslinje
+		dataType: string
+		lineageTag: 42aaa77b-1c25-468d-b000-677cbd92a3ee
+		summarizeBy: none
+		sourceColumn: SRS_regnskapslinje
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimAccountHierarchy = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\DimAccountHierarchy.csv"),[Delimiter=";", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Konto", Int64.Type}, {"Kontonavn", type text}, {"Nivaa1_Navn", type text}, {"Kontotype", type text}, {"SRS_regnskapslinje", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

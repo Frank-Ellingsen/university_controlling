@@ -1,0 +1,74 @@
+table FactBudget
+	lineageTag: 60b76e30-f949-40bd-89fe-1c6c96b6404c
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 55dd7f73-d94b-46bd-b071-e1e65b161aae
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: acca491a-aaa4-4a33-aa73-e77993f5f236
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: acff5ac5-07ea-417f-b65b-ff3d108f7aa1
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: f90b90d1-2e55-49d8-bea2-914df64c83c3
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettBelop
+		dataType: double
+		formatString: #,##0
+		lineageTag: 952d3727-d47b-4374-a6f7-ee7fa162e9ab
+		summarizeBy: sum
+		sourceColumn: BudsjettBelop
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjettansvarsområde
+		dataType: string
+		lineageTag: 82c1d7d3-17f8-431b-8a64-9d3dce0ddc45
+		summarizeBy: none
+		sourceColumn: Budsjettansvarsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettansvarligLeder
+		dataType: string
+		lineageTag: ad97c180-a5c7-4414-9678-25aa7f9cb933
+		summarizeBy: none
+		sourceColumn: BudsjettansvarligLeder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactBudget = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactBudget.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Konto", Int64.Type}, {"VersjonKode", type text}, {"BudsjettBelop", type number}, {"Budsjettansvarsområde", type text}, {"BudsjettansvarligLeder", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

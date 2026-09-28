@@ -1,0 +1,98 @@
+table DimDate_2027
+	lineageTag: f51a38eb-e7f9-4511-a9c2-4639f243e8f2
+	dataCategory: Time
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 32505814-6ae1-4113-aab2-e89ea6c0075d
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dato
+		dataType: dateTime
+		isKey
+		formatString: yyyy-MM-dd
+		lineageTag: 48b52b36-40aa-43cf-936e-edd558dd4b47
+		summarizeBy: none
+		sourceColumn: Dato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Aar
+		dataType: int64
+		formatString: 0
+		lineageTag: fde31688-94de-470c-ac5b-b9b234527198
+		summarizeBy: none
+		sourceColumn: Aar
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNummer
+		dataType: int64
+		formatString: 0
+		lineageTag: 3481c0c5-cab5-4c9d-a670-4b68a81762e0
+		summarizeBy: none
+		sourceColumn: MaanedNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNavn
+		dataType: string
+		lineageTag: 53cb18a1-81f7-4092-937a-052d9ae72213
+		summarizeBy: none
+		sourceColumn: MaanedNavn
+		sortByColumn: MaanedNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNavnKort
+		dataType: string
+		lineageTag: 6b15477c-6c16-404b-9bfa-62abf95c6bc4
+		summarizeBy: none
+		sourceColumn: MaanedNavnKort
+		sortByColumn: MaanedNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvartal
+		dataType: string
+		lineageTag: fa71c014-518d-4633-845d-3f5d80ac4068
+		summarizeBy: none
+		sourceColumn: Kvartal
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErActualYTD
+		dataType: boolean
+		lineageTag: 67b83b7a-b113-4484-b6bf-7c4085ba1a81
+		summarizeBy: none
+		sourceColumn: ErActualYTD
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjettaar
+		dataType: int64
+		formatString: 0
+		lineageTag: 045a3e9c-6ef5-4557-bd4b-346a4cd6b68b
+		summarizeBy: none
+		sourceColumn: Budsjettaar
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate_2027 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\DimDate_2027.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"Dato", type date}, {"Aar", Int64.Type}, {"MaanedNummer", Int64.Type}, {"MaanedNavn", type text}, {"MaanedNavnKort", type text}, {"Kvartal", type text}, {"ErActualYTD", type logical}, {"Budsjettaar", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

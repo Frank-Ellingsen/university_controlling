@@ -1,0 +1,7 @@
+role Universitetsledelse
+	modelPermission: read
+
+	tablePermission DimOrganization = true
+
+	annotation PBI_Id = 9e229707b18f44f5ab1c4b46902a21e5
+

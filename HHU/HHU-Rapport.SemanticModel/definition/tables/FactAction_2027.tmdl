@@ -1,0 +1,89 @@
+table FactAction_2027
+	lineageTag: a160dcb3-ca04-49c4-8746-fd72dfa75cfd
+
+	column TiltakID
+		dataType: string
+		lineageTag: 7ef7364f-1d48-44ad-8c94-7d8cbbe517e6
+		summarizeBy: none
+		sourceColumn: TiltakID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 8263626b-1b83-4e33-bddb-beb1b4b9e802
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tiltaksnavn
+		dataType: string
+		lineageTag: 8f6d79b0-05ba-415d-bd83-6983d43d3f53
+		summarizeBy: none
+		sourceColumn: Tiltaksnavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kategori
+		dataType: string
+		lineageTag: ee83281d-ca3d-4307-82a1-cb13402f3091
+		summarizeBy: none
+		sourceColumn: Kategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ansvarlig
+		dataType: string
+		lineageTag: 8413857e-8690-4d97-98c7-88eb17e73717
+		summarizeBy: none
+		sourceColumn: Ansvarlig
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForventetEffekt
+		dataType: double
+		formatString: #,##0
+		lineageTag: 7cd331b7-bd25-4fc7-8b8a-0d8c2de69abd
+		summarizeBy: sum
+		sourceColumn: ForventetEffekt
+
+		annotation SummarizationSetBy = Automatic
+
+	column RealisertEffekt
+		dataType: double
+		formatString: #,##0
+		lineageTag: 4db35b9c-159b-4fe2-b41c-1b946f2569fe
+		summarizeBy: sum
+		sourceColumn: RealisertEffekt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 65e7812d-8a5b-4775-ab41-7613ff7501bf
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Beskrivelse
+		dataType: string
+		lineageTag: 8242a2f4-f3e5-4f0d-ad24-41d809bb0ca7
+		summarizeBy: none
+		sourceColumn: Beskrivelse
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactAction_2027 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactAction_2027.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"OrgKode", type text}, {"Tiltaksnavn", type text}, {"Kategori", type text}, {"Ansvarlig", type text}, {"ForventetEffekt", type number}, {"RealisertEffekt", type number}, {"Status", type text}, {"Beskrivelse", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

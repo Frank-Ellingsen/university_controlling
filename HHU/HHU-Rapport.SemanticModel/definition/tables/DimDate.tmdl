@@ -1,0 +1,107 @@
+table DimDate
+	lineageTag: 6a2e5711-0a77-4b4d-a5ef-f784d4e081fa
+	dataCategory: Time
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 740dc55c-3103-42c9-a6e4-af55fb1377ff
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dato
+		dataType: dateTime
+		isKey
+		formatString: yyyy-MM-dd
+		lineageTag: 2ec3bce5-2a62-4cbd-af61-630786eff253
+		summarizeBy: none
+		sourceColumn: Dato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Aar
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ddeb4dd-5245-4876-b337-547efd5034a9
+		summarizeBy: none
+		sourceColumn: Aar
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNummer
+		dataType: int64
+		formatString: 0
+		lineageTag: e4b25d66-278e-4119-ba17-810f6c343378
+		summarizeBy: none
+		sourceColumn: MaanedNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNavn
+		dataType: string
+		lineageTag: 80014a24-5555-4fdf-b7dc-20ddf3e14a08
+		summarizeBy: none
+		sourceColumn: MaanedNavn
+		sortByColumn: MaanedNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedNavnKort
+		dataType: string
+		lineageTag: ab1b1c36-2036-4890-8e87-effc26c7fa1a
+		summarizeBy: none
+		sourceColumn: MaanedNavnKort
+		sortByColumn: MaanedNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvartal
+		dataType: string
+		lineageTag: c83d767f-9bb8-44e7-a3a6-cb1434f2c821
+		summarizeBy: none
+		sourceColumn: Kvartal
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErActualYTD
+		dataType: boolean
+		lineageTag: 8db2c514-a5e5-4455-9487-cb23a9052981
+		summarizeBy: none
+		sourceColumn: ErActualYTD
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodeBeskrivelse
+		dataType: string
+		lineageTag: 43747675-86b7-4136-a2f3-e904dc5194db
+		summarizeBy: none
+		sourceColumn: PeriodeBeskrivelse
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodeType
+		dataType: string
+		lineageTag: 356da6b9-b707-4f6e-9643-f7fb0f03852a
+		summarizeBy: none
+		sourceColumn: PeriodeType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\DimDate.csv"),[Delimiter=";", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"Aar", Int64.Type}, {"MaanedNummer", Int64.Type}, {"MaanedNavn", type text}, {"MaanedNavnKort", type text}, {"Kvartal", type text}, {"ErActualYTD", type logical}, {"PeriodeBeskrivelse", type text}}),
+				    #"Added Dato" = Table.AddColumn(#"Changed Type", "Dato", each #date([Aar], [MaanedNummer], 1), type date),
+				    #"Added PeriodeType" = Table.AddColumn(#"Added Dato", "PeriodeType", each [PeriodeBeskrivelse], type text)
+				in
+				    #"Added PeriodeType"
+
+	annotation PBI_ResultType = Table
+

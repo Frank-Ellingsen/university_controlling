@@ -1,0 +1,134 @@
+table FactFTE
+	lineageTag: c01b7cbc-b31b-49af-ae81-51e600bee15c
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: ee339f72-51cd-4e22-a60a-bc38acb85f93
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 1e32dad0-1528-4dfb-91b9-a1d2074dbf04
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjettansvarsområde
+		dataType: string
+		lineageTag: 0780c410-7539-4145-b2ff-811eae434a33
+		summarizeBy: none
+		sourceColumn: Budsjettansvarsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettansvarligLeder
+		dataType: string
+		lineageTag: 6556e838-7e61-4f07-9746-6407bbcc8fac
+		summarizeBy: none
+		sourceColumn: BudsjettansvarligLeder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stillingstype
+		dataType: string
+		lineageTag: 20cf2c96-8952-4492-a387-f702ca39f601
+		summarizeBy: none
+		sourceColumn: Stillingstype
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 35733c8c-a385-45e9-b3ee-cba6e79fc952
+		summarizeBy: sum
+		sourceColumn: Aarsverk
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjettert_Aarsverk
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: bca0f684-fc51-4be4-baa1-f87a933bb096
+		summarizeBy: sum
+		sourceColumn: Budsjettert_Aarsverk
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_UF
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: b679cd4f-0179-48e5-bad7-9246de4e71d1
+		summarizeBy: sum
+		sourceColumn: Aarsverk_UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_TA
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 395e51ee-8817-45d0-a3b0-c3f78e92611c
+		summarizeBy: sum
+		sourceColumn: Aarsverk_TA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk_Totalt
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 3927db81-81a7-4050-b821-91e41eba5291
+		summarizeBy: sum
+		sourceColumn: Aarsverk_Totalt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vakans_Aarsverk
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 8ea32c45-504f-4d21-942c-293f6ddb5d6c
+		summarizeBy: sum
+		sourceColumn: Vakans_Aarsverk
+
+		annotation SummarizationSetBy = Automatic
+
+	column Antall_Ansatte
+		dataType: int64
+		formatString: 0
+		lineageTag: e8c21f28-3032-46e4-be00-85e3c58c7156
+		summarizeBy: sum
+		sourceColumn: Antall_Ansatte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vakansgrad_Pct
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 3d543806-9fa8-46b6-afc0-86e34b07c79e
+		summarizeBy: average
+		sourceColumn: Vakansgrad_Pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactFTE = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactFTE.csv"),[Delimiter=";", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Budsjettansvarsområde", type text}, {"BudsjettansvarligLeder", type text}, {"Aarsverk_UF", type number}, {"Aarsverk_TA", type number}, {"Aarsverk_Totalt", type number}, {"Budsjettert_Aarsverk", type number}, {"Vakans_Aarsverk", type number}, {"Antall_Ansatte", Int64.Type}, {"Vakansgrad_Pct", type number}}),
+				    #"Added UF Ratio" = Table.AddColumn(#"Changed Type", "UF_Ratio", each if [Aarsverk_Totalt] = 0 then 0.5 else [Aarsverk_UF] / [Aarsverk_Totalt], type number),
+				    #"UF Table" = Table.AddColumn(Table.AddColumn(Table.AddColumn(#"Added UF Ratio", "Stillingstype", each "UF", type text), "Aarsverk", each [Aarsverk_UF], type number), "Budsjett_ÅV", each [Budsjettert_Aarsverk] * [UF_Ratio], type number),
+				    #"TA Table" = Table.AddColumn(Table.AddColumn(Table.AddColumn(#"Added UF Ratio", "Stillingstype", each "TA", type text), "Aarsverk", each [Aarsverk_TA], type number), "Budsjett_ÅV", each [Budsjettert_Aarsverk] * (1 - [UF_Ratio]), type number),
+				    #"Combined" = Table.Combine({#"UF Table", #"TA Table"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Combined", {"UF_Ratio", "Budsjettert_Aarsverk"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns", {{"Budsjett_ÅV", "Budsjettert_Aarsverk"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

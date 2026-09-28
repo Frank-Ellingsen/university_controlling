@@ -1,0 +1,129 @@
+table FactStudents
+	lineageTag: 9e9caf6b-4326-4bb5-91e0-a3dc18e8b723
+
+	column StudentNokkel
+		dataType: string
+		lineageTag: 600155ca-3ec2-41ac-94a3-acaeaba9f5c6
+		summarizeBy: none
+		sourceColumn: StudentNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: ca38c7af-d4ed-4de3-aed7-5117333eb2c3
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 31c1e371-17fd-4c59-b031-55361b2991b6
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Studieprogram
+		dataType: string
+		lineageTag: 47d0f1eb-bb64-45d2-8f83-13ed42f51e3c
+		summarizeBy: none
+		sourceColumn: Studieprogram
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegistrerteStudenter
+		dataType: int64
+		formatString: #,##0
+		lineageTag: 3906a124-1d4d-4739-8371-52ff7b2211cb
+		summarizeBy: sum
+		sourceColumn: RegistrerteStudenter
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60_Baseline_2025
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 4ef8013c-68fb-467a-8c3c-daffbd82e1e5
+		summarizeBy: sum
+		sourceColumn: SPE60_Baseline_2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60_Vekst_2025
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 3ab2737e-f404-4dff-8f21-7c804108b201
+		summarizeBy: sum
+		sourceColumn: SPE60_Vekst_2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 9565e85e-1f48-4ba0-ac59-4bd6d660e93a
+		summarizeBy: sum
+		sourceColumn: SPE60
+
+		annotation SummarizationSetBy = Automatic
+
+	column KDKategori
+		dataType: string
+		lineageTag: f4b3b61e-1fa7-49cc-b0ff-e069ff32595b
+		summarizeBy: none
+		sourceColumn: KDKategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column KDSats_NOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: 1ad9d92b-d42b-4753-a2a9-1b6215294f02
+		summarizeBy: sum
+		sourceColumn: KDSats_NOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KD_Marginal_Inntekt_2027
+		dataType: double
+		formatString: #,##0
+		lineageTag: 9ce6c54d-2253-4079-8ea5-0a7bdfbe96d5
+		summarizeBy: sum
+		sourceColumn: KD_Marginal_Inntekt_2027
+
+		annotation SummarizationSetBy = Automatic
+
+	column Studenter_pr_UF
+		dataType: double
+		formatString: 0.0
+		lineageTag: e9f42c7e-6e60-4a1b-97bd-97a9019294c0
+		summarizeBy: average
+		sourceColumn: Studenter_pr_UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column StudenterPrUF
+		dataType: double
+		formatString: 0.0
+		lineageTag: bde764ba-fea0-466b-8701-e223f7507967
+		summarizeBy: average
+		sourceColumn: StudenterPrUF
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactStudents = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactStudents.csv"),[Delimiter=";", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"StudentNokkel", type text}, {"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Studieprogram", type text}, {"RegistrerteStudenter", Int64.Type}, {"SPE60_Baseline_2025", type number}, {"SPE60_Vekst_2025", type number}, {"SPE60", type number}, {"KDKategori", type text}, {"KDSats_NOK", type number}, {"KD_Marginal_Inntekt_2027", type number}, {"Studenter_pr_UF", type number}}),
+				    #"Added StudenterPrUF" = Table.AddColumn(#"Changed Type", "StudenterPrUF", each [Studenter_pr_UF], type number)
+				in
+				    #"Added StudenterPrUF"
+
+	annotation PBI_ResultType = Table
+

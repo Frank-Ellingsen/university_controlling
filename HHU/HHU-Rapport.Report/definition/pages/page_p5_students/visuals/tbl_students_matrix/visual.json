@@ -1,0 +1,194 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_students_matrix",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 40,
+    "height": 410,
+    "width": 1880,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "Studieprogram"
+                }
+              },
+              "queryRef": "FactStudents.Studieprogram",
+              "nativeQueryRef": "Studieprogram"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Enhetsnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Enhetsnavn",
+              "nativeQueryRef": "Institutt"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "KDKategori"
+                }
+              },
+              "queryRef": "FactStudents.KDKategori",
+              "nativeQueryRef": "KD Kategori"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "RegistrerteStudenter"
+                }
+              },
+              "queryRef": "FactStudents.RegistrerteStudenter",
+              "nativeQueryRef": "Registrerte Studenter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "SPE60_Baseline_2025"
+                }
+              },
+              "queryRef": "FactStudents.SPE60_Baseline_2025",
+              "nativeQueryRef": "2025 Lag (SPE60)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "SPE60"
+                }
+              },
+              "queryRef": "FactStudents.SPE60",
+              "nativeQueryRef": "Mål SPE60"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "KDSats_NOK"
+                }
+              },
+              "queryRef": "FactStudents.KDSats_NOK",
+              "nativeQueryRef": "KD Sats (kr)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "KD_Marginal_Inntekt_2027"
+                }
+              },
+              "queryRef": "FactStudents.KD_Marginal_Inntekt_2027",
+              "nativeQueryRef": "Beregnet KD Inntekt (NOK)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "Studenter_pr_UF"
+                }
+              },
+              "queryRef": "FactStudents.Studenter_pr_UF",
+              "nativeQueryRef": "Stud/UF-ÅV"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Utdannings- og Studiepoengmodell: Kategori 1 Satser, 2-års Etterslep og Lærertetthet'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,106 @@
+table FactGL
+	lineageTag: 4d0ad344-5498-4e11-9741-78e316be40ad
+
+	column TransaksjonID
+		dataType: string
+		lineageTag: 337120ae-c81a-4158-8496-709285bde704
+		summarizeBy: none
+		sourceColumn: TransaksjonID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a4bb89e-b8e9-4cd6-864b-8f5dce1e8b3b
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: ffe5f84c-5488-42eb-b8b5-3093c733aebf
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: dfd1ad7a-05c4-4a9f-b9ed-bfc9ec0d7695
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bokforingstype
+		dataType: string
+		lineageTag: 0c64ef10-d2a9-46d0-8c23-7368e9e8ace7
+		summarizeBy: none
+		sourceColumn: Bokforingstype
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 017a9cf1-94aa-4a7d-8272-8176c9a211d1
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Belop_signert
+		dataType: double
+		formatString: #,##0
+		lineageTag: 8c58ac56-b28b-4a9b-a3a1-77e2647000d6
+		summarizeBy: sum
+		sourceColumn: Belop_signert
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjettansvarsområde
+		dataType: string
+		lineageTag: 5eea443d-625c-439a-9f7c-4f1a4dbc6a56
+		summarizeBy: none
+		sourceColumn: Budsjettansvarsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettansvarligLeder
+		dataType: string
+		lineageTag: f23fabe7-e244-4fe8-863e-328185c30122
+		summarizeBy: none
+		sourceColumn: BudsjettansvarligLeder
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProsjektID
+		dataType: string
+		lineageTag: 78630e9a-a4bb-4e6b-b494-4a65bd4f7ff5
+		summarizeBy: none
+		sourceColumn: ProsjektID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avvikstype_Beskrivelse
+		dataType: string
+		lineageTag: 6e62abc4-7f5d-454a-b859-89692075c329
+		summarizeBy: none
+		sourceColumn: Avvikstype_Beskrivelse
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactGL = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactGL.csv"),[Delimiter=";", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TransaksjonID", type text}, {"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Konto", Int64.Type}, {"Bokforingstype", type text}, {"VersjonKode", type text}, {"Belop_signert", type number}, {"Budsjettansvarsområde", type text}, {"BudsjettansvarligLeder", type text}, {"ProsjektID", type text}, {"Avvikstype_Beskrivelse", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "cht_student_ratio",
+  "position": {
+    "x": 1140,
+    "y": 235,
+    "z": 31,
+    "width": 760,
+    "height": 400,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "Studieprogram"
+                }
+              },
+              "queryRef": "FactStudents.Studieprogram",
+              "nativeQueryRef": "Studieprogram",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "Studenter_pr_UF"
+                }
+              },
+              "queryRef": "FactStudents.Studenter_pr_UF",
+              "nativeQueryRef": "Studenter pr UF"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Lærertetthet (Studenter per UF-årsverk)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

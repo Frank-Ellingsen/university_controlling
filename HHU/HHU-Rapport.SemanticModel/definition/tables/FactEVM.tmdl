@@ -1,0 +1,195 @@
+table FactEVM
+	lineageTag: 6a348214-c070-4f88-a03c-4f76a6391c3f
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 00e19198-7f63-4651-8866-19aa3e11fa94
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+
+		annotation SummarizationSetBy = Automatic
+
+	column BAC_BudgetAtCompletion
+		dataType: double
+		formatString: #,##0
+		lineageTag: a85fd1a2-ae39-4ee9-9b97-964cf7a9d4c4
+		summarizeBy: sum
+		sourceColumn: BAC_BudgetAtCompletion
+
+		annotation SummarizationSetBy = Automatic
+
+	column PlannedValue_PV
+		dataType: double
+		formatString: #,##0
+		lineageTag: 32976f8d-a3c0-490b-992c-26b6ee6f2eba
+		summarizeBy: sum
+		sourceColumn: PlannedValue_PV
+
+		annotation SummarizationSetBy = Automatic
+
+	column EarnedValue_EV
+		dataType: double
+		formatString: #,##0
+		lineageTag: 321d946a-ca7d-45a7-9ef4-8854efa55ffd
+		summarizeBy: sum
+		sourceColumn: EarnedValue_EV
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualCost_AC
+		dataType: double
+		formatString: #,##0
+		lineageTag: dfce9fbd-35ae-40b7-bdc5-d14847acbb58
+		summarizeBy: sum
+		sourceColumn: ActualCost_AC
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimateAtCompletion_EAC
+		dataType: double
+		formatString: #,##0
+		lineageTag: 180f2532-0202-4228-be1f-da954e3f65f6
+		summarizeBy: sum
+		sourceColumn: EstimateAtCompletion_EAC
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimateToComplete_ETC
+		dataType: double
+		formatString: #,##0
+		lineageTag: c047ffa8-cc31-4066-ac0f-7ced19fda7da
+		summarizeBy: sum
+		sourceColumn: EstimateToComplete_ETC
+
+		annotation SummarizationSetBy = Automatic
+
+	column VarianceAtCompletion_VAC
+		dataType: double
+		formatString: #,##0
+		lineageTag: 6083cb7a-be41-449f-90a0-a3adc8ccba4a
+		summarizeBy: sum
+		sourceColumn: VarianceAtCompletion_VAC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostPerformanceIndex_CPI
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8bcdef0f-5605-4a47-84bf-e9cc3d80762c
+		summarizeBy: average
+		sourceColumn: CostPerformanceIndex_CPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column SchedulePerformanceIndex_SPI
+		dataType: double
+		formatString: 0.00
+		lineageTag: f7bc4388-3537-4d71-b010-e6788cee7c65
+		summarizeBy: average
+		sourceColumn: SchedulePerformanceIndex_SPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planned_Value_PV_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 76334d11-c8f8-4d19-b5dc-1be898777503
+		summarizeBy: sum
+		sourceColumn: Planned_Value_PV_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Earned_Value_EV_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: fbc1208e-b5ac-4dfb-a6fb-732b630a93b4
+		summarizeBy: sum
+		sourceColumn: Earned_Value_EV_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Actual_Cost_AC_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 91c93afa-9af8-4a13-bb51-766d29644f57
+		summarizeBy: sum
+		sourceColumn: Actual_Cost_AC_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budget_At_Completion_BAC_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 00ce25df-0fd7-4931-85c6-333e78f6fb69
+		summarizeBy: sum
+		sourceColumn: Budget_At_Completion_BAC_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estimate_At_Completion_EAC_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 0a84a1aa-262e-4380-a9d2-335a86d99527
+		summarizeBy: sum
+		sourceColumn: Estimate_At_Completion_EAC_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estimate_To_Complete_ETC_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 9c074700-c19b-4270-b5e0-6abfe7fbf01b
+		summarizeBy: sum
+		sourceColumn: Estimate_To_Complete_ETC_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Variance_At_Completion_VAC_MNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 9b84f1b0-9c8a-41e4-b09c-e50902233414
+		summarizeBy: sum
+		sourceColumn: Variance_At_Completion_VAC_MNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cost_Performance_Index_CPI
+		dataType: double
+		formatString: 0.00
+		lineageTag: d06c96bd-cfa8-4471-8607-da22c2c841a9
+		summarizeBy: average
+		sourceColumn: Cost_Performance_Index_CPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column Schedule_Performance_Index_SPI
+		dataType: double
+		formatString: 0.00
+		lineageTag: 20f79105-e5a9-4d9c-9008-e8afd4d29db2
+		summarizeBy: average
+		sourceColumn: Schedule_Performance_Index_SPI
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactEVM = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactEVM.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"BAC_BudgetAtCompletion", type number}, {"PlannedValue_PV", type number}, {"EarnedValue_EV", type number}, {"ActualCost_AC", type number}, {"EstimateAtCompletion_EAC", type number}, {"EstimateToComplete_ETC", type number}, {"VarianceAtCompletion_VAC", type number}, {"CostPerformanceIndex_CPI", type number}, {"SchedulePerformanceIndex_SPI", type number}}),
+				    #"Added PV_MNOK" = Table.AddColumn(#"Changed Type", "Planned_Value_PV_MNOK", each [PlannedValue_PV] / 1000000, type number),
+				    #"Added EV_MNOK" = Table.AddColumn(#"Added PV_MNOK", "Earned_Value_EV_MNOK", each [EarnedValue_EV] / 1000000, type number),
+				    #"Added AC_MNOK" = Table.AddColumn(#"Added EV_MNOK", "Actual_Cost_AC_MNOK", each [ActualCost_AC] / 1000000, type number),
+				    #"Added BAC_MNOK" = Table.AddColumn(#"Added AC_MNOK", "Budget_At_Completion_BAC_MNOK", each [BAC_BudgetAtCompletion] / 1000000, type number),
+				    #"Added EAC_MNOK" = Table.AddColumn(#"Added BAC_MNOK", "Estimate_At_Completion_EAC_MNOK", each [EstimateAtCompletion_EAC] / 1000000, type number),
+				    #"Added ETC_MNOK" = Table.AddColumn(#"Added EAC_MNOK", "Estimate_To_Complete_ETC_MNOK", each [EstimateToComplete_ETC] / 1000000, type number),
+				    #"Added VAC_MNOK" = Table.AddColumn(#"Added ETC_MNOK", "Variance_At_Completion_VAC_MNOK", each [VarianceAtCompletion_VAC] / 1000000, type number),
+				    #"Added CPI" = Table.AddColumn(#"Added VAC_MNOK", "Cost_Performance_Index_CPI", each [CostPerformanceIndex_CPI], type number),
+				    #"Added SPI" = Table.AddColumn(#"Added CPI", "Schedule_Performance_Index_SPI", each [SchedulePerformanceIndex_SPI], type number)
+				in
+				    #"Added SPI"
+
+	annotation PBI_ResultType = Table
+

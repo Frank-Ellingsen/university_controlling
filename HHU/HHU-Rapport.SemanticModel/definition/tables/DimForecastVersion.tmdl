@@ -1,0 +1,50 @@
+table DimForecastVersion
+	lineageTag: e92110ff-b8d5-4886-b272-1e3425b81d8a
+
+	column VersjonKode
+		dataType: string
+		lineageTag: cee6b9bd-fb47-4b1c-bd29-be222370f4ec
+		summarizeBy: none
+		sourceColumn: VersjonKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonNavn
+		dataType: string
+		lineageTag: 2d9b101f-db08-4a73-aa86-b99865f05967
+		summarizeBy: none
+		sourceColumn: VersjonNavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 1075b675-b91c-44e9-8cb0-960cc97971a3
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column SisteOppdatert
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: d48b6fc1-5e42-4510-8c28-3b847dfbca9c
+		summarizeBy: none
+		sourceColumn: SisteOppdatert
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition DimForecastVersion = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\DimForecastVersion.csv"),[Delimiter=";", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"VersjonKode", type text}, {"VersjonNavn", type text}, {"Status", type text}, {"SisteOppdatert", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

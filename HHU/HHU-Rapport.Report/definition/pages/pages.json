@@ -1,7 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
   "pageOrder": [
-    "2b1fcc5590a11e6bd730"
+    "page_p1_summary",
+    "page_p2_institutter",
+    "page_p3_staffing",
+    "page_p4_evm",
+    "page_p5_students",
+    "page_p6_action",
+    "page_p7_budget2027"
   ],
-  "activePageName": "2b1fcc5590a11e6bd730"
+  "activePageName": "page_p4_evm"
 }

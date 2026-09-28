@@ -1,0 +1,109 @@
+table FactAction
+	lineageTag: 4c442695-ba34-4c21-9a33-68dc55f47609
+
+	column TiltakID
+		dataType: string
+		lineageTag: 39d9f3db-6ae6-4351-a103-44d92165a12c
+		summarizeBy: none
+		sourceColumn: TiltakID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 7351dab0-2387-4016-a8b0-6886568edf4b
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjettansvarsområde
+		dataType: string
+		lineageTag: f0ded5df-578f-431a-a482-b27400247c05
+		summarizeBy: none
+		sourceColumn: Budsjettansvarsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnsvarligLeder
+		dataType: string
+		lineageTag: 516e25fb-b13f-4c42-a014-d438140e9ca2
+		summarizeBy: none
+		sourceColumn: AnsvarligLeder
+
+		annotation SummarizationSetBy = Automatic
+
+	column TiltakNavn
+		dataType: string
+		lineageTag: 7b886878-7931-4e1a-bfcf-5d71ad8aad50
+		summarizeBy: none
+		sourceColumn: TiltakNavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForventetInnsparingNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: 7ace5633-a3dc-492b-aad8-4ebb177679cf
+		summarizeBy: sum
+		sourceColumn: ForventetInnsparingNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column RealisertInnsparingNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: 2bce5771-2d8b-4511-ba3f-ab7b8e7e9c79
+		summarizeBy: sum
+		sourceColumn: RealisertInnsparingNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForventetEffekt
+		dataType: double
+		formatString: #,##0
+		lineageTag: 0d46081e-2021-4aa2-9db9-c1e71d0af88f
+		summarizeBy: sum
+		sourceColumn: ForventetEffekt
+
+		annotation SummarizationSetBy = Automatic
+
+	column RealisertEffekt
+		dataType: double
+		formatString: #,##0
+		lineageTag: 8ddf221b-b3f0-4fc9-8ce6-8c705736a69a
+		summarizeBy: sum
+		sourceColumn: RealisertEffekt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 02cce138-165b-49e9-857d-5b3dc591d9cf
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column FristDato
+		dataType: string
+		lineageTag: a8090c06-b9b2-4202-922e-452176b172ba
+		summarizeBy: none
+		sourceColumn: FristDato
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactAction = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactAction.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"OrgKode", type text}, {"Budsjettansvarsområde", type text}, {"AnsvarligLeder", type text}, {"TiltakNavn", type text}, {"ForventetInnsparingNOK", type number}, {"RealisertInnsparingNOK", type number}, {"Status", type text}, {"FristDato", type text}}),
+				    #"Added ForventetEffekt" = Table.AddColumn(#"Changed Type", "ForventetEffekt", each [ForventetInnsparingNOK], type number),
+				    #"Added RealisertEffekt" = Table.AddColumn(#"Added ForventetEffekt", "RealisertEffekt", each [RealisertInnsparingNOK], type number)
+				in
+				    #"Added RealisertEffekt"
+
+	annotation PBI_ResultType = Table
+

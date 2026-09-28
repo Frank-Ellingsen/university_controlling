@@ -1,0 +1,88 @@
+table DimOrganization
+	lineageTag: 120fe2ae-f3cc-42a9-af2d-6fb57c6a117d
+
+	column OrgKode
+		dataType: string
+		lineageTag: 0d82da0f-afa2-48dc-a108-fcc6093e225b
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enhetsnavn
+		dataType: string
+		lineageTag: 7cb103d0-1de1-43a5-98b1-2830fad30f6d
+		summarizeBy: none
+		sourceColumn: Enhetsnavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa1
+		dataType: string
+		lineageTag: 381e4a9d-377a-41e4-801a-971487b35eac
+		summarizeBy: none
+		sourceColumn: Nivaa1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa2
+		dataType: string
+		lineageTag: dc7f3262-be2a-4936-a636-952469e6fe13
+		summarizeBy: none
+		sourceColumn: Nivaa2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nivaa3
+		dataType: string
+		lineageTag: 352a0181-846b-49ff-87f7-2cf13675f8c3
+		summarizeBy: none
+		sourceColumn: Nivaa3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budsjettansvarlig
+		dataType: string
+		lineageTag: f09ea868-492b-4229-882d-fb77eb1fb77d
+		summarizeBy: none
+		sourceColumn: Budsjettansvarlig
+
+		annotation SummarizationSetBy = Automatic
+
+	column LederTittel
+		dataType: string
+		lineageTag: c06b9ccb-dd83-41bf-8533-a1abc18a5ce2
+		summarizeBy: none
+		sourceColumn: LederTittel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Virksomhetstype
+		dataType: string
+		lineageTag: fd0d07ba-ad43-4c9b-b69c-341fff93e808
+		summarizeBy: none
+		sourceColumn: Virksomhetstype
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fakultetsnavn
+		dataType: string
+		lineageTag: 59f712d4-10c6-4964-b483-fe1af530329e
+		summarizeBy: none
+		sourceColumn: Fakultetsnavn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimOrganization = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\DimOrganization.csv"),[Delimiter=";", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", type text}, {"Enhetsnavn", type text}, {"Nivaa1", type text}, {"Nivaa2", type text}, {"Nivaa3", type text}, {"Budsjettansvarlig", type text}, {"LederTittel", type text}, {"Virksomhetstype", type text}}),
+				    #"Added Fakultetsnavn" = Table.AddColumn(#"Changed Type", "Fakultetsnavn", each [Nivaa2], type text)
+				in
+				    #"Added Fakultetsnavn"
+
+	annotation PBI_ResultType = Table
+

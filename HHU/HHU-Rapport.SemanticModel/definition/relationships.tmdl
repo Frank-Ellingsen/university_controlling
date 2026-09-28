@@ -1,0 +1,88 @@
+relationship rel_factgl_dimorg
+	fromColumn: FactGL.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factgl_dimacc
+	fromColumn: FactGL.Konto
+	toColumn: DimAccountHierarchy.Konto
+
+relationship rel_factgl_dimdate
+	fromColumn: FactGL.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factgl_dimversjon
+	fromColumn: FactGL.VersjonKode
+	toColumn: DimForecastVersion.VersjonKode
+
+relationship rel_factbudget_dimorg
+	fromColumn: FactBudget.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factbudget_dimacc
+	fromColumn: FactBudget.Konto
+	toColumn: DimAccountHierarchy.Konto
+
+relationship rel_factbudget_dimdate
+	fromColumn: FactBudget.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factbudget_dimversjon
+	fromColumn: FactBudget.VersjonKode
+	toColumn: DimForecastVersion.VersjonKode
+
+relationship rel_factfte_dimorg
+	fromColumn: FactFTE.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factfte_dimdate
+	fromColumn: FactFTE.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factstudents_dimorg
+	fromColumn: FactStudents.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factevm_dimdate
+	fromColumn: FactEVM.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factaction_dimorg
+	fromColumn: FactAction.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factbudget2027_dimorg
+	fromColumn: FactBudget_2027.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factbudget2027_dimacc
+	fromColumn: FactBudget_2027.Konto
+	toColumn: DimAccountHierarchy.Konto
+
+relationship rel_factbudget2027_dimdate
+	fromColumn: FactBudget_2027.DatoNokkel
+	toColumn: DimDate_2027.DatoNokkel
+
+relationship rel_factbudget2027_dimversjon
+	fromColumn: FactBudget_2027.VersjonKode
+	toColumn: DimForecastVersion.VersjonKode
+
+relationship rel_factfte2027_dimorg
+	fromColumn: FactFTE_2027.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factfte2027_dimdate
+	fromColumn: FactFTE_2027.DatoNokkel
+	toColumn: DimDate_2027.DatoNokkel
+
+relationship rel_factstudents2027_dimorg
+	fromColumn: FactStudents_2027.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factstudents2027_dimdate
+	fromColumn: FactStudents_2027.DatoNokkel
+	toColumn: DimDate_2027.DatoNokkel
+
+relationship rel_factaction2027_dimorg
+	fromColumn: FactAction_2027.OrgKode
+	toColumn: DimOrganization.OrgKode
+
