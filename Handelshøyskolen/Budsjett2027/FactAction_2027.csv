@@ -1,0 +1,5 @@
+﻿TiltakID;TiltakNavn;OrgKode;OrgNavn;ForventetEffektMNOK;RealisertEffektMNOK;Realiseringsgrad;Status;AnsvarligRolle;StartDato;FristDato;Prioritet
+T001;Ansettelsesstopp administrativ bemanning (TA);1140;HHU Fakultetsadministrasjon;-1.8;-1.8;1.0;Gjennomført;Fakultetsdirektør;2027-01-01;2027-12-31;Høy
+T002;Strategisk omdisponering av 5.0 faglige årsverk;1130;Institutt for økonomi;-3.05;-3.05;1.0;Gjennomført;Dekan / Instituttleder;2027-01-01;2027-12-31;Høy
+T003;Ekspansjon av EVU-portefølje mot næringsliv;1110;Institutt for ledelse og innovasjon;-1.4;-1.4;1.0;Gjennomført;Forskningsdirektør / HHU;2027-01-01;2027-12-31;Medium
+T004;Rammeavtale minikonkurranser IKT og lisenser;1600;Fellesadministrasjon & Fellesdrift;-1.2;-1.2;1.0;Gjennomført;Økonomidirektør;2027-01-01;2027-12-31;Medium

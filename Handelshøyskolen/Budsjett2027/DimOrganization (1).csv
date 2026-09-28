@@ -1,0 +1,12 @@
+﻿OrgKode;OrgNavn;OrgNivaa;Fakultetsnavn;Virksomhetstype;Lokalitet
+1000;Universitetet i Agder (UiA);Toppnivå;UiA;DRIFT;Kristiansand/Grimstad
+1100;Handelshøyskolen ved UiA (HHU);Fakultet;HHU;DRIFT;Campus Kristiansand
+1110;Institutt for ledelse og innovasjon;Institutt;HHU;DRIFT;Campus Kristiansand
+1120;Institutt for rettsvitenskap;Institutt;HHU;DRIFT;Campus Kristiansand
+1130;Institutt for økonomi;Institutt;HHU;DRIFT;Campus Kristiansand
+1140;HHU Fakultetsadministrasjon;Avdeling;HHU;DRIFT;Campus Kristiansand
+1200;Fakultet for teknologi og realfag (TEK);Fakultet;TEK;DRIFT;Grimstad/Kristiansand
+1300;Fakultet for helse- og idrettsvitenskap (HEL);Fakultet;HEL;DRIFT;Kristiansand/Grimstad
+1400;Fakultet for samfunnsvitenskap (SAM);Fakultet;SAM;DRIFT;Campus Kristiansand
+1500;Fakultet for humaniora og pedagogikk (HUM);Fakultet;HUM;DRIFT;Campus Kristiansand
+1600;Fellesadministrasjon & Fellesdrift (ADM);Avdeling;ADM;DRIFT;Kristiansand/Grimstad

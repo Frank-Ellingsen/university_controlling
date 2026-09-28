@@ -245,6 +245,16 @@ table _Measures
 		displayFolder: _05 Staffing & FTE
 		lineageTag: 94353867-7cb3-4f5c-990e-153340e322fe
 
+	/// Ubesatte stillinger / Vakanser
+	measure Vakanser =
+			CALCULATE(
+			    SUM('FactFTE'[Vakanser]),
+			    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+			)
+		formatString: #,##0.0
+		displayFolder: _05 Staffing & FTE
+		lineageTag: 888a7732-c6bf-463d-88b5-7798317e1321
+
 	/// Registrerte Studenter
 	measure 'Registrerte Studenter' =
 			SUM('FactStudents'[RegistrerteStudenter])

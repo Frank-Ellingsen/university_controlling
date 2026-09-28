@@ -1,0 +1,9 @@
+﻿FromTable;FromColumn;ToTable;ToColumn;Cardinality;CrossFilteringDirection
+DimOrganization;OrgKode;FactBudget_2027;OrgKode;1:*;Single
+DimAccountHierarchy;Konto;FactBudget_2027;Konto;1:*;Single
+DimDate_2027;DatoNokkel;FactBudget_2027;DatoNokkel;1:*;Single
+DimForecastVersion;VersjonKode;FactBudget_2027;VersjonKode;1:*;Single
+DimOrganization;OrgKode;FactFTE_2027;OrgKode;1:*;Single
+DimDate_2027;DatoNokkel;FactFTE_2027;DatoNokkel;1:*;Single
+DimOrganization;OrgKode;FactStudents_2027;OrgKode;1:*;Single
+DimOrganization;OrgKode;FactAction_2027;OrgKode;1:*;Single

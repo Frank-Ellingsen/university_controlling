@@ -1,0 +1,18 @@
+﻿Konto;Kontonavn;Nivaa1_Kontoklasse;Nivaa1_Navn;Nivaa2_Kontogruppe;Nivaa2_Navn;Nivaa3_Standardkonto;Nivaa3_Navn;Nivaa4_Underkonto;Nivaa4_Navn;Kontotype;SRS_regnskapslinje
+3030;Salgsinntekt tjenester, avgiftspliktig;3;Salgs- og driftsinntekt;30;Salgsinntekt, avgiftspliktig;303;Salgsinntekt;3030;Avgiftspliktig salg;Inntekt;Salgsinntekt
+3400;Tilskudd fra Norges forskningsråd (NFR);3;Salgs- og driftsinntekt;34;Inntekt fra tilskudd;340;Tilskudd NFR;3400;NFR-bidrag (SRS 10);Inntekt;Tilskudd og overforinger
+3420;Tilskudd fra EU (Horisont Europa);3;Salgs- og driftsinntekt;34;Inntekt fra tilskudd;342;Tilskudd EU;3420;EU-bidrag (SRS 10);Inntekt;Tilskudd og overforinger
+3600;Etter- og videreutdanning (EVU);3;Salgs- og driftsinntekt;36;Oppdragsinntekt;360;EVU kurs;3600;EVU oppdrag (SRS 9);Inntekt;Salgsinntekt
+3630;Oppdragsforskning næringsliv;3;Salgs- og driftsinntekt;36;Oppdragsinntekt;363;Oppdragsforskning;3630;Oppdrag næringsliv (SRS 9);Inntekt;Salgsinntekt
+3900;Inntekt fra statlig bevilgning (KD);3;Salgs- og driftsinntekt;39;Inntekt fra bevilgninger;390;Statlig bevilgning;3900;KD Basis & Resultat;Inntekt;Inntekt fra bevilgninger
+5000;Lonn fast ansatte;5;Lønnskostnad;50;Lønn fast ansatte;500;Fast lønn;5000;Fast lønn UF/TA;Kostnad;Lonnskostnader
+5050;Overtid og ekstrahjelp;5;Lønnskostnad;50;Lønn fast ansatte;505;Overtid;5050;Overtid/sensorer;Kostnad;Lonnskostnader
+5080;Feriepenger;5;Lønnskostnad;50;Lønn fast ansatte;508;Feriepenger;5080;Feriepenger 12%;Kostnad;Lonnskostnader
+5400;Arbeidsgiveravgift;5;Lønnskostnad;54;Arbeidsgiveravgift og pensjon;540;Arbeidsgiveravgift;5400;AGA 14.1%;Kostnad;Lonnskostnader
+5420;Pensjonspremie SPK;5;Lønnskostnad;54;Arbeidsgiveravgift og pensjon;542;Pensjon SPK;5420;SPK pensjonspremie;Kostnad;Lonnskostnader
+6000;Avskrivninger immaterielle eiendeler;6;Annen driftskostnad;60;Avskrivninger;600;Avskrivning FoU;6000;Avskrivning programvare;Kostnad;Av- og nedskrivninger
+6050;Avskrivninger inventar/IKT (SRS 17);6;Annen driftskostnad;60;Avskrivninger;605;Avskrivning utstyr;6050;Avskrivning IKT/utstyr;Kostnad;Av- og nedskrivninger
+6300;Leie lokaler og eiendom;6;Annen driftskostnad;63;Lokalkostnader;630;Husleie;6300;Husleie Statsbygg/campus;Kostnad;Andre driftskostnader
+6420;Leie av datasystemer og lisenser;6;Annen driftskostnad;64;Systemleie;642;IT-lisenser;6420;IT/Canvas/UBW/SAP lisenser;Kostnad;Andre driftskostnader
+6700;Konsulenttjenester og akkreditering;6;Annen driftskostnad;67;Fremmede tjenester;670;Konsulenter;6700;AACSB/Revisjon/Rådgivning;Kostnad;Andre driftskostnader
+7790;Avsetning for tap på oppdrag (SRS 9);7;Andre driftskostnader;77;Andre kostnader;779;Tapsavsetning;7790;SRS 9 Avsetning for tap;Kostnad;Andre driftskostnader

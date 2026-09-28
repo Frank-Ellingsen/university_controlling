@@ -1,0 +1,517 @@
+﻿DatoNokkel;Aar;AarMaaned;OrgKode;OrgNavn;Konto;Kontonavn;VersjonKode;BudsjettBelop;Kilde
+20270101;2027;2027-01;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270101;2027;2027-01;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270101;2027;2027-01;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270101;2027;2027-01;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20270101;2027;2027-01;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270101;2027;2027-01;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270101;2027;2027-01;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270101;2027;2027-01;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270101;2027;2027-01;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270101;2027;2027-01;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270101;2027;2027-01;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20270101;2027;2027-01;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270101;2027;2027-01;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270101;2027;2027-01;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270101;2027;2027-01;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270101;2027;2027-01;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270101;2027;2027-01;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270101;2027;2027-01;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20270101;2027;2027-01;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270101;2027;2027-01;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270101;2027;2027-01;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270101;2027;2027-01;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270101;2027;2027-01;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270101;2027;2027-01;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270101;2027;2027-01;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20270101;2027;2027-01;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270101;2027;2027-01;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270101;2027;2027-01;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270101;2027;2027-01;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270101;2027;2027-01;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20270101;2027;2027-01;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270101;2027;2027-01;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270101;2027;2027-01;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20270101;2027;2027-01;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270101;2027;2027-01;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270101;2027;2027-01;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20270101;2027;2027-01;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270101;2027;2027-01;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270101;2027;2027-01;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20270101;2027;2027-01;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270101;2027;2027-01;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270101;2027;2027-01;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20270101;2027;2027-01;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270201;2027;2027-02;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270201;2027;2027-02;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270201;2027;2027-02;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270201;2027;2027-02;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20270201;2027;2027-02;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270201;2027;2027-02;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270201;2027;2027-02;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270201;2027;2027-02;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270201;2027;2027-02;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270201;2027;2027-02;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270201;2027;2027-02;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20270201;2027;2027-02;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270201;2027;2027-02;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270201;2027;2027-02;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270201;2027;2027-02;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270201;2027;2027-02;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270201;2027;2027-02;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270201;2027;2027-02;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20270201;2027;2027-02;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270201;2027;2027-02;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270201;2027;2027-02;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270201;2027;2027-02;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270201;2027;2027-02;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270201;2027;2027-02;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270201;2027;2027-02;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20270201;2027;2027-02;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270201;2027;2027-02;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270201;2027;2027-02;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270201;2027;2027-02;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270201;2027;2027-02;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20270201;2027;2027-02;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270201;2027;2027-02;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270201;2027;2027-02;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20270201;2027;2027-02;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270201;2027;2027-02;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270201;2027;2027-02;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20270201;2027;2027-02;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270201;2027;2027-02;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270201;2027;2027-02;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20270201;2027;2027-02;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270201;2027;2027-02;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270201;2027;2027-02;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20270201;2027;2027-02;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270301;2027;2027-03;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270301;2027;2027-03;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270301;2027;2027-03;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270301;2027;2027-03;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20270301;2027;2027-03;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270301;2027;2027-03;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270301;2027;2027-03;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270301;2027;2027-03;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270301;2027;2027-03;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270301;2027;2027-03;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270301;2027;2027-03;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20270301;2027;2027-03;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270301;2027;2027-03;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270301;2027;2027-03;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270301;2027;2027-03;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270301;2027;2027-03;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270301;2027;2027-03;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270301;2027;2027-03;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20270301;2027;2027-03;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270301;2027;2027-03;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270301;2027;2027-03;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270301;2027;2027-03;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270301;2027;2027-03;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270301;2027;2027-03;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270301;2027;2027-03;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20270301;2027;2027-03;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270301;2027;2027-03;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270301;2027;2027-03;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270301;2027;2027-03;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270301;2027;2027-03;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20270301;2027;2027-03;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270301;2027;2027-03;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270301;2027;2027-03;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20270301;2027;2027-03;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270301;2027;2027-03;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270301;2027;2027-03;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20270301;2027;2027-03;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270301;2027;2027-03;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270301;2027;2027-03;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20270301;2027;2027-03;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270301;2027;2027-03;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270301;2027;2027-03;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20270301;2027;2027-03;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270401;2027;2027-04;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270401;2027;2027-04;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270401;2027;2027-04;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270401;2027;2027-04;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20270401;2027;2027-04;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270401;2027;2027-04;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270401;2027;2027-04;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270401;2027;2027-04;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270401;2027;2027-04;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270401;2027;2027-04;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270401;2027;2027-04;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20270401;2027;2027-04;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270401;2027;2027-04;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270401;2027;2027-04;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270401;2027;2027-04;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270401;2027;2027-04;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270401;2027;2027-04;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270401;2027;2027-04;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20270401;2027;2027-04;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270401;2027;2027-04;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270401;2027;2027-04;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270401;2027;2027-04;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270401;2027;2027-04;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270401;2027;2027-04;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270401;2027;2027-04;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20270401;2027;2027-04;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270401;2027;2027-04;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270401;2027;2027-04;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270401;2027;2027-04;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270401;2027;2027-04;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20270401;2027;2027-04;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270401;2027;2027-04;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270401;2027;2027-04;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20270401;2027;2027-04;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270401;2027;2027-04;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270401;2027;2027-04;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20270401;2027;2027-04;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270401;2027;2027-04;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270401;2027;2027-04;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20270401;2027;2027-04;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270401;2027;2027-04;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270401;2027;2027-04;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20270401;2027;2027-04;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270501;2027;2027-05;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270501;2027;2027-05;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270501;2027;2027-05;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270501;2027;2027-05;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20270501;2027;2027-05;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270501;2027;2027-05;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270501;2027;2027-05;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270501;2027;2027-05;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270501;2027;2027-05;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270501;2027;2027-05;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270501;2027;2027-05;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20270501;2027;2027-05;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270501;2027;2027-05;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270501;2027;2027-05;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270501;2027;2027-05;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270501;2027;2027-05;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270501;2027;2027-05;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270501;2027;2027-05;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20270501;2027;2027-05;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270501;2027;2027-05;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270501;2027;2027-05;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270501;2027;2027-05;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270501;2027;2027-05;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270501;2027;2027-05;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270501;2027;2027-05;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20270501;2027;2027-05;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270501;2027;2027-05;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270501;2027;2027-05;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270501;2027;2027-05;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270501;2027;2027-05;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20270501;2027;2027-05;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270501;2027;2027-05;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270501;2027;2027-05;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20270501;2027;2027-05;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270501;2027;2027-05;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270501;2027;2027-05;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20270501;2027;2027-05;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270501;2027;2027-05;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270501;2027;2027-05;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20270501;2027;2027-05;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270501;2027;2027-05;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270501;2027;2027-05;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20270501;2027;2027-05;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270601;2027;2027-06;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270601;2027;2027-06;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270601;2027;2027-06;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270601;2027;2027-06;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;7.7817;BUDGET_2027
+20270601;2027;2027-06;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270601;2027;2027-06;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270601;2027;2027-06;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270601;2027;2027-06;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270601;2027;2027-06;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270601;2027;2027-06;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270601;2027;2027-06;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;5.5583;BUDGET_2027
+20270601;2027;2027-06;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270601;2027;2027-06;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270601;2027;2027-06;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270601;2027;2027-06;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270601;2027;2027-06;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270601;2027;2027-06;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270601;2027;2027-06;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;6.67;BUDGET_2027
+20270601;2027;2027-06;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270601;2027;2027-06;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270601;2027;2027-06;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270601;2027;2027-06;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270601;2027;2027-06;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270601;2027;2027-06;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270601;2027;2027-06;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;2.2233;BUDGET_2027
+20270601;2027;2027-06;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270601;2027;2027-06;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270601;2027;2027-06;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270601;2027;2027-06;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270601;2027;2027-06;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;33.031;BUDGET_2027
+20270601;2027;2027-06;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270601;2027;2027-06;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270601;2027;2027-06;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;27.115;BUDGET_2027
+20270601;2027;2027-06;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270601;2027;2027-06;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270601;2027;2027-06;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;15.283;BUDGET_2027
+20270601;2027;2027-06;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270601;2027;2027-06;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270601;2027;2027-06;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;11.6348;BUDGET_2027
+20270601;2027;2027-06;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270601;2027;2027-06;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270601;2027;2027-06;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;12.0292;BUDGET_2027
+20270601;2027;2027-06;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270701;2027;2027-07;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270701;2027;2027-07;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270701;2027;2027-07;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270701;2027;2027-07;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;4.2933;BUDGET_2027
+20270701;2027;2027-07;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270701;2027;2027-07;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270701;2027;2027-07;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270701;2027;2027-07;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270701;2027;2027-07;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270701;2027;2027-07;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270701;2027;2027-07;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.0667;BUDGET_2027
+20270701;2027;2027-07;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270701;2027;2027-07;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270701;2027;2027-07;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270701;2027;2027-07;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270701;2027;2027-07;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270701;2027;2027-07;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270701;2027;2027-07;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;3.68;BUDGET_2027
+20270701;2027;2027-07;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270701;2027;2027-07;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270701;2027;2027-07;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270701;2027;2027-07;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270701;2027;2027-07;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270701;2027;2027-07;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270701;2027;2027-07;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.2267;BUDGET_2027
+20270701;2027;2027-07;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270701;2027;2027-07;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270701;2027;2027-07;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270701;2027;2027-07;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270701;2027;2027-07;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;18.224;BUDGET_2027
+20270701;2027;2027-07;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270701;2027;2027-07;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270701;2027;2027-07;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;14.96;BUDGET_2027
+20270701;2027;2027-07;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270701;2027;2027-07;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270701;2027;2027-07;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;8.432;BUDGET_2027
+20270701;2027;2027-07;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270701;2027;2027-07;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270701;2027;2027-07;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;6.4192;BUDGET_2027
+20270701;2027;2027-07;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270701;2027;2027-07;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270701;2027;2027-07;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;6.6368;BUDGET_2027
+20270701;2027;2027-07;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270801;2027;2027-08;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270801;2027;2027-08;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270801;2027;2027-08;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270801;2027;2027-08;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20270801;2027;2027-08;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270801;2027;2027-08;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270801;2027;2027-08;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270801;2027;2027-08;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270801;2027;2027-08;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270801;2027;2027-08;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270801;2027;2027-08;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20270801;2027;2027-08;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270801;2027;2027-08;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270801;2027;2027-08;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270801;2027;2027-08;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270801;2027;2027-08;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270801;2027;2027-08;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270801;2027;2027-08;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20270801;2027;2027-08;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270801;2027;2027-08;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270801;2027;2027-08;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270801;2027;2027-08;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270801;2027;2027-08;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270801;2027;2027-08;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270801;2027;2027-08;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20270801;2027;2027-08;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270801;2027;2027-08;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270801;2027;2027-08;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270801;2027;2027-08;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270801;2027;2027-08;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20270801;2027;2027-08;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270801;2027;2027-08;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270801;2027;2027-08;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20270801;2027;2027-08;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270801;2027;2027-08;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270801;2027;2027-08;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20270801;2027;2027-08;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270801;2027;2027-08;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270801;2027;2027-08;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20270801;2027;2027-08;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270801;2027;2027-08;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270801;2027;2027-08;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20270801;2027;2027-08;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20270901;2027;2027-09;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20270901;2027;2027-09;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20270901;2027;2027-09;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20270901;2027;2027-09;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20270901;2027;2027-09;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20270901;2027;2027-09;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20270901;2027;2027-09;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20270901;2027;2027-09;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20270901;2027;2027-09;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20270901;2027;2027-09;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20270901;2027;2027-09;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20270901;2027;2027-09;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20270901;2027;2027-09;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20270901;2027;2027-09;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20270901;2027;2027-09;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20270901;2027;2027-09;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20270901;2027;2027-09;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20270901;2027;2027-09;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20270901;2027;2027-09;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20270901;2027;2027-09;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20270901;2027;2027-09;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20270901;2027;2027-09;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20270901;2027;2027-09;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20270901;2027;2027-09;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20270901;2027;2027-09;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20270901;2027;2027-09;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20270901;2027;2027-09;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20270901;2027;2027-09;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20270901;2027;2027-09;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20270901;2027;2027-09;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20270901;2027;2027-09;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20270901;2027;2027-09;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20270901;2027;2027-09;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20270901;2027;2027-09;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20270901;2027;2027-09;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20270901;2027;2027-09;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20270901;2027;2027-09;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20270901;2027;2027-09;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20270901;2027;2027-09;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20270901;2027;2027-09;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20270901;2027;2027-09;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20270901;2027;2027-09;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20270901;2027;2027-09;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20271001;2027;2027-10;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20271001;2027;2027-10;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20271001;2027;2027-10;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20271001;2027;2027-10;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20271001;2027;2027-10;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20271001;2027;2027-10;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20271001;2027;2027-10;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20271001;2027;2027-10;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20271001;2027;2027-10;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20271001;2027;2027-10;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20271001;2027;2027-10;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20271001;2027;2027-10;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20271001;2027;2027-10;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20271001;2027;2027-10;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20271001;2027;2027-10;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20271001;2027;2027-10;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20271001;2027;2027-10;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20271001;2027;2027-10;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20271001;2027;2027-10;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20271001;2027;2027-10;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20271001;2027;2027-10;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20271001;2027;2027-10;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20271001;2027;2027-10;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20271001;2027;2027-10;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20271001;2027;2027-10;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20271001;2027;2027-10;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20271001;2027;2027-10;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20271001;2027;2027-10;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20271001;2027;2027-10;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20271001;2027;2027-10;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20271001;2027;2027-10;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20271001;2027;2027-10;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20271001;2027;2027-10;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20271001;2027;2027-10;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20271001;2027;2027-10;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20271001;2027;2027-10;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20271001;2027;2027-10;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20271001;2027;2027-10;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20271001;2027;2027-10;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20271001;2027;2027-10;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20271001;2027;2027-10;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20271001;2027;2027-10;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20271001;2027;2027-10;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20271101;2027;2027-11;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20271101;2027;2027-11;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20271101;2027;2027-11;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20271101;2027;2027-11;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20271101;2027;2027-11;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20271101;2027;2027-11;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20271101;2027;2027-11;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20271101;2027;2027-11;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20271101;2027;2027-11;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20271101;2027;2027-11;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20271101;2027;2027-11;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20271101;2027;2027-11;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20271101;2027;2027-11;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20271101;2027;2027-11;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20271101;2027;2027-11;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20271101;2027;2027-11;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20271101;2027;2027-11;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20271101;2027;2027-11;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20271101;2027;2027-11;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20271101;2027;2027-11;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20271101;2027;2027-11;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20271101;2027;2027-11;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20271101;2027;2027-11;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20271101;2027;2027-11;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20271101;2027;2027-11;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20271101;2027;2027-11;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20271101;2027;2027-11;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20271101;2027;2027-11;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20271101;2027;2027-11;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20271101;2027;2027-11;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20271101;2027;2027-11;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20271101;2027;2027-11;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20271101;2027;2027-11;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20271101;2027;2027-11;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20271101;2027;2027-11;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20271101;2027;2027-11;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20271101;2027;2027-11;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20271101;2027;2027-11;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20271101;2027;2027-11;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20271101;2027;2027-11;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20271101;2027;2027-11;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20271101;2027;2027-11;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20271101;2027;2027-11;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
+20271201;2027;2027-12;1110;Institutt for ledelse og innovasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-7.4025;BUDGET_2027
+20271201;2027;2027-12;1110;Institutt for ledelse og innovasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5833;BUDGET_2027
+20271201;2027;2027-12;1110;Institutt for ledelse og innovasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.3792;BUDGET_2027
+20271201;2027;2027-12;1110;Institutt for ledelse og innovasjon;5000;Lonn fast ansatte;BUD2027;5.0983;BUDGET_2027
+20271201;2027;2027-12;1110;Institutt for ledelse og innovasjon;6300;Leie lokaler og eiendom;BUD2027;1.155;BUDGET_2027
+20271201;2027;2027-12;1110;Institutt for ledelse og innovasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.77;BUDGET_2027
+20271201;2027;2027-12;1110;Institutt for ledelse og innovasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.9333;BUDGET_2027
+20271201;2027;2027-12;1120;Institutt for rettsvitenskap;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-5.2875;BUDGET_2027
+20271201;2027;2027-12;1120;Institutt for rettsvitenskap;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.4167;BUDGET_2027
+20271201;2027;2027-12;1120;Institutt for rettsvitenskap;3600;Etter- og videreutdanning (EVU);BUD2027;-0.2708;BUDGET_2027
+20271201;2027;2027-12;1120;Institutt for rettsvitenskap;5000;Lonn fast ansatte;BUD2027;3.6417;BUDGET_2027
+20271201;2027;2027-12;1120;Institutt for rettsvitenskap;6300;Leie lokaler og eiendom;BUD2027;0.825;BUDGET_2027
+20271201;2027;2027-12;1120;Institutt for rettsvitenskap;6700;Konsulenttjenester og akkreditering;BUD2027;0.55;BUDGET_2027
+20271201;2027;2027-12;1120;Institutt for rettsvitenskap;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.6667;BUDGET_2027
+20271201;2027;2027-12;1130;Institutt for økonomi;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-6.345;BUDGET_2027
+20271201;2027;2027-12;1130;Institutt for økonomi;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.5;BUDGET_2027
+20271201;2027;2027-12;1130;Institutt for økonomi;3600;Etter- og videreutdanning (EVU);BUD2027;-0.325;BUDGET_2027
+20271201;2027;2027-12;1130;Institutt for økonomi;5000;Lonn fast ansatte;BUD2027;4.37;BUDGET_2027
+20271201;2027;2027-12;1130;Institutt for økonomi;6300;Leie lokaler og eiendom;BUD2027;0.99;BUDGET_2027
+20271201;2027;2027-12;1130;Institutt for økonomi;6700;Konsulenttjenester og akkreditering;BUD2027;0.66;BUDGET_2027
+20271201;2027;2027-12;1130;Institutt for økonomi;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.8;BUDGET_2027
+20271201;2027;2027-12;1140;HHU Fakultetsadministrasjon;3900;Inntekt fra statlig bevilgning (KD);BUD2027;-2.115;BUDGET_2027
+20271201;2027;2027-12;1140;HHU Fakultetsadministrasjon;3400;Tilskudd fra Norges forskningsråd (NFR);BUD2027;-0.1667;BUDGET_2027
+20271201;2027;2027-12;1140;HHU Fakultetsadministrasjon;3600;Etter- og videreutdanning (EVU);BUD2027;-0.1083;BUDGET_2027
+20271201;2027;2027-12;1140;HHU Fakultetsadministrasjon;5000;Lonn fast ansatte;BUD2027;1.4567;BUDGET_2027
+20271201;2027;2027-12;1140;HHU Fakultetsadministrasjon;6300;Leie lokaler og eiendom;BUD2027;0.33;BUDGET_2027
+20271201;2027;2027-12;1140;HHU Fakultetsadministrasjon;6700;Konsulenttjenester og akkreditering;BUD2027;0.22;BUDGET_2027
+20271201;2027;2027-12;1140;HHU Fakultetsadministrasjon;6050;Avskrivninger inventar/IKT (SRS 17);BUD2027;0.2667;BUDGET_2027
+20271201;2027;2027-12;1200;Fakultet for teknologi og realfag (TEK);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-34.0;BUDGET_2027
+20271201;2027;2027-12;1200;Fakultet for teknologi og realfag (TEK);5000;Lonn fast ansatte;BUD2027;21.641;BUDGET_2027
+20271201;2027;2027-12;1200;Fakultet for teknologi og realfag (TEK);6300;Leie lokaler og eiendom;BUD2027;10.72;BUDGET_2027
+20271201;2027;2027-12;1300;Fakultet for helse- og idrettsvitenskap (HEL);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-28.0;BUDGET_2027
+20271201;2027;2027-12;1300;Fakultet for helse- og idrettsvitenskap (HEL);5000;Lonn fast ansatte;BUD2027;17.765;BUDGET_2027
+20271201;2027;2027-12;1300;Fakultet for helse- og idrettsvitenskap (HEL);6300;Leie lokaler og eiendom;BUD2027;8.8;BUDGET_2027
+20271201;2027;2027-12;1400;Fakultet for samfunnsvitenskap (SAM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-16.0;BUDGET_2027
+20271201;2027;2027-12;1400;Fakultet for samfunnsvitenskap (SAM);5000;Lonn fast ansatte;BUD2027;10.013;BUDGET_2027
+20271201;2027;2027-12;1400;Fakultet for samfunnsvitenskap (SAM);6300;Leie lokaler og eiendom;BUD2027;4.96;BUDGET_2027
+20271201;2027;2027-12;1500;Fakultet for humaniora og pedagogikk (HUM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-12.0;BUDGET_2027
+20271201;2027;2027-12;1500;Fakultet for humaniora og pedagogikk (HUM);5000;Lonn fast ansatte;BUD2027;7.6228;BUDGET_2027
+20271201;2027;2027-12;1500;Fakultet for humaniora og pedagogikk (HUM);6300;Leie lokaler og eiendom;BUD2027;3.776;BUDGET_2027
+20271201;2027;2027-12;1600;Fellesadministrasjon & Fellesdrift (ADM);3900;Inntekt fra statlig bevilgning (KD);BUD2027;-11.0;BUDGET_2027
+20271201;2027;2027-12;1600;Fellesadministrasjon & Fellesdrift (ADM);5000;Lonn fast ansatte;BUD2027;7.8812;BUDGET_2027
+20271201;2027;2027-12;1600;Fellesadministrasjon & Fellesdrift (ADM);6300;Leie lokaler og eiendom;BUD2027;3.904;BUDGET_2027
