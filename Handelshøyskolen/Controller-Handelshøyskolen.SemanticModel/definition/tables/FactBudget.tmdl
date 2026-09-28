@@ -7,6 +7,7 @@ table FactBudget
 		lineageTag: 4dedb201-d308-4684-8a96-aca1266c5c07
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgKode
@@ -14,6 +15,7 @@ table FactBudget
 		lineageTag: 0a01ddfd-7a6d-4c61-8b1d-0f0bc9e9e88a
 		summarizeBy: none
 		sourceColumn: OrgKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column Konto
@@ -22,6 +24,7 @@ table FactBudget
 		lineageTag: 07e338e9-2180-4b43-beaf-d6d0a78f9396
 		summarizeBy: none
 		sourceColumn: Konto
+
 		annotation SummarizationSetBy = Automatic
 
 	column BudsjettBelop
@@ -30,6 +33,7 @@ table FactBudget
 		lineageTag: 387e52f0-82f3-401f-9fe8-94fb2445e750
 		summarizeBy: sum
 		sourceColumn: BudsjettBelop
+
 		annotation SummarizationSetBy = Automatic
 
 	column Beskrivelse
@@ -37,6 +41,7 @@ table FactBudget
 		lineageTag: 169754c0-0a3e-4273-ab7d-1d2b5b3a937f
 		summarizeBy: none
 		sourceColumn: Beskrivelse
+
 		annotation SummarizationSetBy = Automatic
 
 	partition FactBudget = m
@@ -50,3 +55,4 @@ table FactBudget
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

@@ -7,6 +7,7 @@ table DimDAXDoc
 		lineageTag: ac144834-f49c-450a-966e-339d4595f0d6
 		summarizeBy: none
 		sourceColumn: LineNr
+
 		annotation SummarizationSetBy = Automatic
 
 	column LineContent
@@ -14,6 +15,7 @@ table DimDAXDoc
 		lineageTag: dddf9e7b-298c-424e-bc2c-ad31fea4b78a
 		summarizeBy: none
 		sourceColumn: LineContent
+
 		annotation SummarizationSetBy = Automatic
 
 	partition DimDAXDoc = m
@@ -27,3 +29,4 @@ table DimDAXDoc
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

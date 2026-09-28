@@ -6,6 +6,7 @@ table DimForecastVersion
 		lineageTag: ea551e53-37be-4ac9-b70b-e9056e8678c1
 		summarizeBy: none
 		sourceColumn: VersjonKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonNavn
@@ -13,6 +14,7 @@ table DimForecastVersion
 		lineageTag: ea92f873-1cc8-4aca-b995-2b4e0d25882a
 		summarizeBy: none
 		sourceColumn: VersjonNavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Beskrivelse
@@ -20,6 +22,7 @@ table DimForecastVersion
 		lineageTag: 26aea936-892a-4a22-8fb9-9af3aafa17bb
 		summarizeBy: none
 		sourceColumn: Beskrivelse
+
 		annotation SummarizationSetBy = Automatic
 
 	column ErAktiv
@@ -27,6 +30,7 @@ table DimForecastVersion
 		lineageTag: 362bae19-4693-48a7-8061-86a52b061112
 		summarizeBy: none
 		sourceColumn: ErAktiv
+
 		annotation SummarizationSetBy = Automatic
 
 	partition DimForecastVersion = m
@@ -40,3 +44,4 @@ table DimForecastVersion
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

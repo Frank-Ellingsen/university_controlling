@@ -6,6 +6,7 @@ table DimOrganization
 		lineageTag: 09f1dbf0-f40f-43c6-ba01-ba5faf4fc0fe
 		summarizeBy: none
 		sourceColumn: OrgNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgKode
@@ -13,6 +14,7 @@ table DimOrganization
 		lineageTag: 46590225-d700-4df9-8f53-0e9fb3abf50b
 		summarizeBy: none
 		sourceColumn: OrgKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column Fakultetsnavn
@@ -20,6 +22,7 @@ table DimOrganization
 		lineageTag: 350f271d-f63e-4727-87c6-7da2cbcbbe94
 		summarizeBy: none
 		sourceColumn: Fakultetsnavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Instituttnavn
@@ -27,6 +30,7 @@ table DimOrganization
 		lineageTag: 5492077e-0c8e-4578-8738-d9d6a8bddf50
 		summarizeBy: none
 		sourceColumn: Instituttnavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Virksomhetstype
@@ -34,6 +38,7 @@ table DimOrganization
 		lineageTag: 73a06fce-1dd5-4d81-b698-26b5e689f744
 		summarizeBy: none
 		sourceColumn: Virksomhetstype
+
 		annotation SummarizationSetBy = Automatic
 
 	column Eierleder
@@ -41,6 +46,7 @@ table DimOrganization
 		lineageTag: a39835dc-957f-474d-a27a-d802bd6e038b
 		summarizeBy: none
 		sourceColumn: Eierleder
+
 		annotation SummarizationSetBy = Automatic
 
 	partition DimOrganization = m
@@ -54,3 +60,4 @@ table DimOrganization
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

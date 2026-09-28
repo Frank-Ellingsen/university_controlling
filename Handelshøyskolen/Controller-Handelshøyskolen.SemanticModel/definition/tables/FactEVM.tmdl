@@ -7,6 +7,7 @@ table FactEVM
 		lineageTag: 736216fe-b914-46f5-be29-b4d27497056f
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column Planned_Value_PV_MNOK
@@ -15,6 +16,7 @@ table FactEVM
 		lineageTag: d070badc-adc0-42fc-8ec3-5897f68fa10e
 		summarizeBy: sum
 		sourceColumn: Planned_Value_PV_MNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column Earned_Value_EV_MNOK
@@ -23,6 +25,7 @@ table FactEVM
 		lineageTag: d2109933-23b5-4495-9a4b-31f13955018a
 		summarizeBy: sum
 		sourceColumn: Earned_Value_EV_MNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column Actual_Cost_AC_MNOK
@@ -31,6 +34,7 @@ table FactEVM
 		lineageTag: 7425fb28-c2d2-42e5-9b4d-1b231b99db22
 		summarizeBy: sum
 		sourceColumn: Actual_Cost_AC_MNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column Budget_At_Completion_BAC_MNOK
@@ -39,6 +43,7 @@ table FactEVM
 		lineageTag: 8174b3c3-064e-4f5f-86be-e732d3f037c5
 		summarizeBy: sum
 		sourceColumn: Budget_At_Completion_BAC_MNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column Estimate_At_Completion_EAC_MNOK
@@ -47,6 +52,7 @@ table FactEVM
 		lineageTag: 142bce0b-f13a-4560-8af0-1beca3d7d63d
 		summarizeBy: sum
 		sourceColumn: Estimate_At_Completion_EAC_MNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column Estimate_To_Complete_ETC_MNOK
@@ -55,6 +61,7 @@ table FactEVM
 		lineageTag: 09c5d240-1a08-4665-93b8-2e127570c570
 		summarizeBy: sum
 		sourceColumn: Estimate_To_Complete_ETC_MNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column Cost_Performance_Index_CPI
@@ -63,6 +70,7 @@ table FactEVM
 		lineageTag: 2c232d88-2d79-41b2-a561-0912223a3dcf
 		summarizeBy: average
 		sourceColumn: Cost_Performance_Index_CPI
+
 		annotation SummarizationSetBy = Automatic
 
 	column Schedule_Performance_Index_SPI
@@ -71,6 +79,7 @@ table FactEVM
 		lineageTag: a288a92e-bcf8-4987-8639-a944fd78811f
 		summarizeBy: average
 		sourceColumn: Schedule_Performance_Index_SPI
+
 		annotation SummarizationSetBy = Automatic
 
 	column Variance_At_Completion_VAC_MNOK
@@ -79,6 +88,7 @@ table FactEVM
 		lineageTag: 518123ce-24d0-4ed2-ac17-8e6cf6949edb
 		summarizeBy: sum
 		sourceColumn: Variance_At_Completion_VAC_MNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	partition FactEVM = m
@@ -92,3 +102,4 @@ table FactEVM
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

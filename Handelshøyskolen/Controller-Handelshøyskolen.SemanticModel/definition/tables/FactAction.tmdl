@@ -6,6 +6,7 @@ table FactAction
 		lineageTag: f41b3c0b-02f9-4662-bce6-001cd07b7e6e
 		summarizeBy: none
 		sourceColumn: TiltakID
+
 		annotation SummarizationSetBy = Automatic
 
 	column Enhet
@@ -13,6 +14,7 @@ table FactAction
 		lineageTag: 37b40578-c993-4ed2-b6d7-a7631577c6df
 		summarizeBy: none
 		sourceColumn: Enhet
+
 		annotation SummarizationSetBy = Automatic
 
 	column TiltakNavn
@@ -20,6 +22,7 @@ table FactAction
 		lineageTag: addb2e5a-7159-4471-9baa-92475e9a76c4
 		summarizeBy: none
 		sourceColumn: TiltakNavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column AnsvarligRolle
@@ -27,6 +30,7 @@ table FactAction
 		lineageTag: 64644665-6d08-400d-b711-d7535930d0e8
 		summarizeBy: none
 		sourceColumn: AnsvarligRolle
+
 		annotation SummarizationSetBy = Automatic
 
 	column StartDato
@@ -35,7 +39,9 @@ table FactAction
 		lineageTag: 817548a4-8ef5-481a-b081-c082387be070
 		summarizeBy: none
 		sourceColumn: StartDato
+
 		annotation SummarizationSetBy = Automatic
+
 		annotation UnderlyingDateTimeDataType = Date
 
 	column FristDato
@@ -44,7 +50,9 @@ table FactAction
 		lineageTag: 5f17cf5f-6b6d-41db-949b-6972517517f4
 		summarizeBy: none
 		sourceColumn: FristDato
+
 		annotation SummarizationSetBy = Automatic
+
 		annotation UnderlyingDateTimeDataType = Date
 
 	column ForventetEffektMNOK
@@ -53,6 +61,7 @@ table FactAction
 		lineageTag: d29a33eb-b0ab-4db6-a0b1-3520f98651eb
 		summarizeBy: sum
 		sourceColumn: ForventetEffektMNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column RealisertEffektMNOK
@@ -61,6 +70,7 @@ table FactAction
 		lineageTag: 6ba7fc25-c413-4b56-af81-40d1661fe61a
 		summarizeBy: sum
 		sourceColumn: RealisertEffektMNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column Prioritet
@@ -68,6 +78,7 @@ table FactAction
 		lineageTag: 75c042b7-f353-4a73-bae6-f16e1582a042
 		summarizeBy: none
 		sourceColumn: Prioritet
+
 		annotation SummarizationSetBy = Automatic
 
 	column Status
@@ -75,6 +86,7 @@ table FactAction
 		lineageTag: bbaf5fca-2ab7-4b2a-b12f-e8259cda322c
 		summarizeBy: none
 		sourceColumn: Status
+
 		annotation SummarizationSetBy = Automatic
 
 	partition FactAction = m
@@ -88,3 +100,4 @@ table FactAction
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

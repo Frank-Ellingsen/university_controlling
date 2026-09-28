@@ -2,3 +2,4 @@ role Universitetsledelse
 	modelPermission: read
 
 	annotation PBI_Id = 9f963c2b4b42417c8de0b88cc1de9ab1
+

@@ -7,6 +7,7 @@ table FactStudents
 		lineageTag: 2910c010-d8fe-4e0d-a010-080001695047
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgKode
@@ -14,6 +15,7 @@ table FactStudents
 		lineageTag: 1a8184dc-5b70-4526-9ab8-e071f9920be8
 		summarizeBy: none
 		sourceColumn: OrgKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column Studieprogram
@@ -21,6 +23,7 @@ table FactStudents
 		lineageTag: 71f7a55b-06c4-48a5-a49a-1de851dd1793
 		summarizeBy: none
 		sourceColumn: Studieprogram
+
 		annotation SummarizationSetBy = Automatic
 
 	column RegistrerteStudenter
@@ -29,6 +32,7 @@ table FactStudents
 		lineageTag: b78ba3cd-9c26-4b3a-8311-58eaced36f22
 		summarizeBy: sum
 		sourceColumn: RegistrerteStudenter
+
 		annotation SummarizationSetBy = Automatic
 
 	column SPE60
@@ -37,6 +41,7 @@ table FactStudents
 		lineageTag: 12fa9659-c56f-433a-ae65-6c1c78a63fa3
 		summarizeBy: sum
 		sourceColumn: SPE60
+
 		annotation SummarizationSetBy = Automatic
 
 	column KategoriKlasse
@@ -44,6 +49,7 @@ table FactStudents
 		lineageTag: bc272c70-5dca-4edb-9cda-20eee113bcb2
 		summarizeBy: none
 		sourceColumn: KategoriKlasse
+
 		annotation SummarizationSetBy = Automatic
 
 	column StudenterPrUF
@@ -52,6 +58,7 @@ table FactStudents
 		lineageTag: 504521f6-4a8e-465d-96c6-50a832093156
 		summarizeBy: average
 		sourceColumn: StudenterPrUF
+
 		annotation SummarizationSetBy = Automatic
 
 	partition FactStudents = m
@@ -65,3 +72,4 @@ table FactStudents
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

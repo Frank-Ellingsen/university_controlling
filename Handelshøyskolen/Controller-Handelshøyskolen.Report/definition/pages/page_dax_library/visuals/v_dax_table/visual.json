@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "v_dax_table",
   "position": {
     "x": 315,
     "y": 168,
-    "width": 945,
+    "z": 6,
     "height": 535,
-    "z": 6
+    "width": 945
   },
   "visual": {
     "visualType": "tableEx",
@@ -99,15 +99,7 @@
     "objects": {
       "general": [
         {
-          "properties": {
-            "title": {
-              "expr": {
-                "Literal": {
-                  "Value": "'DAX M\u00e5lspesifikasjon & Formler (DAX.md)'"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     }

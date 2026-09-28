@@ -7,6 +7,7 @@ table FactFTE
 		lineageTag: 6d9cb344-a724-4826-ae74-2ecf200b16e3
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgKode
@@ -14,6 +15,7 @@ table FactFTE
 		lineageTag: 6f4d13d4-5d64-4a90-bf41-157ff92b9ef9
 		summarizeBy: none
 		sourceColumn: OrgKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column Stillingstype
@@ -21,6 +23,7 @@ table FactFTE
 		lineageTag: 821d5764-8332-4f71-accf-a641973b7425
 		summarizeBy: none
 		sourceColumn: Stillingstype
+
 		annotation SummarizationSetBy = Automatic
 
 	column Aarsverk
@@ -29,6 +32,7 @@ table FactFTE
 		lineageTag: 7a43af23-ed34-4d69-9a55-1547142df33d
 		summarizeBy: sum
 		sourceColumn: Aarsverk
+
 		annotation SummarizationSetBy = Automatic
 
 	column AntallAnsatte
@@ -37,6 +41,7 @@ table FactFTE
 		lineageTag: c34fdcbb-1f9a-4ca9-8712-7717dfea12a8
 		summarizeBy: sum
 		sourceColumn: AntallAnsatte
+
 		annotation SummarizationSetBy = Automatic
 
 	column Vakanser
@@ -45,6 +50,7 @@ table FactFTE
 		lineageTag: d0cc1603-007f-4b63-8c6a-b47286cc3faf
 		summarizeBy: sum
 		sourceColumn: Vakanser
+
 		annotation SummarizationSetBy = Automatic
 
 	column LonnskostnadMNOK
@@ -53,6 +59,7 @@ table FactFTE
 		lineageTag: 9eee3852-5bc6-471c-96cc-8a8aa2b50561
 		summarizeBy: sum
 		sourceColumn: LonnskostnadMNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	partition FactFTE = m
@@ -66,3 +73,4 @@ table FactFTE
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

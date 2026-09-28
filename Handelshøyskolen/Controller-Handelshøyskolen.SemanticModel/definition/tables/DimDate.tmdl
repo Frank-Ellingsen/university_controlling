@@ -8,6 +8,7 @@ table DimDate
 		lineageTag: 82b30786-9d25-4b85-b579-be8f28ad4bba
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column Dato
@@ -17,7 +18,9 @@ table DimDate
 		lineageTag: 2ccaedad-d7c5-4ef8-ba70-75ccdfd87980
 		summarizeBy: none
 		sourceColumn: Dato
+
 		annotation SummarizationSetBy = Automatic
+
 		annotation UnderlyingDateTimeDataType = Date
 
 	column Aar
@@ -26,6 +29,7 @@ table DimDate
 		lineageTag: 377f21fa-6122-42e9-9a40-1e5662271cdb
 		summarizeBy: none
 		sourceColumn: Aar
+
 		annotation SummarizationSetBy = Automatic
 
 	column MaanedNummer
@@ -34,6 +38,7 @@ table DimDate
 		lineageTag: f924da41-8fd7-4fe2-8a5b-06c8317c5200
 		summarizeBy: none
 		sourceColumn: MaanedNummer
+
 		annotation SummarizationSetBy = Automatic
 
 	column MaanedNavnKort
@@ -42,6 +47,7 @@ table DimDate
 		summarizeBy: none
 		sourceColumn: MaanedNavnKort
 		sortByColumn: MaanedNummer
+
 		annotation SummarizationSetBy = Automatic
 
 	column MaanedNavn
@@ -50,6 +56,7 @@ table DimDate
 		summarizeBy: none
 		sourceColumn: MaanedNavn
 		sortByColumn: MaanedNummer
+
 		annotation SummarizationSetBy = Automatic
 
 	column Kvartal
@@ -57,6 +64,7 @@ table DimDate
 		lineageTag: 11efbef8-7eb7-468c-8d56-b0dcb9e7b8de
 		summarizeBy: none
 		sourceColumn: Kvartal
+
 		annotation SummarizationSetBy = Automatic
 
 	column ErActualYTD
@@ -64,6 +72,7 @@ table DimDate
 		lineageTag: 8e5d0498-d435-4612-9469-ba5c325495d5
 		summarizeBy: none
 		sourceColumn: ErActualYTD
+
 		annotation SummarizationSetBy = Automatic
 
 	column PeriodeType
@@ -71,6 +80,7 @@ table DimDate
 		lineageTag: b6ee175f-1c5a-4018-8950-1e0095ef4741
 		summarizeBy: none
 		sourceColumn: PeriodeType
+
 		annotation SummarizationSetBy = Automatic
 
 	partition DimDate = m
@@ -84,3 +94,4 @@ table DimDate
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

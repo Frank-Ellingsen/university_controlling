@@ -45,3 +45,4 @@ relationship rel_factevm_dimdate
 relationship rel_factaction_dimorg
 	fromColumn: FactAction.Enhet
 	toColumn: DimOrganization.OrgKode
+
