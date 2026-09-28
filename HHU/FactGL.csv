@@ -1,0 +1,434 @@
+﻿TransaksjonID;DatoNokkel;OrgKode;Konto;Bokforingstype;VersjonKode;Belop_signert;Budsjettansvarsområde;BudsjettansvarligLeder;ProsjektID;Avvikstype_Beskrivelse
+TR2026_00001;202601;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00002;202602;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00003;202603;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00004;202604;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00005;202605;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00006;202606;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00007;202607;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00008;202608;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00009;202609;K10000;5000;Actual;ACTUAL_YTD_SEP2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00010;202610;K10000;5000;Forecast;FC_Q4_2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00011;202611;K10000;5000;Forecast;FC_Q4_2026;676666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00012;202612;K10000;5000;Forecast;FC_Q4_2026;676674;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00013;202601;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00014;202602;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00015;202603;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00016;202604;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00017;202605;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00018;202606;K10000;5080;Actual;ACTUAL_YTD_SEP2026;114332;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00019;202607;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00020;202608;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00021;202609;K10000;5080;Actual;ACTUAL_YTD_SEP2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00022;202610;K10000;5080;Forecast;FC_Q4_2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00023;202611;K10000;5080;Forecast;FC_Q4_2026;65333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00024;202612;K10000;5080;Forecast;FC_Q4_2026;65339;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Akkreditering / EVU-sak
+TR2026_00025;202601;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00026;202602;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00027;202603;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00028;202604;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00029;202605;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00030;202606;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00031;202607;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00032;202608;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00033;202609;K10000;5400;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00034;202610;K10000;5400;Forecast;FC_Q4_2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00035;202611;K10000;5400;Forecast;FC_Q4_2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00036;202612;K10000;5400;Forecast;FC_Q4_2026;93337;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00037;202601;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00038;202602;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00039;202603;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00040;202604;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00041;202605;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00042;202606;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00043;202607;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00044;202608;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00045;202609;K10000;5420;Actual;ACTUAL_YTD_SEP2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00046;202610;K10000;5420;Forecast;FC_Q4_2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00047;202611;K10000;5420;Forecast;FC_Q4_2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00048;202612;K10000;5420;Forecast;FC_Q4_2026;70000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00049;202601;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00050;202602;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00051;202603;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00052;202604;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00053;202605;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00054;202606;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00055;202607;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00056;202608;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00057;202609;K10000;5100;Actual;ACTUAL_YTD_SEP2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00058;202610;K10000;5100;Forecast;FC_Q4_2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00059;202611;K10000;5100;Forecast;FC_Q4_2026;46666;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00060;202612;K10000;5100;Forecast;FC_Q4_2026;46674;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00061;202601;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00062;202602;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00063;202603;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00064;202604;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00065;202605;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00066;202606;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00067;202607;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00068;202608;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00069;202609;K10000;6300;Actual;ACTUAL_YTD_SEP2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00070;202610;K10000;6300;Forecast;FC_Q4_2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00071;202611;K10000;6300;Forecast;FC_Q4_2026;93333;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00072;202612;K10000;6300;Forecast;FC_Q4_2026;93337;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00073;202601;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00074;202602;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00075;202603;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00076;202604;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00077;202605;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00078;202606;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00079;202607;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00080;202608;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00081;202609;K10000;6550;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00082;202610;K10000;6550;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00083;202611;K10000;6550;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00084;202612;K10000;6550;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00085;202601;K10000;6700;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00086;202602;K10000;6700;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00087;202603;K10000;6700;Actual;ACTUAL_YTD_SEP2026;64750;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Akkreditering / EVU-sak
+TR2026_00088;202604;K10000;6700;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00089;202605;K10000;6700;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00090;202606;K10000;6700;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00091;202607;K10000;6700;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00092;202608;K10000;6700;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00093;202609;K10000;6700;Actual;ACTUAL_YTD_SEP2026;64750;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Akkreditering / EVU-sak
+TR2026_00094;202610;K10000;6700;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00095;202611;K10000;6700;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00096;202612;K10000;6700;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;AACSB01;Normal drift
+TR2026_00097;202601;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00098;202602;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00099;202603;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00100;202604;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00101;202605;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00102;202606;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00103;202607;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00104;202608;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00105;202609;K10000;7130;Actual;ACTUAL_YTD_SEP2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00106;202610;K10000;7130;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00107;202611;K10000;7130;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00108;202612;K10000;7130;Forecast;FC_Q4_2026;35000;Fakultetsadministrasjon;Fakultetsdirektør Kristian Jørgensen;DRIFT;Normal drift
+TR2026_00109;202601;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00110;202602;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00111;202603;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00112;202604;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00113;202605;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00114;202606;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00115;202607;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00116;202608;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00117;202609;K11000;5000;Actual;ACTUAL_YTD_SEP2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00118;202610;K11000;5000;Forecast;FC_Q4_2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00119;202611;K11000;5000;Forecast;FC_Q4_2026;1860833;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00120;202612;K11000;5000;Forecast;FC_Q4_2026;1860837;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00121;202601;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00122;202602;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00123;202603;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00124;202604;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00125;202605;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00126;202606;K11000;5080;Actual;ACTUAL_YTD_SEP2026;314416;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00127;202607;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00128;202608;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00129;202609;K11000;5080;Actual;ACTUAL_YTD_SEP2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00130;202610;K11000;5080;Forecast;FC_Q4_2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00131;202611;K11000;5080;Forecast;FC_Q4_2026;179666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00132;202612;K11000;5080;Forecast;FC_Q4_2026;179670;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00133;202601;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00134;202602;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00135;202603;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00136;202604;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00137;202605;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00138;202606;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00139;202607;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00140;202608;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00141;202609;K11000;5400;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00142;202610;K11000;5400;Forecast;FC_Q4_2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00143;202611;K11000;5400;Forecast;FC_Q4_2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00144;202612;K11000;5400;Forecast;FC_Q4_2026;256674;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00145;202601;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00146;202602;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00147;202603;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00148;202604;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00149;202605;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00150;202606;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00151;202607;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00152;202608;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00153;202609;K11000;5420;Actual;ACTUAL_YTD_SEP2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00154;202610;K11000;5420;Forecast;FC_Q4_2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00155;202611;K11000;5420;Forecast;FC_Q4_2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00156;202612;K11000;5420;Forecast;FC_Q4_2026;192500;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00157;202601;K11000;5100;Actual;ACTUAL_YTD_SEP2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00158;202602;K11000;5100;Actual;ACTUAL_YTD_SEP2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00159;202603;K11000;5100;Actual;ACTUAL_YTD_SEP2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00160;202604;K11000;5100;Actual;ACTUAL_YTD_SEP2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00161;202605;K11000;5100;Actual;ACTUAL_YTD_SEP2026;147583;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00162;202606;K11000;5100;Actual;ACTUAL_YTD_SEP2026;147583;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00163;202607;K11000;5100;Actual;ACTUAL_YTD_SEP2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00164;202608;K11000;5100;Actual;ACTUAL_YTD_SEP2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00165;202609;K11000;5100;Actual;ACTUAL_YTD_SEP2026;147583;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Akkreditering / EVU-sak
+TR2026_00166;202610;K11000;5100;Forecast;FC_Q4_2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00167;202611;K11000;5100;Forecast;FC_Q4_2026;128333;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00168;202612;K11000;5100;Forecast;FC_Q4_2026;128337;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00169;202601;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00170;202602;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00171;202603;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00172;202604;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00173;202605;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00174;202606;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00175;202607;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00176;202608;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00177;202609;K11000;6300;Actual;ACTUAL_YTD_SEP2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00178;202610;K11000;6300;Forecast;FC_Q4_2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00179;202611;K11000;6300;Forecast;FC_Q4_2026;256666;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00180;202612;K11000;6300;Forecast;FC_Q4_2026;256674;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00181;202601;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00182;202602;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00183;202603;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00184;202604;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00185;202605;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00186;202606;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00187;202607;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00188;202608;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00189;202609;K11000;6550;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00190;202610;K11000;6550;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00191;202611;K11000;6550;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00192;202612;K11000;6550;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00193;202601;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00194;202602;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00195;202603;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00196;202604;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00197;202605;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00198;202606;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00199;202607;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00200;202608;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00201;202609;K11000;6700;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00202;202610;K11000;6700;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00203;202611;K11000;6700;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00204;202612;K11000;6700;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;AACSB01;Normal drift
+TR2026_00205;202601;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00206;202602;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00207;202603;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00208;202604;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00209;202605;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00210;202606;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00211;202607;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00212;202608;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00213;202609;K11000;7130;Actual;ACTUAL_YTD_SEP2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00214;202610;K11000;7130;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00215;202611;K11000;7130;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00216;202612;K11000;7130;Forecast;FC_Q4_2026;96250;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;DRIFT;Normal drift
+TR2026_00217;202601;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00218;202602;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00219;202603;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00220;202604;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00221;202605;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00222;202606;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00223;202607;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00224;202608;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00225;202609;K12000;5000;Actual;ACTUAL_YTD_SEP2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00226;202610;K12000;5000;Forecast;FC_Q4_2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00227;202611;K12000;5000;Forecast;FC_Q4_2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00228;202612;K12000;5000;Forecast;FC_Q4_2026;1357200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00229;202601;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00230;202602;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00231;202603;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00232;202604;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00233;202605;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00234;202606;K12000;5080;Actual;ACTUAL_YTD_SEP2026;229320;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00235;202607;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00236;202608;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00237;202609;K12000;5080;Actual;ACTUAL_YTD_SEP2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00238;202610;K12000;5080;Forecast;FC_Q4_2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00239;202611;K12000;5080;Forecast;FC_Q4_2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00240;202612;K12000;5080;Forecast;FC_Q4_2026;131040;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00241;202601;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00242;202602;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00243;202603;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00244;202604;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00245;202605;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00246;202606;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00247;202607;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00248;202608;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00249;202609;K12000;5400;Actual;ACTUAL_YTD_SEP2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00250;202610;K12000;5400;Forecast;FC_Q4_2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00251;202611;K12000;5400;Forecast;FC_Q4_2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00252;202612;K12000;5400;Forecast;FC_Q4_2026;187200;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Vakansbesparelse
+TR2026_00253;202601;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00254;202602;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00255;202603;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00256;202604;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00257;202605;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00258;202606;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00259;202607;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00260;202608;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00261;202609;K12000;5420;Actual;ACTUAL_YTD_SEP2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00262;202610;K12000;5420;Forecast;FC_Q4_2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00263;202611;K12000;5420;Forecast;FC_Q4_2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00264;202612;K12000;5420;Forecast;FC_Q4_2026;146250;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00265;202601;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00266;202602;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00267;202603;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00268;202604;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00269;202605;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00270;202606;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00271;202607;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00272;202608;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00273;202609;K12000;5100;Actual;ACTUAL_YTD_SEP2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00274;202610;K12000;5100;Forecast;FC_Q4_2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00275;202611;K12000;5100;Forecast;FC_Q4_2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00276;202612;K12000;5100;Forecast;FC_Q4_2026;97500;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00277;202601;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00278;202602;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00279;202603;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00280;202604;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00281;202605;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00282;202606;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00283;202607;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00284;202608;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00285;202609;K12000;6300;Actual;ACTUAL_YTD_SEP2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00286;202610;K12000;6300;Forecast;FC_Q4_2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00287;202611;K12000;6300;Forecast;FC_Q4_2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00288;202612;K12000;6300;Forecast;FC_Q4_2026;195000;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00289;202601;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00290;202602;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00291;202603;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00292;202604;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00293;202605;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00294;202606;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00295;202607;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00296;202608;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00297;202609;K12000;6550;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00298;202610;K12000;6550;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00299;202611;K12000;6550;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00300;202612;K12000;6550;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00301;202601;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00302;202602;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00303;202603;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00304;202604;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00305;202605;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00306;202606;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00307;202607;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00308;202608;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00309;202609;K12000;6700;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00310;202610;K12000;6700;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00311;202611;K12000;6700;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00312;202612;K12000;6700;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;AACSB01;Normal drift
+TR2026_00313;202601;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00314;202602;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00315;202603;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00316;202604;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00317;202605;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00318;202606;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00319;202607;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00320;202608;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00321;202609;K12000;7130;Actual;ACTUAL_YTD_SEP2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00322;202610;K12000;7130;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00323;202611;K12000;7130;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00324;202612;K12000;7130;Forecast;FC_Q4_2026;73125;Inst. Rettsvitenskap;Instituttleder Ole Dag Rike;DRIFT;Normal drift
+TR2026_00325;202601;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00326;202602;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00327;202603;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00328;202604;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00329;202605;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00330;202606;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00331;202607;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00332;202608;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00333;202609;K13000;5000;Actual;ACTUAL_YTD_SEP2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00334;202610;K13000;5000;Forecast;FC_Q4_2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00335;202611;K13000;5000;Forecast;FC_Q4_2026;2421401;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00336;202612;K13000;5000;Forecast;FC_Q4_2026;2421403;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00337;202601;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00338;202602;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00339;202603;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00340;202604;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00341;202605;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00342;202606;K13000;5080;Actual;ACTUAL_YTD_SEP2026;409132;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00343;202607;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00344;202608;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00345;202609;K13000;5080;Actual;ACTUAL_YTD_SEP2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00346;202610;K13000;5080;Forecast;FC_Q4_2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00347;202611;K13000;5080;Forecast;FC_Q4_2026;233790;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00348;202612;K13000;5080;Forecast;FC_Q4_2026;233797;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00349;202601;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00350;202602;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00351;202603;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00352;202604;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00353;202605;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00354;202606;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00355;202607;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00356;202608;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00357;202609;K13000;5400;Actual;ACTUAL_YTD_SEP2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00358;202610;K13000;5400;Forecast;FC_Q4_2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00359;202611;K13000;5400;Forecast;FC_Q4_2026;333986;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00360;202612;K13000;5400;Forecast;FC_Q4_2026;333988;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Bemanningsavvik (Lav vakans)
+TR2026_00361;202601;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00362;202602;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00363;202603;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00364;202604;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00365;202605;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00366;202606;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00367;202607;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00368;202608;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00369;202609;K13000;5420;Actual;ACTUAL_YTD_SEP2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00370;202610;K13000;5420;Forecast;FC_Q4_2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00371;202611;K13000;5420;Forecast;FC_Q4_2026;242019;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00372;202612;K13000;5420;Forecast;FC_Q4_2026;242021;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00373;202601;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00374;202602;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00375;202603;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00376;202604;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00377;202605;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00378;202606;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00379;202607;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00380;202608;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00381;202609;K13000;5100;Actual;ACTUAL_YTD_SEP2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00382;202610;K13000;5100;Forecast;FC_Q4_2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00383;202611;K13000;5100;Forecast;FC_Q4_2026;161346;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00384;202612;K13000;5100;Forecast;FC_Q4_2026;161347;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00385;202601;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00386;202602;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00387;202603;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00388;202604;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00389;202605;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00390;202606;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00391;202607;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00392;202608;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00393;202609;K13000;6300;Actual;ACTUAL_YTD_SEP2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00394;202610;K13000;6300;Forecast;FC_Q4_2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00395;202611;K13000;6300;Forecast;FC_Q4_2026;322692;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00396;202612;K13000;6300;Forecast;FC_Q4_2026;322694;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00397;202601;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00398;202602;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00399;202603;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00400;202604;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00401;202605;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00402;202606;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00403;202607;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00404;202608;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00405;202609;K13000;6550;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00406;202610;K13000;6550;Forecast;FC_Q4_2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00407;202611;K13000;6550;Forecast;FC_Q4_2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00408;202612;K13000;6550;Forecast;FC_Q4_2026;121016;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00409;202601;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00410;202602;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00411;202603;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00412;202604;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00413;202605;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00414;202606;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00415;202607;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00416;202608;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00417;202609;K13000;6700;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00418;202610;K13000;6700;Forecast;FC_Q4_2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00419;202611;K13000;6700;Forecast;FC_Q4_2026;121009;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00420;202612;K13000;6700;Forecast;FC_Q4_2026;121016;Inst. Økonomi;Instituttleder Økonomi;AACSB01;Normal drift
+TR2026_00421;202601;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00422;202602;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00423;202603;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00424;202604;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00425;202605;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00426;202606;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00427;202607;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00428;202608;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00429;202609;K13000;7130;Actual;ACTUAL_YTD_SEP2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00430;202610;K13000;7130;Forecast;FC_Q4_2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00431;202611;K13000;7130;Forecast;FC_Q4_2026;121009;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_00432;202612;K13000;7130;Forecast;FC_Q4_2026;121015;Inst. Økonomi;Instituttleder Økonomi;DRIFT;Normal drift
+TR2026_99999;202609;K11000;7790;Actual;ACTUAL_YTD_SEP2026;350000;Inst. Ledelse & Innovasjon;Instituttleder Ledelse;EVU001;SRS 9 Avsetning for forventet tap på oppdrag (EVU001)

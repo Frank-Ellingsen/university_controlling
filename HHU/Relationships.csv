@@ -1,0 +1,12 @@
+﻿FraTabell;FraKolonne;TilTabell;TilKolonne;Kardinalitet;Kryssfiltrering
+FactBudget;OrgKode;DimOrganization;OrgKode;*:1;Single
+FactBudget;Konto;DimAccountHierarchy;Konto;*:1;Single
+FactBudget;DatoNokkel;DimDate;DatoNokkel;*:1;Single
+FactGL;OrgKode;DimOrganization;OrgKode;*:1;Single
+FactGL;Konto;DimAccountHierarchy;Konto;*:1;Single
+FactGL;DatoNokkel;DimDate;DatoNokkel;*:1;Single
+FactFTE;OrgKode;DimOrganization;OrgKode;*:1;Single
+FactFTE;DatoNokkel;DimDate;DatoNokkel;*:1;Single
+FactStudents;OrgKode;DimOrganization;OrgKode;*:1;Single
+FactEVM;DatoNokkel;DimDate;DatoNokkel;*:1;Single
+FactAction;OrgKode;DimOrganization;OrgKode;*:1;Single

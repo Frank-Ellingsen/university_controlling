@@ -1,0 +1,17 @@
+﻿Konto;Kontonavn;Nivaa1_Navn;Kontotype;SRS_regnskapslinje
+3900;Inntekt fra bevilgninger (Basis);Salgs- og driftsinntekt;Inntekt;Inntekt fra bevilgninger
+3400;Tilskudd fra NFR (Bidrag);Salgs- og driftsinntekt;Inntekt;Tilskudd og overføringer
+3420;Tilskudd fra EU (Bidrag);Salgs- og driftsinntekt;Inntekt;Tilskudd og overføringer
+3600;Oppdrags- og EVU-inntekter;Salgs- og driftsinntekt;Inntekt;Salgsinntekt
+5000;Lønn fast ansatte;Lønnskostnad;Kostnad;Lønnskostnader
+5050;Overtid og ekstraundervisning;Lønnskostnad;Kostnad;Lønnskostnader
+5100;Lønn midlertidig ansatte & timelærere;Lønnskostnad;Kostnad;Lønnskostnader
+5080;Feriepenger;Lønnskostnad;Kostnad;Lønnskostnader
+5400;Arbeidsgiveravgift;Lønnskostnad;Kostnad;Lønnskostnader
+5420;Pensjonspremie til SPK;Lønnskostnad;Kostnad;Lønnskostnader
+5800;Refusjon av sykepenger (NAV);Lønnskostnad;Kostnad;Lønnskostnader
+6300;Leie lokaler & Arbeidsplass-sats;Annen driftskostnad;Kostnad;Andre driftskostnader
+6550;IKT-utstyr og programvarelisenser;Annen driftskostnad;Kostnad;Andre driftskostnader
+6700;Konsulenttjenester & AACSB revisjon;Annen driftskostnad;Kostnad;Andre driftskostnader
+7130;Reisekostnader og konferanser;Annen driftskostnad;Kostnad;Andre driftskostnader
+7790;Avsetning for forventet tap på oppdrag (SRS 9);Annen driftskostnad;Kostnad;Andre driftskostnader
