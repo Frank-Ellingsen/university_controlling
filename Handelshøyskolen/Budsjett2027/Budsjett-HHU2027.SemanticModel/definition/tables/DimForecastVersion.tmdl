@@ -1,37 +1,37 @@
 table DimForecastVersion
-	lineageTag: 7514dd1c-85f0-4ed3-8d8e-ed38bf2e3fbc
+	lineageTag: 0e9d1bc2-5e52-4d70-be7d-c5776539fbc1
 
 	column VersjonKode
 		dataType: string
-		lineageTag: 5b772cb3-b355-43e5-9fa6-33768e1fffe0
+		lineageTag: b670fbb9-e9e9-42fe-87cb-e64f6679ed49
 		summarizeBy: none
 		sourceColumn: VersjonKode
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonNavn
 		dataType: string
-		lineageTag: 9f03ecc0-fe3c-4744-bb1b-f323defbe2a6
+		lineageTag: 0409a4ae-2166-46d1-8272-e7d1d5822d0e
 		summarizeBy: none
 		sourceColumn: VersjonNavn
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonType
 		dataType: string
-		lineageTag: c203f45d-555c-4e4e-aaff-24bb2b0edbd8
+		lineageTag: 2b72a2f6-6e3b-4211-84a5-584f4bc8c61a
 		summarizeBy: none
 		sourceColumn: VersjonType
 		annotation SummarizationSetBy = Automatic
 
 	column GjeldendeDato
 		dataType: string
-		lineageTag: b0bf2496-bcb1-4c27-bf35-0f6fb870872b
+		lineageTag: 53845674-a518-4b36-92a1-6d1698b668cf
 		summarizeBy: none
 		sourceColumn: GjeldendeDato
 		annotation SummarizationSetBy = Automatic
 
 	column Status
 		dataType: string
-		lineageTag: 27df3011-6a6a-4059-a8ad-449efeac285f
+		lineageTag: f9a9e4cf-583f-452e-b950-d3eb7d943b72
 		summarizeBy: none
 		sourceColumn: Status
 		annotation SummarizationSetBy = Automatic

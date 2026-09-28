@@ -54,31 +54,31 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "FactAction_2027"
+                      "Entity": "_Measures"
                     }
                   },
-                  "Property": "AnsvarligRolle"
+                  "Property": "Planlagt Innsparing (MNOK)"
                 }
               },
-              "queryRef": "FactAction_2027.AnsvarligRolle",
-              "nativeQueryRef": "Ansvarlig"
+              "queryRef": "_Measures.Planlagt Innsparing (MNOK)",
+              "nativeQueryRef": "Planlagt Innsparing"
             },
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "FactAction_2027"
+                      "Entity": "_Measures"
                     }
                   },
-                  "Property": "Status"
+                  "Property": "Realiseringsgrad %"
                 }
               },
-              "queryRef": "FactAction_2027.Status",
-              "nativeQueryRef": "Gjennomføringsstatus"
+              "queryRef": "_Measures.Realiseringsgrad %",
+              "nativeQueryRef": "Måloppnåelse %"
             }
           ]
         }

@@ -1,10 +1,10 @@
 table FactBudget_2027
-	lineageTag: eaa3c0d5-5e2d-457e-8b6e-ee7265615f26
+	lineageTag: 964c7776-5998-4680-a264-d7e2b240635c
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: b9acf4ce-85d9-423b-b517-54bb9e7a9ee4
+		lineageTag: d24d4bd4-ea83-432d-8919-5eca1e9cc71a
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 		annotation SummarizationSetBy = Automatic
@@ -12,14 +12,14 @@ table FactBudget_2027
 	column Aar
 		dataType: int64
 		formatString: 0
-		lineageTag: 773f8f41-3cf7-4883-b1c6-9d676088a3b3
+		lineageTag: e16c0d49-d01f-4b67-843b-9f7aa4afe288
 		summarizeBy: none
 		sourceColumn: Aar
 		annotation SummarizationSetBy = Automatic
 
 	column AarMaaned
 		dataType: string
-		lineageTag: 28e4a42b-5eb9-48bd-afb1-a602d6a76a28
+		lineageTag: b51659a1-f065-4c37-b0f5-722b6f5f05a6
 		summarizeBy: none
 		sourceColumn: AarMaaned
 		annotation SummarizationSetBy = Automatic
@@ -27,14 +27,14 @@ table FactBudget_2027
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: 08cbc9ec-1faa-4230-88d4-93407adafc14
+		lineageTag: 52aba47f-3c3c-4c2b-aaac-a585fdf65376
 		summarizeBy: none
 		sourceColumn: OrgKode
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNavn
 		dataType: string
-		lineageTag: 598aea70-06b2-4292-8e95-d5c71db8d44c
+		lineageTag: e5c35ce4-92ff-4b1b-ae81-0767e9ec5020
 		summarizeBy: none
 		sourceColumn: OrgNavn
 		annotation SummarizationSetBy = Automatic
@@ -42,21 +42,21 @@ table FactBudget_2027
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: 1ef286e9-cb6a-42ee-8832-69d314f19d84
+		lineageTag: 31f8c8d1-fcb2-4a38-bf94-81b54329afb4
 		summarizeBy: none
 		sourceColumn: Konto
 		annotation SummarizationSetBy = Automatic
 
 	column Kontonavn
 		dataType: string
-		lineageTag: f91b42df-ba9b-4fbb-b1a1-a182fd8a00be
+		lineageTag: 220bd694-1ed6-4bb7-90c1-8f6241be5aeb
 		summarizeBy: none
 		sourceColumn: Kontonavn
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonKode
 		dataType: string
-		lineageTag: 70a4b9b3-585c-4a81-a851-297af231c3e5
+		lineageTag: a44ddf42-18bb-4571-b3eb-5e5a384e5e9c
 		summarizeBy: none
 		sourceColumn: VersjonKode
 		annotation SummarizationSetBy = Automatic
@@ -64,14 +64,14 @@ table FactBudget_2027
 	column BudsjettBelop
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: b22c9124-c8a4-4085-a68e-cfb42b9430a6
+		lineageTag: ff151d85-212a-4147-887e-606593755132
 		summarizeBy: sum
 		sourceColumn: BudsjettBelop
 		annotation SummarizationSetBy = Automatic
 
 	column Kilde
 		dataType: string
-		lineageTag: 0b61e28b-e9b8-4d9f-81fc-5530385424d4
+		lineageTag: 656f7f9d-98a2-4166-856d-ed273dca20c7
 		summarizeBy: none
 		sourceColumn: Kilde
 		annotation SummarizationSetBy = Automatic

@@ -59,44 +59,44 @@
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "FactStudents_2027"
                     }
                   },
-                  "Property": "Registrerte Studenter"
+                  "Property": "RegistrerteStudenter"
                 }
               },
-              "queryRef": "_Measures.Registrerte Studenter",
+              "queryRef": "FactStudents_2027.RegistrerteStudenter",
               "nativeQueryRef": "Registrerte Studenter"
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "FactStudents_2027"
                     }
                   },
-                  "Property": "SPE60 2025 Lag"
+                  "Property": "SPE60_2025_Lag"
                 }
               },
-              "queryRef": "_Measures.SPE60 2025 Lag",
+              "queryRef": "FactStudents_2027.SPE60_2025_Lag",
               "nativeQueryRef": "2025 Lag (60 SPE)"
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "FactStudents_2027"
                     }
                   },
-                  "Property": "SPE60 2027 Target"
+                  "Property": "SPE60_2027_Target"
                 }
               },
-              "queryRef": "_Measures.SPE60 2027 Target",
+              "queryRef": "FactStudents_2027.SPE60_2027_Target",
               "nativeQueryRef": "2027 Target (60 SPE)"
             },
             {
@@ -129,30 +129,30 @@
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "FactStudents_2027"
                     }
                   },
-                  "Property": "Beregnet KD Inntekt (MNOK)"
+                  "Property": "KDInntektBeregnetNOK"
                 }
               },
-              "queryRef": "_Measures.Beregnet KD Inntekt (MNOK)",
-              "nativeQueryRef": "Beregnet KD Inntekt (MNOK)"
+              "queryRef": "FactStudents_2027.KDInntektBeregnetNOK",
+              "nativeQueryRef": "Beregnet KD Inntekt (NOK)"
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "FactStudents_2027"
                     }
                   },
-                  "Property": "Studenter per UF"
+                  "Property": "StudenterPrUF"
                 }
               },
-              "queryRef": "_Measures.Studenter per UF",
+              "queryRef": "FactStudents_2027.StudenterPrUF",
               "nativeQueryRef": "Stud/UF-ÅV"
             }
           ]

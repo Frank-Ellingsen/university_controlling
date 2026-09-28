@@ -1,11 +1,11 @@
 table DimDate_2027
-	lineageTag: 2d1c6a6b-7e12-451a-80d9-3a3fd8f9f340
+	lineageTag: 5b95878a-ab15-4e78-afcd-15756b5c7feb
 	dataCategory: Time
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 51866729-2421-4c59-910a-3d50b9877af0
+		lineageTag: 9ac8b995-7679-4ea0-ab21-222315872394
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 		annotation SummarizationSetBy = Automatic
@@ -14,7 +14,7 @@ table DimDate_2027
 		dataType: dateTime
 		isKey
 		formatString: yyyy-MM-dd
-		lineageTag: fb029a71-ad82-4977-b11f-f1db751fadf8
+		lineageTag: e6e71fa5-82ae-4f73-9509-e31b8b458948
 		summarizeBy: none
 		sourceColumn: Dato
 		annotation SummarizationSetBy = Automatic
@@ -22,7 +22,7 @@ table DimDate_2027
 	column Aar
 		dataType: int64
 		formatString: 0
-		lineageTag: 1291cbf5-f101-4062-8ec6-49de49df6def
+		lineageTag: b6830e06-df1e-4f25-9305-281aa89600e3
 		summarizeBy: none
 		sourceColumn: Aar
 		annotation SummarizationSetBy = Automatic
@@ -30,7 +30,7 @@ table DimDate_2027
 	column MaanedNummer
 		dataType: int64
 		formatString: 0
-		lineageTag: f2c7e9e3-3bd6-4fd5-9271-8bce85be2e2d
+		lineageTag: 5aca4123-0f72-41f3-9b93-ad6cb2517b07
 		summarizeBy: none
 		sourceColumn: MaanedNummer
 		annotation SummarizationSetBy = Automatic
@@ -38,7 +38,7 @@ table DimDate_2027
 	column MaanedNavn
 		dataType: string
 		sortByColumn: MaanedNummer
-		lineageTag: 3b55fc80-5282-481f-9511-afdad0fbbe4f
+		lineageTag: f5da5958-ced1-4429-be62-94a868050f3b
 		summarizeBy: none
 		sourceColumn: MaanedNavn
 		annotation SummarizationSetBy = Automatic
@@ -46,28 +46,28 @@ table DimDate_2027
 	column MaanedNavnKort
 		dataType: string
 		sortByColumn: MaanedNummer
-		lineageTag: c58c563f-af3b-423f-b9b0-4eb7676c5488
+		lineageTag: c7a94099-0a6e-437d-9284-22882a1f1648
 		summarizeBy: none
 		sourceColumn: MaanedNavnKort
 		annotation SummarizationSetBy = Automatic
 
 	column Kvartal
 		dataType: string
-		lineageTag: 1b1185ae-4f78-425a-9e18-f6f6a53fc21b
+		lineageTag: 160def5d-4f7d-4712-99c4-6d57bd993e39
 		summarizeBy: none
 		sourceColumn: Kvartal
 		annotation SummarizationSetBy = Automatic
 
 	column AarMaaned
 		dataType: string
-		lineageTag: b4253f4a-e9c1-4301-a0b9-a985ae719df3
+		lineageTag: 21769651-7ccd-4787-835f-c98299d6f63b
 		summarizeBy: none
 		sourceColumn: AarMaaned
 		annotation SummarizationSetBy = Automatic
 
 	column ErActualYTD
 		dataType: boolean
-		lineageTag: 9858319c-86f0-47af-8f86-e3382cec0b87
+		lineageTag: c836da8e-38f4-4b45-9b77-7cafce5a6eca
 		summarizeBy: none
 		sourceColumn: ErActualYTD
 		annotation SummarizationSetBy = Automatic

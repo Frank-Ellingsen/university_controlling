@@ -437,17 +437,6 @@ relationship rel_action_org
 \t\tsourceColumn: Lokalitet
 \t\tannotation SummarizationSetBy = Automatic
 
-\thierarchy 'Organisasjonshierarki'
-\t\tlineageTag: [[GUID]]
-
-\t\tlevel Fakultet
-\t\t\tlineageTag: [[GUID]]
-\t\t\tcolumn: Fakultetsnavn
-
-\t\tlevel Enhet
-\t\t\tlineageTag: [[GUID]]
-\t\t\tcolumn: OrgNavn
-
 \tpartition DimOrganization = m
 \t\tmode: import
 \t\tsource =
@@ -1236,10 +1225,10 @@ def create_card_visual(vis_name, x, y, width, height, tab_order, measure_name, t
             "tabOrder": tab_order
         },
         "visual": {
-            "visualType": "card",
+            "visualType": "cardVisual",
             "query": {
                 "queryState": {
-                    "Values": {
+                    "Data": {
                         "projections": [
                             {
                                 "field": {
@@ -1996,13 +1985,13 @@ def write_report_pbir():
                         {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "OrgNavn"}}, "queryRef": "FactStudents_2027.OrgNavn", "nativeQueryRef": "Fakultet / Enhet"},
                         {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "StudieprogramNavn"}}, "queryRef": "FactStudents_2027.StudieprogramNavn", "nativeQueryRef": "Studieprogram"},
                         {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "KDKategori"}}, "queryRef": "FactStudents_2027.KDKategori", "nativeQueryRef": "KD Kategori"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Registrerte Studenter"}}, "queryRef": "_Measures.Registrerte Studenter", "nativeQueryRef": "Registrerte Studenter"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "SPE60 2025 Lag"}}, "queryRef": "_Measures.SPE60 2025 Lag", "nativeQueryRef": "2025 Lag (60 SPE)"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "SPE60 2027 Target"}}, "queryRef": "_Measures.SPE60 2027 Target", "nativeQueryRef": "2027 Target (60 SPE)"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "RegistrerteStudenter"}}, "queryRef": "FactStudents_2027.RegistrerteStudenter", "nativeQueryRef": "Registrerte Studenter"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "SPE60_2025_Lag"}}, "queryRef": "FactStudents_2027.SPE60_2025_Lag", "nativeQueryRef": "2025 Lag (60 SPE)"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "SPE60_2027_Target"}}, "queryRef": "FactStudents_2027.SPE60_2027_Target", "nativeQueryRef": "2027 Target (60 SPE)"},
                         {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "SPE60 Produksjonsvekst"}}, "queryRef": "_Measures.SPE60 Produksjonsvekst", "nativeQueryRef": "Vekst (SPE)"},
                         {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "SPE60 Vekst %"}}, "queryRef": "_Measures.SPE60 Vekst %", "nativeQueryRef": "Vekst %"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Beregnet KD Inntekt (MNOK)"}}, "queryRef": "_Measures.Beregnet KD Inntekt (MNOK)", "nativeQueryRef": "Beregnet KD Inntekt (MNOK)"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Studenter per UF"}}, "queryRef": "_Measures.Studenter per UF", "nativeQueryRef": "Stud/UF-ÅV"}
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "KDInntektBeregnetNOK"}}, "queryRef": "FactStudents_2027.KDInntektBeregnetNOK", "nativeQueryRef": "Beregnet KD Inntekt (NOK)"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactStudents_2027"}}, "Property": "StudenterPrUF"}}, "queryRef": "FactStudents_2027.StudenterPrUF", "nativeQueryRef": "Stud/UF-ÅV"}
                     ]}
                 }
             },
@@ -2081,8 +2070,8 @@ def write_report_pbir():
                         {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Realisert Innsparing (MNOK)"}}, "queryRef": "_Measures.Realisert Innsparing (MNOK)", "nativeQueryRef": "Innsparing (MNOK)"}
                     ]},
                     "Tooltips": {"projections": [
-                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "AnsvarligRolle"}}, "queryRef": "FactAction_2027.AnsvarligRolle", "nativeQueryRef": "Ansvarlig"},
-                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "Status"}}, "queryRef": "FactAction_2027.Status", "nativeQueryRef": "Gjennomføringsstatus"}
+                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Planlagt Innsparing (MNOK)"}}, "queryRef": "_Measures.Planlagt Innsparing (MNOK)", "nativeQueryRef": "Planlagt Innsparing"},
+                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Realiseringsgrad %"}}, "queryRef": "_Measures.Realiseringsgrad %", "nativeQueryRef": "Måloppnåelse %"}
                     ]}
                 }
             },
@@ -2122,15 +2111,16 @@ def write_report_pbir():
                 "queryState": {
                     "Values": {"projections": [
                         {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "TiltakID"}}, "queryRef": "FactAction_2027.TiltakID", "nativeQueryRef": "ID"},
-                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "TiltakNavn"}}, "queryRef": "FactAction_2027.TiltakNavn", "nativeQueryRef": "Tiltaksnavn"},
                         {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "OrgNavn"}}, "queryRef": "FactAction_2027.OrgNavn", "nativeQueryRef": "Organisasjonsenhet"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Planlagt Innsparing (MNOK)"}}, "queryRef": "_Measures.Planlagt Innsparing (MNOK)", "nativeQueryRef": "Planlagt MNOK"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Realisert Innsparing (MNOK)"}}, "queryRef": "_Measures.Realisert Innsparing (MNOK)", "nativeQueryRef": "Realisert MNOK"},
-                        {"field": {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": "Realiseringsgrad %"}}, "queryRef": "_Measures.Realiseringsgrad %", "nativeQueryRef": "Realiseringsgrad %"},
-                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "Status"}}, "queryRef": "FactAction_2027.Status", "nativeQueryRef": "Status"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "TiltakNavn"}}, "queryRef": "FactAction_2027.TiltakNavn", "nativeQueryRef": "Tiltaksnavn"},
                         {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "AnsvarligRolle"}}, "queryRef": "FactAction_2027.AnsvarligRolle", "nativeQueryRef": "Ansvarlig Rolle"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "StartDato"}}, "queryRef": "FactAction_2027.StartDato", "nativeQueryRef": "Startdato"},
                         {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "FristDato"}}, "queryRef": "FactAction_2027.FristDato", "nativeQueryRef": "Frist"},
-                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "Prioritet"}}, "queryRef": "FactAction_2027.Prioritet", "nativeQueryRef": "Prioritet"}
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "ForventetEffektMNOK"}}, "queryRef": "FactAction_2027.ForventetEffektMNOK", "nativeQueryRef": "Forventet (MNOK)"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "RealisertEffektMNOK"}}, "queryRef": "FactAction_2027.RealisertEffektMNOK", "nativeQueryRef": "Realisert (MNOK)"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "Realiseringsgrad"}}, "queryRef": "FactAction_2027.Realiseringsgrad", "nativeQueryRef": "Realiseringsgrad"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "Prioritet"}}, "queryRef": "FactAction_2027.Prioritet", "nativeQueryRef": "Prioritet"},
+                        {"field": {"Column": {"Expression": {"SourceRef": {"Entity": "FactAction_2027"}}, "Property": "Status"}}, "queryRef": "FactAction_2027.Status", "nativeQueryRef": "Status"}
                     ]}
                 }
             },

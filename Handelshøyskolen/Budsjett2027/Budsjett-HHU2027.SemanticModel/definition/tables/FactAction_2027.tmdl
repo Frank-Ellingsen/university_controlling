@@ -1,16 +1,16 @@
 table FactAction_2027
-	lineageTag: 1372971b-99b5-4cac-998d-d2cd4bb54c17
+	lineageTag: 853fe109-0a55-484d-9fec-a44fedbbf0d3
 
 	column TiltakID
 		dataType: string
-		lineageTag: 4478073c-c832-4f74-9695-851e55b25ca9
+		lineageTag: 0c5174d8-f637-49f9-a092-1fb5d34150db
 		summarizeBy: none
 		sourceColumn: TiltakID
 		annotation SummarizationSetBy = Automatic
 
 	column TiltakNavn
 		dataType: string
-		lineageTag: e58f96ee-3aaf-4802-94a5-c5ffa30f5d81
+		lineageTag: a813bda7-df09-4ce8-b2ad-9d5fd33f4dce
 		summarizeBy: none
 		sourceColumn: TiltakNavn
 		annotation SummarizationSetBy = Automatic
@@ -18,14 +18,14 @@ table FactAction_2027
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: 085e3da8-eb62-4743-936f-0aec92063fae
+		lineageTag: a919d829-c3e0-487d-a126-187e967d058a
 		summarizeBy: none
 		sourceColumn: OrgKode
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNavn
 		dataType: string
-		lineageTag: a9820186-c4a2-44e8-93f1-d670fa30e0d4
+		lineageTag: 4233163a-f4c5-4373-bc8b-bbacd6d4c112
 		summarizeBy: none
 		sourceColumn: OrgNavn
 		annotation SummarizationSetBy = Automatic
@@ -33,7 +33,7 @@ table FactAction_2027
 	column ForventetEffektMNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 9871db0e-4e24-436f-9c2e-51aa7d9d5c2e
+		lineageTag: 8794d2ea-cbd5-4084-8f00-39cc7519b595
 		summarizeBy: sum
 		sourceColumn: ForventetEffektMNOK
 		annotation SummarizationSetBy = Automatic
@@ -41,7 +41,7 @@ table FactAction_2027
 	column RealisertEffektMNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: d29044a2-d01f-4e10-8709-b9d266224377
+		lineageTag: 0c2f7608-c1ae-4653-af2e-f75a14add9b0
 		summarizeBy: sum
 		sourceColumn: RealisertEffektMNOK
 		annotation SummarizationSetBy = Automatic
@@ -49,42 +49,42 @@ table FactAction_2027
 	column Realiseringsgrad
 		dataType: double
 		formatString: 0.0 %
-		lineageTag: a6a30061-45ca-443e-bb28-a65116d1a909
+		lineageTag: 89397752-8420-4ecf-b6d4-3055787801ed
 		summarizeBy: average
 		sourceColumn: Realiseringsgrad
 		annotation SummarizationSetBy = Automatic
 
 	column Status
 		dataType: string
-		lineageTag: 5e73f718-127d-4696-90e9-c65003039ab9
+		lineageTag: 80bb717f-0b0b-4efa-8ee0-c8f6a4d7cd29
 		summarizeBy: none
 		sourceColumn: Status
 		annotation SummarizationSetBy = Automatic
 
 	column AnsvarligRolle
 		dataType: string
-		lineageTag: a0f0484a-68f7-4105-9993-c7c0f036f528
+		lineageTag: 019cf858-1852-4d01-8370-3c0df9d83ae4
 		summarizeBy: none
 		sourceColumn: AnsvarligRolle
 		annotation SummarizationSetBy = Automatic
 
 	column StartDato
 		dataType: string
-		lineageTag: 8c964db1-7ba7-44a2-be0b-59885ad7fc93
+		lineageTag: 132ca839-2cc5-4438-88aa-bb7545ef4063
 		summarizeBy: none
 		sourceColumn: StartDato
 		annotation SummarizationSetBy = Automatic
 
 	column FristDato
 		dataType: string
-		lineageTag: ffd73421-88f4-4f7e-861a-5d3fd07454ff
+		lineageTag: 0b26cdb5-6765-4824-b919-0698feb86f41
 		summarizeBy: none
 		sourceColumn: FristDato
 		annotation SummarizationSetBy = Automatic
 
 	column Prioritet
 		dataType: string
-		lineageTag: c7b3de85-06fd-4fc1-983b-9772d3eb3453
+		lineageTag: 3a75e1f7-9c45-4096-8089-0efbaa3a9f87
 		summarizeBy: none
 		sourceColumn: Prioritet
 		annotation SummarizationSetBy = Automatic

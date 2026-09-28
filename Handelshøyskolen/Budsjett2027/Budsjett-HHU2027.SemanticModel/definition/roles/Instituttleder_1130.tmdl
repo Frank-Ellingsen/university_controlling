@@ -3,4 +3,4 @@ role Instituttleder_1130
 
 	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1130
 
-	annotation PBI_Id = f9241b6531da4ebf975113104e2ffd98
+	annotation PBI_Id = 847f41c3c71f4c3d8dbb5175dbcd9d97

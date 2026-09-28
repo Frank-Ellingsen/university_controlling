@@ -37,20 +37,6 @@
                       "Entity": "FactAction_2027"
                     }
                   },
-                  "Property": "TiltakNavn"
-                }
-              },
-              "queryRef": "FactAction_2027.TiltakNavn",
-              "nativeQueryRef": "Tiltaksnavn"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "FactAction_2027"
-                    }
-                  },
                   "Property": "OrgNavn"
                 }
               },
@@ -59,59 +45,17 @@
             },
             {
               "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Planlagt Innsparing (MNOK)"
-                }
-              },
-              "queryRef": "_Measures.Planlagt Innsparing (MNOK)",
-              "nativeQueryRef": "Planlagt MNOK"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Realisert Innsparing (MNOK)"
-                }
-              },
-              "queryRef": "_Measures.Realisert Innsparing (MNOK)",
-              "nativeQueryRef": "Realisert MNOK"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Realiseringsgrad %"
-                }
-              },
-              "queryRef": "_Measures.Realiseringsgrad %",
-              "nativeQueryRef": "Realiseringsgrad %"
-            },
-            {
-              "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "FactAction_2027"
                     }
                   },
-                  "Property": "Status"
+                  "Property": "TiltakNavn"
                 }
               },
-              "queryRef": "FactAction_2027.Status",
-              "nativeQueryRef": "Status"
+              "queryRef": "FactAction_2027.TiltakNavn",
+              "nativeQueryRef": "Tiltaksnavn"
             },
             {
               "field": {
@@ -135,6 +79,20 @@
                       "Entity": "FactAction_2027"
                     }
                   },
+                  "Property": "StartDato"
+                }
+              },
+              "queryRef": "FactAction_2027.StartDato",
+              "nativeQueryRef": "Startdato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
                   "Property": "FristDato"
                 }
               },
@@ -149,11 +107,67 @@
                       "Entity": "FactAction_2027"
                     }
                   },
+                  "Property": "ForventetEffektMNOK"
+                }
+              },
+              "queryRef": "FactAction_2027.ForventetEffektMNOK",
+              "nativeQueryRef": "Forventet (MNOK)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "RealisertEffektMNOK"
+                }
+              },
+              "queryRef": "FactAction_2027.RealisertEffektMNOK",
+              "nativeQueryRef": "Realisert (MNOK)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "Realiseringsgrad"
+                }
+              },
+              "queryRef": "FactAction_2027.Realiseringsgrad",
+              "nativeQueryRef": "Realiseringsgrad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
                   "Property": "Prioritet"
                 }
               },
               "queryRef": "FactAction_2027.Prioritet",
               "nativeQueryRef": "Prioritet"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "FactAction_2027.Status",
+              "nativeQueryRef": "Status"
             }
           ]
         }

@@ -1,10 +1,10 @@
 table FactFTE_2027
-	lineageTag: ef6d1c89-787b-4593-a8d3-39889df40bb9
+	lineageTag: 60bf1844-5d25-436e-975a-f3821011d1a3
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 943e0b3b-860e-4313-b870-37e4761b1477
+		lineageTag: 6f28e552-7a6f-48bc-bd06-1b00694094eb
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 		annotation SummarizationSetBy = Automatic
@@ -12,7 +12,7 @@ table FactFTE_2027
 	column Aar
 		dataType: int64
 		formatString: 0
-		lineageTag: 57d376b3-7421-4d1e-84e3-b73fddce7b7c
+		lineageTag: ef18ddd9-8284-4073-8a61-343f8f33e229
 		summarizeBy: none
 		sourceColumn: Aar
 		annotation SummarizationSetBy = Automatic
@@ -20,28 +20,28 @@ table FactFTE_2027
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: ca45e901-87f5-4b41-80da-55959735b72b
+		lineageTag: 6a7f95dd-e19f-42f2-a1f1-3d3ef32913f2
 		summarizeBy: none
 		sourceColumn: OrgKode
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNavn
 		dataType: string
-		lineageTag: 36d60e8f-aa61-4c12-9464-23e05fb691a7
+		lineageTag: 8ee0f4ec-0f64-4224-a34b-e27428110c2b
 		summarizeBy: none
 		sourceColumn: OrgNavn
 		annotation SummarizationSetBy = Automatic
 
 	column Stillingstype
 		dataType: string
-		lineageTag: 54390a99-f56e-4025-ab41-854270bcdfb5
+		lineageTag: 5a567cbd-4c90-46eb-89d0-7006c4eb2d37
 		summarizeBy: none
 		sourceColumn: Stillingstype
 		annotation SummarizationSetBy = Automatic
 
 	column StillingsgruppeNavn
 		dataType: string
-		lineageTag: 6cef35fc-77a0-40b2-880d-bc43cbe2e664
+		lineageTag: cd0b58ad-c12b-4f83-a118-66c63ec1d1c5
 		summarizeBy: none
 		sourceColumn: StillingsgruppeNavn
 		annotation SummarizationSetBy = Automatic
@@ -49,7 +49,7 @@ table FactFTE_2027
 	column Aarsverk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: e451fc6b-c3f3-4a42-8a5a-e3f1c7c2f92f
+		lineageTag: c6f77dfa-8ce2-4976-aaf1-2b2f3cb527ad
 		summarizeBy: sum
 		sourceColumn: Aarsverk
 		annotation SummarizationSetBy = Automatic
@@ -57,7 +57,7 @@ table FactFTE_2027
 	column AntallAnsatte
 		dataType: int64
 		formatString: 0
-		lineageTag: 2b73f262-4af8-42c9-ac21-4bbf9af22355
+		lineageTag: dc311a44-4316-4419-8661-bd42eef4bb09
 		summarizeBy: sum
 		sourceColumn: AntallAnsatte
 		annotation SummarizationSetBy = Automatic
@@ -65,7 +65,7 @@ table FactFTE_2027
 	column Vakanser
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 94936046-d968-4c5e-be8d-bf9720d02c3c
+		lineageTag: 8934b0c7-5aa0-4b90-98dc-3e3043752ccf
 		summarizeBy: sum
 		sourceColumn: Vakanser
 		annotation SummarizationSetBy = Automatic
@@ -73,14 +73,14 @@ table FactFTE_2027
 	column SnittLonnNOK
 		dataType: int64
 		formatString: #,##0
-		lineageTag: f13c61ca-5e77-4c3a-9237-3d9cf1abb819
+		lineageTag: 1c408dd3-f0b7-44fa-b0e4-12f83e69946c
 		summarizeBy: average
 		sourceColumn: SnittLonnNOK
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonKode
 		dataType: string
-		lineageTag: 83b146a7-9007-4f12-b15f-4ca940c66859
+		lineageTag: 317a2d69-64bb-4f9b-a2d9-852054346f53
 		summarizeBy: none
 		sourceColumn: VersjonKode
 		annotation SummarizationSetBy = Automatic

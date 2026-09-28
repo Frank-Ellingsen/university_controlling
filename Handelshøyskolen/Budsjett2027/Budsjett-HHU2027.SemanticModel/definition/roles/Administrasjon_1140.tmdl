@@ -3,4 +3,4 @@ role Administrasjon_1140
 
 	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1140
 
-	annotation PBI_Id = df7abf75a8684496930a7a2d57fbc3e7
+	annotation PBI_Id = 97299033102a4f09ac035627ccd79663

@@ -1,31 +1,31 @@
 table FactStudents_2027
-	lineageTag: 3fa2cbab-2622-476a-8457-f0a413c92adf
+	lineageTag: d16bbd03-5ac4-46f6-962e-fb3711dccf02
 
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: a8d669f5-999a-4316-b782-88ca223dca5f
+		lineageTag: 9892e663-8a1a-4c6c-a922-c48d0f399549
 		summarizeBy: none
 		sourceColumn: OrgKode
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNavn
 		dataType: string
-		lineageTag: 91b1f66c-be41-4f4c-b46e-596cd24eecf4
+		lineageTag: 1d513420-c9df-4860-b707-f26d37d53951
 		summarizeBy: none
 		sourceColumn: OrgNavn
 		annotation SummarizationSetBy = Automatic
 
 	column StudieprogramNavn
 		dataType: string
-		lineageTag: dccb787d-8c2a-4789-87a6-0f09bd6cc500
+		lineageTag: b887f589-29fe-4993-b42e-8aa718e81abc
 		summarizeBy: none
 		sourceColumn: StudieprogramNavn
 		annotation SummarizationSetBy = Automatic
 
 	column KDKategori
 		dataType: string
-		lineageTag: b249a289-f8fd-4949-8901-3e0fc6a63844
+		lineageTag: 5bbbf344-8b35-4700-9ad8-7b2b92adde61
 		summarizeBy: none
 		sourceColumn: KDKategori
 		annotation SummarizationSetBy = Automatic
@@ -33,7 +33,7 @@ table FactStudents_2027
 	column RegistrerteStudenter
 		dataType: int64
 		formatString: #,##0
-		lineageTag: e3413aa5-97a1-45ba-98c4-314b95e1a50e
+		lineageTag: 02d299d7-68af-405e-a1e3-5b529c6db696
 		summarizeBy: sum
 		sourceColumn: RegistrerteStudenter
 		annotation SummarizationSetBy = Automatic
@@ -41,7 +41,7 @@ table FactStudents_2027
 	column SPE60_2025_Lag
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: f74a5b06-63e6-40ee-b920-4c7506faa730
+		lineageTag: eba88519-f259-4308-972a-4a53350f4d5d
 		summarizeBy: sum
 		sourceColumn: SPE60_2025_Lag
 		annotation SummarizationSetBy = Automatic
@@ -49,7 +49,7 @@ table FactStudents_2027
 	column SPE60_2027_Target
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: cd8e373e-fab8-4bbc-a353-a604a759b9dc
+		lineageTag: 86f5633b-2814-4cdc-b960-5c165f909e65
 		summarizeBy: sum
 		sourceColumn: SPE60_2027_Target
 		annotation SummarizationSetBy = Automatic
@@ -57,7 +57,7 @@ table FactStudents_2027
 	column KDInntektBeregnetNOK
 		dataType: double
 		formatString: #,##0
-		lineageTag: 75836a13-8bbe-4462-8867-f3cbbab65f90
+		lineageTag: b6cc20cc-786c-48e3-ba85-b004e1753c31
 		summarizeBy: sum
 		sourceColumn: KDInntektBeregnetNOK
 		annotation SummarizationSetBy = Automatic
@@ -65,7 +65,7 @@ table FactStudents_2027
 	column StudenterPrUF
 		dataType: double
 		formatString: 0.0
-		lineageTag: e3cc44be-29b0-47ad-acd3-96a51d27404c
+		lineageTag: 85f6e597-224f-4150-9543-72050f6c0fc8
 		summarizeBy: average
 		sourceColumn: StudenterPrUF
 		annotation SummarizationSetBy = Automatic

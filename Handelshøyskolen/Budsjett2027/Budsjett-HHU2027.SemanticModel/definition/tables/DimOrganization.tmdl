@@ -1,59 +1,48 @@
 table DimOrganization
-	lineageTag: d07bbf07-2138-4404-9eff-ab149d718a75
+	lineageTag: 92293f1f-90db-4a8d-b85e-133b74ad5cb3
 
 	column OrgKode
 		dataType: int64
 		formatString: 0
-		lineageTag: 3159f248-8280-4b59-b555-16ca8156826f
+		lineageTag: accad2b8-e5b1-4755-9263-b482d8988339
 		summarizeBy: none
 		sourceColumn: OrgKode
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNavn
 		dataType: string
-		lineageTag: 6e219b5b-72b0-4895-b1d7-53d09283ae78
+		lineageTag: 9b70e503-1a32-402e-a815-a1eaad376585
 		summarizeBy: none
 		sourceColumn: OrgNavn
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNivaa
 		dataType: string
-		lineageTag: cf0eb669-9ddc-4ef8-afd9-27db9460a38a
+		lineageTag: 8b5fef2a-7748-480c-9569-a3d37d4e0f91
 		summarizeBy: none
 		sourceColumn: OrgNivaa
 		annotation SummarizationSetBy = Automatic
 
 	column Fakultetsnavn
 		dataType: string
-		lineageTag: fad20f50-65f5-40fd-afac-cbc139db5556
+		lineageTag: 7ca0c0e8-933a-4779-947a-884ae497b882
 		summarizeBy: none
 		sourceColumn: Fakultetsnavn
 		annotation SummarizationSetBy = Automatic
 
 	column Virksomhetstype
 		dataType: string
-		lineageTag: 50b25e4a-9db0-4e80-9a40-57c6f3b5810c
+		lineageTag: c2170867-03ba-46a7-9e75-6f5785a93e64
 		summarizeBy: none
 		sourceColumn: Virksomhetstype
 		annotation SummarizationSetBy = Automatic
 
 	column Lokalitet
 		dataType: string
-		lineageTag: 1e6f9d1b-eb31-421b-881d-7880dd22d8f6
+		lineageTag: f8e7961f-02f7-4032-a406-606b0d97c895
 		summarizeBy: none
 		sourceColumn: Lokalitet
 		annotation SummarizationSetBy = Automatic
-
-	hierarchy 'Organisasjonshierarki'
-		lineageTag: 56eda275-6c94-4034-a976-f8922d7de2fa
-
-		level Fakultet
-			lineageTag: e19dc151-4712-49cf-87b9-e451d136f12b
-			column: Fakultetsnavn
-
-		level Enhet
-			lineageTag: a33ea2ce-7e5f-4f85-a82e-21d2d53cf104
-			column: OrgNavn
 
 	partition DimOrganization = m
 		mode: import
