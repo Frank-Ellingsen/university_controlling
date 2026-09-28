@@ -1,0 +1,224 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "p4_tbl_students_matrix",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 40,
+    "width": 1880,
+    "height": 410,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents_2027"
+                    }
+                  },
+                  "Property": "OrgNavn"
+                }
+              },
+              "queryRef": "FactStudents_2027.OrgNavn",
+              "nativeQueryRef": "Fakultet / Enhet"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents_2027"
+                    }
+                  },
+                  "Property": "StudieprogramNavn"
+                }
+              },
+              "queryRef": "FactStudents_2027.StudieprogramNavn",
+              "nativeQueryRef": "Studieprogram"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents_2027"
+                    }
+                  },
+                  "Property": "KDKategori"
+                }
+              },
+              "queryRef": "FactStudents_2027.KDKategori",
+              "nativeQueryRef": "KD Kategori"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Registrerte Studenter"
+                }
+              },
+              "queryRef": "_Measures.Registrerte Studenter",
+              "nativeQueryRef": "Registrerte Studenter"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPE60 2025 Lag"
+                }
+              },
+              "queryRef": "_Measures.SPE60 2025 Lag",
+              "nativeQueryRef": "2025 Lag (60 SPE)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPE60 2027 Target"
+                }
+              },
+              "queryRef": "_Measures.SPE60 2027 Target",
+              "nativeQueryRef": "2027 Target (60 SPE)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPE60 Produksjonsvekst"
+                }
+              },
+              "queryRef": "_Measures.SPE60 Produksjonsvekst",
+              "nativeQueryRef": "Vekst (SPE)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "SPE60 Vekst %"
+                }
+              },
+              "queryRef": "_Measures.SPE60 Vekst %",
+              "nativeQueryRef": "Vekst %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Beregnet KD Inntekt (MNOK)"
+                }
+              },
+              "queryRef": "_Measures.Beregnet KD Inntekt (MNOK)",
+              "nativeQueryRef": "Beregnet KD Inntekt (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Studenter per UF"
+                }
+              },
+              "queryRef": "_Measures.Studenter per UF",
+              "nativeQueryRef": "Stud/UF-ÅV"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Utdanningsproduksjon & KD Finansieringsmatrise: Studieprogram, SPE60-Mål og Beregnet Inntekt'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11pt"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E293B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

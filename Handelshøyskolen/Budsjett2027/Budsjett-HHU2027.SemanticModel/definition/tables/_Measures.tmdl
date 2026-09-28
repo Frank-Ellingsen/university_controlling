@@ -1,0 +1,330 @@
+table _Measures
+	lineageTag: 09268b5f-1941-4449-8d64-b468047db2c4
+
+	/// Samlet budsjettert inntekt (positive tall, MNOK)
+	measure 'Budsjett Inntekt' =
+			CALCULATE(
+			    -SUM('FactBudget_2027'[BudsjettBelop]),
+			    'DimAccountHierarchy'[Kontotype] = "Inntekt"
+			)
+		formatString: #,##0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 77c02739-b739-4ede-a3c8-cb66494a6aec
+
+	/// Samlede budsjetterte driftskostnader (positive tall, MNOK)
+	measure 'Budsjett Kostnad' =
+			CALCULATE(
+			    SUM('FactBudget_2027'[BudsjettBelop]),
+			    'DimAccountHierarchy'[Kontotype] = "Kostnad"
+			)
+		formatString: #,##0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 5bb5df1a-a5c1-4079-8346-efb065f53eb7
+
+	/// Netto budsjettert driftsresultat (Inntekt minus Kostnad, MNOK)
+	measure 'Budsjett Netto Resultat' = [Budsjett Inntekt] - [Budsjett Kostnad]
+		formatString: +#,##0.0;-#,##0.0;0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: a83e0b2d-9e94-45ea-9b35-4d3607066267
+
+	/// Budsjettert lønnskostnad fast og midlertidig ansatte (MNOK)
+	measure 'Budsjett Lønn' =
+			CALCULATE(
+			    SUM('FactBudget_2027'[BudsjettBelop]),
+			    'DimAccountHierarchy'[Nivaa1_Navn] = "Lønnskostnad"
+			)
+		formatString: #,##0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 19efd5e5-67aa-4dce-886a-62631e1a7d39
+
+	/// Budsjetterte andre driftskostnader inkl. husleie, IKT og konsulenter (MNOK)
+	measure 'Budsjett Drift' =
+			CALCULATE(
+			    SUM('FactBudget_2027'[BudsjettBelop]),
+			    'DimAccountHierarchy'[SRS_regnskapslinje] = "Andre driftskostnader"
+			)
+		formatString: #,##0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 224e1458-dda5-4634-9722-f525cfe0578b
+
+	/// Budsjetterte ordinære avskrivninger inventar og IKT etter SRS 17 (MNOK)
+	measure 'Budsjett Avskrivninger' =
+			CALCULATE(
+			    SUM('FactBudget_2027'[BudsjettBelop]),
+			    'DimAccountHierarchy'[SRS_regnskapslinje] = "Av- og nedskrivninger"
+			)
+		formatString: #,##0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: db2368fd-ccfa-4a0f-ba7d-6a94b35c63bb
+
+	/// Statlig basis- og resultatbevilgning over statsbudsjettets Kap. 260 Post 50 (MNOK)
+	measure 'Budsjett Bevilgning (KD)' =
+			CALCULATE(
+			    -SUM('FactBudget_2027'[BudsjettBelop]),
+			    'DimAccountHierarchy'[Konto] = 3900
+			)
+		formatString: #,##0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: a4335d23-bac9-452f-9ee3-78f4e3cc47bb
+
+	/// Eksternfinansierte BOA- og EVU-inntekter etter SRS 9 og SRS 10 (MNOK)
+	measure 'Budsjett BOA & EVU Inntekt' =
+			CALCULATE(
+			    -SUM('FactBudget_2027'[BudsjettBelop]),
+			    'DimAccountHierarchy'[Konto] IN {3400, 3600, 3030}
+			)
+		formatString: #,##0.0
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 9ae3e97b-8410-4f2f-affa-3e6ea8459a0e
+
+	/// Lønnskostnadenes andel av samlede driftskostnader (Sektornorm: 62 - 65 %)
+	measure 'Lønnsandel %' = DIVIDE([Budsjett Lønn], [Budsjett Kostnad])
+		formatString: 0.0 %
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 04c2edf1-f21f-427c-80b8-bf5aa81fcced
+
+	/// Driftskostnadenes andel av samlede kostnader
+	measure 'Driftsandel %' = DIVIDE([Budsjett Drift], [Budsjett Kostnad])
+		formatString: 0.0 %
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 5b9432ff-3a5c-4e71-9bf3-fec3e0af556b
+
+	/// Driftsmargin i prosent av samlet inntekt
+	measure 'Driftsmargin %' = DIVIDE([Budsjett Netto Resultat], [Budsjett Inntekt])
+		formatString: 0.0 %
+		displayFolder: 01 Økonomi & Resultat
+		lineageTag: 9d8d267b-e997-4443-a0d1-004dc3769352
+
+	/// Totale normerte årsverk (Full-Time Equivalent)
+	measure 'FTE Årsverk' =
+			AVERAGEX(
+			    VALUES('DimDate_2027'[AarMaaned]),
+			    CALCULATE(SUM('FactFTE_2027'[Aarsverk]))
+			)
+		formatString: #,##0.0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: e6d819bf-659c-403d-b449-3014392f6ed0
+
+	/// Vitenskapelige årsverk innen undervisning og forskning (UF)
+	measure 'UF-Årsverk' =
+			CALCULATE(
+			    [FTE Årsverk],
+			    'FactFTE_2027'[Stillingstype] = "UF"
+			)
+		formatString: #,##0.0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: afda9fbc-e9ac-4f6d-8563-9f183630e9b2
+
+	/// Teknisk-administrative årsverk (TA)
+	measure 'TA-Årsverk' =
+			CALCULATE(
+			    [FTE Årsverk],
+			    'FactFTE_2027'[Stillingstype] = "TA"
+			)
+		formatString: #,##0.0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: fddebf58-04f4-446a-8161-2d728a5ff264
+
+	/// Totalt antall ansatte personer
+	measure 'Antall Ansatte' =
+			AVERAGEX(
+			    VALUES('DimDate_2027'[AarMaaned]),
+			    CALCULATE(SUM('FactFTE_2027'[AntallAnsatte]))
+			)
+		formatString: #,##0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: 8e1bdfb8-e4c7-4bb6-843c-7904906cb22e
+
+	/// Ubesatte stillinger / vakante årsverk
+	measure 'Vakanser (Årsverk)' =
+			AVERAGEX(
+			    VALUES('DimDate_2027'[AarMaaned]),
+			    CALCULATE(SUM('FactFTE_2027'[Vakanser]))
+			)
+		formatString: #,##0.0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: 36342bff-e63d-422e-a1c3-b9017070e134
+
+	/// Vakanser i prosent av totale årsverk (vakansfaktor)
+	measure 'Vakansfaktor %' = DIVIDE([Vakanser (Årsverk)], [FTE Årsverk])
+		formatString: 0.0 %
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: 72c423fa-ee9b-4955-983b-567dc205e2b7
+
+	/// Gjennomsnittlig årslønn for vitenskapelig ansatte (NOK)
+	measure 'Snittlønn UF (NOK)' =
+			CALCULATE(
+			    AVERAGEX(VALUES('DimDate_2027'[AarMaaned]), CALCULATE(AVERAGE('FactFTE_2027'[SnittLonnNOK]))),
+			    'FactFTE_2027'[Stillingstype] = "UF"
+			)
+		formatString: #,##0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: e241179c-39eb-4c78-ab51-37d21b415c43
+
+	/// Gjennomsnittlig årslønn for teknisk-administrative ansatte (NOK)
+	measure 'Snittlønn TA (NOK)' =
+			CALCULATE(
+			    AVERAGEX(VALUES('DimDate_2027'[AarMaaned]), CALCULATE(AVERAGE('FactFTE_2027'[SnittLonnNOK]))),
+			    'FactFTE_2027'[Stillingstype] = "TA"
+			)
+		formatString: #,##0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: 07cec110-70bf-4c6b-bd4e-33a8e743b941
+
+	/// Samlet snittlønn på tvers av alle stillingsgrupper (NOK)
+	measure 'Snittlønn Totalt (NOK)' =
+			AVERAGEX(
+			    VALUES('DimDate_2027'[AarMaaned]),
+			    CALCULATE(AVERAGE('FactFTE_2027'[SnittLonnNOK]))
+			)
+		formatString: #,##0
+		displayFolder: 02 Bemanningsstyring (FTE)
+		lineageTag: 6151d910-d61f-4c82-b3f2-dce72fbbc0f9
+
+	/// Totalt antall semesterregistrerte studenter i Felles Studentsystem (FS)
+	measure 'Registrerte Studenter' = SUM('FactStudents_2027'[RegistrerteStudenter])
+		formatString: #,##0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: ab404ce8-e7fd-41a6-bb58-f8c400c74d67
+
+	/// Historisk studiepoengproduksjon 2025 som danner grunnlag for 2027-tildeling (2-års etterslep)
+	measure 'SPE60 2025 Lag' = SUM('FactStudents_2027'[SPE60_2025_Lag])
+		formatString: #,##0.0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: 401f1847-d3c7-44cd-abc9-e2cf55325200
+
+	/// Måltall for studiepoengproduksjon i 2027 (SPE60 Target)
+	measure 'SPE60 2027 Target' = SUM('FactStudents_2027'[SPE60_2027_Target])
+		formatString: #,##0.0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: 3e3af0a1-ac84-42c2-897d-d82267a965d0
+
+	/// Forventet vekst i studiepoengproduksjon fra 2025-grunnlag til 2027-mål
+	measure 'SPE60 Produksjonsvekst' = [SPE60 2027 Target] - [SPE60 2025 Lag]
+		formatString: +#,##0.0;-#,##0.0;0.0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: 91e5c419-72a4-4829-b1c5-ba1898013d2e
+
+	/// Prosentvis produksjonsvekst i studiepoeng
+	measure 'SPE60 Vekst %' = DIVIDE([SPE60 Produksjonsvekst], [SPE60 2025 Lag])
+		formatString: 0.0 %
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: d647a4f3-491d-470b-a0a3-f0f23ad1dab5
+
+	/// Beregnet resultatbasert KD-tildeling etter KDs 2025/2027-modell (MNOK)
+	measure 'Beregnet KD Inntekt (MNOK)' = DIVIDE(SUM('FactStudents_2027'[KDInntektBeregnetNOK]), 1000000)
+		formatString: #,##0.0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: 9fb154d4-f616-4675-a03f-c40c73dfabf1
+
+	/// Lærertetthet målt som registrerte studenter per vitenskapelig årsverk
+	measure 'Studenter per UF' = DIVIDE([Registrerte Studenter], [UF-Årsverk])
+		formatString: 0.0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: 21b8b915-ccc8-4df3-91eb-037257f9ad8a
+
+	/// Studiepoengproduksjon per vitenskapelig årsverk (SPE60 per UF)
+	measure 'SPE60 per UF' = DIVIDE([SPE60 2027 Target], [UF-Årsverk])
+		formatString: 0.0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: a643297a-1862-4c39-8059-573f3e8864ad
+
+	/// Drifts- og personalkostnad per produserte 60 studiepoeng (tusen kroner)
+	measure 'Enhetskostnad per SPE60 (kNOK)' = DIVIDE([Budsjett Kostnad] * 1000, [SPE60 2027 Target])
+		formatString: #,##0
+		displayFolder: 03 Utdanningsproduksjon & KD
+		lineageTag: bdfe0b8a-f94d-4018-9401-1ccba31c94c0
+
+	/// Vedtatt innsparingseffekt i omstillingsplan (MNOK)
+	measure 'Planlagt Innsparing (MNOK)' = SUM('FactAction_2027'[ForventetEffektMNOK])
+		formatString: #,##0.0
+		displayFolder: 04 Omstillingstiltak & EVM
+		lineageTag: 830101fb-43df-41fa-9105-e02f0256c4c2
+
+	/// Realisert innsparingseffekt per dags dato (MNOK)
+	measure 'Realisert Innsparing (MNOK)' = SUM('FactAction_2027'[RealisertEffektMNOK])
+		formatString: #,##0.0
+		displayFolder: 04 Omstillingstiltak & EVM
+		lineageTag: 0b047f78-fa57-487a-9398-01a184184dcf
+
+	/// Realiseringsgrad for vedtatte omstillingstiltak
+	measure 'Realiseringsgrad %' = DIVIDE([Realisert Innsparing (MNOK)], [Planlagt Innsparing (MNOK)])
+		formatString: 0.0 %
+		displayFolder: 04 Omstillingstiltak & EVM
+		lineageTag: b6f861c1-82b6-49d9-973e-31cef7767349
+
+	/// Antall vedtatte omstillingstiltak i handlingsplan
+	measure 'Antall Tiltak' = COUNTROWS('FactAction_2027')
+		formatString: 0
+		displayFolder: 04 Omstillingstiltak & EVM
+		lineageTag: 096f52e1-7028-42c8-962c-dc67a435b693
+
+	/// Avsetning til formålskapital i henhold til F-05-20 (MNOK)
+	measure 'F-05-20 Avsetningsreserve (MNOK)' = [Budsjett Netto Resultat]
+		formatString: +#,##0.0;-#,##0.0;0.0
+		displayFolder: 04 Omstillingstiltak & EVM
+		lineageTag: ad7f09a9-f620-41bd-82aa-41434439cda2
+
+	/// Formålskapitalavsetningens andel av samlet bevilgning (5 %-regelen i F-05-20)
+	measure 'F-05-20 Avsetningsandel %' = DIVIDE([F-05-20 Avsetningsreserve (MNOK)], [Budsjett Bevilgning (KD)])
+		formatString: 0.0 %
+		displayFolder: 04 Omstillingstiltak & EVM
+		lineageTag: c5447092-a739-4abf-8be6-ef70e20e64f9
+
+	/// Trafikklys RAG-status for netto rammeresultat
+	measure 'RAG Netto Resultat' =
+			IF([Budsjett Netto Resultat] >= 0, "🟢 Overskudd", "🔴 Underskudd")
+		displayFolder: 05 RAG & Formatering
+		lineageTag: 7a1b78ef-9593-4b58-bc5e-011ffb9dd585
+
+	/// Trafikklys RAG-status for lønnsandel i forhold til sektornorm på 62 - 65 %
+	measure 'RAG Lønnsandel' =
+			IF([Lønnsandel %] <= 0.65, "🟢 Innenfor norm", "🟡 Høy lønnsandel")
+		displayFolder: 05 RAG & Formatering
+		lineageTag: 7a104d19-1c1a-42bb-a5e9-8cd8a9ebd62b
+
+	/// Trafikklys RAG-status for F-05-20 avsetningsgrense på maksimalt 5 %
+	measure 'RAG F-05-20 Status' =
+			IF([F-05-20 Avsetningsandel %] <= 0.05, "🟢 < 5% Formålskapital", "🔴 Risiko for inndragning")
+		displayFolder: 05 RAG & Formatering
+		lineageTag: 5e047568-d89e-4acd-843b-eac33d33b253
+
+	/// Strategisk controller-diagnose og driveranalyse per enhet
+	measure 'Diagnose og Drivere 2027' =
+			VAR Org = SELECTEDVALUE('DimOrganization'[OrgKode])
+			RETURN
+			SWITCH(
+			    Org,
+			    1110, "HHU Ledelse & Innovasjon: 100,4 MNOK inntekt / +3,0 MNOK overskudd. T003 EVU-ekspansjon (-1,4 MNOK). 22,7 stud/UF.",
+			    1120, "HHU Rettsvitenskap: 71,7 MNOK inntekt / +2,2 MNOK overskudd. Juss-profesjon. 21,3 stud/UF. Lav vakansgrad.",
+			    1130, "HHU Økonomi: 86,0 MNOK inntekt / +2,6 MNOK overskudd. T002 omdisponering av 5 faglige årsverk (-3,05 MNOK).",
+			    1140, "HHU Fakultetsadministrasjon: 28,7 MNOK inntekt / +0,86 MNOK overskudd. T001 ansettelsesstopp TA (-1,8 MNOK).",
+			    1200, "TEK: 351 MNOK inntekt. Ingeniør- og realfag. Kategori 2 sats (81 800 kr/SPE60). 14,0 stud/UF.",
+			    1300, "HEL: 310 MNOK inntekt. Helsefag og sykepleie. Kategori 2 sats. 15,9 stud/UF.",
+			    1400, "SAM: 242 MNOK inntekt. Samfunnsvitenskap. Kategori 1 sats. 20,2 stud/UF.",
+			    1500, "HUM: 201 MNOK inntekt. Lærerutdanning og humaniora. Kategori 1 sats. 20,2 stud/UF.",
+			    1600, "ADM: Sentral fellesadministrasjon og fellesdrift. T004 rammeavtaler og lisenskutt (-1,2 MNOK).",
+			    "Handelshøyskolen ved UiA (HHU) har et samlet vedtatt budsjett på 286,8 MNOK inntekt, 278,2 MNOK kostnad og et netto driftsoverskudd på +8,6 MNOK."
+			)
+		displayFolder: 05 RAG & Formatering
+		lineageTag: 819fddcf-ccc3-478e-914c-b94832cd4c67
+
+	column RowId
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e27c0596-f39d-41ba-b286-fda3bb1cd12f
+		summarizeBy: none
+		sourceColumn: RowId
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [RowId = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"RowId", Int64.Type}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

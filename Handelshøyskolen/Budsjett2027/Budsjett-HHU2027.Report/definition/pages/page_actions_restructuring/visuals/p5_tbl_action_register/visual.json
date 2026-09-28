@@ -1,0 +1,224 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "p5_tbl_action_register",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 40,
+    "width": 1880,
+    "height": 410,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "TiltakID"
+                }
+              },
+              "queryRef": "FactAction_2027.TiltakID",
+              "nativeQueryRef": "ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "TiltakNavn"
+                }
+              },
+              "queryRef": "FactAction_2027.TiltakNavn",
+              "nativeQueryRef": "Tiltaksnavn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "OrgNavn"
+                }
+              },
+              "queryRef": "FactAction_2027.OrgNavn",
+              "nativeQueryRef": "Organisasjonsenhet"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Planlagt Innsparing (MNOK)"
+                }
+              },
+              "queryRef": "_Measures.Planlagt Innsparing (MNOK)",
+              "nativeQueryRef": "Planlagt MNOK"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Realisert Innsparing (MNOK)"
+                }
+              },
+              "queryRef": "_Measures.Realisert Innsparing (MNOK)",
+              "nativeQueryRef": "Realisert MNOK"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Realiseringsgrad %"
+                }
+              },
+              "queryRef": "_Measures.Realiseringsgrad %",
+              "nativeQueryRef": "Realiseringsgrad %"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "FactAction_2027.Status",
+              "nativeQueryRef": "Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "AnsvarligRolle"
+                }
+              },
+              "queryRef": "FactAction_2027.AnsvarligRolle",
+              "nativeQueryRef": "Ansvarlig Rolle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "FristDato"
+                }
+              },
+              "queryRef": "FactAction_2027.FristDato",
+              "nativeQueryRef": "Frist"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "Prioritet"
+                }
+              },
+              "queryRef": "FactAction_2027.Prioritet",
+              "nativeQueryRef": "Prioritet"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fullstendig Tiltaksregister: Fremdrift, Roller, Frister og Økonomisk Effekt'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11pt"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E293B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

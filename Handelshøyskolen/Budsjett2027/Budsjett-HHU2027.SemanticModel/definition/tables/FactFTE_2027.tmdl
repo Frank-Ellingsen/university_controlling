@@ -1,0 +1,98 @@
+table FactFTE_2027
+	lineageTag: ef6d1c89-787b-4593-a8d3-39889df40bb9
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 943e0b3b-860e-4313-b870-37e4761b1477
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+		annotation SummarizationSetBy = Automatic
+
+	column Aar
+		dataType: int64
+		formatString: 0
+		lineageTag: 57d376b3-7421-4d1e-84e3-b73fddce7b7c
+		summarizeBy: none
+		sourceColumn: Aar
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: ca45e901-87f5-4b41-80da-55959735b72b
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column OrgNavn
+		dataType: string
+		lineageTag: 36d60e8f-aa61-4c12-9464-23e05fb691a7
+		summarizeBy: none
+		sourceColumn: OrgNavn
+		annotation SummarizationSetBy = Automatic
+
+	column Stillingstype
+		dataType: string
+		lineageTag: 54390a99-f56e-4025-ab41-854270bcdfb5
+		summarizeBy: none
+		sourceColumn: Stillingstype
+		annotation SummarizationSetBy = Automatic
+
+	column StillingsgruppeNavn
+		dataType: string
+		lineageTag: 6cef35fc-77a0-40b2-880d-bc43cbe2e664
+		summarizeBy: none
+		sourceColumn: StillingsgruppeNavn
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: e451fc6b-c3f3-4a42-8a5a-e3f1c7c2f92f
+		summarizeBy: sum
+		sourceColumn: Aarsverk
+		annotation SummarizationSetBy = Automatic
+
+	column AntallAnsatte
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b73f262-4af8-42c9-ac21-4bbf9af22355
+		summarizeBy: sum
+		sourceColumn: AntallAnsatte
+		annotation SummarizationSetBy = Automatic
+
+	column Vakanser
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 94936046-d968-4c5e-be8d-bf9720d02c3c
+		summarizeBy: sum
+		sourceColumn: Vakanser
+		annotation SummarizationSetBy = Automatic
+
+	column SnittLonnNOK
+		dataType: int64
+		formatString: #,##0
+		lineageTag: f13c61ca-5e77-4c3a-9237-3d9cf1abb819
+		summarizeBy: average
+		sourceColumn: SnittLonnNOK
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 83b146a7-9007-4f12-b15f-4ca940c66859
+		summarizeBy: none
+		sourceColumn: VersjonKode
+		annotation SummarizationSetBy = Automatic
+
+	partition FactFTE_2027 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\Budsjett2027\FactFTE_2027.csv"),[Delimiter=";", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"Aar", Int64.Type}, {"OrgKode", Int64.Type}, {"OrgNavn", type text}, {"Stillingstype", type text}, {"StillingsgruppeNavn", type text}, {"Aarsverk", type number}, {"AntallAnsatte", Int64.Type}, {"Vakanser", type number}, {"SnittLonnNOK", Int64.Type}, {"VersjonKode", type text}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,6 @@
+role Dekan_HHU
+	modelPermission: read
+
+	tablePermission DimOrganization = 'DimOrganization'[Fakultetsnavn] == "HHU"
+
+	annotation PBI_Id = b1f89364dc654d23abc06fb7d417eb8a

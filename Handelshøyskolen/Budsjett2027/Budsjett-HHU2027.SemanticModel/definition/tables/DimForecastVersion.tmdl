@@ -1,0 +1,49 @@
+table DimForecastVersion
+	lineageTag: 7514dd1c-85f0-4ed3-8d8e-ed38bf2e3fbc
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 5b772cb3-b355-43e5-9fa6-33768e1fffe0
+		summarizeBy: none
+		sourceColumn: VersjonKode
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonNavn
+		dataType: string
+		lineageTag: 9f03ecc0-fe3c-4744-bb1b-f323defbe2a6
+		summarizeBy: none
+		sourceColumn: VersjonNavn
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonType
+		dataType: string
+		lineageTag: c203f45d-555c-4e4e-aaff-24bb2b0edbd8
+		summarizeBy: none
+		sourceColumn: VersjonType
+		annotation SummarizationSetBy = Automatic
+
+	column GjeldendeDato
+		dataType: string
+		lineageTag: b0bf2496-bcb1-4c27-bf35-0f6fb870872b
+		summarizeBy: none
+		sourceColumn: GjeldendeDato
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 27df3011-6a6a-4059-a8ad-449efeac285f
+		summarizeBy: none
+		sourceColumn: Status
+		annotation SummarizationSetBy = Automatic
+
+	partition DimForecastVersion = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\Budsjett2027\DimForecastVersion (1).csv"),[Delimiter=";", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"VersjonKode", type text}, {"VersjonNavn", type text}, {"VersjonType", type text}, {"GjeldendeDato", type text}, {"Status", type text}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

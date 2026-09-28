@@ -1,0 +1,31 @@
+relationship rel_budget_org
+	fromColumn: FactBudget_2027.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_budget_account
+	fromColumn: FactBudget_2027.Konto
+	toColumn: DimAccountHierarchy.Konto
+
+relationship rel_budget_date
+	fromColumn: FactBudget_2027.DatoNokkel
+	toColumn: DimDate_2027.DatoNokkel
+
+relationship rel_budget_version
+	fromColumn: FactBudget_2027.VersjonKode
+	toColumn: DimForecastVersion.VersjonKode
+
+relationship rel_fte_org
+	fromColumn: FactFTE_2027.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_fte_date
+	fromColumn: FactFTE_2027.DatoNokkel
+	toColumn: DimDate_2027.DatoNokkel
+
+relationship rel_students_org
+	fromColumn: FactStudents_2027.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_action_org
+	fromColumn: FactAction_2027.OrgKode
+	toColumn: DimOrganization.OrgKode

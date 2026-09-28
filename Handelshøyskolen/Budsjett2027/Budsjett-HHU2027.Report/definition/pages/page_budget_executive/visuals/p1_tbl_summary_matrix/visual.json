@@ -1,0 +1,272 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "p1_tbl_summary_matrix",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 40,
+    "width": 1880,
+    "height": 410,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Fakultetsnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Fakultetsnavn",
+              "nativeQueryRef": "Fakultet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "OrgNavn"
+                }
+              },
+              "queryRef": "DimOrganization.OrgNavn",
+              "nativeQueryRef": "Organisasjonsenhet",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Inntekt"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Inntekt",
+              "nativeQueryRef": "Inntekt (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Lønn"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Lønn",
+              "nativeQueryRef": "Lønn (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Drift"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Drift",
+              "nativeQueryRef": "Drift (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Avskrivninger"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Avskrivninger",
+              "nativeQueryRef": "Avskrivninger (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Kostnad"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Kostnad",
+              "nativeQueryRef": "Kostnad (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Netto Resultat"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Netto Resultat",
+              "nativeQueryRef": "Netto Resultat (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Lønnsandel %"
+                }
+              },
+              "queryRef": "_Measures.Lønnsandel %",
+              "nativeQueryRef": "Lønnsandel %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "FTE Årsverk"
+                }
+              },
+              "queryRef": "_Measures.FTE Årsverk",
+              "nativeQueryRef": "Årsverk (FTE)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "UF-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.UF-Årsverk",
+              "nativeQueryRef": "UF-Årsverk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "RAG Netto Resultat"
+                }
+              },
+              "queryRef": "_Measures.RAG Netto Resultat",
+              "nativeQueryRef": "Status"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Diagnose og Drivere 2027"
+                }
+              },
+              "queryRef": "_Measures.Diagnose og Drivere 2027",
+              "nativeQueryRef": "Controller Diagnose"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Enhetsvis Hovedavstemming: Driftsbudsjett, Bemanningsstruktur og Strategisk Diagnose (300-sekunders analyse)'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11pt"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E293B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

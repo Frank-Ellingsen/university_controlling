@@ -1,0 +1,4 @@
+role Universitetsledelse
+	modelPermission: read
+
+	annotation PBI_Id = d136ccb7746643a881df89003a54f544

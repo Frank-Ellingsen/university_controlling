@@ -1,0 +1,83 @@
+table FactStudents_2027
+	lineageTag: 3fa2cbab-2622-476a-8457-f0a413c92adf
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: a8d669f5-999a-4316-b782-88ca223dca5f
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column OrgNavn
+		dataType: string
+		lineageTag: 91b1f66c-be41-4f4c-b46e-596cd24eecf4
+		summarizeBy: none
+		sourceColumn: OrgNavn
+		annotation SummarizationSetBy = Automatic
+
+	column StudieprogramNavn
+		dataType: string
+		lineageTag: dccb787d-8c2a-4789-87a6-0f09bd6cc500
+		summarizeBy: none
+		sourceColumn: StudieprogramNavn
+		annotation SummarizationSetBy = Automatic
+
+	column KDKategori
+		dataType: string
+		lineageTag: b249a289-f8fd-4949-8901-3e0fc6a63844
+		summarizeBy: none
+		sourceColumn: KDKategori
+		annotation SummarizationSetBy = Automatic
+
+	column RegistrerteStudenter
+		dataType: int64
+		formatString: #,##0
+		lineageTag: e3413aa5-97a1-45ba-98c4-314b95e1a50e
+		summarizeBy: sum
+		sourceColumn: RegistrerteStudenter
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60_2025_Lag
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: f74a5b06-63e6-40ee-b920-4c7506faa730
+		summarizeBy: sum
+		sourceColumn: SPE60_2025_Lag
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60_2027_Target
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: cd8e373e-fab8-4bbc-a353-a604a759b9dc
+		summarizeBy: sum
+		sourceColumn: SPE60_2027_Target
+		annotation SummarizationSetBy = Automatic
+
+	column KDInntektBeregnetNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: 75836a13-8bbe-4462-8867-f3cbbab65f90
+		summarizeBy: sum
+		sourceColumn: KDInntektBeregnetNOK
+		annotation SummarizationSetBy = Automatic
+
+	column StudenterPrUF
+		dataType: double
+		formatString: 0.0
+		lineageTag: e3cc44be-29b0-47ad-acd3-96a51d27404c
+		summarizeBy: average
+		sourceColumn: StudenterPrUF
+		annotation SummarizationSetBy = Automatic
+
+	partition FactStudents_2027 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\Budsjett2027\FactStudents_2027.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", Int64.Type}, {"OrgNavn", type text}, {"StudieprogramNavn", type text}, {"KDKategori", type text}, {"RegistrerteStudenter", Int64.Type}, {"SPE60_2025_Lag", type number}, {"SPE60_2027_Target", type number}, {"KDInntektBeregnetNOK", type number}, {"StudenterPrUF", type number}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

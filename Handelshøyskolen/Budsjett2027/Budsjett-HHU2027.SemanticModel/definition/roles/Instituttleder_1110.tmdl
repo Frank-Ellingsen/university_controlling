@@ -1,0 +1,6 @@
+role Instituttleder_1110
+	modelPermission: read
+
+	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1110
+
+	annotation PBI_Id = de8830b082b84062b2ca8d0518e53abb

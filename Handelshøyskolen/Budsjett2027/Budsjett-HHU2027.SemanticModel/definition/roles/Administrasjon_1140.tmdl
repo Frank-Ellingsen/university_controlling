@@ -1,0 +1,6 @@
+role Administrasjon_1140
+	modelPermission: read
+
+	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == 1140
+
+	annotation PBI_Id = df7abf75a8684496930a7a2d57fbc3e7

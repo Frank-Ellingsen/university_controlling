@@ -1,0 +1,102 @@
+table FactAction_2027
+	lineageTag: 1372971b-99b5-4cac-998d-d2cd4bb54c17
+
+	column TiltakID
+		dataType: string
+		lineageTag: 4478073c-c832-4f74-9695-851e55b25ca9
+		summarizeBy: none
+		sourceColumn: TiltakID
+		annotation SummarizationSetBy = Automatic
+
+	column TiltakNavn
+		dataType: string
+		lineageTag: e58f96ee-3aaf-4802-94a5-c5ffa30f5d81
+		summarizeBy: none
+		sourceColumn: TiltakNavn
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 085e3da8-eb62-4743-936f-0aec92063fae
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column OrgNavn
+		dataType: string
+		lineageTag: a9820186-c4a2-44e8-93f1-d670fa30e0d4
+		summarizeBy: none
+		sourceColumn: OrgNavn
+		annotation SummarizationSetBy = Automatic
+
+	column ForventetEffektMNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 9871db0e-4e24-436f-9c2e-51aa7d9d5c2e
+		summarizeBy: sum
+		sourceColumn: ForventetEffektMNOK
+		annotation SummarizationSetBy = Automatic
+
+	column RealisertEffektMNOK
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: d29044a2-d01f-4e10-8709-b9d266224377
+		summarizeBy: sum
+		sourceColumn: RealisertEffektMNOK
+		annotation SummarizationSetBy = Automatic
+
+	column Realiseringsgrad
+		dataType: double
+		formatString: 0.0 %
+		lineageTag: a6a30061-45ca-443e-bb28-a65116d1a909
+		summarizeBy: average
+		sourceColumn: Realiseringsgrad
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 5e73f718-127d-4696-90e9-c65003039ab9
+		summarizeBy: none
+		sourceColumn: Status
+		annotation SummarizationSetBy = Automatic
+
+	column AnsvarligRolle
+		dataType: string
+		lineageTag: a0f0484a-68f7-4105-9993-c7c0f036f528
+		summarizeBy: none
+		sourceColumn: AnsvarligRolle
+		annotation SummarizationSetBy = Automatic
+
+	column StartDato
+		dataType: string
+		lineageTag: 8c964db1-7ba7-44a2-be0b-59885ad7fc93
+		summarizeBy: none
+		sourceColumn: StartDato
+		annotation SummarizationSetBy = Automatic
+
+	column FristDato
+		dataType: string
+		lineageTag: ffd73421-88f4-4f7e-861a-5d3fd07454ff
+		summarizeBy: none
+		sourceColumn: FristDato
+		annotation SummarizationSetBy = Automatic
+
+	column Prioritet
+		dataType: string
+		lineageTag: c7b3de85-06fd-4fc1-983b-9772d3eb3453
+		summarizeBy: none
+		sourceColumn: Prioritet
+		annotation SummarizationSetBy = Automatic
+
+	partition FactAction_2027 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\Budsjett2027\FactAction_2027.csv"),[Delimiter=";", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"TiltakNavn", type text}, {"OrgKode", Int64.Type}, {"OrgNavn", type text}, {"ForventetEffektMNOK", type number}, {"RealisertEffektMNOK", type number}, {"Realiseringsgrad", type number}, {"Status", type text}, {"AnsvarligRolle", type text}, {"StartDato", type text}, {"FristDato", type text}, {"Prioritet", type text}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

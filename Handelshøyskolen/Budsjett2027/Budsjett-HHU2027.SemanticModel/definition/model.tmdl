@@ -7,9 +7,27 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation __PBI_TimeIntelligenceEnabled = 1
+annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDL-Extension"]
+
+annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate_2027","DimForecastVersion","DimOrganization","FactAction_2027","FactBudget_2027","FactFTE_2027","FactStudents_2027","_Measures"]
+
+ref table DimAccountHierarchy
+ref table DimDate_2027
+ref table DimForecastVersion
+ref table DimOrganization
+ref table FactAction_2027
+ref table FactBudget_2027
+ref table FactFTE_2027
+ref table FactStudents_2027
+ref table _Measures
+
+ref role Universitetsledelse
+ref role Dekan_HHU
+ref role Instituttleder_1110
+ref role Instituttleder_1120
+ref role Instituttleder_1130
+ref role Administrasjon_1140
 
 ref cultureInfo en-US
-

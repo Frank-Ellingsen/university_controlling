@@ -1,0 +1,231 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "p2_tbl_hhu_matrix",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 40,
+    "width": 1880,
+    "height": 410,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "OrgNavn"
+                }
+              },
+              "queryRef": "DimOrganization.OrgNavn",
+              "nativeQueryRef": "Institutt / Avdeling",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccountHierarchy"
+                    }
+                  },
+                  "Property": "Nivaa2_Navn"
+                }
+              },
+              "queryRef": "DimAccountHierarchy.Nivaa2_Navn",
+              "nativeQueryRef": "Kontogruppe",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccountHierarchy"
+                    }
+                  },
+                  "Property": "Kontonavn"
+                }
+              },
+              "queryRef": "DimAccountHierarchy.Kontonavn",
+              "nativeQueryRef": "Hovedkonto",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Inntekt"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Inntekt",
+              "nativeQueryRef": "Inntekt (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Kostnad"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Kostnad",
+              "nativeQueryRef": "Kostnad (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Netto Resultat"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Netto Resultat",
+              "nativeQueryRef": "Netto Resultat (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "FTE Årsverk"
+                }
+              },
+              "queryRef": "_Measures.FTE Årsverk",
+              "nativeQueryRef": "FTE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "UF-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.UF-Årsverk",
+              "nativeQueryRef": "UF"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "TA-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.TA-Årsverk",
+              "nativeQueryRef": "TA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Vakanser (Årsverk)"
+                }
+              },
+              "queryRef": "_Measures.Vakanser (Årsverk)",
+              "nativeQueryRef": "Vakanser"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'HHU Detaljert Kontomatrise: Kontogruppe, Standardkonto og Ressursbruk per Institutt'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11pt"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E293B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

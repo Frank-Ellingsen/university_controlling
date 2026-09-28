@@ -1,7 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
   "pageOrder": [
-    "d1c456a8e8836cec0440"
+    "page_budget_executive",
+    "page_budget_hhu",
+    "page_fte_capacity",
+    "page_students_kd",
+    "page_actions_restructuring"
   ],
-  "activePageName": "d1c456a8e8836cec0440"
+  "activePageName": "page_budget_executive"
 }

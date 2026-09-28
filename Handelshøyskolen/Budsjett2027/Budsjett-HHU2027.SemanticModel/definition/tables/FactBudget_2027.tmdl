@@ -1,0 +1,89 @@
+table FactBudget_2027
+	lineageTag: eaa3c0d5-5e2d-457e-8b6e-ee7265615f26
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: b9acf4ce-85d9-423b-b517-54bb9e7a9ee4
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+		annotation SummarizationSetBy = Automatic
+
+	column Aar
+		dataType: int64
+		formatString: 0
+		lineageTag: 773f8f41-3cf7-4883-b1c6-9d676088a3b3
+		summarizeBy: none
+		sourceColumn: Aar
+		annotation SummarizationSetBy = Automatic
+
+	column AarMaaned
+		dataType: string
+		lineageTag: 28e4a42b-5eb9-48bd-afb1-a602d6a76a28
+		summarizeBy: none
+		sourceColumn: AarMaaned
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: int64
+		formatString: 0
+		lineageTag: 08cbc9ec-1faa-4230-88d4-93407adafc14
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column OrgNavn
+		dataType: string
+		lineageTag: 598aea70-06b2-4292-8e95-d5c71db8d44c
+		summarizeBy: none
+		sourceColumn: OrgNavn
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ef286e9-cb6a-42ee-8832-69d314f19d84
+		summarizeBy: none
+		sourceColumn: Konto
+		annotation SummarizationSetBy = Automatic
+
+	column Kontonavn
+		dataType: string
+		lineageTag: f91b42df-ba9b-4fbb-b1a1-a182fd8a00be
+		summarizeBy: none
+		sourceColumn: Kontonavn
+		annotation SummarizationSetBy = Automatic
+
+	column VersjonKode
+		dataType: string
+		lineageTag: 70a4b9b3-585c-4a81-a851-297af231c3e5
+		summarizeBy: none
+		sourceColumn: VersjonKode
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettBelop
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: b22c9124-c8a4-4085-a68e-cfb42b9430a6
+		summarizeBy: sum
+		sourceColumn: BudsjettBelop
+		annotation SummarizationSetBy = Automatic
+
+	column Kilde
+		dataType: string
+		lineageTag: 0b61e28b-e9b8-4d9f-81fc-5530385424d4
+		summarizeBy: none
+		sourceColumn: Kilde
+		annotation SummarizationSetBy = Automatic
+
+	partition FactBudget_2027 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\Budsjett2027\FactBudget_2027.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"Aar", Int64.Type}, {"AarMaaned", type text}, {"OrgKode", Int64.Type}, {"OrgNavn", type text}, {"Konto", Int64.Type}, {"Kontonavn", type text}, {"VersjonKode", type text}, {"BudsjettBelop", type number}, {"Kilde", type text}}, "en-US")
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
