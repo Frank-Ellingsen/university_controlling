@@ -291,7 +291,6 @@ relationship rel_factaction_dimorg
 
 \tcolumn ErActualYTD
 \t\tdataType: boolean
-\t\tformatString: \"TRUE\";\"TRUE\";\"FALSE\"
 \t\tlineageTag: [[GUID]]
 \t\tsummarizeBy: none
 \t\tsourceColumn: ErActualYTD

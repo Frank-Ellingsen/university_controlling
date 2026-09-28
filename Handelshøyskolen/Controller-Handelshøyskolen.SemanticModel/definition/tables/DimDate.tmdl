@@ -61,7 +61,6 @@ table DimDate
 
 	column ErActualYTD
 		dataType: boolean
-		formatString: "TRUE";"TRUE";"FALSE"
 		lineageTag: 8e5d0498-d435-4612-9469-ba5c325495d5
 		summarizeBy: none
 		sourceColumn: ErActualYTD
