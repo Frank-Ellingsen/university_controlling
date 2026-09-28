@@ -9,7 +9,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Actual YTD (Bokført regnskap M01 - M09 / Sept 30 Cutoff) | Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
 		lineageTag: f6035ce0-e1e7-4c65-9c23-3108adfe59f2
 
 	/// Budsjett YTD (Akkumulert periodisert budsjett M01 - M09)
@@ -20,7 +19,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Budsjett YTD (Akkumulert periodisert budsjett M01 - M09) | Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
 		lineageTag: 016fa028-679f-43b5-9658-e82d971aa183
 
 	/// Avvik YTD (MNOK) [Positivt = Merforbruk / Negativt = Mindreforbruk]
@@ -28,7 +26,6 @@ table _Measures
 			[Actual YTD] - [Budsjett YTD]
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Avvik YTD (MNOK) [Positivt = Merforbruk / Negativt = Mindreforbruk] | Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
 		lineageTag: 8840fd54-26f3-4ef1-bc36-23e20cb6a09f
 
 	/// Avvik YTD %
@@ -36,7 +33,6 @@ table _Measures
 			DIVIDE([Avvik YTD], [Budsjett YTD], 0)
 		formatString: 0.0%
 		displayFolder: _01 Accounting
-		description: "Avvik YTD % | Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
 		lineageTag: 6dc16d93-270c-4e31-92d5-6b548b8b000a
 
 	/// Monthly Actuals and Forecast Bridge (M01-M09 Actuals + M10-M12 Q4 Forecast)
@@ -49,7 +45,6 @@ table _Measures
 			IF(CurrentMonth <= CutoffMonth, ActualAmount, ForecastAmount)
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Monthly Actuals and Forecast Bridge (M01-M09 Actuals + M10-M12 Q4 Forecast) | Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
 		lineageTag: f2a2cf1c-2357-4418-a19c-1cd773baed2f
 
 	/// Forecast Q4 / Estimate to Complete (ETC M10 - M12)
@@ -60,7 +55,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Forecast Q4 / Estimate to Complete (ETC M10 - M12) | Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
 		lineageTag: 6ef296a6-ad62-48c1-8680-ff4ef33764aa
 
 	/// Forecast LE / Estimate at Completion (EAC = Actual YTD + Q4 Forecast)
@@ -68,7 +62,6 @@ table _Measures
 			[Actual YTD] + [Forecast Q4 (ETC)]
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Forecast LE / Estimate at Completion (EAC = Actual YTD + Q4 Forecast) | Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
 		lineageTag: c1347f40-e9d2-4b6a-975a-e68b2182f7ef
 
 	/// Vedtatt Årsbudsjett / Budget at Completion (BAC)
@@ -76,7 +69,6 @@ table _Measures
 			SUM('FactBudget'[BudsjettBelop])
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Vedtatt Årsbudsjett / Budget at Completion (BAC) | Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
 		lineageTag: 2580146d-5cd7-416b-ab96-9bdaf7f3449e
 
 	/// Sluttavvik / Variance at Completion (VAC MNOK = BAC - EAC)
@@ -84,7 +76,6 @@ table _Measures
 			[Årsbudsjett (BAC)] - [Forecast LE (EAC)]
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Sluttavvik / Variance at Completion (VAC MNOK = BAC - EAC) | Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
 		lineageTag: 61bb73a4-3e8d-40bf-8099-751dc19f4b4b
 
 	/// VAC % (Relativ overskridelse eller innsparing)
@@ -92,7 +83,6 @@ table _Measures
 			DIVIDE([Sluttavvik (VAC)], [Årsbudsjett (BAC)], 0)
 		formatString: 0.0%
 		displayFolder: _02 Forecast & LE
-		description: "VAC % (Relativ overskridelse eller innsparing) | Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
 		lineageTag: 0d8d3c66-faf7-41f3-849c-6cdd1bb35602
 
 	/// Prior Year Actuals (PY YTD)
@@ -103,7 +93,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Prior Year Actuals (PY YTD) | Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter."
 		lineageTag: cbf17100-ff2c-4da1-a9d7-0a17b39fc7d1
 
 	/// Absolute Year-over-Year Difference (YoY MNOK)
@@ -111,7 +100,6 @@ table _Measures
 			[Actual YTD] - [Actual PY]
 		formatString: #,##0.0
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Absolute Year-over-Year Difference (YoY MNOK) | Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter."
 		lineageTag: 0fda8e86-6d7b-4d34-9e58-72ec4f4ef009
 
 	/// Percentage Year-over-Year Growth (YoY %)
@@ -119,7 +107,6 @@ table _Measures
 			DIVIDE([Actual YoY], [Actual PY], 0)
 		formatString: 0.0%
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Percentage Year-over-Year Growth (YoY %) | Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter."
 		lineageTag: 175a49c2-4bb1-40c3-ab42-90e21a2665a7
 
 	/// Prior Month Actuals (PM)
@@ -131,7 +118,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Prior Month Actuals (PM) | Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter."
 		lineageTag: 561107dc-e44d-42ec-ae9a-de9ed4eae3d5
 
 	/// Current Month Actuals (CM)
@@ -143,7 +129,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Current Month Actuals (CM) | Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter."
 		lineageTag: 4615dcdd-daaf-47cd-bd27-6b154db2fa88
 
 	/// Month-over-Month Difference (MoM MNOK)
@@ -151,7 +136,6 @@ table _Measures
 			[Actual CM] - [Actual PM]
 		formatString: #,##0.0
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Month-over-Month Difference (MoM MNOK) | Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter."
 		lineageTag: d36c359a-ef95-420a-9a48-0c00c0b2aa02
 
 	/// Percentage Month-over-Month Growth (MoM %)
@@ -159,7 +143,6 @@ table _Measures
 			DIVIDE([Actual MoM], [Actual PM], 0)
 		formatString: 0.0%
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Percentage Month-over-Month Growth (MoM %) | Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter."
 		lineageTag: a5929f01-56b1-4743-9411-7da4853d3bd1
 
 	/// Planned Value (PV) - Akkumulert planlagt verdi
@@ -167,7 +150,6 @@ table _Measures
 			SUM('FactEVM'[Planned_Value_PV_MNOK])
 		formatString: #,##0.0
 		displayFolder: _04 EVM
-		description: "Planned Value (PV) - Akkumulert planlagt verdi | Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
 		lineageTag: 91da2db5-85b3-4acb-8579-4c4d0fbbe32a
 
 	/// Earned Value (EV) - Akkumulert opptjent verdi
@@ -175,7 +157,6 @@ table _Measures
 			SUM('FactEVM'[Earned_Value_EV_MNOK])
 		formatString: #,##0.0
 		displayFolder: _04 EVM
-		description: "Earned Value (EV) - Akkumulert opptjent verdi | Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
 		lineageTag: 8f6482e1-5a0f-45da-92bf-998667e4f39f
 
 	/// Actual Cost (AC) - Akkumulert faktisk kostnad
@@ -183,7 +164,6 @@ table _Measures
 			SUM('FactEVM'[Actual_Cost_AC_MNOK])
 		formatString: #,##0.0
 		displayFolder: _04 EVM
-		description: "Actual Cost (AC) - Akkumulert faktisk kostnad | Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
 		lineageTag: 6f790d72-62f4-43ea-94b1-1aff325b508a
 
 	/// Cost Performance Index (CPI = EV / AC)
@@ -191,7 +171,6 @@ table _Measures
 			DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
 		formatString: 0.00
 		displayFolder: _04 EVM
-		description: "Cost Performance Index (CPI = EV / AC) | Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
 		lineageTag: 80acbcd5-728d-4b66-81a9-81204b1542ff
 
 	/// Schedule Performance Index (SPI = EV / PV)
@@ -199,7 +178,6 @@ table _Measures
 			DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
 		formatString: 0.00
 		displayFolder: _04 EVM
-		description: "Schedule Performance Index (SPI = EV / PV) | Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
 		lineageTag: f1fcadc0-5e6b-4ca2-a775-64274b85cc08
 
 	/// EVM Status Subtitle Callout
@@ -209,7 +187,6 @@ table _Measures
 			RETURN
 			"CPI: " & FORMAT(CPIVal, "0.00") & " (Kost) | SPI: " & FORMAT(SPIVal, "0.00") & " (Fremdrift)"
 		displayFolder: _04 EVM
-		description: "EVM Status Subtitle Callout | Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
 		lineageTag: 9e08d1c4-c0a6-4ef7-a362-5b28bec366a6
 
 	/// Totale Årsverk (FTE Snapshot)
@@ -220,7 +197,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _05 Staffing & FTE
-		description: "Totale Årsverk (FTE Snapshot) | Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
 		lineageTag: 20163a4d-6b6a-4776-ad13-72b2bd8c6529
 
 	/// Faglige Årsverk (UF - Undervisning og Forskning)
@@ -231,7 +207,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _05 Staffing & FTE
-		description: "Faglige Årsverk (UF - Undervisning og Forskning) | Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
 		lineageTag: 2d4fdf92-94a4-4862-9875-38a570cde8da
 
 	/// Teknisk-Administrative Årsverk (TA)
@@ -242,7 +217,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _05 Staffing & FTE
-		description: "Teknisk-Administrative Årsverk (TA) | Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
 		lineageTag: 89fe4884-9fc9-4ebe-8968-9d48e2dc24e6
 
 	/// Faglig Andel % (Sektormål: > 50-55%)
@@ -250,7 +224,6 @@ table _Measures
 			DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)
 		formatString: 0.0%
 		displayFolder: _05 Staffing & FTE
-		description: "Faglig Andel % (Sektormål: > 50-55%) | Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
 		lineageTag: b1cc55c9-36da-4aee-bf28-d6ffc199b26c
 
 	/// Lønnsandel % av Totale Driftskostnader (Sektornorm: 62-65%)
@@ -260,7 +233,6 @@ table _Measures
 			RETURN DIVIDE(Lonn, TotalKost, 0)
 		formatString: 0.0%
 		displayFolder: _05 Staffing & FTE
-		description: "Lønnsandel % av Totale Driftskostnader (Sektornorm: 62-65%) | Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
 		lineageTag: 390757d1-bd98-4f8b-86e0-dbf346fe4f32
 
 	/// Staffing Card Subtitle Callout
@@ -271,7 +243,6 @@ table _Measures
 			RETURN
 			FORMAT(UF, "#0") & " UF / " & FORMAT(TA, "#0") & " TA | Lønnsandel: " & FORMAT(LonnPct, "0.0%")
 		displayFolder: _05 Staffing & FTE
-		description: "Staffing Card Subtitle Callout | Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
 		lineageTag: 94353867-7cb3-4f5c-990e-153340e322fe
 
 	/// Registrerte Studenter
@@ -279,7 +250,6 @@ table _Measures
 			SUM('FactStudents'[RegistrerteStudenter])
 		formatString: #,##0
 		displayFolder: _06 Utdanning & SPE60
-		description: "Registrerte Studenter | Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer."
 		lineageTag: b8cc44f6-f924-4b40-a41a-6f121175137c
 
 	/// Avlagte Studiepoengekvivalenter (SPE60 = Total SP / 60)
@@ -287,7 +257,6 @@ table _Measures
 			SUM('FactStudents'[SPE60])
 		formatString: #,##0
 		displayFolder: _06 Utdanning & SPE60
-		description: "Avlagte Studiepoengekvivalenter (SPE60 = Total SP / 60) | Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer."
 		lineageTag: 307282a3-e9b0-4152-a541-b519236520e7
 
 	/// Studenter pr Faglig Årsverk (Lærertetthet & Kapasitet)
@@ -295,7 +264,6 @@ table _Measures
 			DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)
 		formatString: #,##0.0
 		displayFolder: _06 Utdanning & SPE60
-		description: "Studenter pr Faglig Årsverk (Lærertetthet & Kapasitet) | Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer."
 		lineageTag: 05a3778d-245b-4bcf-830f-b2756d1681b4
 
 	/// Enhetskostnad pr SPE60 (NOK pr produserte helårsstudent)
@@ -303,7 +271,6 @@ table _Measures
 			DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)
 		formatString: #,##0.0
 		displayFolder: _06 Utdanning & SPE60
-		description: "Enhetskostnad pr SPE60 (NOK pr produserte helårsstudent) | Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer."
 		lineageTag: 6988f95b-597b-4a71-a620-ac24628c3bc4
 
 	/// KD Kategori 1 Inntekt (Humaniora, Samfunnsfag, Økonomi @ 54 550 kr/SPE60)
@@ -314,7 +281,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _06 Utdanning & SPE60
-		description: "KD Kategori 1 Inntekt (Humaniora, Samfunnsfag, Økonomi @ 54 550 kr/SPE60) | Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer."
 		lineageTag: 2f4cc489-e2a1-4f03-af15-f8efb9a49ba9
 
 	/// Student KPI Card Subtitle Callout
@@ -324,7 +290,6 @@ table _Measures
 			RETURN
 			FORMAT(SPE, "#,##0") & " SPE60 | " & FORMAT(Ratio, "0.0") & " Studenter/UF-ÅV"
 		displayFolder: _06 Utdanning & SPE60
-		description: "Student KPI Card Subtitle Callout | Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer."
 		lineageTag: c252a630-2ea9-4ce0-ab8c-acc123846f1a
 
 	/// Forventet Tiltakseffekt (Planlagt innsparing i MNOK)
@@ -332,7 +297,6 @@ table _Measures
 			SUM('FactAction'[ForventetEffekt])
 		formatString: #,##0.0
 		displayFolder: _07 Action Tracker
-		description: "Forventet Tiltakseffekt (Planlagt innsparing i MNOK) | FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik."
 		lineageTag: 00467edb-36d1-4793-bc13-e966b36e5fc3
 
 	/// Realisert Tiltakseffekt (Bokført innsparing hittil)
@@ -340,7 +304,6 @@ table _Measures
 			SUM('FactAction'[RealisertEffekt])
 		formatString: #,##0.0
 		displayFolder: _07 Action Tracker
-		description: "Realisert Tiltakseffekt (Bokført innsparing hittil) | FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik."
 		lineageTag: f0fe25ba-51d7-4113-bffb-c86b204fc9ff
 
 	/// Tiltak Realiseringsgrad %
@@ -348,7 +311,6 @@ table _Measures
 			DIVIDE([Realisert Tiltakseffekt], [Forventet Tiltakseffekt], 0)
 		formatString: 0.0%
 		displayFolder: _07 Action Tracker
-		description: "Tiltak Realiseringsgrad % | FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik."
 		lineageTag: 5120ad34-2b7d-4f56-b3f2-9b7be1d397fb
 
 	/// Forecast etter Tiltak (Netto Sluttresultat inkl. omstilling)
@@ -356,7 +318,6 @@ table _Measures
 			[Forecast LE (EAC)] + [Forventet Tiltakseffekt]
 		formatString: #,##0.0
 		displayFolder: _07 Action Tracker
-		description: "Forecast etter Tiltak (Netto Sluttresultat inkl. omstilling) | FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik."
 		lineageTag: 29f35471-396c-486a-8cbf-fde7a8293baf
 
 	/// Restavvik etter Tiltak (Gjenværende risikogap)
@@ -364,7 +325,6 @@ table _Measures
 			[Forecast etter Tiltak] - [Årsbudsjett (BAC)]
 		formatString: #,##0.0
 		displayFolder: _07 Action Tracker
-		description: "Restavvik etter Tiltak (Gjenværende risikogap) | FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik."
 		lineageTag: 0ad63d06-4e6b-424e-b9fb-da1cfae7db6e
 
 	/// Budget Variance RAG Status Text Badge
@@ -381,7 +341,6 @@ table _Measures
 			    "🔴 Kritisk overskridelse (>5%)"
 			)
 		displayFolder: _08 RAG & Design
-		description: "Budget Variance RAG Status Text Badge | Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
 		lineageTag: 0b95c5c5-d577-465c-99ce-d7037c0af261
 
 	/// Primary RAG Hex Color (For Bars, Card Accents & Text)
@@ -399,7 +358,6 @@ table _Measures
 			    )
 			)
 		displayFolder: _08 RAG & Design
-		description: "Primary RAG Hex Color (For Bars, Card Accents & Text) | Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
 		lineageTag: 228277a9-9649-4673-befe-e90ae60bc2df
 
 	/// Soft RAG Background Fill Hex (Tufte 85% Opacity Tint for Matrix Cells)
@@ -418,7 +376,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _08 RAG & Design
-		description: "Soft RAG Background Fill Hex (Tufte 85% Opacity Tint for Matrix Cells) | Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
 		lineageTag: 0b77ac02-01ab-4491-a278-69aafa9007f4
 
 	/// Multi-Context Card Subtitle with RAG Icons (New Card Visual)
@@ -439,7 +396,6 @@ table _Measures
 			RETURN
 			PlanText & " | " & YoYText & " | " & MoMText
 		displayFolder: _08 RAG & Design
-		description: "Multi-Context Card Subtitle with RAG Icons (New Card Visual) | Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
 		lineageTag: 812150fb-0d3b-4626-b364-7f8d2cbab660
 
 	/// HHU Total Revenue (276.6 MNOK)
@@ -451,7 +407,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _09 HHU Measures
-		description: "HHU Total Revenue (276.6 MNOK) | Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
 		lineageTag: 720b5340-e19e-4e57-b7ef-5462bdaa0bdf
 
 	/// HHU Net Result (+2.2 MNOK Surplus)
@@ -462,7 +417,6 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _09 HHU Measures
-		description: "HHU Net Result (+2.2 MNOK Surplus) | Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
 		lineageTag: 7ca7ec63-b4b1-4f66-a946-5d7ad3ee70e3
 
 	/// HHU Lønnsandel % (65.4%)
@@ -473,7 +427,6 @@ table _Measures
 			)
 		formatString: 0.0%
 		displayFolder: _09 HHU Measures
-		description: "HHU Lønnsandel % (65.4%) | Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
 		lineageTag: 30b211ce-cd12-4da6-bd60-121f40590357
 
 	/// HHU Studenter pr UF-Årsverk (22.3 Ratio)
@@ -483,7 +436,6 @@ table _Measures
 			RETURN DIVIDE(Studenter, UF, 0)
 		formatString: #,##0.0
 		displayFolder: _09 HHU Measures
-		description: "HHU Studenter pr UF-Årsverk (22.3 Ratio) | Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
 		lineageTag: de3187d3-0ae7-4eb2-bf06-e718eb0e6be1
 
 	/// HHU BOA Frikjøpsgrad (Buy-Out Share)
@@ -493,7 +445,6 @@ table _Measures
 			RETURN DIVIDE(BOALonn, TotalLonn, 0)
 		formatString: #,##0.0
 		displayFolder: _09 HHU Measures
-		description: "HHU BOA Frikjøpsgrad (Buy-Out Share) | Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
 		lineageTag: e713cb96-bf10-4f93-aa80-5ae63d7f1bf1
 
 	/// HHU RAG Status
@@ -504,7 +455,6 @@ table _Measures
 			    IF(Resultat >= -2.0, "🟡 Moderat merforbruk (< 2 MNOK)", "🔴 Kritisk merforbruk (> 2 MNOK)")
 			)
 		displayFolder: _09 HHU Measures
-		description: "HHU RAG Status | Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
 		lineageTag: 73437431-ae2e-44cb-98d4-8f85b80fdff0
 
 	/// Bokført inntekt YTD
@@ -512,7 +462,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Inntekt", 'DimDate'[ErActualYTD] = TRUE())
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Bokført inntekt YTD"
 		lineageTag: dc8eebc4-8251-4ae8-80a7-0278d4377075
 
 	/// Bokført kostnad YTD
@@ -520,7 +469,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Kostnad", 'DimDate'[ErActualYTD] = TRUE())
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Bokført kostnad YTD"
 		lineageTag: cfc702e3-0f76-4c1b-8a9b-664927281419
 
 	/// Periodisert budsjett inntekt YTD
@@ -528,7 +476,6 @@ table _Measures
 			CALCULATE(SUM('FactBudget'[BudsjettBelop]), 'DimAccountHierarchy'[Kontotype] = "Inntekt", 'DimDate'[ErActualYTD] = TRUE())
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Periodisert budsjett inntekt YTD"
 		lineageTag: 144cf504-823b-48be-9270-13bdd4ded241
 
 	/// Periodisert budsjett kostnad YTD
@@ -536,7 +483,6 @@ table _Measures
 			CALCULATE(SUM('FactBudget'[BudsjettBelop]), 'DimAccountHierarchy'[Kontotype] = "Kostnad", 'DimDate'[ErActualYTD] = TRUE())
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		description: "Periodisert budsjett kostnad YTD"
 		lineageTag: 699c8eb6-559d-497c-a106-3f12ef4bb986
 
 	/// Fjorårsinntekt YTD
@@ -544,7 +490,6 @@ table _Measures
 			CALCULATE([Actual YTD Inntekt], SAMEPERIODLASTYEAR('DimDate'[Dato]))
 		formatString: #,##0.0
 		displayFolder: _03 Temporal YoY & MoM
-		description: "Fjorårsinntekt YTD"
 		lineageTag: 43b1a339-9188-40fa-bd49-eb92b2047d95
 
 	/// Prognostisert inntekt Q4
@@ -552,7 +497,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Inntekt", 'DimDate'[ErActualYTD] = FALSE())
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Prognostisert inntekt Q4"
 		lineageTag: 36230c65-caaf-4121-98ef-ea7851762134
 
 	/// Prognostisert kostnad Q4
@@ -560,7 +504,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Kostnad", 'DimDate'[ErActualYTD] = FALSE())
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Prognostisert kostnad Q4"
 		lineageTag: 81d239cc-3056-479a-93ac-7327f041332e
 
 	/// Total helårsprognose inntekt
@@ -568,7 +511,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Inntekt")
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Total helårsprognose inntekt"
 		lineageTag: 855e9e01-8da1-498a-a615-a0e5815951b8
 
 	/// Total helårsprognose kostnad
@@ -576,7 +518,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Kostnad")
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Total helårsprognose kostnad"
 		lineageTag: 71e54f10-86e7-4479-85ab-70d297fd0833
 
 	/// Total inntekt helårsprognose
@@ -584,7 +525,6 @@ table _Measures
 			[Forecast LE Inntekt]
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Total inntekt helårsprognose"
 		lineageTag: a1fa4655-dec3-4a41-ba77-c59aa2c1709b
 
 	/// Total kostnad helårsprognose
@@ -592,7 +532,6 @@ table _Measures
 			[Forecast LE Kostnad]
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Total kostnad helårsprognose"
 		lineageTag: 8b04fef9-6a4e-40d6-b202-1cbd3ed7696a
 
 	/// Netto driftsresultat helårsprognose
@@ -600,7 +539,6 @@ table _Measures
 			[Forecast LE Inntekt] - [Forecast LE Kostnad]
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Netto driftsresultat helårsprognose"
 		lineageTag: cb17c9cc-ae59-4ede-b228-c26729f75471
 
 	/// Vedtatt årsbudsjett inntekt
@@ -608,7 +546,6 @@ table _Measures
 			CALCULATE(SUM('FactBudget'[BudsjettBelop]), 'DimAccountHierarchy'[Kontotype] = "Inntekt")
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Vedtatt årsbudsjett inntekt"
 		lineageTag: 23c68b0a-d741-4d1a-888b-ef3b1411f06e
 
 	/// Vedtatt årsbudsjett kostnad
@@ -616,7 +553,6 @@ table _Measures
 			CALCULATE(SUM('FactBudget'[BudsjettBelop]), 'DimAccountHierarchy'[Kontotype] = "Kostnad")
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Vedtatt årsbudsjett kostnad"
 		lineageTag: 6e6837a4-0933-4fcf-b247-8adf185f7e7a
 
 	/// Netto driftsresultat vedtatt budsjett
@@ -624,7 +560,6 @@ table _Measures
 			[Årsbudsjett Inntekt] - [Årsbudsjett Kostnad]
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Netto driftsresultat vedtatt budsjett"
 		lineageTag: ddab15f8-dfe1-4bc3-ab4e-322f5a2c5d83
 
 	/// Handelshøyskolen netto driftsresultat
@@ -632,7 +567,6 @@ table _Measures
 			[HHU Net Result]
 		formatString: #,##0.0
 		displayFolder: _09 HHU Measures
-		description: "Handelshøyskolen netto driftsresultat"
 		lineageTag: 92072364-bd2b-424a-8e33-01a254733de5
 
 	/// Handelshøyskolen total kostnad
@@ -640,7 +574,6 @@ table _Measures
 			CALCULATE([Forecast LE Kostnad], 'DimOrganization'[Fakultetsnavn] = "Handelshøyskolen ved UiA (HHU)")
 		formatString: #,##0.0
 		displayFolder: _09 HHU Measures
-		description: "Handelshøyskolen total kostnad"
 		lineageTag: ec02d698-6556-4d06-a006-e4a609893450
 
 	/// Realisering av omstillingstiltak
@@ -648,7 +581,6 @@ table _Measures
 			[Tiltak Realiseringsgrad %]
 		formatString: 0.0%
 		displayFolder: _07 Action Tracker
-		description: "Realisering av omstillingstiltak"
 		lineageTag: b515d7dc-43a4-4106-8afd-0eeddc31e088
 
 	/// Restavvik tiltak
@@ -656,7 +588,6 @@ table _Measures
 			[Forventet Tiltakseffekt] - [Realisert Tiltakseffekt]
 		formatString: #,##0.00 MNOK
 		displayFolder: _07 Action Tracker
-		description: "Restavvik tiltak"
 		lineageTag: b765d920-253e-49d1-a113-cc263ad29ae7
 
 	/// Beregnet KD Kat 1 inntekt i MNOK
@@ -664,7 +595,6 @@ table _Measures
 			[Avlagte SPE60] * 54550 / 1000000
 		formatString: #,##0.0 MNOK
 		displayFolder: _06 Utdanning & SPE60
-		description: "Beregnet KD Kat 1 inntekt i MNOK"
 		lineageTag: a9ef9683-6376-424f-9d72-2384fb9fefee
 
 	/// AACSB akkrediteringskostnad
@@ -672,7 +602,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[ProsjektKode] = "AACSB01")
 		formatString: #,##0.000 MNOK
 		displayFolder: _09 HHU Measures
-		description: "AACSB akkrediteringskostnad"
 		lineageTag: 27e978ca-a93d-4b4b-bd32-5ea1a79b7fe0
 
 	/// SRS 9 avsetning for tap på EVU001
@@ -680,7 +609,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Konto] = 7790, 'FactGL'[ProsjektKode] = "EVU001")
 		formatString: #,##0.000 MNOK
 		displayFolder: _09 HHU Measures
-		description: "SRS 9 avsetning for tap på EVU001"
 		lineageTag: e73a7aca-c79b-48d7-92cb-9b6f958c64f8
 
 	/// SRS 10 frikjøp NFR001
@@ -688,42 +616,36 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Konto] = 3400, 'FactGL'[ProsjektKode] = "NFR001")
 		formatString: #,##0.000 MNOK
 		displayFolder: _09 HHU Measures
-		description: "SRS 10 frikjøp NFR001"
 		lineageTag: 776ec009-992b-4a92-9534-15cd9e771c26
 
 	/// Farge for avviksstolper
 	measure 'Faculty Bar Color' =
 			IF([Sluttavvik (VAC)] >= 0, "#10b981", "#ef4444")
 		displayFolder: _08 RAG & Design
-		description: "Farge for avviksstolper"
 		lineageTag: 2f627bc2-cfa1-4314-8ebd-ce815d09b051
 
 	/// Kantfarge for KPI-kort
 	measure 'KPI Card Border Color' =
 			SWITCH(TRUE(), [VAC %] < -0.05, "#EF4444", [VAC %] < 0.00, "#F59E0B", "#10B981")
 		displayFolder: _08 RAG & Design
-		description: "Kantfarge for KPI-kort"
 		lineageTag: a03c491b-95a6-46ec-900f-22fd134aea70
 
 	/// Statuslinje resultat
 	measure 'Net Result Status Text' =
 			VAR YTDResult = [Actual YTD] VAR HelarVAC = [Sluttavvik (VAC)] RETURN "Helårsavvik: " & FORMAT(HelarVAC, "+#,##0.0;-#,##0.0;0.0") & " MNOK | YTD: " & FORMAT(YTDResult, "#,##0.0") & " MNOK"
 		displayFolder: _08 RAG & Design
-		description: "Statuslinje resultat"
 		lineageTag: 8861bb0c-d8b8-4f88-aeba-cfa7b5126045
 
 	/// Statuslinje inntekt
 	measure 'Revenue Variance Indicator' =
 			VAR Budget = [Årsbudsjett (BAC)] VAR Forecast = [Forecast LE (EAC)] VAR Diff = Forecast - Budget VAR Pct = DIVIDE(Diff, Budget, 0) RETURN "Budsjett: " & FORMAT(Budget, "#,##0.0") & " MNOK | " & IF(Diff >= 0, "▲ +" & FORMAT(Pct, "0.0%"), "▼ " & FORMAT(Pct, "0.0%"))
 		displayFolder: _08 RAG & Design
-		description: "Statuslinje inntekt"
 		lineageTag: 4851914c-353d-405f-87f4-ddbfa718d632
 
 	/// Prognosestatus
 	measure 'Forecast RAG Status' =
 			VAR Vac = [Sluttavvik (VAC)] VAR VacPct = [VAC %] RETURN SWITCH(TRUE(), Vac >= 0, "🟢 Planmessig", VacPct >= -0.05, "🟡 Moderat avvik", "🔴 Vesentlig avvik")
 		displayFolder: _08 RAG & Design
-		description: "Prognosestatus"
 		lineageTag: 2047bce9-4c7d-4a8d-8678-298c0319089a
 
 	/// Lønnskostnad helår
@@ -731,7 +653,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Nivaa1_Navn] = "Lønnskostnad")
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Lønnskostnad helår"
 		lineageTag: b0c043cf-e7b3-4ab7-8aba-cd57129c4359
 
 	/// Driftskostnad helår
@@ -739,7 +660,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Nivaa1_Navn] IN {"Annen driftskostnad", "Andre driftskostnader"})
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Driftskostnad helår"
 		lineageTag: 250eb7bd-b966-43e5-90e2-d05e3ec3ec34
 
 	/// Capex helår
@@ -747,7 +667,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Investeringer")
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Capex helår"
 		lineageTag: e9c3abf3-ae2b-4a18-afdd-5ce6f7832009
 
 	/// Samlede driftskostnader
@@ -755,7 +674,6 @@ table _Measures
 			CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = "Kostnad")
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		description: "Samlede driftskostnader"
 		lineageTag: 88226465-8ce9-49fe-a3ef-ff75f4ddc8fb
 
 	/// Kostnadsavvik EVM
@@ -763,7 +681,6 @@ table _Measures
 			[Earned Value (EV)] - [Actual Cost (AC)]
 		formatString: #,##0.0
 		displayFolder: _04 EVM
-		description: "Kostnadsavvik EVM"
 		lineageTag: e4d75717-508c-4dbe-9707-81a0321b5c26
 
 	/// Fremdriftsavvik EVM
@@ -771,7 +688,6 @@ table _Measures
 			[Earned Value (EV)] - [Planned Value (PV)]
 		formatString: #,##0.0
 		displayFolder: _04 EVM
-		description: "Fremdriftsavvik EVM"
 		lineageTag: 2d3363aa-86b4-41c7-9825-dd6e3bb2529c
 
 	/// To-Complete Performance Index
@@ -779,7 +695,6 @@ table _Measures
 			DIVIDE([Årsbudsjett (BAC)] - [Earned Value (EV)], [Årsbudsjett (BAC)] - [Actual Cost (AC)], 1)
 		formatString: 0.00
 		displayFolder: _04 EVM
-		description: "To-Complete Performance Index"
 		lineageTag: 9e746587-e5b6-4f0f-a85d-3492f14104f4
 
 	/// EVM beregnet EAC
@@ -787,7 +702,6 @@ table _Measures
 			DIVIDE([Årsbudsjett (BAC)], [CPI], [Årsbudsjett (BAC)])
 		formatString: #,##0.0
 		displayFolder: _04 EVM
-		description: "EVM beregnet EAC"
 		lineageTag: b4686f33-1d33-4671-bf85-d7b52bdfdbe6
 
 	/// EVM beregnet VAC
@@ -795,7 +709,6 @@ table _Measures
 			[Årsbudsjett (BAC)] - [EAC (EVM)]
 		formatString: #,##0.0
 		displayFolder: _04 EVM
-		description: "EVM beregnet VAC"
 		lineageTag: 17757c50-c481-439b-8f03-db1afa347607
 
 	/// Diagnosetekst pr enhet
@@ -816,7 +729,6 @@ table _Measures
 			    "Handelshøyskolen har et samlet netto overskudd på +2,2 MNOK som bidrar til å dempe universitetets sentrale underskudd."
 			)
 		displayFolder: _08 RAG & Design
-		description: "Diagnosetekst pr enhet"
 		lineageTag: ca56bf16-95ae-4427-956b-a0b2ef172b83
 
 	column Column1

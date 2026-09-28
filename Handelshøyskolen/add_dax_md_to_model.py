@@ -279,7 +279,6 @@ def update_measures_tmdl(rows):
         if fmt:
             measures_code += f"\t\tformatString: {fmt}\n"
         measures_code += f"\t\tdisplayFolder: {m_folder}\n"
-        measures_code += f'\t\tdescription: "{m_desc} | {m_note}"\n'
         measures_code += f"\t\tlineageTag: [[GUID]]\n\n"
 
     # 2. Auxiliary measures for report continuity
@@ -348,7 +347,6 @@ SWITCH(
         if fmt:
             measures_code += f"\t\tformatString: {fmt}\n"
         measures_code += f"\t\tdisplayFolder: {folder}\n"
-        measures_code += f'\t\tdescription: "{desc}"\n'
         measures_code += f"\t\tlineageTag: [[GUID]]\n\n"
 
     # End table definition with dummy partition
