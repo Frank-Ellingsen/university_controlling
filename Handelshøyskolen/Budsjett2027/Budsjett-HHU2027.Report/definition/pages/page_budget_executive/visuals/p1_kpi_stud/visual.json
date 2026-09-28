@@ -3,10 +3,10 @@
   "name": "p1_kpi_stud",
   "position": {
     "x": 1620,
-    "y": 105,
+    "y": 105.07389162561576,
     "z": 20,
-    "width": 280,
-    "height": 115,
+    "height": 139.65517241379311,
+    "width": 280.64039408866995,
     "tabOrder": 10
   },
   "visual": {
@@ -74,6 +74,29 @@
             "id": "default"
           }
         }
+      ],
+      "value": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Registrerte Studenter"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -98,13 +121,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

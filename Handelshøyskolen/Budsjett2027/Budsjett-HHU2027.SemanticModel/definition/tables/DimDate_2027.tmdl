@@ -8,6 +8,7 @@ table DimDate_2027
 		lineageTag: 9ac8b995-7679-4ea0-ab21-222315872394
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column Dato
@@ -17,6 +18,7 @@ table DimDate_2027
 		lineageTag: e6e71fa5-82ae-4f73-9509-e31b8b458948
 		summarizeBy: none
 		sourceColumn: Dato
+
 		annotation SummarizationSetBy = Automatic
 
 	column Aar
@@ -25,6 +27,7 @@ table DimDate_2027
 		lineageTag: b6830e06-df1e-4f25-9305-281aa89600e3
 		summarizeBy: none
 		sourceColumn: Aar
+
 		annotation SummarizationSetBy = Automatic
 
 	column MaanedNummer
@@ -33,22 +36,25 @@ table DimDate_2027
 		lineageTag: 5aca4123-0f72-41f3-9b93-ad6cb2517b07
 		summarizeBy: none
 		sourceColumn: MaanedNummer
+
 		annotation SummarizationSetBy = Automatic
 
 	column MaanedNavn
 		dataType: string
-		sortByColumn: MaanedNummer
 		lineageTag: f5da5958-ced1-4429-be62-94a868050f3b
 		summarizeBy: none
 		sourceColumn: MaanedNavn
+		sortByColumn: MaanedNummer
+
 		annotation SummarizationSetBy = Automatic
 
 	column MaanedNavnKort
 		dataType: string
-		sortByColumn: MaanedNummer
 		lineageTag: c7a94099-0a6e-437d-9284-22882a1f1648
 		summarizeBy: none
 		sourceColumn: MaanedNavnKort
+		sortByColumn: MaanedNummer
+
 		annotation SummarizationSetBy = Automatic
 
 	column Kvartal
@@ -56,6 +62,7 @@ table DimDate_2027
 		lineageTag: 160def5d-4f7d-4712-99c4-6d57bd993e39
 		summarizeBy: none
 		sourceColumn: Kvartal
+
 		annotation SummarizationSetBy = Automatic
 
 	column AarMaaned
@@ -63,6 +70,7 @@ table DimDate_2027
 		lineageTag: 21769651-7ccd-4787-835f-c98299d6f63b
 		summarizeBy: none
 		sourceColumn: AarMaaned
+
 		annotation SummarizationSetBy = Automatic
 
 	column ErActualYTD
@@ -70,6 +78,7 @@ table DimDate_2027
 		lineageTag: c836da8e-38f4-4b45-9b77-7cafce5a6eca
 		summarizeBy: none
 		sourceColumn: ErActualYTD
+
 		annotation SummarizationSetBy = Automatic
 
 	partition DimDate_2027 = m
@@ -83,3 +92,4 @@ table DimDate_2027
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_cht_srs_cost",
   "position": {
     "x": 1440,
     "y": 235,
     "z": 32,
-    "width": 460,
     "height": 400,
+    "width": 460,
     "tabOrder": 13
   },
   "visual": {
@@ -74,13 +74,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

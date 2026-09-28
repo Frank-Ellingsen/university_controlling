@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_cht_cost_breakdown",
   "position": {
     "x": 920,
     "y": 235,
     "z": 31,
-    "width": 980,
     "height": 400,
+    "width": 980,
     "tabOrder": 11
   },
   "visual": {
@@ -104,13 +104,6 @@
                   "Value": "'Segoe UI'"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9pt"
-                }
-              }
             }
           }
         }
@@ -138,13 +131,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

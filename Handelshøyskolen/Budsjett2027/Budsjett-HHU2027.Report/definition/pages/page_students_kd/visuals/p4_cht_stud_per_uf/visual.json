@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p4_cht_stud_per_uf",
   "position": {
     "x": 1020,
     "y": 235,
     "z": 31,
-    "width": 880,
     "height": 400,
+    "width": 880,
     "tabOrder": 11
   },
   "visual": {
@@ -74,13 +74,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

@@ -4,3 +4,4 @@ role Dekan_HHU
 	tablePermission DimOrganization = 'DimOrganization'[Fakultetsnavn] == "HHU"
 
 	annotation PBI_Id = 0ff649288af948fe8bf5c90d7a5dee6c
+

@@ -6,6 +6,7 @@ table DimForecastVersion
 		lineageTag: b670fbb9-e9e9-42fe-87cb-e64f6679ed49
 		summarizeBy: none
 		sourceColumn: VersjonKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonNavn
@@ -13,6 +14,7 @@ table DimForecastVersion
 		lineageTag: 0409a4ae-2166-46d1-8272-e7d1d5822d0e
 		summarizeBy: none
 		sourceColumn: VersjonNavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonType
@@ -20,6 +22,7 @@ table DimForecastVersion
 		lineageTag: 2b72a2f6-6e3b-4211-84a5-584f4bc8c61a
 		summarizeBy: none
 		sourceColumn: VersjonType
+
 		annotation SummarizationSetBy = Automatic
 
 	column GjeldendeDato
@@ -27,6 +30,7 @@ table DimForecastVersion
 		lineageTag: 53845674-a518-4b36-92a1-6d1698b668cf
 		summarizeBy: none
 		sourceColumn: GjeldendeDato
+
 		annotation SummarizationSetBy = Automatic
 
 	column Status
@@ -34,6 +38,7 @@ table DimForecastVersion
 		lineageTag: f9a9e4cf-583f-452e-b950-d3eb7d943b72
 		summarizeBy: none
 		sourceColumn: Status
+
 		annotation SummarizationSetBy = Automatic
 
 	partition DimForecastVersion = m
@@ -47,3 +52,4 @@ table DimForecastVersion
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

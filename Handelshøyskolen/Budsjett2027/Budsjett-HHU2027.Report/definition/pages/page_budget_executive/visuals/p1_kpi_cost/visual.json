@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_kpi_cost",
   "position": {
-    "x": 340,
-    "y": 105,
+    "x": 340.49261083743841,
+    "y": 105.07389162561576,
     "z": 20,
-    "width": 300,
-    "height": 115,
+    "height": 139.65517241379311,
+    "width": 299.26108374384233,
     "tabOrder": 6
   },
   "visual": {
@@ -74,6 +74,29 @@
             "id": "default"
           }
         }
+      ],
+      "value": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Budsjett Kostnad"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -98,13 +121,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

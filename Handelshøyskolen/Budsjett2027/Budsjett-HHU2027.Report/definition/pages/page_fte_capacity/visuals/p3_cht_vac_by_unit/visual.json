@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p3_cht_vac_by_unit",
   "position": {
     "x": 1020,
     "y": 235,
     "z": 31,
-    "width": 880,
     "height": 400,
+    "width": 880,
     "tabOrder": 11
   },
   "visual": {
@@ -29,24 +29,6 @@
               "queryRef": "DimOrganization.OrgNavn",
               "nativeQueryRef": "Enhet",
               "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Vakanser (Årsverk)"
-                }
-              },
-              "queryRef": "_Measures.Vakanser (Årsverk)",
-              "nativeQueryRef": "Vakante Årsverk"
             }
           ]
         },
@@ -81,6 +63,24 @@
               "nativeQueryRef": "Totale Årsverk"
             }
           ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Vakanser (Årsverk)"
+                }
+              },
+              "queryRef": "_Measures.Vakanser (Årsverk)",
+              "nativeQueryRef": "Vakante Årsverk"
+            }
+          ]
         }
       }
     },
@@ -106,13 +106,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

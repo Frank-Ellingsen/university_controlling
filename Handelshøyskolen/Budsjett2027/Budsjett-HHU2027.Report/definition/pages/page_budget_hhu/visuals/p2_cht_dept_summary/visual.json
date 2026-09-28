@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_cht_dept_summary",
   "position": {
     "x": 20,
     "y": 235,
     "z": 30,
-    "width": 880,
     "height": 400,
+    "width": 880,
     "tabOrder": 10
   },
   "visual": {
@@ -104,13 +104,6 @@
                   "Value": "'Segoe UI'"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9pt"
-                }
-              }
             }
           }
         }
@@ -138,13 +131,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

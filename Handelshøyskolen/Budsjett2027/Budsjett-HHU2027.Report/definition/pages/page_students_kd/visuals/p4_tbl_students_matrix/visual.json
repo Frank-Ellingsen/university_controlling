@@ -5,8 +5,8 @@
     "x": 20,
     "y": 650,
     "z": 40,
-    "width": 1880,
     "height": 410,
+    "width": 1880,
     "tabOrder": 12
   },
   "visual": {
@@ -194,13 +194,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

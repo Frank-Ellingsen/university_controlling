@@ -29,3 +29,4 @@ relationship rel_students_org
 relationship rel_action_org
 	fromColumn: FactAction_2027.OrgKode
 	toColumn: DimOrganization.OrgKode
+

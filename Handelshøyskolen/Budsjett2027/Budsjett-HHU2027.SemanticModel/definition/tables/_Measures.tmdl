@@ -106,7 +106,7 @@ table _Measures
 		lineageTag: 2e82f9d9-c166-49cf-8bd5-b0c41380c092
 
 	/// Vitenskapelige årsverk innen undervisning og forskning (UF)
-	measure 'UF-Årsverk' =
+	measure UF-Årsverk =
 			CALCULATE(
 			    [FTE Årsverk],
 			    'FactFTE_2027'[Stillingstype] = "UF"
@@ -116,7 +116,7 @@ table _Measures
 		lineageTag: 300752ca-4ce9-4f51-999f-1542dffd5ce1
 
 	/// Teknisk-administrative årsverk (TA)
-	measure 'TA-Årsverk' =
+	measure TA-Årsverk =
 			CALCULATE(
 			    [FTE Årsverk],
 			    'FactFTE_2027'[Stillingstype] = "TA"
@@ -272,20 +272,17 @@ table _Measures
 		lineageTag: 20d23890-aafb-4be9-b718-88386c568e50
 
 	/// Trafikklys RAG-status for netto rammeresultat
-	measure 'RAG Netto Resultat' =
-			IF([Budsjett Netto Resultat] >= 0, "🟢 Overskudd", "🔴 Underskudd")
+	measure 'RAG Netto Resultat' = IF([Budsjett Netto Resultat] >= 0, "🟢 Overskudd", "🔴 Underskudd")
 		displayFolder: 05 RAG & Formatering
 		lineageTag: 2590ba69-7aea-4fb6-9460-5cc12a32781d
 
 	/// Trafikklys RAG-status for lønnsandel i forhold til sektornorm på 62 - 65 %
-	measure 'RAG Lønnsandel' =
-			IF([Lønnsandel %] <= 0.65, "🟢 Innenfor norm", "🟡 Høy lønnsandel")
+	measure 'RAG Lønnsandel' = IF([Lønnsandel %] <= 0.65, "🟢 Innenfor norm", "🟡 Høy lønnsandel")
 		displayFolder: 05 RAG & Formatering
 		lineageTag: 21f42b3d-fdd4-4c13-b70a-789ee4213140
 
 	/// Trafikklys RAG-status for F-05-20 avsetningsgrense på maksimalt 5 %
-	measure 'RAG F-05-20 Status' =
-			IF([F-05-20 Avsetningsandel %] <= 0.05, "🟢 < 5% Formålskapital", "🔴 Risiko for inndragning")
+	measure 'RAG F-05-20 Status' = IF([F-05-20 Avsetningsandel %] <= 0.05, "🟢 < 5% Formålskapital", "🔴 Risiko for inndragning")
 		displayFolder: 05 RAG & Formatering
 		lineageTag: 25deb4a4-4fb5-4e37-aa8e-8271fef7de93
 
@@ -316,6 +313,7 @@ table _Measures
 		lineageTag: 4cfe6379-f2c6-4060-999c-855c42168422
 		summarizeBy: none
 		sourceColumn: RowId
+
 		annotation SummarizationSetBy = Automatic
 
 	partition _Measures = m
@@ -328,3 +326,4 @@ table _Measures
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

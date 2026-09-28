@@ -7,6 +7,7 @@ table FactBudget_2027
 		lineageTag: d24d4bd4-ea83-432d-8919-5eca1e9cc71a
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column Aar
@@ -15,6 +16,7 @@ table FactBudget_2027
 		lineageTag: e16c0d49-d01f-4b67-843b-9f7aa4afe288
 		summarizeBy: none
 		sourceColumn: Aar
+
 		annotation SummarizationSetBy = Automatic
 
 	column AarMaaned
@@ -22,6 +24,7 @@ table FactBudget_2027
 		lineageTag: b51659a1-f065-4c37-b0f5-722b6f5f05a6
 		summarizeBy: none
 		sourceColumn: AarMaaned
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgKode
@@ -30,6 +33,7 @@ table FactBudget_2027
 		lineageTag: 52aba47f-3c3c-4c2b-aaac-a585fdf65376
 		summarizeBy: none
 		sourceColumn: OrgKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNavn
@@ -37,6 +41,7 @@ table FactBudget_2027
 		lineageTag: e5c35ce4-92ff-4b1b-ae81-0767e9ec5020
 		summarizeBy: none
 		sourceColumn: OrgNavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Konto
@@ -45,6 +50,7 @@ table FactBudget_2027
 		lineageTag: 31f8c8d1-fcb2-4a38-bf94-81b54329afb4
 		summarizeBy: none
 		sourceColumn: Konto
+
 		annotation SummarizationSetBy = Automatic
 
 	column Kontonavn
@@ -52,6 +58,7 @@ table FactBudget_2027
 		lineageTag: 220bd694-1ed6-4bb7-90c1-8f6241be5aeb
 		summarizeBy: none
 		sourceColumn: Kontonavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonKode
@@ -59,6 +66,7 @@ table FactBudget_2027
 		lineageTag: a44ddf42-18bb-4571-b3eb-5e5a384e5e9c
 		summarizeBy: none
 		sourceColumn: VersjonKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column BudsjettBelop
@@ -67,6 +75,7 @@ table FactBudget_2027
 		lineageTag: ff151d85-212a-4147-887e-606593755132
 		summarizeBy: sum
 		sourceColumn: BudsjettBelop
+
 		annotation SummarizationSetBy = Automatic
 
 	column Kilde
@@ -74,6 +83,7 @@ table FactBudget_2027
 		lineageTag: 656f7f9d-98a2-4166-856d-ed273dca20c7
 		summarizeBy: none
 		sourceColumn: Kilde
+
 		annotation SummarizationSetBy = Automatic
 
 	partition FactBudget_2027 = m
@@ -87,3 +97,4 @@ table FactBudget_2027
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

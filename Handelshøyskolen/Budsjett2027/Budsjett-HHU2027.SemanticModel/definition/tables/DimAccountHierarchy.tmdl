@@ -7,6 +7,7 @@ table DimAccountHierarchy
 		lineageTag: a03a9f81-e62a-4ed0-a4c1-4869e9716301
 		summarizeBy: none
 		sourceColumn: Konto
+
 		annotation SummarizationSetBy = Automatic
 
 	column Kontonavn
@@ -14,6 +15,7 @@ table DimAccountHierarchy
 		lineageTag: fc7a72a3-688e-49aa-ac0c-74c0c69ee0f3
 		summarizeBy: none
 		sourceColumn: Kontonavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa1_Kontoklasse
@@ -22,6 +24,7 @@ table DimAccountHierarchy
 		lineageTag: 015f2152-17da-46a4-815f-9152dfc6c08d
 		summarizeBy: none
 		sourceColumn: Nivaa1_Kontoklasse
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa1_Navn
@@ -29,6 +32,7 @@ table DimAccountHierarchy
 		lineageTag: e80c75d0-87d9-47d6-8802-3b0418e9ed65
 		summarizeBy: none
 		sourceColumn: Nivaa1_Navn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa2_Kontogruppe
@@ -37,6 +41,7 @@ table DimAccountHierarchy
 		lineageTag: 56d9384f-bdad-4236-8494-4019feded2b7
 		summarizeBy: none
 		sourceColumn: Nivaa2_Kontogruppe
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa2_Navn
@@ -44,6 +49,7 @@ table DimAccountHierarchy
 		lineageTag: 197e0937-abef-44cd-9ddc-eba4e63f6e70
 		summarizeBy: none
 		sourceColumn: Nivaa2_Navn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa3_Standardkonto
@@ -52,6 +58,7 @@ table DimAccountHierarchy
 		lineageTag: 9fcb1056-a5d4-4f8f-8b7a-0aea2a011414
 		summarizeBy: none
 		sourceColumn: Nivaa3_Standardkonto
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa3_Navn
@@ -59,6 +66,7 @@ table DimAccountHierarchy
 		lineageTag: b5547d7b-2de5-43b6-a8f9-07cd9daa2a81
 		summarizeBy: none
 		sourceColumn: Nivaa3_Navn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa4_Underkonto
@@ -67,6 +75,7 @@ table DimAccountHierarchy
 		lineageTag: 351037b4-f079-4412-b563-1a0967a454e1
 		summarizeBy: none
 		sourceColumn: Nivaa4_Underkonto
+
 		annotation SummarizationSetBy = Automatic
 
 	column Nivaa4_Navn
@@ -74,6 +83,7 @@ table DimAccountHierarchy
 		lineageTag: a663d7c1-f813-4b11-856f-765f737d105f
 		summarizeBy: none
 		sourceColumn: Nivaa4_Navn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Kontotype
@@ -81,6 +91,7 @@ table DimAccountHierarchy
 		lineageTag: 8148e50c-2451-4fa8-bed2-65b0f6913339
 		summarizeBy: none
 		sourceColumn: Kontotype
+
 		annotation SummarizationSetBy = Automatic
 
 	column SRS_regnskapslinje
@@ -88,6 +99,7 @@ table DimAccountHierarchy
 		lineageTag: 767d85be-25b4-4d33-8ed4-4ca5ea081258
 		summarizeBy: none
 		sourceColumn: SRS_regnskapslinje
+
 		annotation SummarizationSetBy = Automatic
 
 	partition DimAccountHierarchy = m
@@ -101,3 +113,4 @@ table DimAccountHierarchy
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

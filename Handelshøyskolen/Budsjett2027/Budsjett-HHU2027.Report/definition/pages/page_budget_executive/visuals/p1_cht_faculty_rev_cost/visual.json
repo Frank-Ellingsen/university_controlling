@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_cht_faculty_rev_cost",
   "position": {
     "x": 20,
     "y": 235,
     "z": 30,
-    "width": 800,
     "height": 400,
+    "width": 800,
     "tabOrder": 11
   },
   "visual": {
@@ -29,38 +29,6 @@
               "queryRef": "DimOrganization.Fakultetsnavn",
               "nativeQueryRef": "Fakultet",
               "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Budsjett Inntekt"
-                }
-              },
-              "queryRef": "_Measures.Budsjett Inntekt",
-              "nativeQueryRef": "Inntekt (MNOK)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Budsjett Kostnad"
-                }
-              },
-              "queryRef": "_Measures.Budsjett Kostnad",
-              "nativeQueryRef": "Kostnad (MNOK)"
             }
           ]
         },
@@ -95,6 +63,38 @@
               "nativeQueryRef": "Lønnsandel %"
             }
           ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Inntekt"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Inntekt",
+              "nativeQueryRef": "Inntekt (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett Kostnad"
+                }
+              },
+              "queryRef": "_Measures.Budsjett Kostnad",
+              "nativeQueryRef": "Kostnad (MNOK)"
+            }
+          ]
         }
       }
     },
@@ -120,13 +120,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9pt"
                 }
               }
             }
@@ -156,13 +149,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

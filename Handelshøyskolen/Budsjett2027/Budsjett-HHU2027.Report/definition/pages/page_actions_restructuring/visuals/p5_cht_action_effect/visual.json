@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p5_cht_action_effect",
   "position": {
     "x": 20,
     "y": 235,
     "z": 30,
-    "width": 980,
     "height": 400,
+    "width": 980,
     "tabOrder": 10
   },
   "visual": {
@@ -29,24 +29,6 @@
               "queryRef": "FactAction_2027.TiltakNavn",
               "nativeQueryRef": "Omstillingstiltak",
               "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Realisert Innsparing (MNOK)"
-                }
-              },
-              "queryRef": "_Measures.Realisert Innsparing (MNOK)",
-              "nativeQueryRef": "Innsparing (MNOK)"
             }
           ]
         },
@@ -81,6 +63,24 @@
               "nativeQueryRef": "Måloppnåelse %"
             }
           ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Realisert Innsparing (MNOK)"
+                }
+              },
+              "queryRef": "_Measures.Realisert Innsparing (MNOK)",
+              "nativeQueryRef": "Innsparing (MNOK)"
+            }
+          ]
         }
       }
     },
@@ -106,13 +106,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11pt"
                 }
               }
             },

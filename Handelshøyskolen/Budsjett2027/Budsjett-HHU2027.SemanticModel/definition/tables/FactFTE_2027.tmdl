@@ -7,6 +7,7 @@ table FactFTE_2027
 		lineageTag: 6f28e552-7a6f-48bc-bd06-1b00694094eb
 		summarizeBy: none
 		sourceColumn: DatoNokkel
+
 		annotation SummarizationSetBy = Automatic
 
 	column Aar
@@ -15,6 +16,7 @@ table FactFTE_2027
 		lineageTag: ef18ddd9-8284-4073-8a61-343f8f33e229
 		summarizeBy: none
 		sourceColumn: Aar
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgKode
@@ -23,6 +25,7 @@ table FactFTE_2027
 		lineageTag: 6a7f95dd-e19f-42f2-a1f1-3d3ef32913f2
 		summarizeBy: none
 		sourceColumn: OrgKode
+
 		annotation SummarizationSetBy = Automatic
 
 	column OrgNavn
@@ -30,6 +33,7 @@ table FactFTE_2027
 		lineageTag: 8ee0f4ec-0f64-4224-a34b-e27428110c2b
 		summarizeBy: none
 		sourceColumn: OrgNavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Stillingstype
@@ -37,6 +41,7 @@ table FactFTE_2027
 		lineageTag: 5a567cbd-4c90-46eb-89d0-7006c4eb2d37
 		summarizeBy: none
 		sourceColumn: Stillingstype
+
 		annotation SummarizationSetBy = Automatic
 
 	column StillingsgruppeNavn
@@ -44,6 +49,7 @@ table FactFTE_2027
 		lineageTag: cd0b58ad-c12b-4f83-a118-66c63ec1d1c5
 		summarizeBy: none
 		sourceColumn: StillingsgruppeNavn
+
 		annotation SummarizationSetBy = Automatic
 
 	column Aarsverk
@@ -52,6 +58,7 @@ table FactFTE_2027
 		lineageTag: c6f77dfa-8ce2-4976-aaf1-2b2f3cb527ad
 		summarizeBy: sum
 		sourceColumn: Aarsverk
+
 		annotation SummarizationSetBy = Automatic
 
 	column AntallAnsatte
@@ -60,6 +67,7 @@ table FactFTE_2027
 		lineageTag: dc311a44-4316-4419-8661-bd42eef4bb09
 		summarizeBy: sum
 		sourceColumn: AntallAnsatte
+
 		annotation SummarizationSetBy = Automatic
 
 	column Vakanser
@@ -68,6 +76,7 @@ table FactFTE_2027
 		lineageTag: 8934b0c7-5aa0-4b90-98dc-3e3043752ccf
 		summarizeBy: sum
 		sourceColumn: Vakanser
+
 		annotation SummarizationSetBy = Automatic
 
 	column SnittLonnNOK
@@ -76,6 +85,7 @@ table FactFTE_2027
 		lineageTag: 1c408dd3-f0b7-44fa-b0e4-12f83e69946c
 		summarizeBy: average
 		sourceColumn: SnittLonnNOK
+
 		annotation SummarizationSetBy = Automatic
 
 	column VersjonKode
@@ -83,6 +93,7 @@ table FactFTE_2027
 		lineageTag: 317a2d69-64bb-4f9b-a2d9-852054346f53
 		summarizeBy: none
 		sourceColumn: VersjonKode
+
 		annotation SummarizationSetBy = Automatic
 
 	partition FactFTE_2027 = m
@@ -96,3 +107,4 @@ table FactFTE_2027
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
