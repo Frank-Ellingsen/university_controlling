@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis_cht_hhu_bemanning",
+  "position": {
+    "x": 960,
+    "y": 235,
+    "z": 20,
+    "width": 940,
+    "height": 380,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Instituttnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Instituttnavn",
+              "nativeQueryRef": "Institutt",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglige Årsverk (UF)"
+                }
+              },
+              "queryRef": "_Measures.Faglige Årsverk (UF)",
+              "nativeQueryRef": "UF Faglige Årsverk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Teknisk-Admin Årsverk (TA)"
+                }
+              },
+              "queryRef": "_Measures.Teknisk-Admin Årsverk (TA)",
+              "nativeQueryRef": "TA Administrative Årsverk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Vakanser"
+                }
+              },
+              "queryRef": "_Measures.Vakanser",
+              "nativeQueryRef": "Ledige Vakanser"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Stillingsstruktur og Vakanser (UF, TA & Vakansfaktor) pr HHU-Enhet'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

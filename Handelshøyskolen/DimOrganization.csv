@@ -1,0 +1,10 @@
+﻿OrgNokkel;OrgKode;Fakultetsnavn;Instituttnavn;Virksomhetstype;Eierleder
+ORG_HHU_01;HHU_I001;Handelshøyskolen ved UiA (HHU);Institutt for ledelse og innovasjon;Utdanning & Forskning;Instituttleder I001
+ORG_HHU_02;HHU_I002;Handelshøyskolen ved UiA (HHU);Institutt for rettsvitenskap;Utdanning & Forskning;Instituttleder I002
+ORG_HHU_03;HHU_I003;Handelshøyskolen ved UiA (HHU);Institutt for økonomi;Utdanning & Forskning;Instituttleder I003
+ORG_HHU_04;HHU_ADM;Handelshøyskolen ved UiA (HHU);HHU Fakultetsadministrasjon;Fakultetsledelse;Fakultetsdirektør HHU
+ORG_TEK_01;TEK_001;Fakultet for teknologi og realfag (TEK);Institutt for ingeniørvitenskap;Utdanning & Forskning;Dekan TEK
+ORG_HEL_01;HEL_001;Fakultet for helse- og idrettsvitenskap (HEL);Institutt for helse og sykepleie;Utdanning & Forskning;Dekan HEL
+ORG_SAM_01;SAM_001;Fakultet for samfunnsvitenskap (SAM);Institutt for statsvitenskap;Utdanning & Forskning;Dekan SAM
+ORG_HUM_01;HUM_001;Fakultet for humaniora og pedagogikk (HUM);Institutt for pedagogikk;Utdanning & Forskning;Dekan HUM
+ORG_ADM_01;ADM_001;Fellesadministrasjon & Fellesdrift (ADM);Sentraladministrasjonen;Fellesdrift;Universitetsdirektør

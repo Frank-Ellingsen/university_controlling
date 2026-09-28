@@ -1,0 +1,71 @@
+table DimDAXLibrary
+	lineageTag: 62ff8a35-2710-4e4b-981a-600b05b95066
+
+	column MeasureNr
+		dataType: int64
+		formatString: 0
+		lineageTag: e120daff-efbd-458b-b643-55cf0acbf9e7
+		summarizeBy: none
+		sourceColumn: MeasureNr
+		annotation SummarizationSetBy = Automatic
+
+	column Folder
+		dataType: string
+		lineageTag: d7768435-56c5-4cd3-86a3-830e328064ff
+		summarizeBy: none
+		sourceColumn: Folder
+		annotation SummarizationSetBy = Automatic
+
+	column FolderTitle
+		dataType: string
+		lineageTag: 3dc40225-785b-4adc-9351-a09c64af2078
+		summarizeBy: none
+		sourceColumn: FolderTitle
+		annotation SummarizationSetBy = Automatic
+
+	column MeasureName
+		dataType: string
+		lineageTag: 86140c8c-1ae7-4862-86cd-ebbdf99b6a8f
+		summarizeBy: none
+		sourceColumn: MeasureName
+		annotation SummarizationSetBy = Automatic
+
+	column HeaderDescription
+		dataType: string
+		lineageTag: 67e39470-44b8-4e96-9b79-0c318f66351a
+		summarizeBy: none
+		sourceColumn: HeaderDescription
+		annotation SummarizationSetBy = Automatic
+
+	column DAXFormula
+		dataType: string
+		lineageTag: 306a92dd-f9b9-4ec6-bf19-1a974d94dc30
+		summarizeBy: none
+		sourceColumn: DAXFormula
+		annotation SummarizationSetBy = Automatic
+
+	column DAXCode
+		dataType: string
+		lineageTag: 07b0459c-7f97-4441-adcb-867ebcf2cbdf
+		summarizeBy: none
+		sourceColumn: DAXCode
+		annotation SummarizationSetBy = Automatic
+
+	column ControllingNote
+		dataType: string
+		lineageTag: 2f903220-11f9-4bff-a627-537c6139d829
+		summarizeBy: none
+		sourceColumn: ControllingNote
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDAXLibrary = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\DimDAXLibrary.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"MeasureNr", Int64.Type}, {"Folder", type text}, {"FolderTitle", type text}, {"MeasureName", type text}, {"HeaderDescription", type text}, {"DAXFormula", type text}, {"DAXCode", type text}, {"ControllingNote", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

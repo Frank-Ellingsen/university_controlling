@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "vis_txt_tdi_note15",
+  "position": {
+    "x": 1240,
+    "y": 235,
+    "z": 10,
+    "height": 430,
+    "width": 660,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "BOA & TDI-Modellen (Tid, Direkte, Indirekte Kostnader / Overhead)\n• SRS 10 Bidrag (NFR/EU): Inntekt = Påløpte kostnader. Ingen fortjeneste. Full balanseføring på konto 2180 ved forskuddsutbetaling.\n• SRS 9 Oppdrag (EVU): Faktureres etter fullføringsgrad / leverte milepæler. Onerøse kontrakter tapsavsettes umiddelbart (konto 7790).\n• 5 %-regelen (Rundskriv F-05-20): Ubrukte bevilgningsmidler over 5,0% (71,7 MNOK) må begrunnes særskilt i Note 15 med bindende investeringsplaner.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "15pt",
+                      "fontWeight": "bold",
+                      "color": "#1E293B"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Veilederkrav: Controller sikrer full overhead-dekning (TDI) og overvåker instituttvise frikjøpsgrader for vitenskapelig ansatte.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#64748B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

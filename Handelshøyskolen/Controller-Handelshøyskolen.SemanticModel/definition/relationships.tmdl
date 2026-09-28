@@ -1,0 +1,47 @@
+relationship rel_factgl_dimorg
+	fromColumn: FactGL.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factgl_dimacc
+	fromColumn: FactGL.Konto
+	toColumn: DimAccountHierarchy.Konto
+
+relationship rel_factgl_dimdate
+	fromColumn: FactGL.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factbudget_dimorg
+	fromColumn: FactBudget.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factbudget_dimacc
+	fromColumn: FactBudget.Konto
+	toColumn: DimAccountHierarchy.Konto
+
+relationship rel_factbudget_dimdate
+	fromColumn: FactBudget.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factfte_dimorg
+	fromColumn: FactFTE.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factfte_dimdate
+	fromColumn: FactFTE.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factstudents_dimorg
+	fromColumn: FactStudents.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factstudents_dimdate
+	fromColumn: FactStudents.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factevm_dimdate
+	fromColumn: FactEVM.DatoNokkel
+	toColumn: DimDate.DatoNokkel
+
+relationship rel_factaction_dimorg
+	fromColumn: FactAction.Enhet
+	toColumn: DimOrganization.OrgKode

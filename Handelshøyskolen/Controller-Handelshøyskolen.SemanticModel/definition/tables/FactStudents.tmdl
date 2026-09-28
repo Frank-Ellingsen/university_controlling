@@ -1,0 +1,67 @@
+table FactStudents
+	lineageTag: 87e8a10a-84a4-4152-80ca-95d04cb33315
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 2910c010-d8fe-4e0d-a010-080001695047
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 1a8184dc-5b70-4526-9ab8-e071f9920be8
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column Studieprogram
+		dataType: string
+		lineageTag: 71f7a55b-06c4-48a5-a49a-1de851dd1793
+		summarizeBy: none
+		sourceColumn: Studieprogram
+		annotation SummarizationSetBy = Automatic
+
+	column RegistrerteStudenter
+		dataType: int64
+		formatString: 0
+		lineageTag: b78ba3cd-9c26-4b3a-8311-58eaced36f22
+		summarizeBy: sum
+		sourceColumn: RegistrerteStudenter
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 12fa9659-c56f-433a-ae65-6c1c78a63fa3
+		summarizeBy: sum
+		sourceColumn: SPE60
+		annotation SummarizationSetBy = Automatic
+
+	column KategoriKlasse
+		dataType: string
+		lineageTag: bc272c70-5dca-4edb-9cda-20eee113bcb2
+		summarizeBy: none
+		sourceColumn: KategoriKlasse
+		annotation SummarizationSetBy = Automatic
+
+	column StudenterPrUF
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 504521f6-4a8e-465d-96c6-50a832093156
+		summarizeBy: average
+		sourceColumn: StudenterPrUF
+		annotation SummarizationSetBy = Automatic
+
+	partition FactStudents = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\FactStudents.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Studieprogram", type text}, {"RegistrerteStudenter", Int64.Type}, {"SPE60", type number}, {"KategoriKlasse", type text}, {"StudenterPrUF", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

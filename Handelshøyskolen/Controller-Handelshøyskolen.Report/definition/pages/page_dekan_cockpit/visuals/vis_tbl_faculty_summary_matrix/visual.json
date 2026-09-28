@@ -1,0 +1,219 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "vis_tbl_faculty_summary_matrix",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 40,
+    "height": 410,
+    "width": 1880,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Fakultetsnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Fakultetsnavn",
+              "nativeQueryRef": "Fakultet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Instituttnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Instituttnavn",
+              "nativeQueryRef": "Institutt",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Inntekt MNOK"
+                }
+              },
+              "queryRef": "_Measures.Total Inntekt MNOK",
+              "nativeQueryRef": "Total Inntekt (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual/FC Lønn"
+                }
+              },
+              "queryRef": "_Measures.Actual/FC Lønn",
+              "nativeQueryRef": "Lønnskostnad (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual/FC Drift"
+                }
+              },
+              "queryRef": "_Measures.Actual/FC Drift",
+              "nativeQueryRef": "Driftskostnad (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual/FC Capex"
+                }
+              },
+              "queryRef": "_Measures.Actual/FC Capex",
+              "nativeQueryRef": "Investeringer Capex (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sluttavvik (VAC)"
+                }
+              },
+              "queryRef": "_Measures.Sluttavvik (VAC)",
+              "nativeQueryRef": "Netto Resultat VAC (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglige Årsverk (UF)"
+                }
+              },
+              "queryRef": "_Measures.Faglige Årsverk (UF)",
+              "nativeQueryRef": "UF-Årsverk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Studenter pr UF-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Studenter pr UF-Årsverk",
+              "nativeQueryRef": "Studenter / UF-ÅV"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Forecast RAG Status"
+                }
+              },
+              "queryRef": "_Measures.Forecast RAG Status",
+              "nativeQueryRef": "RAG Status"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Diagnose og Drivere"
+                }
+              },
+              "queryRef": "_Measures.Diagnose og Drivere",
+              "nativeQueryRef": "Strategisk Diagnose"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fakultets- og Instituttoversikt: Totalregnskap, Stillingsstruktur og Styringsdiagnose (300-sekunders dybdeanalyse)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "vis_txt_gap_bridge",
+  "position": {
+    "x": 20,
+    "y": 705,
+    "z": 10,
+    "height": 350,
+    "width": 1880,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Senior Controller Vurdering & Strategiske Handlingsalternativer for Fakultetsledelsen (HHU)\n• HHU bidrar med +2,2 MNOK i positivt driftsresultat: Dette demper UiAs samlede helårsavvik (-11,0 MNOK som må dekkes av formålskapital iht. F-05-20).\n• Tiltak T001 (Administrativ ansettelsesstopp på HHU ADM): Har allerede levert -0,9 MNOK av forventet -1,2 MNOK.\n• Tiltak T002 (Omdisponering faglige årsverk): Fullført med 100% måloppnåelse (-0,85 MNOK) og styrket undervisningskapasitet på Økonomi.\n• Tiltak T003 (EVU porteføljeekspansjon): Pågår mot Agder-næringslivet med -0,8 MNOK realisert av -1,5 MNOK målsetting.\n• Strategisk Anbefaling: Opprettholde vakansbrems i Q4, prioritere NFR-frikjøp (SRS 10) for vitenskapelige ansatte, og overvåke EVU001 nøye for å unngå ytterligere kontraktstap etter SRS 9.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "15pt",
+                      "fontWeight": "bold",
+                      "color": "#1E293B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

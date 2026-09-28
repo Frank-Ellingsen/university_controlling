@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Controller-Handelshøyskolen"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f94182f8-224b-4ed4-a8af-578f2a2e09c4"
+  }
+}

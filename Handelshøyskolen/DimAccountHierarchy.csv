@@ -1,0 +1,21 @@
+﻿Konto;Kontonavn;Nivaa1_Kontoklasse;Nivaa1_Navn;Nivaa2_Kontogruppe;Nivaa2_Navn;Nivaa3_Standardkonto;Nivaa3_Navn;Kontotype;SRS_regnskapslinje
+3030;Salgsinntekt tjenester;3;Salgs- og driftsinntekt;30;Salgsinntekt;303;Salgsinntekt;Inntekt;Salgsinntekt
+3400;Tilskudd fra NFR;3;Salgs- og driftsinntekt;34;Inntekt fra tilskudd;340;Tilskudd NFR;Inntekt;Tilskudd og overforinger
+3420;Tilskudd fra EU;3;Salgs- og driftsinntekt;34;Inntekt fra tilskudd;342;Tilskudd EU;Inntekt;Tilskudd og overforinger
+3600;Etter- og videreutdanning (EVU);3;Salgs- og driftsinntekt;36;Oppdragsinntekt;360;EVU inntekter;Inntekt;Salgsinntekt
+3630;Oppdragsforskning;3;Salgs- og driftsinntekt;36;Oppdragsinntekt;363;Oppdrag inntekt;Inntekt;Salgsinntekt
+3900;Inntekt fra statlig bevilgning;3;Salgs- og driftsinntekt;39;Bevilgningsinntekt;390;Bevilgning KD;Inntekt;Inntekt fra bevilgninger
+5000;Fast lønn ansatte;5;Lønnskostnad;50;Fast lønn;500;Fast lønn;Kostnad;Lonnskostnader
+5050;Overtid og ekstrahjelp;5;Lønnskostnad;50;Fast lønn;505;Overtid;Kostnad;Lonnskostnader
+5080;Feriepenger;5;Lønnskostnad;50;Fast lønn;508;Feriepenger;Kostnad;Lonnskostnader
+5100;Midlertidig lønn / timelærere;5;Lønnskostnad;51;Midlertidig lønn;510;Midlertidig lønn;Kostnad;Lonnskostnader
+5400;Arbeidsgiveravgift;5;Lønnskostnad;54;Sosiale kostnader;540;Arbeidsgiveravgift;Kostnad;Lonnskostnader
+5420;Pensjonspremie SPK;5;Lønnskostnad;54;Sosiale kostnader;542;Pensjon SPK;Kostnad;Lonnskostnader
+5800;Refusjon sykepenger / NAV;5;Lønnskostnad;58;Refusjoner;580;Refusjon sykepenger;Kostnad;Lonnskostnader
+6050;Avskrivning IKT og utstyr;6;Annen driftskostnad;60;Avskrivning;605;Avskrivning utstyr;Kostnad;Av- og nedskrivninger
+6300;Leie lokaler / Statsbygg;6;Annen driftskostnad;63;Lokalkostnader;630;Husleie;Kostnad;Andre driftskostnader
+6420;Leie datasystemer / lisenser;6;Annen driftskostnad;64;IT-kostnader;642;IT-lisenser;Kostnad;Andre driftskostnader
+6700;Konsulenttjenester / AACSB revision;6;Annen driftskostnad;67;Fremmede tjenester;670;Konsulenter;Kostnad;Andre driftskostnader
+7130;Reiser og diett;6;Annen driftskostnad;71;Reisekostnader;713;Tjenestereiser;Kostnad;Andre driftskostnader
+7790;Avsetning for forventet tap (SRS 9);7;Andre driftskostnader;77;Tap og avsetninger;779;Avsetning tap;Kostnad;Andre driftskostnader
+1250;Aktivert IKT-infrastruktur (Capex);1;Eiendeler;12;Anleggsmidler;125;IKT-investeringer;Investeringer;Anleggsmidler

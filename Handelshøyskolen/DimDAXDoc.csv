@@ -1,0 +1,288 @@
+LineNr,LineContent
+1," complete, production-grade DAX Measure Library for the UiA Controller Project and Financial Management Framework12.This library covers the entire semantic datamodel (FactGL, FactBudget, FactFTE, FactStudents, FactEVM, FactAction, DimOrganization, DimAccountHierarchy, DimDate)3more_horiz. It is organized into 8 display folders for Power BI Desktop and incorporates the ""So What?"" decision-support framework67, Edward Tufte's data-ink principles89, temporal context (YoY and MoM)1011, and strict Red-Amber-Green (RAG) conditional formatting1213.Folder 1: Core Accounting & YTD Measures (_01 Accounting)// 1. Actual YTD (Bokført regnskap M01 - M09 / Sept 30 Cutoff)"
+2,Actual YTD = 
+3,CALCULATE(
+4,"    SUM('FactGL'[Belop_signert]),"
+5,"    'FactGL'[Bokforingstype] = ""Actual"""
+6,)
+7,
+8,// 2. Budsjett YTD (Akkumulert periodisert budsjett M01 - M09)
+9,Budsjett YTD = 
+10,CALCULATE(
+11,"    SUM('FactBudget'[BudsjettBelop]),"
+12,    'DimDate'[ErActualYTD] = TRUE()
+13,)
+14,
+15,// 3. Avvik YTD (MNOK) [Positivt = Merforbruk / Negativt = Mindreforbruk]
+16,Avvik YTD = [Actual YTD] - [Budsjett YTD]
+17,
+18,// 4. Avvik YTD %
+19,Avvik YTD % = 
+20,"DIVIDE([Avvik YTD], [Budsjett YTD], 0)"
+21,
+22,// 5. Monthly Actuals and Forecast Bridge (M01-M09 Actuals + M10-M12 Q4 Forecast)
+23,Monthly Actuals and Forecast = 
+24,VAR CutoffMonth = 9
+25,VAR CurrentMonth = MAX('DimDate'[MaanedNummer])
+26,"VAR ActualAmount = CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Actual"")"
+27,"VAR ForecastAmount = CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Forecast"")"
+28,RETURN
+29,"IF(CurrentMonth <= CutoffMonth, ActualAmount, ForecastAmount)"
+30,"Note: Actual YTD sums historical general ledger transactions up to the September 30 cutoff date (1 072,1 MNOK revenue / 1 092,0 MNOK expenses for UiA)1415.Folder 2: Rolling Forecasts & Year-End Estimates (_02 Forecast & LE)// 6. Forecast Q4 / Estimate to Complete (ETC M10 - M12)"
+31,Forecast Q4 (ETC) = 
+32,CALCULATE(
+33,"    SUM('FactGL'[Belop_signert]),"
+34,"    'FactGL'[Bokforingstype] = ""Forecast"""
+35,)
+36,
+37,// 7. Forecast LE / Estimate at Completion (EAC = Actual YTD + Q4 Forecast)
+38,Forecast LE (EAC) = [Actual YTD] + [Forecast Q4 (ETC)]
+39,
+40,// 8. Vedtatt Årsbudsjett / Budget at Completion (BAC)
+41,Årsbudsjett (BAC) = SUM('FactBudget'[BudsjettBelop])
+42,
+43,// 9. Sluttavvik / Variance at Completion (VAC MNOK = BAC - EAC)
+44,Sluttavvik (VAC) = [Årsbudsjett (BAC)] - [Forecast LE (EAC)]
+45,
+46,// 10. VAC % (Relativ overskridelse eller innsparing)
+47,VAC % = 
+48,"DIVIDE([Sluttavvik (VAC)], [Årsbudsjett (BAC)], 0)"
+49,"Note: The total full-year forecast (Forecast LE / EAC) equals 1 433,0 MNOK in revenue against 1 444,0 MNOK in expenses, yielding a net full-year deficit (VAC) of -11,0 MNOK that is covered by accumulated reserves pursuant to Note 15 and Circular F-05-201617.Folder 3: Temporal Baseline Comparisons (_03 Temporal YoY & MoM)// 11. Prior Year Actuals (PY YTD)"
+50,Actual PY = 
+51,CALCULATE(
+52,"    [Actual YTD],"
+53,    SAMEPERIODLASTYEAR('DimDate'[Dato])
+54,)
+55,
+56,// 12. Absolute Year-over-Year Difference (YoY MNOK)
+57,Actual YoY = [Actual YTD] - [Actual PY]
+58,
+59,// 13. Percentage Year-over-Year Growth (YoY %)
+60,Actual YoY % = 
+61,"DIVIDE([Actual YoY], [Actual PY], 0)"
+62,
+63,// 14. Prior Month Actuals (PM)
+64,Actual PM = 
+65,CALCULATE(
+66,"    SUM('FactGL'[Belop_signert]),"
+67,"    PREVIOUSMONTH('DimDate'[Dato]),"
+68,"    'FactGL'[Bokforingstype] = ""Actual"""
+69,)
+70,
+71,// 15. Current Month Actuals (CM)
+72,Actual CM = 
+73,CALCULATE(
+74,"    SUM('FactGL'[Belop_signert]),"
+75,"    'DimDate'[DatoNokkel] = MAX('FactGL'[DatoNokkel]),"
+76,"    'FactGL'[Bokforingstype] = ""Actual"""
+77,)
+78,
+79,// 16. Month-over-Month Difference (MoM MNOK)
+80,Actual MoM = [Actual CM] - [Actual PM]
+81,
+82,// 17. Percentage Month-over-Month Growth (MoM %)
+83,Actual MoM % = 
+84,"DIVIDE([Actual MoM], [Actual PM], 0)"
+85,Note: Adding temporal baselines (YoY and MoM) ensures that executives evaluate performance momentum alongside annual budget targets1011.Folder 4: Earned Value Management (_04 EVM)// 18. Planned Value (PV) - Akkumulert planlagt verdi
+86,Planned Value (PV) = SUM('FactEVM'[Planned_Value_PV_MNOK])
+87,
+88,// 19. Earned Value (EV) - Akkumulert opptjent verdi
+89,Earned Value (EV) = SUM('FactEVM'[Earned_Value_EV_MNOK])
+90,
+91,// 20. Actual Cost (AC) - Akkumulert faktisk kostnad
+92,Actual Cost (AC) = SUM('FactEVM'[Actual_Cost_AC_MNOK])
+93,
+94,// 21. Cost Performance Index (CPI = EV / AC)
+95,"CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)"
+96,
+97,// 22. Schedule Performance Index (SPI = EV / PV)
+98,"SPI = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)"
+99,
+100,// 23. EVM Status Subtitle Callout
+101,EVM Status Subtitle = 
+102,VAR CPIVal = [CPI]
+103,VAR SPIVal = [SPI]
+104,RETURN
+105,"""CPI: "" & FORMAT(CPIVal, ""0.00"") & "" (Kost) | SPI: "" & FORMAT(SPIVal, ""0.00"") & "" (Fremdrift)"""
+106,"Note: At the late-year control cutoff, UiA's CPI is 0.95 (5% cost overrun) and SPI is 0.92 (8% schedule lag)1718.Folder 5: Staffing & Capacity KPIs (_05 Staffing & FTE)// 24. Totale Årsverk (FTE Snapshot)"
+107,Totale Årsverk = 
+108,CALCULATE(
+109,"    SUM('FactFTE'[Aarsverk]),"
+110,    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+111,)
+112,
+113,// 25. Faglige Årsverk (UF - Undervisning og Forskning)
+114,Faglige Årsverk (UF) = 
+115,CALCULATE(
+116,"    [Totale Årsverk],"
+117,"    'FactFTE'[Stillingstype] = ""UF"""
+118,)
+119,
+120,// 26. Teknisk-Administrative Årsverk (TA)
+121,Teknisk-Admin Årsverk (TA) = 
+122,CALCULATE(
+123,"    [Totale Årsverk],"
+124,"    'FactFTE'[Stillingstype] = ""TA"""
+125,)
+126,
+127,// 27. Faglig Andel % (Sektormål: > 50-55%)
+128,"Faglig Andel % = DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)"
+129,
+130,// 28. Lønnsandel % av Totale Driftskostnader (Sektornorm: 62-65%)
+131,Lønnsandel % = 
+132,"VAR Lonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"")"
+133,"VAR TotalKost = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = ""Kostnad"")"
+134,"RETURN DIVIDE(Lonn, TotalKost, 0)"
+135,
+136,// 29. Staffing Card Subtitle Callout
+137,Staffing Card Subtitle = 
+138,VAR UF = [Faglige Årsverk (UF)]
+139,VAR TA = [Teknisk-Admin Årsverk (TA)]
+140,VAR LonnPct = [Lønnsandel %]
+141,RETURN
+142,"FORMAT(UF, ""#0"") & "" UF / "" & FORMAT(TA, ""#0"") & "" TA | Lønnsandel: "" & FORMAT(LonnPct, ""0.0%"")"
+143,"Note: Personnel expenses represent 65.4% of total operating expenses across UiA (944.0 MNOK), slightly exceeding the sector benchmark upper threshold of 65.0%19more_horiz.Folder 6: Student Production & KD 2025 Model (_06 Utdanning & SPE60)// 30. Registrerte Studenter"
+144,Registrerte Studenter = SUM('FactStudents'[RegistrerteStudenter])
+145,
+146,// 31. Avlagte Studiepoengekvivalenter (SPE60 = Total SP / 60)
+147,Avlagte SPE60 = SUM('FactStudents'[SPE60])
+148,
+149,// 32. Studenter pr Faglig Årsverk (Lærertetthet & Kapasitet)
+150,Studenter pr UF-Årsverk = 
+151,"DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)"
+152,
+153,// 33. Enhetskostnad pr SPE60 (NOK pr produserte helårsstudent)
+154,Enhetskostnad pr SPE60 = 
+155,"DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)"
+156,
+157,"// 34. KD Kategori 1 Inntekt (Humaniora, Samfunnsfag, Økonomi @ 54 550 kr/SPE60)"
+158,KD Kat 1 Inntekt = 
+159,CALCULATE(
+160,"    SUM('FactStudents'[SPE60]) * 54550,"
+161,"    'FactStudents'[KDKategori] = ""Kategori 1"""
+162,)
+163,
+164,// 35. Student KPI Card Subtitle Callout
+165,Student KPI Subtitle = 
+166,VAR SPE = [Avlagte SPE60]
+167,VAR Ratio = [Studenter pr UF-Årsverk]
+168,RETURN
+169,"FORMAT(SPE, ""#,##0"") & "" SPE60 | "" & FORMAT(Ratio, ""0.0"") & "" Studenter/UF-ÅV"""
+170,"Note: Under KD's 2025 funding model, Category 1 produces 54 550 NOK per 60 SPE. Category 1 rates apply strictly to marginal volume changes rather than baseline historical positions22more_horiz.Folder 7: Restructuring & Action Tracker (_07 Action Tracker)// 36. Forventet Tiltakseffekt (Planlagt innsparing i MNOK)"
+171,Forventet Tiltakseffekt = SUM('FactAction'[ForventetEffekt])
+172,
+173,// 37. Realisert Tiltakseffekt (Bokført innsparing hittil)
+174,Realisert Tiltakseffekt = SUM('FactAction'[RealisertEffekt])
+175,
+176,// 38. Tiltak Realiseringsgrad %
+177,Tiltak Realiseringsgrad % = 
+178,"DIVIDE([Realisert Tiltakseffekt], [Forventet Tiltakseffekt], 0)"
+179,
+180,// 39. Forecast etter Tiltak (Netto Sluttresultat inkl. omstilling)
+181,Forecast etter Tiltak = [Forecast LE (EAC)] + [Forventet Tiltakseffekt]
+182,
+183,// 40. Restavvik etter Tiltak (Gjenværende risikogap)
+184,Restavvik etter Tiltak = [Forecast etter Tiltak] - [Årsbudsjett (BAC)]
+185,"Note: FactAction connects restructuring initiatives (e.g., administrative vacancy freezes T001/T002) directly to ledger accounts and forecast drift5more_horiz.Folder 8: RAG Formatting & Dynamic Design (_08 RAG & Design)// 41. Budget Variance RAG Status Text Badge"
+186,Budget Variance RAG Status = 
+187,VAR Budget = [Årsbudsjett (BAC)]
+188,VAR Forecast = [Forecast LE (EAC)]
+189,VAR Vac = Forecast - Budget
+190,"VAR VacPct = DIVIDE(Vac, Budget, 0)"
+191,RETURN
+192,SWITCH(
+193,"    TRUE(),"
+194,"    Vac >= 0, ""🟢 Under/I budsjett"","
+195,"    VacPct >= -0.05, ""🟡 Moderat overskridelse (2-5%)"","
+196,"    ""🔴 Kritisk overskridelse (>5%)"""
+197,)
+198,
+199,"// 42. Primary RAG Hex Color (For Bars, Card Accents & Text)"
+200,RAG Hex Color = 
+201,VAR Vac = [Sluttavvik (VAC)]
+202,VAR VacPct = [VAC %]
+203,RETURN
+204,IF(
+205,"    Vac >= 0, "
+206,"    ""#10b981"", // Emerald Green"
+207,    IF(
+208,"        VacPct >= -0.05, "
+209,"        ""#f59e0b"", // Amber Yellow"
+210,"        ""#ef4444""  // Crimson Red"
+211,    )
+212,)
+213,
+214,// 43. Soft RAG Background Fill Hex (Tufte 85% Opacity Tint for Matrix Cells)
+215,RAG Soft Background Hex = 
+216,VAR Vac = [Sluttavvik (VAC)]
+217,VAR VacPct = [VAC %]
+218,RETURN
+219,IF(
+220,"    Vac >= 0, "
+221,"    ""#ecfdf5"", // Soft Mint Green"
+222,    IF(
+223,"        VacPct >= -0.05, "
+224,"        ""#fffbeb"", // Soft Warm Amber"
+225,"        ""#fef2f2""  // Soft Crimson Red"
+226,    )
+227,)
+228,
+229,// 44. Multi-Context Card Subtitle with RAG Icons (New Card Visual)
+230,Multi-Context Revenue Subtitle = 
+231,VAR Budget = [Årsbudsjett (BAC)]
+232,VAR Forecast = [Forecast LE (EAC)]
+233,"VAR PlanDiffPct = DIVIDE(Forecast - Budget, Budget, 0)"
+234,VAR YoYPct = [Actual YoY %]
+235,VAR MoMPct = [Actual MoM %]
+236,
+237,"VAR PlanIcon = IF(PlanDiffPct >= 0, ""🟢"", IF(PlanDiffPct >= -0.05, ""🟡"", ""🔴""))"
+238,"VAR YoYIcon = IF(YoYPct >= 0, ""🟢"", ""🔴"")"
+239,
+240,"VAR PlanText = PlanIcon & "" Budsj: "" & IF(PlanDiffPct >= 0, ""▲ +"", ""▼ "") & FORMAT(PlanDiffPct, ""0.0%"")"
+241,"VAR YoYText = YoYIcon & "" YoY: "" & IF(YoYPct >= 0, ""▲ +"", ""▼ "") & FORMAT(YoYPct, ""0.0%"")"
+242,"VAR MoMText = ""MoM: "" & IF(MoMPct >= 0, ""▲ +"", ""▼ "") & FORMAT(MoMPct, ""0.0%"")"
+243,
+244,RETURN
+245,"PlanText & "" | "" & YoYText & "" | "" & MoMText"
+246,"Note: Applying soft background fills (#ECFDF5, #FFFBEB, #FEF2F2) prevents saturated neon glare, adhering strictly to Tufte's data-ink standard8more_horiz.Special Sub-Folder: Handelshøyskolen ved UiA (_09 HHU Measures)// 45. HHU Total Revenue (276.6 MNOK)"
+247,HHU Total Revenue = 
+248,CALCULATE(
+249,"    [Forecast LE (EAC)],"
+250,"    'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"","
+251,"    'DimAccountHierarchy'[Nivaa1_Navn] = ""Salgs- og driftsinntekt"""
+252,)
+253,
+254,// 46. HHU Net Result (+2.2 MNOK Surplus)
+255,HHU Net Result = 
+256,CALCULATE(
+257,"    [Sluttavvik (VAC)],"
+258,"    'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"""
+259,)
+260,
+261,// 47. HHU Lønnsandel % (65.4%)
+262,HHU Lønnsandel % = 
+263,CALCULATE(
+264,"    [Lønnsandel %],"
+265,"    'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"""
+266,)
+267,
+268,// 48. HHU Studenter pr UF-Årsverk (22.3 Ratio)
+269,HHU Studenter pr UF-Årsverk = 
+270,"VAR Studenter = CALCULATE(SUM('FactStudents'[RegistrerteStudenter]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"")"
+271,"VAR UF = CALCULATE(SUM('FactFTE'[Aarsverk]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'FactFTE'[Stillingstype] = ""UF"")"
+272,"RETURN DIVIDE(Studenter, UF, 0)"
+273,
+274,// 49. HHU BOA Frikjøpsgrad (Buy-Out Share)
+275,HHU BOA Frikjøpsgrad = 
+276,"VAR BOALonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"", 'DimOrganization'[Virksomhetstype] = ""BOA"")"
+277,"VAR TotalLonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"")"
+278,"RETURN DIVIDE(BOALonn, TotalLonn, 0)"
+279,
+280,// 50. HHU RAG Status
+281,HHU RAG Status = 
+282,VAR Resultat = [HHU Net Result]
+283,RETURN
+284,"IF(Resultat >= 0, ""🟢 Overskudd (+2.2 MNOK / Ramme overholdt)"","
+285,"    IF(Resultat >= -2.0, ""🟡 Moderat merforbruk (< 2 MNOK)"", ""🔴 Kritisk merforbruk (> 2 MNOK)"")"
+286,)
+287,"Note: HHU delivers a positive net operating result of +2.2 MNOK2930. However, its high student-to-faculty ratio (22.3) combined with KD Category 1 funding constraints requires active controller monitoring22.Implementation Instructions in Power BI DesktopCreate Measures Table: Go to Home > Enter Data, create a table named _Measures, and load it.Add Measures: Click New Measure and paste each DAX block.Set Display Folders: In Model View, select each measure and enter the folder path (e.g., _01 Accounting, _08 RAG & Design).Conditional Formatting:For Card Accent Bars: Enable Accent Bar on New Card Visual $\rightarrow$ fx (Conditional Formatting) $\rightarrow$ Format Style: Field Value $\rightarrow$ Select [RAG Hex Color]3132.For Matrix Fills: Go to Cell Elements $\rightarrow$ Enable Background Color $\rightarrow$ Format Style: Field Value $\rightarrow$ Select [RAG Soft Background Hex]"

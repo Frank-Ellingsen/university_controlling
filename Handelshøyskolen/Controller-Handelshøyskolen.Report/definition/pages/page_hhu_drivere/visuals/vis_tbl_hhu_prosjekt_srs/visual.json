@@ -1,0 +1,144 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "vis_tbl_hhu_prosjekt_srs",
+  "position": {
+    "x": 20,
+    "y": 630,
+    "z": 25,
+    "width": 1880,
+    "height": 430,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Instituttnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Instituttnavn",
+              "nativeQueryRef": "Enhet"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactGL"
+                    }
+                  },
+                  "Property": "ProsjektKode"
+                }
+              },
+              "queryRef": "FactGL.ProsjektKode",
+              "nativeQueryRef": "Prosjekt"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccountHierarchy"
+                    }
+                  },
+                  "Property": "Kontonavn"
+                }
+              },
+              "queryRef": "DimAccountHierarchy.Kontonavn",
+              "nativeQueryRef": "Kontonavn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccountHierarchy"
+                    }
+                  },
+                  "Property": "SRS_regnskapslinje"
+                }
+              },
+              "queryRef": "DimAccountHierarchy.SRS_regnskapslinje",
+              "nativeQueryRef": "SRS Standard"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual YTD Kostnad"
+                }
+              },
+              "queryRef": "_Measures.Actual YTD Kostnad",
+              "nativeQueryRef": "Påløpt M01-M09 (MNOK)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Forecast LE Kostnad"
+                }
+              },
+              "queryRef": "_Measures.Forecast LE Kostnad",
+              "nativeQueryRef": "Helår LE (MNOK)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactGL"
+                    }
+                  },
+                  "Property": "Beskrivelse"
+                }
+              },
+              "queryRef": "FactGL.Beskrivelse",
+              "nativeQueryRef": "Merknad / Regulatorisk Hjemmel"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sentrale HHU Transaksjoner og Prosjekter: AACSB Akkreditering, SRS 9 EVU-avsetning & SRS 10 NFR-frikjøp'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

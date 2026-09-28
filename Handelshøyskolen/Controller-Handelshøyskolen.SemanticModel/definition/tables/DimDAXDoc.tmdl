@@ -1,0 +1,29 @@
+table DimDAXDoc
+	lineageTag: 56bddd23-46cd-4980-9c95-707512ae68c5
+
+	column LineNr
+		dataType: int64
+		formatString: 0
+		lineageTag: ac144834-f49c-450a-966e-339d4595f0d6
+		summarizeBy: none
+		sourceColumn: LineNr
+		annotation SummarizationSetBy = Automatic
+
+	column LineContent
+		dataType: string
+		lineageTag: dddf9e7b-298c-424e-bc2c-ad31fea4b78a
+		summarizeBy: none
+		sourceColumn: LineContent
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDAXDoc = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\DimDAXDoc.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"LineNr", Int64.Type}, {"LineContent", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

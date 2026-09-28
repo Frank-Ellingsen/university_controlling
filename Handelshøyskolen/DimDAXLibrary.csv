@@ -1,0 +1,196 @@
+MeasureNr,Folder,FolderTitle,MeasureName,HeaderDescription,DAXFormula,DAXCode,ControllingNote
+1,_01 Accounting,Core Accounting & YTD Measures,Actual YTD,Actual YTD (Bokført regnskap M01 - M09 / Sept 30 Cutoff),"Actual YTD = CALCULATE( SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Actual"" )","Actual YTD = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert]),
+    'FactGL'[Bokforingstype] = ""Actual""
+)","Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
+2,_01 Accounting,Core Accounting & YTD Measures,Budsjett YTD,Budsjett YTD (Akkumulert periodisert budsjett M01 - M09),"Budsjett YTD = CALCULATE( SUM('FactBudget'[BudsjettBelop]), 'DimDate'[ErActualYTD] = TRUE() )","Budsjett YTD = 
+CALCULATE(
+    SUM('FactBudget'[BudsjettBelop]),
+    'DimDate'[ErActualYTD] = TRUE()
+)","Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
+3,_01 Accounting,Core Accounting & YTD Measures,Avvik YTD,Avvik YTD (MNOK) [Positivt = Merforbruk / Negativt = Mindreforbruk],Avvik YTD = [Actual YTD] - [Budsjett YTD],Avvik YTD = [Actual YTD] - [Budsjett YTD],"Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
+4,_01 Accounting,Core Accounting & YTD Measures,Avvik YTD %,Avvik YTD %,"Avvik YTD % = DIVIDE([Avvik YTD], [Budsjett YTD], 0)","Avvik YTD % = 
+DIVIDE([Avvik YTD], [Budsjett YTD], 0)","Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
+5,_01 Accounting,Core Accounting & YTD Measures,Monthly Actuals and Forecast,Monthly Actuals and Forecast Bridge (M01-M09 Actuals + M10-M12 Q4 Forecast),"Monthly Actuals and Forecast = VAR CutoffMonth = 9 VAR CurrentMonth = MAX('DimDate'[MaanedNummer]) VAR ActualAmount = CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Actual"") VAR ForecastAmount = CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Forecast"") RETURN IF(CurrentMonth <= CutoffMonth, ActualAmount, ForecastAmount)","Monthly Actuals and Forecast = 
+VAR CutoffMonth = 9
+VAR CurrentMonth = MAX('DimDate'[MaanedNummer])
+VAR ActualAmount = CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Actual"")
+VAR ForecastAmount = CALCULATE(SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Forecast"")
+RETURN
+IF(CurrentMonth <= CutoffMonth, ActualAmount, ForecastAmount)","Actual YTD summerer bokførte hovedboksbevegelser frem til 30. september (1 072,1 MNOK inntekt / 1 092,0 MNOK kostnader for UiA)."
+6,_02 Forecast & LE,Rolling Forecasts & Year-End Estimates,Forecast Q4 (ETC),Forecast Q4 / Estimate to Complete (ETC M10 - M12),"Forecast Q4 (ETC) = CALCULATE( SUM('FactGL'[Belop_signert]), 'FactGL'[Bokforingstype] = ""Forecast"" )","Forecast Q4 (ETC) = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert]),
+    'FactGL'[Bokforingstype] = ""Forecast""
+)","Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
+7,_02 Forecast & LE,Rolling Forecasts & Year-End Estimates,Forecast LE (EAC),Forecast LE / Estimate at Completion (EAC = Actual YTD + Q4 Forecast),Forecast LE (EAC) = [Actual YTD] + [Forecast Q4 (ETC)],Forecast LE (EAC) = [Actual YTD] + [Forecast Q4 (ETC)],"Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
+8,_02 Forecast & LE,Rolling Forecasts & Year-End Estimates,Årsbudsjett (BAC),Vedtatt Årsbudsjett / Budget at Completion (BAC),Årsbudsjett (BAC) = SUM('FactBudget'[BudsjettBelop]),Årsbudsjett (BAC) = SUM('FactBudget'[BudsjettBelop]),"Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
+9,_02 Forecast & LE,Rolling Forecasts & Year-End Estimates,Sluttavvik (VAC),Sluttavvik / Variance at Completion (VAC MNOK = BAC - EAC),Sluttavvik (VAC) = [Årsbudsjett (BAC)] - [Forecast LE (EAC)],Sluttavvik (VAC) = [Årsbudsjett (BAC)] - [Forecast LE (EAC)],"Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
+10,_02 Forecast & LE,Rolling Forecasts & Year-End Estimates,VAC %,VAC % (Relativ overskridelse eller innsparing),"VAC % = DIVIDE([Sluttavvik (VAC)], [Årsbudsjett (BAC)], 0)","VAC % = 
+DIVIDE([Sluttavvik (VAC)], [Årsbudsjett (BAC)], 0)","Samlet helårsprognose (Forecast LE / EAC) utgjør 1 433,0 MNOK inntekt mot 1 444,0 MNOK kostnader. Netto helårsavvik (VAC) på -11,0 MNOK dekkes av oppsparte reserver i tråd med Note 15 og Rundskriv F-05-20."
+11,_03 Temporal YoY & MoM,Temporal Baseline Comparisons,Actual PY,Prior Year Actuals (PY YTD),"Actual PY = CALCULATE( [Actual YTD], SAMEPERIODLASTYEAR('DimDate'[Dato]) )","Actual PY = 
+CALCULATE(
+    [Actual YTD],
+    SAMEPERIODLASTYEAR('DimDate'[Dato])
+)",Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter.
+12,_03 Temporal YoY & MoM,Temporal Baseline Comparisons,Actual YoY,Absolute Year-over-Year Difference (YoY MNOK),Actual YoY = [Actual YTD] - [Actual PY],Actual YoY = [Actual YTD] - [Actual PY],Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter.
+13,_03 Temporal YoY & MoM,Temporal Baseline Comparisons,Actual YoY %,Percentage Year-over-Year Growth (YoY %),"Actual YoY % = DIVIDE([Actual YoY], [Actual PY], 0)","Actual YoY % = 
+DIVIDE([Actual YoY], [Actual PY], 0)",Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter.
+14,_03 Temporal YoY & MoM,Temporal Baseline Comparisons,Actual PM,Prior Month Actuals (PM),"Actual PM = CALCULATE( SUM('FactGL'[Belop_signert]), PREVIOUSMONTH('DimDate'[Dato]), 'FactGL'[Bokforingstype] = ""Actual"" )","Actual PM = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert]),
+    PREVIOUSMONTH('DimDate'[Dato]),
+    'FactGL'[Bokforingstype] = ""Actual""
+)",Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter.
+15,_03 Temporal YoY & MoM,Temporal Baseline Comparisons,Actual CM,Current Month Actuals (CM),"Actual CM = CALCULATE( SUM('FactGL'[Belop_signert]), 'DimDate'[DatoNokkel] = MAX('FactGL'[DatoNokkel]), 'FactGL'[Bokforingstype] = ""Actual"" )","Actual CM = 
+CALCULATE(
+    SUM('FactGL'[Belop_signert]),
+    'DimDate'[DatoNokkel] = MAX('FactGL'[DatoNokkel]),
+    'FactGL'[Bokforingstype] = ""Actual""
+)",Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter.
+16,_03 Temporal YoY & MoM,Temporal Baseline Comparisons,Actual MoM,Month-over-Month Difference (MoM MNOK),Actual MoM = [Actual CM] - [Actual PM],Actual MoM = [Actual CM] - [Actual PM],Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter.
+17,_03 Temporal YoY & MoM,Temporal Baseline Comparisons,Actual MoM %,Percentage Month-over-Month Growth (MoM %),"Actual MoM % = DIVIDE([Actual MoM], [Actual PM], 0)","Actual MoM % = 
+DIVIDE([Actual MoM], [Actual PM], 0)",Temporære sammenligningslinjer (YoY og MoM) sikrer at ledelsen evaluerer driftsmomentum parallelt med faste årsbudsjetter.
+18,_04 EVM,Earned Value Management,Planned Value (PV),Planned Value (PV) - Akkumulert planlagt verdi,Planned Value (PV) = SUM('FactEVM'[Planned_Value_PV_MNOK]),Planned Value (PV) = SUM('FactEVM'[Planned_Value_PV_MNOK]),"Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
+19,_04 EVM,Earned Value Management,Earned Value (EV),Earned Value (EV) - Akkumulert opptjent verdi,Earned Value (EV) = SUM('FactEVM'[Earned_Value_EV_MNOK]),Earned Value (EV) = SUM('FactEVM'[Earned_Value_EV_MNOK]),"Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
+20,_04 EVM,Earned Value Management,Actual Cost (AC),Actual Cost (AC) - Akkumulert faktisk kostnad,Actual Cost (AC) = SUM('FactEVM'[Actual_Cost_AC_MNOK]),Actual Cost (AC) = SUM('FactEVM'[Actual_Cost_AC_MNOK]),"Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
+21,_04 EVM,Earned Value Management,CPI,Cost Performance Index (CPI = EV / AC),"CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)","CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)","Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
+22,_04 EVM,Earned Value Management,SPI,Schedule Performance Index (SPI = EV / PV),"SPI = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)","SPI = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)","Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
+23,_04 EVM,Earned Value Management,EVM Status Subtitle,EVM Status Subtitle Callout,"EVM Status Subtitle = VAR CPIVal = [CPI] VAR SPIVal = [SPI] RETURN ""CPI: "" & FORMAT(CPIVal, ""0.00"") & "" (Kost) | SPI: "" & FORMAT(SPIVal, ""0.00"") & "" (Fremdrift)""","EVM Status Subtitle = 
+VAR CPIVal = [CPI]
+VAR SPIVal = [SPI]
+RETURN
+""CPI: "" & FORMAT(CPIVal, ""0.00"") & "" (Kost) | SPI: "" & FORMAT(SPIVal, ""0.00"") & "" (Fremdrift)""","Ved T3-avskjæring er UiAs CPI 0,95 (5% kostnadsoverskridelse) og SPI 0,92 (8% fremdriftsforsinkelse)."
+24,_05 Staffing & FTE,Staffing & Capacity KPIs,Totale Årsverk,Totale Årsverk (FTE Snapshot),"Totale Årsverk = CALCULATE( SUM('FactFTE'[Aarsverk]), 'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel]) )","Totale Årsverk = 
+CALCULATE(
+    SUM('FactFTE'[Aarsverk]),
+    'DimDate'[DatoNokkel] = MAX('FactFTE'[DatoNokkel])
+)","Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
+25,_05 Staffing & FTE,Staffing & Capacity KPIs,Faglige Årsverk (UF),Faglige Årsverk (UF - Undervisning og Forskning),"Faglige Årsverk (UF) = CALCULATE( [Totale Årsverk], 'FactFTE'[Stillingstype] = ""UF"" )","Faglige Årsverk (UF) = 
+CALCULATE(
+    [Totale Årsverk],
+    'FactFTE'[Stillingstype] = ""UF""
+)","Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
+26,_05 Staffing & FTE,Staffing & Capacity KPIs,Teknisk-Admin Årsverk (TA),Teknisk-Administrative Årsverk (TA),"Teknisk-Admin Årsverk (TA) = CALCULATE( [Totale Årsverk], 'FactFTE'[Stillingstype] = ""TA"" )","Teknisk-Admin Årsverk (TA) = 
+CALCULATE(
+    [Totale Årsverk],
+    'FactFTE'[Stillingstype] = ""TA""
+)","Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
+27,_05 Staffing & FTE,Staffing & Capacity KPIs,Faglig Andel %,Faglig Andel % (Sektormål: > 50-55%),"Faglig Andel % = DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)","Faglig Andel % = DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)","Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
+28,_05 Staffing & FTE,Staffing & Capacity KPIs,Lønnsandel %,Lønnsandel % av Totale Driftskostnader (Sektornorm: 62-65%),"Lønnsandel % = VAR Lonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"") VAR TotalKost = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = ""Kostnad"") RETURN DIVIDE(Lonn, TotalKost, 0)","Lønnsandel % = 
+VAR Lonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"")
+VAR TotalKost = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimAccountHierarchy'[Kontotype] = ""Kostnad"")
+RETURN DIVIDE(Lonn, TotalKost, 0)","Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
+29,_05 Staffing & FTE,Staffing & Capacity KPIs,Staffing Card Subtitle,Staffing Card Subtitle Callout,"Staffing Card Subtitle = VAR UF = [Faglige Årsverk (UF)] VAR TA = [Teknisk-Admin Årsverk (TA)] VAR LonnPct = [Lønnsandel %] RETURN FORMAT(UF, ""#0"") & "" UF / "" & FORMAT(TA, ""#0"") & "" TA | Lønnsandel: "" & FORMAT(LonnPct, ""0.0%"")","Staffing Card Subtitle = 
+VAR UF = [Faglige Årsverk (UF)]
+VAR TA = [Teknisk-Admin Årsverk (TA)]
+VAR LonnPct = [Lønnsandel %]
+RETURN
+FORMAT(UF, ""#0"") & "" UF / "" & FORMAT(TA, ""#0"") & "" TA | Lønnsandel: "" & FORMAT(LonnPct, ""0.0%"")","Lønnskostnader utgjør 65,4% av totale driftskostnader ved UiA (944,0 MNOK), marginalt over sektornormens øvre terskel på 65,0%."
+30,_06 Utdanning & SPE60,Student Production & KD 2025 Model,Registrerte Studenter,Registrerte Studenter,Registrerte Studenter = SUM('FactStudents'[RegistrerteStudenter]),Registrerte Studenter = SUM('FactStudents'[RegistrerteStudenter]),Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer.
+31,_06 Utdanning & SPE60,Student Production & KD 2025 Model,Avlagte SPE60,Avlagte Studiepoengekvivalenter (SPE60 = Total SP / 60),Avlagte SPE60 = SUM('FactStudents'[SPE60]),Avlagte SPE60 = SUM('FactStudents'[SPE60]),Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer.
+32,_06 Utdanning & SPE60,Student Production & KD 2025 Model,Studenter pr UF-Årsverk,Studenter pr Faglig Årsverk (Lærertetthet & Kapasitet),"Studenter pr UF-Årsverk = DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)","Studenter pr UF-Årsverk = 
+DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)",Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer.
+33,_06 Utdanning & SPE60,Student Production & KD 2025 Model,Enhetskostnad pr SPE60,Enhetskostnad pr SPE60 (NOK pr produserte helårsstudent),"Enhetskostnad pr SPE60 = DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)","Enhetskostnad pr SPE60 = 
+DIVIDE([Forecast LE (EAC)] * 1000000, [Avlagte SPE60], 0)",Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer.
+34,_06 Utdanning & SPE60,Student Production & KD 2025 Model,KD Kat 1 Inntekt,"KD Kategori 1 Inntekt (Humaniora, Samfunnsfag, Økonomi @ 54 550 kr/SPE60)","KD Kat 1 Inntekt = CALCULATE( SUM('FactStudents'[SPE60]) * 54550, 'FactStudents'[KDKategori] = ""Kategori 1"" )","KD Kat 1 Inntekt = 
+CALCULATE(
+    SUM('FactStudents'[SPE60]) * 54550,
+    'FactStudents'[KDKategori] = ""Kategori 1""
+)",Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer.
+35,_06 Utdanning & SPE60,Student Production & KD 2025 Model,Student KPI Subtitle,Student KPI Card Subtitle Callout,"Student KPI Subtitle = VAR SPE = [Avlagte SPE60] VAR Ratio = [Studenter pr UF-Årsverk] RETURN FORMAT(SPE, ""#,##0"") & "" SPE60 | "" & FORMAT(Ratio, ""0.0"") & "" Studenter/UF-ÅV""","Student KPI Subtitle = 
+VAR SPE = [Avlagte SPE60]
+VAR Ratio = [Studenter pr UF-Årsverk]
+RETURN
+FORMAT(SPE, ""#,##0"") & "" SPE60 | "" & FORMAT(Ratio, ""0.0"") & "" Studenter/UF-ÅV""",Under KDs 2025-finansieringsmodell gir Kategori 1 en sats på 54 550 NOK pr 60 SPE. Satsen gjelder marginale volumendringer.
+36,_07 Action Tracker,Restructuring & Action Tracker,Forventet Tiltakseffekt,Forventet Tiltakseffekt (Planlagt innsparing i MNOK),Forventet Tiltakseffekt = SUM('FactAction'[ForventetEffekt]),Forventet Tiltakseffekt = SUM('FactAction'[ForventetEffekt]),FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik.
+37,_07 Action Tracker,Restructuring & Action Tracker,Realisert Tiltakseffekt,Realisert Tiltakseffekt (Bokført innsparing hittil),Realisert Tiltakseffekt = SUM('FactAction'[RealisertEffekt]),Realisert Tiltakseffekt = SUM('FactAction'[RealisertEffekt]),FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik.
+38,_07 Action Tracker,Restructuring & Action Tracker,Tiltak Realiseringsgrad %,Tiltak Realiseringsgrad %,"Tiltak Realiseringsgrad % = DIVIDE([Realisert Tiltakseffekt], [Forventet Tiltakseffekt], 0)","Tiltak Realiseringsgrad % = 
+DIVIDE([Realisert Tiltakseffekt], [Forventet Tiltakseffekt], 0)",FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik.
+39,_07 Action Tracker,Restructuring & Action Tracker,Forecast etter Tiltak,Forecast etter Tiltak (Netto Sluttresultat inkl. omstilling),Forecast etter Tiltak = [Forecast LE (EAC)] + [Forventet Tiltakseffekt],Forecast etter Tiltak = [Forecast LE (EAC)] + [Forventet Tiltakseffekt],FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik.
+40,_07 Action Tracker,Restructuring & Action Tracker,Restavvik etter Tiltak,Restavvik etter Tiltak (Gjenværende risikogap),Restavvik etter Tiltak = [Forecast etter Tiltak] - [Årsbudsjett (BAC)],Restavvik etter Tiltak = [Forecast etter Tiltak] - [Årsbudsjett (BAC)],FactAction kobler omstillingstiltak (f.eks. administrativ ansettelsesstopp T001/T002) direkte til regnskapskonti og prognoseavvik.
+41,_08 RAG & Design,RAG Formatting & Dynamic Design,Budget Variance RAG Status,Budget Variance RAG Status Text Badge,"Budget Variance RAG Status = VAR Budget = [Årsbudsjett (BAC)] VAR Forecast = [Forecast LE (EAC)] VAR Vac = Forecast - Budget VAR VacPct = DIVIDE(Vac, Budget, 0) RETURN SWITCH( TRUE(), Vac >= 0, ""🟢 Under/I budsjett"", VacPct >= -0.05, ""🟡 Moderat overskridelse (2-5%)"", ""🔴 Kritisk overskridelse (>5%)"" )","Budget Variance RAG Status = 
+VAR Budget = [Årsbudsjett (BAC)]
+VAR Forecast = [Forecast LE (EAC)]
+VAR Vac = Forecast - Budget
+VAR VacPct = DIVIDE(Vac, Budget, 0)
+RETURN
+SWITCH(
+    TRUE(),
+    Vac >= 0, ""🟢 Under/I budsjett"",
+    VacPct >= -0.05, ""🟡 Moderat overskridelse (2-5%)"",
+    ""🔴 Kritisk overskridelse (>5%)""
+)","Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
+42,_08 RAG & Design,RAG Formatting & Dynamic Design,RAG Hex Color,"Primary RAG Hex Color (For Bars, Card Accents & Text)","RAG Hex Color = VAR Vac = [Sluttavvik (VAC)] VAR VacPct = [VAC %] RETURN IF( Vac >= 0, ""#10b981"", // Emerald Green IF( VacPct >= -0.05, ""#f59e0b"", // Amber Yellow ""#ef4444"" // Crimson Red ) )","RAG Hex Color = 
+VAR Vac = [Sluttavvik (VAC)]
+VAR VacPct = [VAC %]
+RETURN
+IF(
+    Vac >= 0, 
+    ""#10b981"", // Emerald Green
+    IF(
+        VacPct >= -0.05, 
+        ""#f59e0b"", // Amber Yellow
+        ""#ef4444""  // Crimson Red
+    )
+)","Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
+43,_08 RAG & Design,RAG Formatting & Dynamic Design,RAG Soft Background Hex,Soft RAG Background Fill Hex (Tufte 85% Opacity Tint for Matrix Cells),"RAG Soft Background Hex = VAR Vac = [Sluttavvik (VAC)] VAR VacPct = [VAC %] RETURN IF( Vac >= 0, ""#ecfdf5"", // Soft Mint Green IF( VacPct >= -0.05, ""#fffbeb"", // Soft Warm Amber ""#fef2f2"" // Soft Crimson Red ) )","RAG Soft Background Hex = 
+VAR Vac = [Sluttavvik (VAC)]
+VAR VacPct = [VAC %]
+RETURN
+IF(
+    Vac >= 0, 
+    ""#ecfdf5"", // Soft Mint Green
+    IF(
+        VacPct >= -0.05, 
+        ""#fffbeb"", // Soft Warm Amber
+        ""#fef2f2""  // Soft Crimson Red
+    )
+)","Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
+44,_08 RAG & Design,RAG Formatting & Dynamic Design,Multi-Context Revenue Subtitle,Multi-Context Card Subtitle with RAG Icons (New Card Visual),"Multi-Context Revenue Subtitle = VAR Budget = [Årsbudsjett (BAC)] VAR Forecast = [Forecast LE (EAC)] VAR PlanDiffPct = DIVIDE(Forecast - Budget, Budget, 0) VAR YoYPct = [Actual YoY %] VAR MoMPct = [Actual MoM %] VAR PlanIcon = IF(PlanDiffPct >= 0, ""🟢"", IF(PlanDiffPct >= -0.05, ""🟡"", ""🔴"")) VAR YoYIcon = IF(YoYPct >= 0, ""🟢"", ""🔴"") VAR PlanText = PlanIcon & "" Budsj: "" & IF(PlanDiffPct >= 0, ""▲ +"", ""▼ "") & FORMAT(PlanDiffPct, ""0.0%"") VAR YoYText = YoYIcon & "" YoY: "" & IF(YoYPct >= 0, ""▲ +"", ""▼ "") & FORMAT(YoYPct, ""0.0%"") VAR MoMText = ""MoM: "" & IF(MoMPct >= 0, ""▲ +"", ""▼ "") & FORMAT(MoMPct, ""0.0%"") RETURN PlanText & "" | "" & YoYText & "" | "" & MoMText","Multi-Context Revenue Subtitle = 
+VAR Budget = [Årsbudsjett (BAC)]
+VAR Forecast = [Forecast LE (EAC)]
+VAR PlanDiffPct = DIVIDE(Forecast - Budget, Budget, 0)
+VAR YoYPct = [Actual YoY %]
+VAR MoMPct = [Actual MoM %]
+
+VAR PlanIcon = IF(PlanDiffPct >= 0, ""🟢"", IF(PlanDiffPct >= -0.05, ""🟡"", ""🔴""))
+VAR YoYIcon = IF(YoYPct >= 0, ""🟢"", ""🔴"")
+
+VAR PlanText = PlanIcon & "" Budsj: "" & IF(PlanDiffPct >= 0, ""▲ +"", ""▼ "") & FORMAT(PlanDiffPct, ""0.0%"")
+VAR YoYText = YoYIcon & "" YoY: "" & IF(YoYPct >= 0, ""▲ +"", ""▼ "") & FORMAT(YoYPct, ""0.0%"")
+VAR MoMText = ""MoM: "" & IF(MoMPct >= 0, ""▲ +"", ""▼ "") & FORMAT(MoMPct, ""0.0%"")
+
+RETURN
+PlanText & "" | "" & YoYText & "" | "" & MoMText","Bruk av myke bakgrunnsfyll (#ECFDF5, #FFFBEB, #FEF2F2) forhindrer blendende neonfarger og følger Edward Tuftes data-ink prinsipper."
+45,_09 HHU Measures,Handelshøyskolen ved UiA Spesifikt,HHU Total Revenue,HHU Total Revenue (276.6 MNOK),"HHU Total Revenue = CALCULATE( [Forecast LE (EAC)], 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'DimAccountHierarchy'[Nivaa1_Navn] = ""Salgs- og driftsinntekt"" )","HHU Total Revenue = 
+CALCULATE(
+    [Forecast LE (EAC)],
+    'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"",
+    'DimAccountHierarchy'[Nivaa1_Navn] = ""Salgs- og driftsinntekt""
+)","Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
+46,_09 HHU Measures,Handelshøyskolen ved UiA Spesifikt,HHU Net Result,HHU Net Result (+2.2 MNOK Surplus),"HHU Net Result = CALCULATE( [Sluttavvik (VAC)], 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"" )","HHU Net Result = 
+CALCULATE(
+    [Sluttavvik (VAC)],
+    'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)""
+)","Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
+47,_09 HHU Measures,Handelshøyskolen ved UiA Spesifikt,HHU Lønnsandel %,HHU Lønnsandel % (65.4%),"HHU Lønnsandel % = CALCULATE( [Lønnsandel %], 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"" )","HHU Lønnsandel % = 
+CALCULATE(
+    [Lønnsandel %],
+    'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)""
+)","Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
+48,_09 HHU Measures,Handelshøyskolen ved UiA Spesifikt,HHU Studenter pr UF-Årsverk,HHU Studenter pr UF-Årsverk (22.3 Ratio),"HHU Studenter pr UF-Årsverk = VAR Studenter = CALCULATE(SUM('FactStudents'[RegistrerteStudenter]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"") VAR UF = CALCULATE(SUM('FactFTE'[Aarsverk]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'FactFTE'[Stillingstype] = ""UF"") RETURN DIVIDE(Studenter, UF, 0)","HHU Studenter pr UF-Årsverk = 
+VAR Studenter = CALCULATE(SUM('FactStudents'[RegistrerteStudenter]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"")
+VAR UF = CALCULATE(SUM('FactFTE'[Aarsverk]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'FactFTE'[Stillingstype] = ""UF"")
+RETURN DIVIDE(Studenter, UF, 0)","Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
+49,_09 HHU Measures,Handelshøyskolen ved UiA Spesifikt,HHU BOA Frikjøpsgrad,HHU BOA Frikjøpsgrad (Buy-Out Share),"HHU BOA Frikjøpsgrad = VAR BOALonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"", 'DimOrganization'[Virksomhetstype] = ""BOA"") VAR TotalLonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"") RETURN DIVIDE(BOALonn, TotalLonn, 0)","HHU BOA Frikjøpsgrad = 
+VAR BOALonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"", 'DimOrganization'[Virksomhetstype] = ""BOA"")
+VAR TotalLonn = CALCULATE(SUM('FactGL'[Belop_signert]), 'DimOrganization'[Fakultetsnavn] = ""Handelshøyskolen ved UiA (HHU)"", 'DimAccountHierarchy'[Nivaa1_Navn] = ""Lønnskostnad"")
+RETURN DIVIDE(BOALonn, TotalLonn, 0)","Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."
+50,_09 HHU Measures,Handelshøyskolen ved UiA Spesifikt,HHU RAG Status,HHU RAG Status,"HHU RAG Status = VAR Resultat = [HHU Net Result] RETURN IF(Resultat >= 0, ""🟢 Overskudd (+2.2 MNOK / Ramme overholdt)"", IF(Resultat >= -2.0, ""🟡 Moderat merforbruk (< 2 MNOK)"", ""🔴 Kritisk merforbruk (> 2 MNOK)"") )","HHU RAG Status = 
+VAR Resultat = [HHU Net Result]
+RETURN
+IF(Resultat >= 0, ""🟢 Overskudd (+2.2 MNOK / Ramme overholdt)"",
+    IF(Resultat >= -2.0, ""🟡 Moderat merforbruk (< 2 MNOK)"", ""🔴 Kritisk merforbruk (> 2 MNOK)"")
+)","Handelshøyskolen (HHU) leverer et positivt netto driftsresultat på +2,2 MNOK. Høy student-til-faglig ratio (22,3) kombinert med KD Kat 1 krever aktiv controller-oppfølging."

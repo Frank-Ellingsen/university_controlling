@@ -1,0 +1,12 @@
+﻿FraTabell;FraKolonne;TilTabell;TilKolonne;Kardinalitet;Kryssfiltrering;Beskrivelse
+FactGL;OrgKode;DimOrganization;OrgKode;*:1;Enveis (Single);Relaterer regnskapstransaksjoner til organisasjonsstruktur
+FactGL;Konto;DimAccountHierarchy;Konto;*:1;Enveis (Single);Relaterer hovedbok til kontoplanhierarki R-102
+FactGL;DatoNokkel;DimDate;DatoNokkel;*:1;Enveis (Single);Relaterer regnskapstider til datokalender 2026
+FactBudget;OrgKode;DimOrganization;OrgKode;*:1;Enveis (Single);Relaterer årsbudsjett til organisasjon
+FactBudget;Konto;DimAccountHierarchy;Konto;*:1;Enveis (Single);Relaterer budsjett til kontoplan
+FactBudget;DatoNokkel;DimDate;DatoNokkel;*:1;Enveis (Single);Relaterer månedsbudsjetter til kalender
+FactFTE;OrgKode;DimOrganization;OrgKode;*:1;Enveis (Single);Relaterer bemanningsdata til organisasjon
+FactFTE;DatoNokkel;DimDate;DatoNokkel;*:1;Enveis (Single);Relaterer månedsårsverk til kalender
+FactStudents;OrgKode;DimOrganization;OrgKode;*:1;Enveis (Single);Relaterer studentmassen til fakultet/institutt
+FactStudents;DatoNokkel;DimDate;DatoNokkel;*:1;Enveis (Single);Relaterer studiepoeng til kalender
+FactEVM;DatoNokkel;DimDate;DatoNokkel;*:1;Enveis (Single);Relaterer Earned Value til kalender

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "vis_cht_hhu_spe_institutt",
+  "position": {
+    "x": 20,
+    "y": 235,
+    "z": 20,
+    "width": 920,
+    "height": 380,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Instituttnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Instituttnavn",
+              "nativeQueryRef": "Institutt",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Registrerte Studenter"
+                }
+              },
+              "queryRef": "_Measures.Registrerte Studenter",
+              "nativeQueryRef": "Studenter"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Avlagte SPE60"
+                }
+              },
+              "queryRef": "_Measures.Avlagte SPE60",
+              "nativeQueryRef": "SPE60 Helår"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'HHU Instituttfordeling: Registrerte Studenter vs. Avlagte SPE60 (KD Kat 1)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

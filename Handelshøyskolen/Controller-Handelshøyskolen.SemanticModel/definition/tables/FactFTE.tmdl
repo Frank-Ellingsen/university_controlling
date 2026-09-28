@@ -1,0 +1,68 @@
+table FactFTE
+	lineageTag: 86242ae6-a613-4383-92f3-f99911680c46
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d9cb344-a724-4826-ae74-2ecf200b16e3
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 6f4d13d4-5d64-4a90-bf41-157ff92b9ef9
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column Stillingstype
+		dataType: string
+		lineageTag: 821d5764-8332-4f71-accf-a641973b7425
+		summarizeBy: none
+		sourceColumn: Stillingstype
+		annotation SummarizationSetBy = Automatic
+
+	column Aarsverk
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 7a43af23-ed34-4d69-9a55-1547142df33d
+		summarizeBy: sum
+		sourceColumn: Aarsverk
+		annotation SummarizationSetBy = Automatic
+
+	column AntallAnsatte
+		dataType: int64
+		formatString: 0
+		lineageTag: c34fdcbb-1f9a-4ca9-8712-7717dfea12a8
+		summarizeBy: sum
+		sourceColumn: AntallAnsatte
+		annotation SummarizationSetBy = Automatic
+
+	column Vakanser
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: d0cc1603-007f-4b63-8c6a-b47286cc3faf
+		summarizeBy: sum
+		sourceColumn: Vakanser
+		annotation SummarizationSetBy = Automatic
+
+	column LonnskostnadMNOK
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: 9eee3852-5bc6-471c-96cc-8a8aa2b50561
+		summarizeBy: sum
+		sourceColumn: LonnskostnadMNOK
+		annotation SummarizationSetBy = Automatic
+
+	partition FactFTE = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\FactFTE.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Stillingstype", type text}, {"Aarsverk", type number}, {"AntallAnsatte", Int64.Type}, {"Vakanser", type number}, {"LonnskostnadMNOK", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

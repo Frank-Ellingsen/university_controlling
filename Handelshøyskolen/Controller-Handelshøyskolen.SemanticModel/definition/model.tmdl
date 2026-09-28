@@ -1,0 +1,36 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode","TMDL-Extension"]
+
+annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate","DimForecastVersion","DimOrganization","FactBudget","FactEVM","FactFTE","FactGL","FactStudents","FactAction","_Measures","DimDAXLibrary","DimDAXDoc"]
+
+ref table DimAccountHierarchy
+ref table DimDate
+ref table DimForecastVersion
+ref table DimOrganization
+ref table FactBudget
+ref table FactEVM
+ref table FactFTE
+ref table FactGL
+ref table FactStudents
+ref table FactAction
+ref table _Measures
+ref table DimDAXLibrary
+ref table DimDAXDoc
+
+ref role Universitetsledelse
+ref role Dekan_HHU
+ref role Instituttleder_I001
+ref role Instituttleder_I002
+ref role Instituttleder_I003
+
+ref cultureInfo en-US

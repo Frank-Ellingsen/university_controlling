@@ -1,0 +1,90 @@
+table FactAction
+	lineageTag: 78851e85-347f-4e50-a3bf-d20e11a45574
+
+	column TiltakID
+		dataType: string
+		lineageTag: f41b3c0b-02f9-4662-bce6-001cd07b7e6e
+		summarizeBy: none
+		sourceColumn: TiltakID
+		annotation SummarizationSetBy = Automatic
+
+	column Enhet
+		dataType: string
+		lineageTag: 37b40578-c993-4ed2-b6d7-a7631577c6df
+		summarizeBy: none
+		sourceColumn: Enhet
+		annotation SummarizationSetBy = Automatic
+
+	column TiltakNavn
+		dataType: string
+		lineageTag: addb2e5a-7159-4471-9baa-92475e9a76c4
+		summarizeBy: none
+		sourceColumn: TiltakNavn
+		annotation SummarizationSetBy = Automatic
+
+	column AnsvarligRolle
+		dataType: string
+		lineageTag: 64644665-6d08-400d-b711-d7535930d0e8
+		summarizeBy: none
+		sourceColumn: AnsvarligRolle
+		annotation SummarizationSetBy = Automatic
+
+	column StartDato
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 817548a4-8ef5-481a-b081-c082387be070
+		summarizeBy: none
+		sourceColumn: StartDato
+		annotation SummarizationSetBy = Automatic
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FristDato
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 5f17cf5f-6b6d-41db-949b-6972517517f4
+		summarizeBy: none
+		sourceColumn: FristDato
+		annotation SummarizationSetBy = Automatic
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ForventetEffektMNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: d29a33eb-b0ab-4db6-a0b1-3520f98651eb
+		summarizeBy: sum
+		sourceColumn: ForventetEffektMNOK
+		annotation SummarizationSetBy = Automatic
+
+	column RealisertEffektMNOK
+		dataType: double
+		formatString: #,##0.00
+		lineageTag: 6ba7fc25-c413-4b56-af81-40d1661fe61a
+		summarizeBy: sum
+		sourceColumn: RealisertEffektMNOK
+		annotation SummarizationSetBy = Automatic
+
+	column Prioritet
+		dataType: string
+		lineageTag: 75c042b7-f353-4a73-bae6-f16e1582a042
+		summarizeBy: none
+		sourceColumn: Prioritet
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: bbaf5fca-2ab7-4b2a-b12f-e8259cda322c
+		summarizeBy: none
+		sourceColumn: Status
+		annotation SummarizationSetBy = Automatic
+
+	partition FactAction = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\FactAction.csv"),[Delimiter=";", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TiltakID", type text}, {"Enhet", type text}, {"TiltakNavn", type text}, {"AnsvarligRolle", type text}, {"StartDato", type date}, {"FristDato", type date}, {"ForventetEffektMNOK", type number}, {"RealisertEffektMNOK", type number}, {"Prioritet", type text}, {"Status", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

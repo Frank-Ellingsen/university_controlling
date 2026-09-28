@@ -1,0 +1,52 @@
+table FactBudget
+	lineageTag: 4c9a82a0-1576-4f29-8df0-90b610d69c41
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 4dedb201-d308-4684-8a96-aca1266c5c07
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 0a01ddfd-7a6d-4c61-8b1d-0f0bc9e9e88a
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: 07e338e9-2180-4b43-beaf-d6d0a78f9396
+		summarizeBy: none
+		sourceColumn: Konto
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettBelop
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: 387e52f0-82f3-401f-9fe8-94fb2445e750
+		summarizeBy: sum
+		sourceColumn: BudsjettBelop
+		annotation SummarizationSetBy = Automatic
+
+	column Beskrivelse
+		dataType: string
+		lineageTag: 169754c0-0a3e-4273-ab7d-1d2b5b3a937f
+		summarizeBy: none
+		sourceColumn: Beskrivelse
+		annotation SummarizationSetBy = Automatic
+
+	partition FactBudget = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\FactBudget.csv"),[Delimiter=";", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Konto", Int64.Type}, {"BudsjettBelop", type number}, {"Beskrivelse", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

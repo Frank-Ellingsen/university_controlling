@@ -1,0 +1,56 @@
+table DimOrganization
+	lineageTag: c67a3149-eea9-4fb3-ae5f-a4538ebe53e4
+
+	column OrgNokkel
+		dataType: string
+		lineageTag: 09f1dbf0-f40f-43c6-ba01-ba5faf4fc0fe
+		summarizeBy: none
+		sourceColumn: OrgNokkel
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 46590225-d700-4df9-8f53-0e9fb3abf50b
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column Fakultetsnavn
+		dataType: string
+		lineageTag: 350f271d-f63e-4727-87c6-7da2cbcbbe94
+		summarizeBy: none
+		sourceColumn: Fakultetsnavn
+		annotation SummarizationSetBy = Automatic
+
+	column Instituttnavn
+		dataType: string
+		lineageTag: 5492077e-0c8e-4578-8738-d9d6a8bddf50
+		summarizeBy: none
+		sourceColumn: Instituttnavn
+		annotation SummarizationSetBy = Automatic
+
+	column Virksomhetstype
+		dataType: string
+		lineageTag: 73a06fce-1dd5-4d81-b698-26b5e689f744
+		summarizeBy: none
+		sourceColumn: Virksomhetstype
+		annotation SummarizationSetBy = Automatic
+
+	column Eierleder
+		dataType: string
+		lineageTag: a39835dc-957f-474d-a27a-d802bd6e038b
+		summarizeBy: none
+		sourceColumn: Eierleder
+		annotation SummarizationSetBy = Automatic
+
+	partition DimOrganization = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\DimOrganization.csv"),[Delimiter=";", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgNokkel", type text}, {"OrgKode", type text}, {"Fakultetsnavn", type text}, {"Instituttnavn", type text}, {"Virksomhetstype", type text}, {"Eierleder", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

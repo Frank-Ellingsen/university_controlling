@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.4.0/schema.json",
+  "name": "v_dax_table",
+  "position": {
+    "x": 315,
+    "y": 168,
+    "width": 945,
+    "height": 535,
+    "z": 6
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDAXLibrary"
+                    }
+                  },
+                  "Property": "MeasureNr"
+                }
+              },
+              "queryRef": "DimDAXLibrary.MeasureNr"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDAXLibrary"
+                    }
+                  },
+                  "Property": "MeasureName"
+                }
+              },
+              "queryRef": "DimDAXLibrary.MeasureName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDAXLibrary"
+                    }
+                  },
+                  "Property": "FolderTitle"
+                }
+              },
+              "queryRef": "DimDAXLibrary.FolderTitle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDAXLibrary"
+                    }
+                  },
+                  "Property": "HeaderDescription"
+                }
+              },
+              "queryRef": "DimDAXLibrary.HeaderDescription"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDAXLibrary"
+                    }
+                  },
+                  "Property": "DAXFormula"
+                }
+              },
+              "queryRef": "DimDAXLibrary.DAXFormula"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimDAXLibrary"
+                    }
+                  },
+                  "Property": "ControllingNote"
+                }
+              },
+              "queryRef": "DimDAXLibrary.ControllingNote"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "title": {
+              "expr": {
+                "Literal": {
+                  "Value": "'DAX M\u00e5lspesifikasjon & Formler (DAX.md)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

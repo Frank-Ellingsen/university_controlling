@@ -1,0 +1,66 @@
+table FactGL
+	lineageTag: c36740d2-974f-497c-8edc-5f7fbf8fa299
+
+	column DatoNokkel
+		dataType: int64
+		formatString: 0
+		lineageTag: 10c57db9-0abb-485a-acc7-a6121a9537e5
+		summarizeBy: none
+		sourceColumn: DatoNokkel
+		annotation SummarizationSetBy = Automatic
+
+	column OrgKode
+		dataType: string
+		lineageTag: 2fd1af7b-6743-44e5-9d88-45d90bdc97fd
+		summarizeBy: none
+		sourceColumn: OrgKode
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		formatString: 0
+		lineageTag: f9627d58-0e8a-49ed-87b4-4281aedbf6fd
+		summarizeBy: none
+		sourceColumn: Konto
+		annotation SummarizationSetBy = Automatic
+
+	column ProsjektKode
+		dataType: string
+		lineageTag: c70899e5-54f1-48fc-93d7-c65133e5d8f2
+		summarizeBy: none
+		sourceColumn: ProsjektKode
+		annotation SummarizationSetBy = Automatic
+
+	column Bokforingstype
+		dataType: string
+		lineageTag: 9d0e2db7-9bba-4ab2-b90a-2dd837b62a54
+		summarizeBy: none
+		sourceColumn: Bokforingstype
+		annotation SummarizationSetBy = Automatic
+
+	column Belop_signert
+		dataType: double
+		formatString: #,##0.000
+		lineageTag: c81db24a-1e38-44ee-8d2e-c086d95d682f
+		summarizeBy: sum
+		sourceColumn: Belop_signert
+		annotation SummarizationSetBy = Automatic
+
+	column Beskrivelse
+		dataType: string
+		lineageTag: c8be7f6a-db36-4da9-8e91-beaca6379853
+		summarizeBy: none
+		sourceColumn: Beskrivelse
+		annotation SummarizationSetBy = Automatic
+
+	partition FactGL = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\Handelshøyskolen\FactGL.csv"),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DatoNokkel", Int64.Type}, {"OrgKode", type text}, {"Konto", Int64.Type}, {"ProsjektKode", type text}, {"Bokforingstype", type text}, {"Belop_signert", type number}, {"Beskrivelse", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
