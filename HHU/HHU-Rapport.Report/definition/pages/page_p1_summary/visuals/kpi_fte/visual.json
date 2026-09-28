@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "_Measures.Totale Årsverk",
-              "nativeQueryRef": "Totale Årsverk"
+              "nativeQueryRef": "BEMANNING TOTALT (FTE)"
             }
           ]
         }

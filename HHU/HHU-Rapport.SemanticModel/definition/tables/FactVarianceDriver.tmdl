@@ -1,0 +1,83 @@
+table FactVarianceDriver
+	lineageTag: d0ba4af1-196c-421a-b001-0a4e2268e093
+
+	column OrgKode
+		dataType: string
+		lineageTag: e70ba26b-ddc2-4a03-a981-25654ce8cc00
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: int64
+		lineageTag: 13b6f4c3-a397-4401-b229-b874e5a935b0
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avviksdriver
+		dataType: string
+		lineageTag: e547ad4d-c4ac-45ec-85bc-d42ecf6a0e14
+		summarizeBy: none
+		sourceColumn: Avviksdriver
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudsjettBelop
+		dataType: double
+		formatString: #,##0
+		lineageTag: 24d3f0f1-6f73-400f-8a88-89930980a69f
+		summarizeBy: sum
+		sourceColumn: BudsjettBelop
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrognoseLE
+		dataType: double
+		formatString: #,##0
+		lineageTag: c570471e-a399-4a19-b47b-b168c580972d
+		summarizeBy: sum
+		sourceColumn: PrognoseLE
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvvikBelop
+		dataType: double
+		formatString: #,##0
+		lineageTag: 2db7615f-9e6e-444e-aa1e-755e00dcb7a2
+		summarizeBy: sum
+		sourceColumn: AvvikBelop
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvvikProsent
+		dataType: double
+		formatString: 0.0%
+		lineageTag: c750c611-7300-4ec6-9f79-cfe4904b22c1
+		summarizeBy: none
+		sourceColumn: AvvikProsent
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Status
+		dataType: string
+		lineageTag: 8454a9ec-019e-4fab-859c-221c6b0d409f
+		summarizeBy: none
+		sourceColumn: RAG_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactVarianceDriver = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactVarianceDriver.csv"),[Delimiter=";", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", type text}, {"Konto", Int64.Type}, {"Avviksdriver", type text}, {"BudsjettBelop", type number}, {"PrognoseLE", type number}, {"AvvikBelop", type number}, {"AvvikProsent", type number}, {"RAG_Status", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

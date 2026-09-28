@@ -1,0 +1,188 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_closure_plan",
+  "position": {
+    "x": 20,
+    "y": 695,
+    "z": 30,
+    "height": 365,
+    "width": 1180,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "Prio"
+                }
+              },
+              "queryRef": "FactClosurePlan.Prio",
+              "nativeQueryRef": "Prio",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "AvvikRisiko"
+                }
+              },
+              "queryRef": "FactClosurePlan.AvvikRisiko",
+              "nativeQueryRef": "Avvik / Risiko",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "PaakrevdHandling"
+                }
+              },
+              "queryRef": "FactClosurePlan.PaakrevdHandling",
+              "nativeQueryRef": "Påkrevd Handling",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "AnsvarligEier"
+                }
+              },
+              "queryRef": "FactClosurePlan.AnsvarligEier",
+              "nativeQueryRef": "Eier",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "FristDato"
+                }
+              },
+              "queryRef": "FactClosurePlan.FristDato",
+              "nativeQueryRef": "Frist",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "BevisFerdigkriterium"
+                }
+              },
+              "queryRef": "FactClosurePlan.BevisFerdigkriterium",
+              "nativeQueryRef": "Ferdigkriterium",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "Konsekvens"
+                }
+              },
+              "queryRef": "FactClosurePlan.Konsekvens",
+              "nativeQueryRef": "Konsekvens",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactClosurePlan"
+                    }
+                  },
+                  "Property": "RAG_Status"
+                }
+              },
+              "queryRef": "FactClosurePlan.RAG_Status",
+              "nativeQueryRef": "RAG",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Prioritert Lukkeplan før Systemfrys (UBW-låsing 15.11.2026)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

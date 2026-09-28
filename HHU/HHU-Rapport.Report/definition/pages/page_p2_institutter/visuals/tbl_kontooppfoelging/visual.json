@@ -1,0 +1,203 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_kontooppfoelging",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 480,
+    "width": 1260,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccountHierarchy"
+                    }
+                  },
+                  "Property": "Konto"
+                }
+              },
+              "queryRef": "DimAccountHierarchy.Konto",
+              "nativeQueryRef": "Konto",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccountHierarchy"
+                    }
+                  },
+                  "Property": "Kontonavn"
+                }
+              },
+              "queryRef": "DimAccountHierarchy.Kontonavn",
+              "nativeQueryRef": "Kontonavn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimAccountHierarchy"
+                    }
+                  },
+                  "Property": "SRS_regnskapslinje"
+                }
+              },
+              "queryRef": "DimAccountHierarchy.SRS_regnskapslinje",
+              "nativeQueryRef": "SRS-Linje",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual YTD"
+                }
+              },
+              "queryRef": "_Measures.Actual YTD",
+              "nativeQueryRef": "Regnskap YTD",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budsjett YTD"
+                }
+              },
+              "queryRef": "_Measures.Budsjett YTD",
+              "nativeQueryRef": "Budsjett YTD",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Avvik YTD"
+                }
+              },
+              "queryRef": "_Measures.Avvik YTD",
+              "nativeQueryRef": "Avvik YTD",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Forecast LE (EAC)"
+                }
+              },
+              "queryRef": "_Measures.Forecast LE (EAC)",
+              "nativeQueryRef": "Helårsprognose (LE)",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Årsbudsjett (BAC)"
+                }
+              },
+              "queryRef": "_Measures.Årsbudsjett (BAC)",
+              "nativeQueryRef": "Årsbudsjett (BAC)",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sluttavvik (VAC)"
+                }
+              },
+              "queryRef": "_Measures.Sluttavvik (VAC)",
+              "nativeQueryRef": "Sluttavvik (VAC)",
+              "active": false
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Kontooppfølging: Regnskap, Budsjett og Sluttavvik per Hovedbokskonto (SRS)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p8_decision",
+  "position": {
+    "x": 20,
+    "y": 715,
+    "z": 10,
+    "height": 345,
+    "width": 1880,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "⚠️ STRATEGISK BESLUTNINGSSTØTTE 2027 & 2,0 MNOK INNTEKTSGAP",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#B91C1C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Fakultetsstyrets behandling av 2027-rammen fordrer følgende strategiske avklaringer:\n\n1. Datakvalitetsavvik: FactBudget_2027 summerer til 286,07 MNOK, mens styringsdokumentene oppgir en ramme på 288,07 MNOK. Differansen på 2,0 MNOK skyldes manglende inntektsføring av sentral strategisk tildeling og må rettes i kilden før systemfrys.\n2. Lønnsandelens utvikling: Konto-basert lønnsandel (66,8 %) overskrider målet på 64,5 %. Lønnsveksten (3,7 %) spiser opp handlingsrommet og krever at ansettelsesstopp håndheves.\n3. Investeringsreserver: Det planlagte overskuddet på 4,1 MNOK må formålsbindes til flerårige investeringer i AACSB-akkreditering og digital læring.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

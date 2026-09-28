@@ -3,10 +3,10 @@
   "name": "tbl_institute_matrix",
   "position": {
     "x": 20,
-    "y": 655,
-    "z": 40,
-    "height": 410,
-    "width": 1880,
+    "y": 635,
+    "z": 30,
+    "height": 425,
+    "width": 1260,
     "tabOrder": 12
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "DimOrganization.OrgKode",
-              "nativeQueryRef": "OrgKode"
+              "nativeQueryRef": "OrgKode",
+              "active": true
             },
             {
               "field": {
@@ -41,7 +42,8 @@
                 }
               },
               "queryRef": "DimOrganization.Enhetsnavn",
-              "nativeQueryRef": "Enhetsnavn"
+              "nativeQueryRef": "Enhet",
+              "active": true
             },
             {
               "field": {
@@ -55,7 +57,8 @@
                 }
               },
               "queryRef": "_Measures.Total Inntekt MNOK",
-              "nativeQueryRef": "Total Inntekt (MNOK)"
+              "nativeQueryRef": "Total Inntekt (MNOK)",
+              "active": false
             },
             {
               "field": {
@@ -69,7 +72,8 @@
                 }
               },
               "queryRef": "_Measures.Actual/FC Lønn",
-              "nativeQueryRef": "Lønnskostnad (MNOK)"
+              "nativeQueryRef": "Lønnskostnad (MNOK)",
+              "active": false
             },
             {
               "field": {
@@ -83,7 +87,8 @@
                 }
               },
               "queryRef": "_Measures.Actual/FC Drift",
-              "nativeQueryRef": "Driftskostnad (MNOK)"
+              "nativeQueryRef": "Driftskostnad (MNOK)",
+              "active": false
             },
             {
               "field": {
@@ -97,7 +102,8 @@
                 }
               },
               "queryRef": "_Measures.Actual/FC Capex",
-              "nativeQueryRef": "Investeringer Capex (MNOK)"
+              "nativeQueryRef": "Investeringer Capex",
+              "active": false
             },
             {
               "field": {
@@ -111,7 +117,8 @@
                 }
               },
               "queryRef": "_Measures.Sluttavvik (VAC)",
-              "nativeQueryRef": "Netto Resultat VAC"
+              "nativeQueryRef": "Netto Resultat VAC",
+              "active": false
             },
             {
               "field": {
@@ -125,7 +132,8 @@
                 }
               },
               "queryRef": "_Measures.Faglige Årsverk (UF)",
-              "nativeQueryRef": "UF-Årsverk"
+              "nativeQueryRef": "UF-Årsverk",
+              "active": false
             },
             {
               "field": {
@@ -139,7 +147,8 @@
                 }
               },
               "queryRef": "_Measures.Studenter pr UF-Årsverk",
-              "nativeQueryRef": "Studenter / UF-ÅV"
+              "nativeQueryRef": "Studenter/UF",
+              "active": false
             },
             {
               "field": {
@@ -153,21 +162,8 @@
                 }
               },
               "queryRef": "_Measures.Forecast RAG Status",
-              "nativeQueryRef": "RAG Status"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Diagnose og Drivere"
-                }
-              },
-              "queryRef": "_Measures.Diagnose og Drivere",
-              "nativeQueryRef": "Strategisk Diagnose"
+              "nativeQueryRef": "RAG Status",
+              "active": false
             }
           ]
         }
@@ -209,7 +205,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fakultets- og Instituttoversikt: Totalregnskap, Stillingsstruktur og Styringsdiagnose (300-sekunders dybdeanalyse)'"
+                  "Value": "'Fakultets- og Instituttoversikt: Totalregnskap, Stillingsstruktur og Styringsstatus (300-sekunders dybdeanalyse)'"
                 }
               }
             }

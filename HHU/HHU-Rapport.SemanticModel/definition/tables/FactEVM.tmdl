@@ -1,10 +1,10 @@
 table FactEVM
-	lineageTag: 6a348214-c070-4f88-a03c-4f76a6391c3f
+	lineageTag: 32f0faf8-12ba-41de-920b-3754418806e0
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 00e19198-7f63-4651-8866-19aa3e11fa94
+		lineageTag: 17d4d3f4-1fb6-40a4-8293-bfc0afc88e3c
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -13,7 +13,7 @@ table FactEVM
 	column BAC_BudgetAtCompletion
 		dataType: double
 		formatString: #,##0
-		lineageTag: a85fd1a2-ae39-4ee9-9b97-964cf7a9d4c4
+		lineageTag: ebbf66c4-c7c1-409a-97c3-8b8d3d862d63
 		summarizeBy: sum
 		sourceColumn: BAC_BudgetAtCompletion
 
@@ -22,7 +22,7 @@ table FactEVM
 	column PlannedValue_PV
 		dataType: double
 		formatString: #,##0
-		lineageTag: 32976f8d-a3c0-490b-992c-26b6ee6f2eba
+		lineageTag: ce30bc7b-f474-480b-aa59-1dedace9f18e
 		summarizeBy: sum
 		sourceColumn: PlannedValue_PV
 
@@ -31,7 +31,7 @@ table FactEVM
 	column EarnedValue_EV
 		dataType: double
 		formatString: #,##0
-		lineageTag: 321d946a-ca7d-45a7-9ef4-8854efa55ffd
+		lineageTag: f890a423-f3c6-4991-b687-d7208c693b85
 		summarizeBy: sum
 		sourceColumn: EarnedValue_EV
 
@@ -40,7 +40,7 @@ table FactEVM
 	column ActualCost_AC
 		dataType: double
 		formatString: #,##0
-		lineageTag: dfce9fbd-35ae-40b7-bdc5-d14847acbb58
+		lineageTag: 587c472c-67b9-4f53-82c5-738c2475a155
 		summarizeBy: sum
 		sourceColumn: ActualCost_AC
 
@@ -49,7 +49,7 @@ table FactEVM
 	column EstimateAtCompletion_EAC
 		dataType: double
 		formatString: #,##0
-		lineageTag: 180f2532-0202-4228-be1f-da954e3f65f6
+		lineageTag: 3e719de7-7b17-4639-9057-738f8c34d760
 		summarizeBy: sum
 		sourceColumn: EstimateAtCompletion_EAC
 
@@ -58,7 +58,7 @@ table FactEVM
 	column EstimateToComplete_ETC
 		dataType: double
 		formatString: #,##0
-		lineageTag: c047ffa8-cc31-4066-ac0f-7ced19fda7da
+		lineageTag: ce2c81e6-00e8-475a-809f-63fd40cdac03
 		summarizeBy: sum
 		sourceColumn: EstimateToComplete_ETC
 
@@ -67,7 +67,7 @@ table FactEVM
 	column VarianceAtCompletion_VAC
 		dataType: double
 		formatString: #,##0
-		lineageTag: 6083cb7a-be41-449f-90a0-a3adc8ccba4a
+		lineageTag: 471f3df0-ddc6-44c9-9549-c7bfa390d302
 		summarizeBy: sum
 		sourceColumn: VarianceAtCompletion_VAC
 
@@ -76,7 +76,7 @@ table FactEVM
 	column CostPerformanceIndex_CPI
 		dataType: double
 		formatString: 0.00
-		lineageTag: 8bcdef0f-5605-4a47-84bf-e9cc3d80762c
+		lineageTag: a12a2f9b-9434-4aff-a512-eeb8869d6644
 		summarizeBy: average
 		sourceColumn: CostPerformanceIndex_CPI
 
@@ -85,7 +85,7 @@ table FactEVM
 	column SchedulePerformanceIndex_SPI
 		dataType: double
 		formatString: 0.00
-		lineageTag: f7bc4388-3537-4d71-b010-e6788cee7c65
+		lineageTag: 8aba59f4-b639-4b77-a205-5f80ae6f653d
 		summarizeBy: average
 		sourceColumn: SchedulePerformanceIndex_SPI
 
@@ -94,7 +94,7 @@ table FactEVM
 	column Planned_Value_PV_MNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 76334d11-c8f8-4d19-b5dc-1be898777503
+		lineageTag: 343f5a63-1aec-42e6-a9b6-3934b92386dc
 		summarizeBy: sum
 		sourceColumn: Planned_Value_PV_MNOK
 
@@ -103,7 +103,7 @@ table FactEVM
 	column Earned_Value_EV_MNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: fbc1208e-b5ac-4dfb-a6fb-732b630a93b4
+		lineageTag: 7775c3a6-76ab-4dc2-b215-89a7a6a47f7a
 		summarizeBy: sum
 		sourceColumn: Earned_Value_EV_MNOK
 
@@ -112,7 +112,7 @@ table FactEVM
 	column Actual_Cost_AC_MNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 91c93afa-9af8-4a13-bb51-766d29644f57
+		lineageTag: 6753989a-b3f8-4bcf-b1cb-5db3ddcb4200
 		summarizeBy: sum
 		sourceColumn: Actual_Cost_AC_MNOK
 
@@ -121,7 +121,7 @@ table FactEVM
 	column Budget_At_Completion_BAC_MNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 00ce25df-0fd7-4931-85c6-333e78f6fb69
+		lineageTag: 9aec8f8d-d8cd-42fd-8687-80ade0cfdb3e
 		summarizeBy: sum
 		sourceColumn: Budget_At_Completion_BAC_MNOK
 
@@ -130,7 +130,7 @@ table FactEVM
 	column Estimate_At_Completion_EAC_MNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 0a84a1aa-262e-4380-a9d2-335a86d99527
+		lineageTag: 37e6b951-241b-428f-982b-77a1b01d737b
 		summarizeBy: sum
 		sourceColumn: Estimate_At_Completion_EAC_MNOK
 
@@ -139,7 +139,7 @@ table FactEVM
 	column Estimate_To_Complete_ETC_MNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 9c074700-c19b-4270-b5e0-6abfe7fbf01b
+		lineageTag: 5c229574-aa63-4b07-b152-4bb9bea9393b
 		summarizeBy: sum
 		sourceColumn: Estimate_To_Complete_ETC_MNOK
 
@@ -148,7 +148,7 @@ table FactEVM
 	column Variance_At_Completion_VAC_MNOK
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 9b84f1b0-9c8a-41e4-b09c-e50902233414
+		lineageTag: 1b1870a7-f924-4f56-a1b8-b57de241f324
 		summarizeBy: sum
 		sourceColumn: Variance_At_Completion_VAC_MNOK
 
@@ -157,7 +157,7 @@ table FactEVM
 	column Cost_Performance_Index_CPI
 		dataType: double
 		formatString: 0.00
-		lineageTag: d06c96bd-cfa8-4471-8607-da22c2c841a9
+		lineageTag: 23c5d22e-50f4-4eb8-800c-662e35e0136e
 		summarizeBy: average
 		sourceColumn: Cost_Performance_Index_CPI
 
@@ -166,7 +166,7 @@ table FactEVM
 	column Schedule_Performance_Index_SPI
 		dataType: double
 		formatString: 0.00
-		lineageTag: 20f79105-e5a9-4d9c-9008-e8afd4d29db2
+		lineageTag: 977b9706-c1be-4e52-8414-0ebdf14f930e
 		summarizeBy: average
 		sourceColumn: Schedule_Performance_Index_SPI
 

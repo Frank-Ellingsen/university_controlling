@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p2_analytical",
+  "position": {
+    "x": 1300,
+    "y": 240,
+    "z": 10,
+    "height": 480,
+    "width": 600,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "📋 ANALYTISK KONKLUSJON (Fra Unit Analysis)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#0F172A"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Enhetsanalysen avdekker tre vesentlige styringsforhold for Handelshøyskolen:\n\n• K13000 Økonomi er fakultetets største enhet med 1 450 studenter og 129,3 MNOK i inntekter. Høy aktivitet gir stram kostnadsstyring, spesielt innen pensjonsreguleringer.\n\n• K11000 Ledelse har marginal lønnsomhet på etter- og videreutdanning (EVU). Kontraktsmarginer må gjennomgås før nye leveranser igangsettes.\n\n• K12000 Rettsvitenskap har et midlertidig regnskapsmessig overskudd på 1,8 MNOK, men dette skyldes forsinkelser i ansettelser av førsteamanuenser og representerer en faglig kapasitetsrisiko.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

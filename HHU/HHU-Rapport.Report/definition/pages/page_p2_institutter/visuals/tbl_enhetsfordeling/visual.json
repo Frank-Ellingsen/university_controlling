@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_enhetsfordeling",
+  "position": {
+    "x": 20,
+    "y": 735,
+    "z": 30,
+    "height": 325,
+    "width": 1880,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "DimOrganization.OrgKode",
+              "nativeQueryRef": "OrgKode",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Enhetsnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Enhetsnavn",
+              "nativeQueryRef": "Enhetsnavn",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Inntekt MNOK"
+                }
+              },
+              "queryRef": "_Measures.Total Inntekt MNOK",
+              "nativeQueryRef": "Total Inntekt",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual/FC Lønn"
+                }
+              },
+              "queryRef": "_Measures.Actual/FC Lønn",
+              "nativeQueryRef": "Lønnskostnad",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Actual/FC Drift"
+                }
+              },
+              "queryRef": "_Measures.Actual/FC Drift",
+              "nativeQueryRef": "Driftskostnad",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sluttavvik (VAC)"
+                }
+              },
+              "queryRef": "_Measures.Sluttavvik (VAC)",
+              "nativeQueryRef": "Netto Sluttavvik (VAC)",
+              "active": false
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Enhetsfordeling: Samlet Kostnads- og Inntektsbilde per Institutt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

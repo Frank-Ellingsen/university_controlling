@@ -1,0 +1,173 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_driver_analysis",
+  "position": {
+    "x": 1120,
+    "y": 240,
+    "z": 30,
+    "height": 440,
+    "width": 780,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDriverAnalysis"
+                    }
+                  },
+                  "Property": "DriverNavn"
+                }
+              },
+              "queryRef": "FactDriverAnalysis.DriverNavn",
+              "nativeQueryRef": "Driver",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDriverAnalysis"
+                    }
+                  },
+                  "Property": "Kvantifisering"
+                }
+              },
+              "queryRef": "FactDriverAnalysis.Kvantifisering",
+              "nativeQueryRef": "Kvantifisering",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDriverAnalysis"
+                    }
+                  },
+                  "Property": "Helaarseffekt"
+                }
+              },
+              "queryRef": "FactDriverAnalysis.Helaarseffekt",
+              "nativeQueryRef": "Helårseffekt",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDriverAnalysis"
+                    }
+                  },
+                  "Property": "Risiko"
+                }
+              },
+              "queryRef": "FactDriverAnalysis.Risiko",
+              "nativeQueryRef": "Risiko",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDriverAnalysis"
+                    }
+                  },
+                  "Property": "Kontroll"
+                }
+              },
+              "queryRef": "FactDriverAnalysis.Kontroll",
+              "nativeQueryRef": "Kontrollmekanisme",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDriverAnalysis"
+                    }
+                  },
+                  "Property": "Differanse"
+                }
+              },
+              "queryRef": "FactDriverAnalysis.Differanse",
+              "nativeQueryRef": "Diff",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDriverAnalysis"
+                    }
+                  },
+                  "Property": "RAG_Status"
+                }
+              },
+              "queryRef": "FactDriverAnalysis.RAG_Status",
+              "nativeQueryRef": "RAG",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Driveranalyse: Kritiske Forutsetninger for 2027'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

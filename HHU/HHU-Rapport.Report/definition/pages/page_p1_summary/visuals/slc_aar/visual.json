@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "DimDate.Aar",
-              "nativeQueryRef": "Aar",
+              "nativeQueryRef": "Regnskapsår",
               "active": true
             }
           ]

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p1_conclusion",
+  "position": {
+    "x": 1300,
+    "y": 635,
+    "z": 10,
+    "height": 425,
+    "width": 600,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "📌 LEDELSESKONKLUSJON (3–30–300 Beslutningsvisning)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#0369A1"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "September YTD + Q4-prognose viser 4,1 MNOK mindreforbruk mot budsjett, men resultatet drives av midlertidige forsinkelser i ansettelser (K12000) og økt ekstern prosjektaktivitet.\n\n1. Kritiske flaskehalser: Månedlig prognoseavvik på 1,2 MNOK må lukkes før UBW-systemfrys 15.11.2026.\n\n2. Bemanningsrisiko: Konto-basert lønnsandel (66,8 %) overskrider målet på 64,5 % med 2,3 prosentpoeng.\n\n3. Omstilling 2027: Tiltakene T001–T003 må realisere planlagt helårseffekt på 3,8 MNOK for å sikre balanse.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,10 +1,10 @@
 table DimAccountHierarchy
-	lineageTag: 8782fa3d-7c39-47a8-b5e9-e95cc3bd3e2f
+	lineageTag: 22287e34-c1ef-4bbe-a924-0f4365dace2b
 
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: 2fc70cc9-c30c-4a24-a6cf-54e26fc018ff
+		lineageTag: a4265f30-b89d-4e54-b1a7-e9b2be7147c4
 		summarizeBy: none
 		sourceColumn: Konto
 
@@ -12,7 +12,7 @@ table DimAccountHierarchy
 
 	column Kontonavn
 		dataType: string
-		lineageTag: d81981b3-62bd-4a41-803f-d685ba5b529f
+		lineageTag: f00794bf-ab38-4bea-a719-df79bea5006d
 		summarizeBy: none
 		sourceColumn: Kontonavn
 
@@ -20,7 +20,7 @@ table DimAccountHierarchy
 
 	column Nivaa1_Navn
 		dataType: string
-		lineageTag: a1d300a1-f5a7-48b8-8df9-148374d25634
+		lineageTag: 39767dbe-22cb-4aaa-80e4-cb8c8c1d15c8
 		summarizeBy: none
 		sourceColumn: Nivaa1_Navn
 
@@ -28,7 +28,7 @@ table DimAccountHierarchy
 
 	column Kontotype
 		dataType: string
-		lineageTag: 57d1ed1f-03a6-4c6b-9d29-15b870f3b5db
+		lineageTag: 89a69432-f5dd-4408-92a4-12e3ed3e091d
 		summarizeBy: none
 		sourceColumn: Kontotype
 
@@ -36,7 +36,7 @@ table DimAccountHierarchy
 
 	column SRS_regnskapslinje
 		dataType: string
-		lineageTag: 42aaa77b-1c25-468d-b000-677cbd92a3ee
+		lineageTag: a5952566-16cf-4f33-87d8-2776c5d3a104
 		summarizeBy: none
 		sourceColumn: SRS_regnskapslinje
 

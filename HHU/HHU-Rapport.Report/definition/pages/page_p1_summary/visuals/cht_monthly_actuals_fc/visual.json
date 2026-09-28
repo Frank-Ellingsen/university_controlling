@@ -6,7 +6,7 @@
     "y": 240,
     "z": 30,
     "width": 1120,
-    "height": 400,
+    "height": 380,
     "tabOrder": 10
   },
   "visual": {
@@ -46,7 +46,7 @@
                 }
               },
               "queryRef": "_Measures.Faktiske & Prognostiserte Driftskostnader",
-              "nativeQueryRef": "Faktiske & Prognostiserte Driftskostnader"
+              "nativeQueryRef": "Faktiske & Prognose (MNOK)"
             }
           ]
         },
@@ -64,39 +64,7 @@
                 }
               },
               "queryRef": "_Measures.Budsjett YTD",
-              "nativeQueryRef": "Budsjett YTD"
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Avvik YTD"
-                }
-              },
-              "queryRef": "_Measures.Avvik YTD",
-              "nativeQueryRef": "Avvik YTD"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Avvik YTD %"
-                }
-              },
-              "queryRef": "_Measures.Avvik YTD %",
-              "nativeQueryRef": "Avvik YTD %"
+              "nativeQueryRef": "Budsjett (MNOK)"
             }
           ]
         }
@@ -122,29 +90,6 @@
             }
           }
         }
-      ],
-      "lineStyles": [
-        {
-          "properties": {
-            "lineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'dashed'"
-                }
-              }
-            },
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Budsjett YTD"
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -161,7 +106,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Månedlig Kostnadsutvikling vs. Budsjett M01–M12 (T3 Cutoff pr 30.09)'"
+                  "Value": "'Månedlig Driftskostnad: M01-M09 Faktisk, M10-M12 Q4 Prognose vs. Budsjett'"
                 }
               }
             }

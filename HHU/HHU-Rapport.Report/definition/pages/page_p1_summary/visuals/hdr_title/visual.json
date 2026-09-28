@@ -22,7 +22,7 @@
                     "value": "Handelshøyskolen ved UiA (HHU) — Ledelsessammendrag & Helårsprognose 2026",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "14pt",
+                      "fontSize": "13pt",
                       "fontWeight": "bold",
                       "color": "#0F172A"
                     }
@@ -32,7 +32,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Vedtatt ramme 130 153 825 kr | Cutoff: 30.09.2026 (M01-M09 Actuals, M10-M12 Q4 Forecast) | Tufte Minimalist Standard",
+                    "value": "Vedtatt ramme 130,2 MNOK | Cutoff: 30.09.2026 (M01-M09 Actuals, M10-M12 Q4 Forecast) | Tufte Minimalist Standard",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "9pt",

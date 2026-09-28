@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_org_staffing_summary",
+  "position": {
+    "x": 20,
+    "y": 735,
+    "z": 30,
+    "height": 325,
+    "width": 1880,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "DimOrganization.OrgKode",
+              "nativeQueryRef": "Org",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Enhetsnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Enhetsnavn",
+              "nativeQueryRef": "Enhetsnavn",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Totale Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Totale Årsverk",
+              "nativeQueryRef": "Totale Årsverk",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglige Årsverk (UF)"
+                }
+              },
+              "queryRef": "_Measures.Faglige Årsverk (UF)",
+              "nativeQueryRef": "UF-Årsverk",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Teknisk-Admin Årsverk (TA)"
+                }
+              },
+              "queryRef": "_Measures.Teknisk-Admin Årsverk (TA)",
+              "nativeQueryRef": "TA-Årsverk",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Lønnsandel %"
+                }
+              },
+              "queryRef": "_Measures.Lønnsandel %",
+              "nativeQueryRef": "Lønnsandel %",
+              "active": false
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Aggregert Bemanningssammendrag per Institutt og Enhet'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,11 +1,11 @@
 table DimDate_2027
-	lineageTag: f51a38eb-e7f9-4511-a9c2-4639f243e8f2
+	lineageTag: 1000d20a-ac8e-44d5-936e-90d3c7d350c2
 	dataCategory: Time
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 32505814-6ae1-4113-aab2-e89ea6c0075d
+		lineageTag: 46885708-3c07-4ff2-9075-4bfb51009559
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -15,7 +15,7 @@ table DimDate_2027
 		dataType: dateTime
 		isKey
 		formatString: yyyy-MM-dd
-		lineageTag: 48b52b36-40aa-43cf-936e-edd558dd4b47
+		lineageTag: ed5e647b-433e-46ac-a1f1-3e3f50e3d3c4
 		summarizeBy: none
 		sourceColumn: Dato
 
@@ -26,7 +26,7 @@ table DimDate_2027
 	column Aar
 		dataType: int64
 		formatString: 0
-		lineageTag: fde31688-94de-470c-ac5b-b9b234527198
+		lineageTag: 8e6b2f98-1b05-45e3-aa79-71a5f42a0da0
 		summarizeBy: none
 		sourceColumn: Aar
 
@@ -35,7 +35,7 @@ table DimDate_2027
 	column MaanedNummer
 		dataType: int64
 		formatString: 0
-		lineageTag: 3481c0c5-cab5-4c9d-a670-4b68a81762e0
+		lineageTag: 386805bf-a728-4a9e-b268-bbb8788f4bd9
 		summarizeBy: none
 		sourceColumn: MaanedNummer
 
@@ -43,7 +43,7 @@ table DimDate_2027
 
 	column MaanedNavn
 		dataType: string
-		lineageTag: 53cb18a1-81f7-4092-937a-052d9ae72213
+		lineageTag: 4bc900ae-20ef-4122-b492-1beaca705480
 		summarizeBy: none
 		sourceColumn: MaanedNavn
 		sortByColumn: MaanedNummer
@@ -52,7 +52,7 @@ table DimDate_2027
 
 	column MaanedNavnKort
 		dataType: string
-		lineageTag: 6b15477c-6c16-404b-9bfa-62abf95c6bc4
+		lineageTag: 318afea5-13f6-4c12-b254-d208efe14ffa
 		summarizeBy: none
 		sourceColumn: MaanedNavnKort
 		sortByColumn: MaanedNummer
@@ -61,7 +61,7 @@ table DimDate_2027
 
 	column Kvartal
 		dataType: string
-		lineageTag: fa71c014-518d-4633-845d-3f5d80ac4068
+		lineageTag: 59531ad4-579c-4f13-a27e-498ede290df3
 		summarizeBy: none
 		sourceColumn: Kvartal
 
@@ -69,7 +69,7 @@ table DimDate_2027
 
 	column ErActualYTD
 		dataType: boolean
-		lineageTag: 67b83b7a-b113-4484-b6bf-7c4085ba1a81
+		lineageTag: ea035d0b-6ec7-459f-9016-f29b2b35be0b
 		summarizeBy: none
 		sourceColumn: ErActualYTD
 
@@ -78,7 +78,7 @@ table DimDate_2027
 	column Budsjettaar
 		dataType: int64
 		formatString: 0
-		lineageTag: 045a3e9c-6ef5-4557-bd4b-346a4cd6b68b
+		lineageTag: 59dfc98d-433c-4263-bccc-c0ea850c9d09
 		summarizeBy: none
 		sourceColumn: Budsjettaar
 

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p3_management",
+  "position": {
+    "x": 20,
+    "y": 755,
+    "z": 10,
+    "height": 305,
+    "width": 1880,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "⚠️ LEDELSESVURDERING OG ROBUSTHETSANALYSE",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#B91C1C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ledelsens gjennomgang viser at fakultetets positive helårsavvik (+4,1 MNOK) skjuler strukturelle sårbarheter:\n\n1. Pensjonsreguleringsrisiko: Pensjonspremieavviket ved K13000 (-1,8 MNOK) inntreffer i M03 og må håndteres med faste kvartalsvise avsetninger.\n2. EVU-inntektssvikt: K11000 har 1,5 MNOK lavere kursinntekter enn budsjettert, noe som krever umiddelbar stopp i leveranser uten positiv kontraktsmargin.\n3. Vakanser ved K12000: Besparelsen på 1,8 MNOK skyldes forsinket rekruttering av vitenskapelig ansatte, som må beskyttes mot permanente budsjettkutt.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

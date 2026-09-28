@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p4_escalation",
+  "position": {
+    "x": 1240,
+    "y": 735,
+    "z": 10,
+    "height": 325,
+    "width": 660,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "📋 ESKALERING OG BESLUTNINGSKRAV (Tiltaksportefølje)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#0F172A"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "For å sikre realisering av tiltakseffekten på 3,8 MNOK gjelder følgende styringskrav:\n\n• Prio 1 (K13000): Ansettelsesstopp for stillinger uten ekstern finansiering gjelder med umiddelbar virkning.\n• Prio 2 (K11000): EVU-marginanalyse ferdigstilles innen 15.10.2026; ulønnsomme moduler avvikles.\n• Prio 5 (Portefølje): Ukentlig statusrapportering til fakultetsdirektør; avvik > 10 % eskaleres til dekanen.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

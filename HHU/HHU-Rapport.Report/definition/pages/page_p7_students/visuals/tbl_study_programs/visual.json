@@ -1,0 +1,203 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_study_programs",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 500,
+    "width": 1260,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "FactStudents.OrgKode",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "Studieprogram"
+                }
+              },
+              "queryRef": "FactStudents.Studieprogram",
+              "nativeQueryRef": "Studieprogram",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "KDKategori"
+                }
+              },
+              "queryRef": "FactStudents.KDKategori",
+              "nativeQueryRef": "Kategori",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "RegistrerteStudenter"
+                }
+              },
+              "queryRef": "FactStudents.RegistrerteStudenter",
+              "nativeQueryRef": "Studenter",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "SPE60_Baseline_2025"
+                }
+              },
+              "queryRef": "FactStudents.SPE60_Baseline_2025",
+              "nativeQueryRef": "SPE60 Base",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "SPE60"
+                }
+              },
+              "queryRef": "FactStudents.SPE60",
+              "nativeQueryRef": "SPE60 Mål",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "KDSats_NOK"
+                }
+              },
+              "queryRef": "FactStudents.KDSats_NOK",
+              "nativeQueryRef": "KD Sats",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "KD_Marginal_Inntekt_2027"
+                }
+              },
+              "queryRef": "FactStudents.KD_Marginal_Inntekt_2027",
+              "nativeQueryRef": "KD Inntekt (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactStudents"
+                    }
+                  },
+                  "Property": "StudenterPrUF"
+                }
+              },
+              "queryRef": "FactStudents.StudenterPrUF",
+              "nativeQueryRef": "Student/UF Ratio",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Studieprogramoversikt: Produksjon, Satser og Beregnet KD-Bevilgning'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

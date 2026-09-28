@@ -1,0 +1,173 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_actions_t001_t004",
+  "position": {
+    "x": 20,
+    "y": 735,
+    "z": 30,
+    "height": 325,
+    "width": 1200,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "TiltakID"
+                }
+              },
+              "queryRef": "FactAction.TiltakID",
+              "nativeQueryRef": "TiltakID",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "FactAction.OrgKode",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "TiltakNavn"
+                }
+              },
+              "queryRef": "FactAction.TiltakNavn",
+              "nativeQueryRef": "Tiltakstittel",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "ForventetEffekt"
+                }
+              },
+              "queryRef": "FactAction.ForventetEffekt",
+              "nativeQueryRef": "Forventet Effekt (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "RealisertEffekt"
+                }
+              },
+              "queryRef": "FactAction.RealisertEffekt",
+              "nativeQueryRef": "Realisert (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "FactAction.Status",
+              "nativeQueryRef": "Status",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction"
+                    }
+                  },
+                  "Property": "FristDato"
+                }
+              },
+              "queryRef": "FactAction.FristDato",
+              "nativeQueryRef": "Frist",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Omstillingsportefølje T001–T004 (Gjennomføring & Realisering)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

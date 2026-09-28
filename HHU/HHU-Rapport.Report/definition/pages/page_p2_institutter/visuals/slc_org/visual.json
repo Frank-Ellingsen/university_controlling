@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
   "name": "slc_org",
   "position": {
-    "x": 1240,
+    "x": 1320,
     "y": 15,
     "z": 15,
-    "width": 320,
+    "width": 280,
     "height": 75,
     "tabOrder": 2
   },
@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "DimOrganization.Enhetsnavn",
-              "nativeQueryRef": "Enhetsnavn",
+              "nativeQueryRef": "Enhet / Institutt",
               "active": true
             }
           ]
@@ -61,7 +61,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Velg Institutt'"
+                  "Value": "'Enhet / Institutt'"
                 }
               }
             }

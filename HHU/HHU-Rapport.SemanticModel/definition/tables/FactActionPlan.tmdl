@@ -1,0 +1,114 @@
+table FactActionPlan
+	lineageTag: 0266d029-9347-4fc8-8070-01947bacccad
+
+	column Prio
+		dataType: int64
+		formatString: 0
+		lineageTag: 51703c03-1c78-4392-8541-5fc17be533e6
+		summarizeBy: none
+		sourceColumn: Prio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Omraade
+		dataType: string
+		lineageTag: 12e9693d-4a00-4401-ba3a-6888a56de57c
+		summarizeBy: none
+		sourceColumn: Omraade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rotaarsak
+		dataType: string
+		lineageTag: 282c53f0-5659-49ce-8a95-fddd508c0f31
+		summarizeBy: none
+		sourceColumn: Rotaarsak
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnbefaltHandling
+		dataType: string
+		lineageTag: 9a159c6d-bc3c-43cf-9c38-c387931dbda4
+		summarizeBy: none
+		sourceColumn: AnbefaltHandling
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnsvarligEier
+		dataType: string
+		lineageTag: 73e9ba08-d07c-458b-ae56-1ae84cf49f04
+		summarizeBy: none
+		sourceColumn: AnsvarligEier
+
+		annotation SummarizationSetBy = Automatic
+
+	column FristDato
+		dataType: string
+		lineageTag: 310574c1-3c60-42ed-94d5-8fef24541f2a
+		summarizeBy: none
+		sourceColumn: FristDato
+
+		annotation SummarizationSetBy = Automatic
+
+	column BruttoGapNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: c7121177-424e-4d9e-9004-54a38edf2012
+		summarizeBy: sum
+		sourceColumn: BruttoGapNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForventetEffektNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: df2fcff7-1d1c-40d4-a7d9-79aea463f64a
+		summarizeBy: sum
+		sourceColumn: ForventetEffektNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KPI_Kontrollpunkt
+		dataType: string
+		lineageTag: b54a3563-5128-4489-b5fe-1b00c48c6ae0
+		summarizeBy: none
+		sourceColumn: KPI_Kontrollpunkt
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Status
+		dataType: string
+		lineageTag: 017c0925-1259-4986-b85b-3e2b937d21f8
+		summarizeBy: none
+		sourceColumn: RAG_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column BeslutningNaa
+		dataType: string
+		lineageTag: 2d031151-815d-4d69-b562-b21b38cbca92
+		summarizeBy: none
+		sourceColumn: BeslutningNaa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Oppfoelging
+		dataType: string
+		lineageTag: 0647a833-2b87-4683-88fd-4d572a8160db
+		summarizeBy: none
+		sourceColumn: Oppfoelging
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactActionPlan = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactActionPlan.csv"),[Delimiter=";", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Prio", Int64.Type}, {"Omraade", type text}, {"Rotaarsak", type text}, {"AnbefaltHandling", type text}, {"AnsvarligEier", type text}, {"FristDato", type text}, {"BruttoGapNOK", type number}, {"ForventetEffektNOK", type number}, {"KPI_Kontrollpunkt", type text}, {"RAG_Status", type text}, {"BeslutningNaa", type text}, {"Oppfoelging", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

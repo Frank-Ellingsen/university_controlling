@@ -1,0 +1,122 @@
+table FactDriverAnalysis
+	lineageTag: 2a707539-e889-4838-a718-2fdd95704d72
+
+	column DriverNavn
+		dataType: string
+		lineageTag: 4360de38-38a7-4e24-a308-26727e862abb
+		summarizeBy: none
+		sourceColumn: DriverNavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mekanisme
+		dataType: string
+		lineageTag: c681b774-fcad-4049-b7cf-0701b42f0225
+		summarizeBy: none
+		sourceColumn: Mekanisme
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvantifisering
+		dataType: string
+		lineageTag: ce3ff942-72a1-401e-8ae0-86bc220a2a58
+		summarizeBy: none
+		sourceColumn: Kvantifisering
+
+		annotation SummarizationSetBy = Automatic
+
+	column Helaarseffekt
+		dataType: string
+		lineageTag: a94368e2-1fe5-4fdc-9e0f-313482e093b5
+		summarizeBy: none
+		sourceColumn: Helaarseffekt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Risiko
+		dataType: string
+		lineageTag: c75fe5e7-6da0-4186-81a8-18b68cb28f9c
+		summarizeBy: none
+		sourceColumn: Risiko
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontroll
+		dataType: string
+		lineageTag: 22e4f371-030b-4ee6-a1eb-fba13d8cbe06
+		summarizeBy: none
+		sourceColumn: Kontroll
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnsvarligEier
+		dataType: string
+		lineageTag: 208df482-7bb3-4ff5-bd62-0f6294e7be04
+		summarizeBy: none
+		sourceColumn: AnsvarligEier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avstemming
+		dataType: string
+		lineageTag: c926703e-696a-4030-9d76-46787a63a10c
+		summarizeBy: none
+		sourceColumn: Avstemming
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modellverdi
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 1fc1c535-dd38-446b-a35d-d3cf5aa5995c
+		summarizeBy: sum
+		sourceColumn: Modellverdi
+
+		annotation SummarizationSetBy = Automatic
+
+	column Referanseverdi
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: 8b227c5f-0137-4ecd-a38a-2cf373b2ce9f
+		summarizeBy: sum
+		sourceColumn: Referanseverdi
+
+		annotation SummarizationSetBy = Automatic
+
+	column Differanse
+		dataType: double
+		formatString: #,##0.0
+		lineageTag: d2e16674-1d8b-4fea-8fe6-d06810484cb6
+		summarizeBy: sum
+		sourceColumn: Differanse
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Status
+		dataType: string
+		lineageTag: aa0856f8-af52-4720-b7e1-7c2aa0d5cbf4
+		summarizeBy: none
+		sourceColumn: RAG_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konklusjon
+		dataType: string
+		lineageTag: 7b9fc744-3793-4032-8f40-706a0e664e43
+		summarizeBy: none
+		sourceColumn: Konklusjon
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactDriverAnalysis = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactDriverAnalysis.csv"),[Delimiter=";", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DriverNavn", type text}, {"Mekanisme", type text}, {"Kvantifisering", type text}, {"Helaarseffekt", type text}, {"Risiko", type text}, {"Kontroll", type text}, {"AnsvarligEier", type text}, {"Avstemming", type text}, {"Modellverdi", type number}, {"Referanseverdi", type number}, {"Differanse", type number}, {"RAG_Status", type text}, {"Konklusjon", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,9 +1,9 @@
 table FactGL
-	lineageTag: 4d0ad344-5498-4e11-9741-78e316be40ad
+	lineageTag: 64d51590-bc89-4aa3-98cf-e3e45a6e1c05
 
 	column TransaksjonID
 		dataType: string
-		lineageTag: 337120ae-c81a-4158-8496-709285bde704
+		lineageTag: 2748478e-fac2-4f16-a2c4-ceb4254f7562
 		summarizeBy: none
 		sourceColumn: TransaksjonID
 
@@ -12,7 +12,7 @@ table FactGL
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 6a4bb89e-b8e9-4cd6-864b-8f5dce1e8b3b
+		lineageTag: b42adb85-f1e3-4b90-a55f-37d574d0d61e
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -20,7 +20,7 @@ table FactGL
 
 	column OrgKode
 		dataType: string
-		lineageTag: ffe5f84c-5488-42eb-b8b5-3093c733aebf
+		lineageTag: fd321928-9314-4b64-a45b-0e6b644739e0
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -29,7 +29,7 @@ table FactGL
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: dfd1ad7a-05c4-4a9f-b9ed-bfc9ec0d7695
+		lineageTag: b2d21614-becf-409a-b96e-897167620df1
 		summarizeBy: none
 		sourceColumn: Konto
 
@@ -37,7 +37,7 @@ table FactGL
 
 	column Bokforingstype
 		dataType: string
-		lineageTag: 0c64ef10-d2a9-46d0-8c23-7368e9e8ace7
+		lineageTag: 20aa6b61-42be-4b2e-83df-d28dbd3042b1
 		summarizeBy: none
 		sourceColumn: Bokforingstype
 
@@ -45,7 +45,7 @@ table FactGL
 
 	column VersjonKode
 		dataType: string
-		lineageTag: 017a9cf1-94aa-4a7d-8272-8176c9a211d1
+		lineageTag: d0afd741-f77f-469e-bbf4-74e0d4f78ccb
 		summarizeBy: none
 		sourceColumn: VersjonKode
 
@@ -54,7 +54,7 @@ table FactGL
 	column Belop_signert
 		dataType: double
 		formatString: #,##0
-		lineageTag: 8c58ac56-b28b-4a9b-a3a1-77e2647000d6
+		lineageTag: da6e38c4-38f7-4af2-bd34-ce11fa820253
 		summarizeBy: sum
 		sourceColumn: Belop_signert
 
@@ -62,7 +62,7 @@ table FactGL
 
 	column Budsjettansvarsområde
 		dataType: string
-		lineageTag: 5eea443d-625c-439a-9f7c-4f1a4dbc6a56
+		lineageTag: f4ad8083-4e93-4d15-b73f-4e36bc473010
 		summarizeBy: none
 		sourceColumn: Budsjettansvarsområde
 
@@ -70,7 +70,7 @@ table FactGL
 
 	column BudsjettansvarligLeder
 		dataType: string
-		lineageTag: f23fabe7-e244-4fe8-863e-328185c30122
+		lineageTag: f814c685-7bf8-4c30-9a31-eb58dc346c6e
 		summarizeBy: none
 		sourceColumn: BudsjettansvarligLeder
 
@@ -78,7 +78,7 @@ table FactGL
 
 	column ProsjektID
 		dataType: string
-		lineageTag: 78630e9a-a4bb-4e6b-b494-4a65bd4f7ff5
+		lineageTag: e4613518-50ff-4c2a-b221-d0cc7f64ecb4
 		summarizeBy: none
 		sourceColumn: ProsjektID
 
@@ -86,7 +86,7 @@ table FactGL
 
 	column Avvikstype_Beskrivelse
 		dataType: string
-		lineageTag: 6e62abc4-7f5d-454a-b859-89692075c329
+		lineageTag: 2dfdb21d-2dac-400a-b53d-392c298e997e
 		summarizeBy: none
 		sourceColumn: Avvikstype_Beskrivelse
 

@@ -1,9 +1,9 @@
 table FactStudents_2027
-	lineageTag: d2b12a7e-05d2-460b-95d8-0b974d25b14b
+	lineageTag: 1a8ba17b-172a-41a2-a881-23bbd84d1c05
 
 	column StudentNokkel
 		dataType: string
-		lineageTag: be41efef-e837-4d0a-a612-d7388fecae42
+		lineageTag: 5a094b28-71c2-4e40-8a99-54a549d6f85c
 		summarizeBy: none
 		sourceColumn: StudentNokkel
 
@@ -12,7 +12,7 @@ table FactStudents_2027
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: d5cbc395-5b79-44b6-a190-50d3ec0755aa
+		lineageTag: 831d5347-0d6a-4abb-be3c-7054deb84c98
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -20,7 +20,7 @@ table FactStudents_2027
 
 	column OrgKode
 		dataType: string
-		lineageTag: b0d4e35a-8b44-48a0-9663-0b592c3664ba
+		lineageTag: 548a4490-042c-4d9a-96ad-1ad7b701b768
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -28,7 +28,7 @@ table FactStudents_2027
 
 	column Studieprogram
 		dataType: string
-		lineageTag: 0c8e5ec9-c5fd-4a41-8d62-e2596299fb91
+		lineageTag: bcf68db1-9d5e-4558-8041-a143a2d8f943
 		summarizeBy: none
 		sourceColumn: Studieprogram
 
@@ -37,7 +37,7 @@ table FactStudents_2027
 	column RegistrerteStudenter
 		dataType: int64
 		formatString: #,##0
-		lineageTag: 0a2e541a-31dc-4867-943d-3b25c9eb87e8
+		lineageTag: 1a19eb13-0a60-47b6-8a83-0f0460dd065c
 		summarizeBy: sum
 		sourceColumn: RegistrerteStudenter
 
@@ -46,7 +46,7 @@ table FactStudents_2027
 	column SPE60_Baseline_2025
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: ec24c04c-d7ad-4fbd-936c-c9db9de3db8e
+		lineageTag: 4bd4b5c2-fa33-468c-a0da-0ac42b5fdbf3
 		summarizeBy: sum
 		sourceColumn: SPE60_Baseline_2025
 
@@ -55,7 +55,7 @@ table FactStudents_2027
 	column SPE60_Vekst_2025
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: a8fe8c7a-2f9a-4122-a002-7ea3e73fe1b7
+		lineageTag: f0a94dcf-877c-48ef-b8a7-3fee74122b39
 		summarizeBy: sum
 		sourceColumn: SPE60_Vekst_2025
 
@@ -64,7 +64,7 @@ table FactStudents_2027
 	column SPE60
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: b2e358af-c18d-4a25-932b-ba5bf04b9d8e
+		lineageTag: 2d8eb9de-3ba7-4cc7-bac9-95076d114192
 		summarizeBy: sum
 		sourceColumn: SPE60
 
@@ -72,7 +72,7 @@ table FactStudents_2027
 
 	column KDKategori
 		dataType: string
-		lineageTag: c71a7c0c-83cf-47b6-9380-0560486b7697
+		lineageTag: efbe7f1a-a110-4654-9c4b-c017bc2fa1ab
 		summarizeBy: none
 		sourceColumn: KDKategori
 
@@ -81,7 +81,7 @@ table FactStudents_2027
 	column KDSats_NOK
 		dataType: double
 		formatString: #,##0
-		lineageTag: 08407a56-3afb-4a16-b088-f786e7b8d6b2
+		lineageTag: a8ddc4d7-0435-4cb3-b6e0-708421774255
 		summarizeBy: sum
 		sourceColumn: KDSats_NOK
 
@@ -90,7 +90,7 @@ table FactStudents_2027
 	column KD_Marginal_Inntekt_2027
 		dataType: double
 		formatString: #,##0
-		lineageTag: 574115df-120a-41d4-9b34-59a08e0648a9
+		lineageTag: fb307857-06a3-4a1a-9be5-ac261f583478
 		summarizeBy: sum
 		sourceColumn: KD_Marginal_Inntekt_2027
 
@@ -99,7 +99,7 @@ table FactStudents_2027
 	column Studenter_pr_UF
 		dataType: double
 		formatString: 0.0
-		lineageTag: 3dfbc2e5-0434-4c29-bac3-51a0de01bf2d
+		lineageTag: eedc4943-5b6b-4ab1-8624-456518e2b781
 		summarizeBy: average
 		sourceColumn: Studenter_pr_UF
 
@@ -108,7 +108,7 @@ table FactStudents_2027
 	column StudenterPrUF
 		dataType: double
 		formatString: 0.0
-		lineageTag: 92cce759-7266-4d66-9792-ebb72f934d36
+		lineageTag: 8b5a2ca6-483c-4e65-a934-9f89e2439079
 		summarizeBy: average
 		sourceColumn: StudenterPrUF
 

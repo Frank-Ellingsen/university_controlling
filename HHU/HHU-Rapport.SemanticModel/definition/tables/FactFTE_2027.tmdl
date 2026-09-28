@@ -1,9 +1,9 @@
 table FactFTE_2027
-	lineageTag: 77b74a02-57c3-4bf1-8d7d-4856c5b07e0e
+	lineageTag: 3daa6d92-69ee-420f-b09f-c9b6c0446585
 
 	column FTENokkel
 		dataType: string
-		lineageTag: 0e689bf5-be16-4f81-9d07-5091731947c9
+		lineageTag: 0d69b521-37b1-4e85-864f-5ae6e76099af
 		summarizeBy: none
 		sourceColumn: FTENokkel
 
@@ -12,7 +12,7 @@ table FactFTE_2027
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 66f62b80-93b6-450b-af65-2d83b8eb874c
+		lineageTag: ddfe0e97-97cc-4cf0-9773-bc99b9f4492b
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -20,7 +20,7 @@ table FactFTE_2027
 
 	column OrgKode
 		dataType: string
-		lineageTag: d58322b9-26fe-4b29-841f-3cc146279935
+		lineageTag: 2367b0d7-7f2e-4d21-8962-ce53847b1056
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -29,7 +29,7 @@ table FactFTE_2027
 	column Budsjettert_Aarsverk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 1e64405c-6b52-4a7d-8069-c7c9911a738c
+		lineageTag: 5d4c8d5a-e3b8-4dd6-a059-011238faa398
 		summarizeBy: sum
 		sourceColumn: Budsjettert_Aarsverk
 
@@ -38,7 +38,7 @@ table FactFTE_2027
 	column Vakans_Aarsverk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: b5e1f5a6-410b-455e-8793-f88eaca90922
+		lineageTag: deb3e4e1-fe41-4e0f-903b-8da7369cd520
 		summarizeBy: sum
 		sourceColumn: Vakans_Aarsverk
 
@@ -47,7 +47,7 @@ table FactFTE_2027
 	column Aarsverk_Totalt
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 262a8cc1-7dc5-409f-aa4e-413d55231423
+		lineageTag: cbedd9fc-2737-45cc-8720-067109a5ff4d
 		summarizeBy: sum
 		sourceColumn: Aarsverk_Totalt
 
@@ -56,7 +56,7 @@ table FactFTE_2027
 	column Aarsverk_UF
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: fa96f87e-93fa-48bd-a395-52a02a941547
+		lineageTag: b8165e53-3cd3-43af-bf41-ccdb2e2bfd3f
 		summarizeBy: sum
 		sourceColumn: Aarsverk_UF
 
@@ -65,7 +65,7 @@ table FactFTE_2027
 	column Aarsverk_TA
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: ebb30c65-9467-4396-b907-ae307163e798
+		lineageTag: ba8b11ea-f0ee-42e3-956d-2b2cce399f02
 		summarizeBy: sum
 		sourceColumn: Aarsverk_TA
 
@@ -74,7 +74,7 @@ table FactFTE_2027
 	column Antall_Ansatte
 		dataType: int64
 		formatString: 0
-		lineageTag: 35e2c850-7c36-4dd5-b2a8-229d950a2de6
+		lineageTag: bd7d4794-2dfd-481c-9a78-099df2b2c159
 		summarizeBy: sum
 		sourceColumn: Antall_Ansatte
 
@@ -83,7 +83,7 @@ table FactFTE_2027
 	column Maanedlig_Lonnskostnad
 		dataType: double
 		formatString: #,##0
-		lineageTag: beb0d943-5853-4670-b4c6-0b721ddec90b
+		lineageTag: 3cbc6844-3ce8-400b-aa8f-366517477964
 		summarizeBy: sum
 		sourceColumn: Maanedlig_Lonnskostnad
 
@@ -92,7 +92,7 @@ table FactFTE_2027
 	column Lennsandel_Pct
 		dataType: double
 		formatString: 0.0%
-		lineageTag: d0b415ab-8009-40df-b1f9-3ba55a960ab5
+		lineageTag: 7976cfb3-0e19-46a9-99b1-ac66ad2b7c5e
 		summarizeBy: average
 		sourceColumn: Lennsandel_Pct
 

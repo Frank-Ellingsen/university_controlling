@@ -1,0 +1,7 @@
+﻿Prio;AvvikRisiko;PaakrevdHandling;AnsvarligEier;FristDato;BevisFerdigkriterium;Konsekvens;RAG_Status
+1;2,0 MNOK manglende inntektslinje;"Avstem rammebrev, konto og enhet; korriger kilden eller dokumenter formelt vedtak";Senior Controller / sentral økonomi;2026-10-07;Modellinntekt = signert ramme;Resultat og styresak blir feil;🔴
+2;Lønnsandel 66,8 % mot mål 64,5 %;"Avstem konto-basert modell mot FTE-fil og budsjettnotat; dokumenter definisjon og beslutning";Controller / HR;2026-10-15;Én godkjent lønnsdefinisjon og bro;Feil RAG og svak bemanningsstyring;🔴
+3;BOA/TDI-avhengighet;Valider 22 % overhead, finansierte frikjøp og prosjektmargin før stillingsdisponering;Forskningsleder;2026-10-23;Signerte prosjektkalkyler og frikjøpsplan;BFV subsidierer ekstern aktivitet;🟡
+4;EVU/SRS 9-risiko;Krev positiv kontraktsmargin og månedlig EAC før nye leveranser;Instituttleder Ledelse;2026-10-31;Godkjent kalkyle og tapsrisiko = 0;Tapsavsetning reduserer resultatet;🟡
+5;Formålskapital / 5 %-regel;Knytt overskuddet til vedtatte flerårige investeringer med milepæler;Fakultetsdirektør;2026-11-15;Godkjent investeringsplan;Risiko for passiv reserve/inndragning;🟢
+6;Baseline og sporbarhet;Kjør komplett kontrolliste, godkjenning og lås BUD2027 først etter lukking;Senior Controller;2026-12-15;Signert kontrollpakke og låst versjon;Ustabil baseline og svakt revisjonsspor;🔴

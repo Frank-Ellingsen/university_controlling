@@ -1,9 +1,9 @@
 table FactBudget_2027
-	lineageTag: 65ac2cc7-007a-425b-8111-ae525aada4d3
+	lineageTag: fdd73325-9ef8-4a8e-b2f3-bd306cde8e4d
 
 	column BudsjettNokkel
 		dataType: string
-		lineageTag: f315ae90-7264-4385-af73-10de7c4a48b0
+		lineageTag: 8da98b65-e169-49aa-8b0e-fbbcc214b4a6
 		summarizeBy: none
 		sourceColumn: BudsjettNokkel
 
@@ -12,7 +12,7 @@ table FactBudget_2027
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 7e5ceed0-2ac6-4130-b9a7-645b41fa6087
+		lineageTag: 469423b3-843d-49bd-990c-b8c30f96ba35
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -20,7 +20,7 @@ table FactBudget_2027
 
 	column OrgKode
 		dataType: string
-		lineageTag: 21776838-d43b-4548-b503-a7102993357f
+		lineageTag: 228b165c-15e5-403c-abe8-18e0c5f1bb43
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -29,7 +29,7 @@ table FactBudget_2027
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: be09c421-c6ad-4ed3-bbce-16a7e625ebcb
+		lineageTag: 676e6737-e55e-458a-a47d-3c34f50081ce
 		summarizeBy: none
 		sourceColumn: Konto
 
@@ -37,7 +37,7 @@ table FactBudget_2027
 
 	column VersjonKode
 		dataType: string
-		lineageTag: 00cdc443-46e9-41e2-a5ad-102d7eb75a46
+		lineageTag: ae7fd946-bf9d-4de4-95a1-928e5c77051d
 		summarizeBy: none
 		sourceColumn: VersjonKode
 
@@ -46,7 +46,7 @@ table FactBudget_2027
 	column BudsjettBelop
 		dataType: double
 		formatString: #,##0
-		lineageTag: 0d402100-bba6-4525-bdc7-170b4cc86659
+		lineageTag: d810487b-134f-469b-998e-31b1d7ad3142
 		summarizeBy: sum
 		sourceColumn: BudsjettBelop
 
@@ -54,7 +54,7 @@ table FactBudget_2027
 
 	column Valuta
 		dataType: string
-		lineageTag: 79a479a2-e82d-479f-bb0a-547612c3c551
+		lineageTag: 0a4f3f7c-22ec-40f9-8ae9-acf59e6cb995
 		summarizeBy: none
 		sourceColumn: Valuta
 
@@ -62,7 +62,7 @@ table FactBudget_2027
 
 	column Kommentar
 		dataType: string
-		lineageTag: 680267f1-9501-4e01-a45f-7b5e1fff18f5
+		lineageTag: 05da4ece-995e-4e40-8bac-f516a7557193
 		summarizeBy: none
 		sourceColumn: Kommentar
 

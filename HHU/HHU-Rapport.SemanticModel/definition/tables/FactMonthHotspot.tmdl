@@ -1,0 +1,40 @@
+table FactMonthHotspot
+	lineageTag: 2160ac01-5c11-49b3-981a-d2f0fead9975
+
+	column Maaned
+		dataType: string
+		lineageTag: 603c5146-9d4b-4311-84ef-351299ff065d
+		summarizeBy: none
+		sourceColumn: Maaned
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvvikBelop
+		dataType: double
+		formatString: #,##0
+		lineageTag: e3615c27-16a7-458c-b253-d73de98b33b8
+		summarizeBy: sum
+		sourceColumn: AvvikBelop
+
+		annotation SummarizationSetBy = Automatic
+
+	column Forklaring
+		dataType: string
+		lineageTag: 2d82acbe-d370-49b8-9bfb-259de1f999c5
+		summarizeBy: none
+		sourceColumn: Forklaring
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactMonthHotspot = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactMonthHotspot.csv"),[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Maaned", type text}, {"AvvikBelop", type number}, {"Forklaring", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

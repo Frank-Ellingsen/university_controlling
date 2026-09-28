@@ -1,5 +1,5 @@
 table _Measures
-	lineageTag: b2c3f549-c052-4dfb-9c15-303e65d0e414
+	lineageTag: 59c550bc-dc3f-45ce-8538-87144cb84269
 
 	/// 1. Actual YTD (Bokført regnskap M01 - M09 / Sept 30 Cutoff)
 	measure 'Actual YTD' =
@@ -9,7 +9,7 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _01 Accounting
-		lineageTag: c1bb889a-9100-4b73-a92d-e4b8a6b4b4db
+		lineageTag: 86b48942-b697-4ea5-b7ce-89c6a1379ecd
 
 	/// 2. Budsjett YTD (Akkumulert periodisert budsjett M01 - M09)
 	measure 'Budsjett YTD' =
@@ -19,19 +19,19 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _01 Accounting
-		lineageTag: 21d9d73e-75b7-442e-a446-7c7bb671f681
+		lineageTag: 4c173968-0f0d-443e-8ee8-b643bf3c8b55
 
 	/// 3. Avvik YTD (MNOK) [Positivt = Merforbruk / Negativt = Mindreforbruk]
 	measure 'Avvik YTD' = [Actual YTD] - [Budsjett YTD]
 		formatString: #,##0
 		displayFolder: _01 Accounting
-		lineageTag: 9e012d48-9f3b-4331-8926-a3ecb19e1a17
+		lineageTag: 12912875-a7a1-4810-b867-4b840faf3346
 
 	/// 4. Avvik YTD %
 	measure 'Avvik YTD %' = DIVIDE([Avvik YTD], [Budsjett YTD], 0)
 		formatString: 0.0%
 		displayFolder: _01 Accounting
-		lineageTag: 808c40a2-33f0-4f7c-9eca-a66e819fe307
+		lineageTag: 87e7f46c-37c4-41dc-9523-c04d9e2031c1
 
 	/// 5. Monthly Actuals and Forecast Bridge (M01-M09 Actuals + M10-M12 Q4 Forecast)
 	measure 'Monthly Actuals and Forecast' =
@@ -43,7 +43,7 @@ table _Measures
 			IF(CurrentMonth <= CutoffMonth, ActualAmount, ForecastAmount)
 		formatString: #,##0
 		displayFolder: _01 Accounting
-		lineageTag: 54e3ce31-8d85-47d0-b1d0-28700c224cbd
+		lineageTag: 7c033970-7be0-40a9-bde7-59ab41b70f67
 
 	/// 6. Forecast Q4 / Estimate to Complete (ETC M10 - M12)
 	measure 'Forecast Q4 (ETC)' =
@@ -53,31 +53,31 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _02 Forecast & LE
-		lineageTag: 49fe1a93-1d67-4f52-8511-ae5e4c8b38ab
+		lineageTag: bd871554-37d7-4a8e-96f0-ecafc04245a1
 
 	/// 7. Forecast LE / Estimate at Completion (EAC = Actual YTD + Q4 Forecast)
 	measure 'Forecast LE (EAC)' = [Actual YTD] + [Forecast Q4 (ETC)]
 		formatString: #,##0
 		displayFolder: _02 Forecast & LE
-		lineageTag: fae2a61a-0bd7-40c8-a053-66f905af2087
+		lineageTag: c5632ac8-797d-4ee0-8f58-3c537645e711
 
 	/// 8. Vedtatt Årsbudsjett / Budget at Completion (BAC)
 	measure 'Årsbudsjett (BAC)' = SUM('FactBudget'[BudsjettBelop])
 		formatString: #,##0
 		displayFolder: _02 Forecast & LE
-		lineageTag: 07d78c5b-8be3-44ab-876d-5c0c62da5091
+		lineageTag: 44285b81-dd4d-42e0-849d-ddb383251bfc
 
 	/// 9. Sluttavvik / Variance at Completion (VAC MNOK = BAC - EAC)
 	measure 'Sluttavvik (VAC)' = [Årsbudsjett (BAC)] - [Forecast LE (EAC)]
 		formatString: #,##0
 		displayFolder: _02 Forecast & LE
-		lineageTag: a8b9ffe9-c6fb-406c-a866-46a0c57ad17c
+		lineageTag: 8e93a202-f81e-418e-a090-411dce24cfb0
 
 	/// 10. VAC % (Relativ overskridelse eller innsparing)
 	measure 'VAC %' = DIVIDE([Sluttavvik (VAC)], [Årsbudsjett (BAC)], 0)
 		formatString: 0.0%
 		displayFolder: _02 Forecast & LE
-		lineageTag: c78adbf5-8de8-4bc6-ac47-d479f5b29f6d
+		lineageTag: 3fbd7667-0ea7-4725-9bb9-8eff2ae0100b
 
 	/// 11. Prior Year Actuals (PY YTD)
 	measure 'Actual PY' =
@@ -87,19 +87,19 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _03 Temporal YoY & MoM
-		lineageTag: 884e947c-26e3-4d81-8763-ac157a2b9240
+		lineageTag: 8c288086-29b3-4355-8153-6adf396248d5
 
 	/// 12. Absolute Year-over-Year Difference (YoY MNOK)
 	measure 'Actual YoY' = [Actual YTD] - [Actual PY]
 		formatString: #,##0
 		displayFolder: _03 Temporal YoY & MoM
-		lineageTag: 9988edca-ed6e-4308-aeb2-712bfb6a9b6d
+		lineageTag: d9e27c4d-a2f2-409c-b9b5-8d54201dc1ad
 
 	/// 13. Percentage Year-over-Year Growth (YoY %)
 	measure 'Actual YoY %' = DIVIDE([Actual YoY], [Actual PY], 0)
 		formatString: 0.0%
 		displayFolder: _03 Temporal YoY & MoM
-		lineageTag: 9ba0c0bb-3541-4c73-8ada-41332230f1b4
+		lineageTag: 250299db-e9b9-4567-880a-52b7f8e03557
 
 	/// 14. Prior Month Actuals (PM)
 	measure 'Actual PM' =
@@ -110,7 +110,7 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _03 Temporal YoY & MoM
-		lineageTag: 555b1a99-a2a6-412b-bda1-c9dfaba9c597
+		lineageTag: cea4654a-8541-4a67-a421-6372266f7a41
 
 	/// 15. Current Month Actuals (CM)
 	measure 'Actual CM' =
@@ -121,49 +121,49 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _03 Temporal YoY & MoM
-		lineageTag: d5c6174f-cf45-4165-92fc-05829b6edce7
+		lineageTag: f1cdb313-3094-4cca-a438-3c1cf4026acd
 
 	/// 16. Month-over-Month Difference (MoM MNOK)
 	measure 'Actual MoM' = [Actual CM] - [Actual PM]
 		formatString: #,##0
 		displayFolder: _03 Temporal YoY & MoM
-		lineageTag: 8ae19294-ce4c-4341-97cd-da06ea695ab9
+		lineageTag: 678bd1d6-e33a-4c4d-ba4b-10fdb0351251
 
 	/// 17. Percentage Month-over-Month Growth (MoM %)
 	measure 'Actual MoM %' = DIVIDE([Actual MoM], [Actual PM], 0)
 		formatString: 0.0%
 		displayFolder: _03 Temporal YoY & MoM
-		lineageTag: 84bbc4a1-e537-46fa-afe5-c5e501240cd8
+		lineageTag: 2e189d9f-7542-449a-bf9d-58fd5ea5b44b
 
 	/// 18. Planned Value (PV)
 	measure 'Planned Value (PV)' = SUM('FactEVM'[Planned_Value_PV_MNOK])
 		formatString: #,##0
 		displayFolder: _04 EVM
-		lineageTag: 63ef295e-d202-4aea-b485-083d528f04f9
+		lineageTag: fcb2d9bc-de8e-427f-bc8e-d30651dea1a5
 
 	/// 19. Earned Value (EV)
 	measure 'Earned Value (EV)' = SUM('FactEVM'[Earned_Value_EV_MNOK])
 		formatString: #,##0
 		displayFolder: _04 EVM
-		lineageTag: 28728606-6d05-43c5-8413-273e6714a484
+		lineageTag: 91ce63ab-cb29-4d8a-81be-e0f887b8a26c
 
 	/// 20. Actual Cost (AC)
 	measure 'Actual Cost (AC)' = SUM('FactEVM'[Actual_Cost_AC_MNOK])
 		formatString: #,##0
 		displayFolder: _04 EVM
-		lineageTag: 9e6197bb-3f34-4188-bd45-33deb817eeb7
+		lineageTag: 51b6e68c-8157-4245-8cd7-d4fd3f85dd0c
 
 	/// 21. Cost Performance Index (CPI = EV / AC)
 	measure CPI = DIVIDE([Earned Value (EV)], [Actual Cost (AC)], 1)
 		formatString: 0.00
 		displayFolder: _04 EVM
-		lineageTag: 70606b27-ec81-4b69-9336-296dbb41edd4
+		lineageTag: d6a92723-7224-457a-80e3-16c5b7038e39
 
 	/// 22. Schedule Performance Index (SPI = EV / PV)
 	measure SPI = DIVIDE([Earned Value (EV)], [Planned Value (PV)], 1)
 		formatString: 0.00
 		displayFolder: _04 EVM
-		lineageTag: e2ae4e2b-061f-483c-a9c1-1a14e48fe1f0
+		lineageTag: 0b37550a-ce45-4c00-aeee-b571aff497f2
 
 	/// 23. EVM Status Subtitle Callout
 	measure 'EVM Status Subtitle' =
@@ -172,7 +172,7 @@ table _Measures
 			RETURN
 			"CPI: " & FORMAT(CPIVal, "0.00") & " (Kost) | SPI: " & FORMAT(SPIVal, "0.00") & " (Fremdrift)"
 		displayFolder: _04 EVM
-		lineageTag: a614cdb6-4130-4188-b635-b173ba64e5e1
+		lineageTag: 3609f651-0d1f-42c7-a6aa-346f2db4a4e0
 
 	/// 24. Totale Årsverk (FTE Snapshot)
 	measure 'Totale Årsverk' =
@@ -182,7 +182,7 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _05 Staffing & FTE
-		lineageTag: 772493b9-e54c-4e13-9263-89ea0f7d63e7
+		lineageTag: f78a8880-3b3a-4dc2-9e6c-7baf07e6914c
 
 	/// 25. Faglige Årsverk (UF - Undervisning og Forskning)
 	measure 'Faglige Årsverk (UF)' =
@@ -192,7 +192,7 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _05 Staffing & FTE
-		lineageTag: ec2e1197-8360-4df1-91f3-917c357ee23c
+		lineageTag: 279130bd-1c82-4409-b230-99526f0185ef
 
 	/// 26. Teknisk-Administrative Årsverk (TA)
 	measure 'Teknisk-Admin Årsverk (TA)' =
@@ -202,13 +202,13 @@ table _Measures
 			)
 		formatString: #,##0.0
 		displayFolder: _05 Staffing & FTE
-		lineageTag: 7b3ad471-9306-4d45-aa74-656633e9db50
+		lineageTag: 3a07027d-57c7-4fe4-8c91-af4f0780b136
 
 	/// 27. Faglig Andel % (Sektormål: > 50-55%)
 	measure 'Faglig Andel %' = DIVIDE([Faglige Årsverk (UF)], [Totale Årsverk], 0)
 		formatString: 0.0%
 		displayFolder: _05 Staffing & FTE
-		lineageTag: 8fae4338-4697-4596-afe8-60b083f10523
+		lineageTag: 6cf19733-9161-4614-be8a-07d0a205f32b
 
 	/// 28. Lønnsandel % av Totale Driftskostnader (Sektornorm: 62-65%)
 	measure 'Lønnsandel %' =
@@ -217,7 +217,7 @@ table _Measures
 			RETURN DIVIDE(Lonn, TotalKost, 0)
 		formatString: 0.0%
 		displayFolder: _05 Staffing & FTE
-		lineageTag: 5b09a63f-fe3c-415b-a647-53892cd63d0f
+		lineageTag: 00b34272-bd15-445c-9061-393ba5fd3ed7
 
 	/// 29. Vakansgrad % (Planlagt vs Faktisk Årsverk)
 	measure 'Vakansgrad %' =
@@ -226,25 +226,25 @@ table _Measures
 			RETURN DIVIDE(BudsjettÅV - FaktiskÅV, BudsjettÅV, 0)
 		formatString: 0.0%
 		displayFolder: _05 Staffing & FTE
-		lineageTag: 6bbb0292-3cea-4a57-8dab-3676ff05e301
+		lineageTag: c13bb059-e143-4eca-80f6-ec1ab87d5be5
 
 	/// 30. Registrerte Studenter
 	measure 'Registrerte Studenter' = SUM('FactStudents'[RegistrerteStudenter])
 		formatString: #,##0
 		displayFolder: _06 Utdanning & SPE60
-		lineageTag: 57489f25-eeae-410a-a22a-8f276e4b1249
+		lineageTag: c60ee534-78a7-48b1-b4a8-2765bdd51200
 
 	/// 31. Avlagte Studiepoengekvivalenter (SPE60 = Total SP / 60)
 	measure 'Avlagte SPE60' = SUM('FactStudents'[SPE60])
 		formatString: #,##0.0
 		displayFolder: _06 Utdanning & SPE60
-		lineageTag: 2884bbc1-9dfb-4a67-9578-efe6973b74a3
+		lineageTag: 37c6123c-64ba-4d21-8a65-5a11594e5a1c
 
 	/// 32. Studenter pr Faglig Årsverk (Lærertetthet)
 	measure 'Studenter pr UF-Årsverk' = DIVIDE([Registrerte Studenter], [Faglige Årsverk (UF)], 0)
 		formatString: #,##0.0
 		displayFolder: _06 Utdanning & SPE60
-		lineageTag: f42af252-1bcd-43bd-9337-cf28958c071f
+		lineageTag: 3a8db449-baaa-41af-8ee0-45c395c4dfcf
 
 	/// 33. KD Kategori 1 Inntekt (Humaniora, Samfunnsfag, Økonomi @ 54 550 kr/SPE60)
 	measure 'KD Kat 1 Inntekt' =
@@ -254,31 +254,31 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _06 Utdanning & SPE60
-		lineageTag: 818324d8-cb58-46c8-b03a-0d44414c21cb
+		lineageTag: 0f689496-6f95-41d0-83de-fa0863bb851d
 
 	/// 34. Forventet Tiltakseffekt (Planlagt innsparing i MNOK)
 	measure 'Forventet Tiltakseffekt' = SUM('FactAction'[ForventetEffekt])
 		formatString: #,##0
 		displayFolder: _07 Action Tracker
-		lineageTag: 8f951cd2-0111-420a-9dc5-98b8cab0b38f
+		lineageTag: 65bc7a5f-7088-45ed-a80e-e933f4d8a5c9
 
 	/// 35. Realisert Tiltakseffekt (Bokført innsparing hittil)
 	measure 'Realisert Tiltakseffekt' = SUM('FactAction'[RealisertEffekt])
 		formatString: #,##0
 		displayFolder: _07 Action Tracker
-		lineageTag: 71b56172-1afc-4e68-b6db-47f4de5110cd
+		lineageTag: f8074b17-ed85-4df4-b9db-a2d0bafbc84f
 
 	/// 36. Tiltak Realiseringsgrad %
 	measure 'Tiltak Realiseringsgrad %' = DIVIDE([Realisert Tiltakseffekt], [Forventet Tiltakseffekt], 0)
 		formatString: 0.0%
 		displayFolder: _07 Action Tracker
-		lineageTag: 8a2b2399-b57e-4e28-ae33-a77628140404
+		lineageTag: 5bfb0713-6da4-4888-bdac-28e0cf94aa67
 
 	/// 37. Forecast etter Tiltak
 	measure 'Forecast etter Tiltak' = [Forecast LE (EAC)] + [Forventet Tiltakseffekt]
 		formatString: #,##0
 		displayFolder: _07 Action Tracker
-		lineageTag: 0410e4f0-ee0f-4487-bc61-1c75dc605489
+		lineageTag: b588f7df-8304-4aff-8953-087b99949b21
 
 	/// 38. Budget Variance RAG Status Text Badge
 	measure 'Budget Variance RAG Status' =
@@ -294,7 +294,7 @@ table _Measures
 			    "🔴 Kritisk overskridelse (>5%)"
 			)
 		displayFolder: _08 RAG & Design
-		lineageTag: b97e1c35-860c-43c6-b8b6-78a27e6c5cb6
+		lineageTag: 07852d9f-3089-4230-8d1d-f9ff807213cb
 
 	/// 39. Primary RAG Hex Color (For Bars, Card Accents & Text)
 	measure 'RAG Hex Color' =
@@ -311,7 +311,7 @@ table _Measures
 			    )
 			)
 		displayFolder: _08 RAG & Design
-		lineageTag: ea7ff076-ba0e-4b2b-901b-a3fa96ef83e7
+		lineageTag: bc253896-49ae-41c9-8e6c-4b201f0a4b42
 
 	/// 40. Soft RAG Background Fill Hex (Tufte 85% Opacity Tint for Matrix Cells)
 	measure 'RAG Soft Background Hex' =
@@ -328,7 +328,7 @@ table _Measures
 			    )
 			)
 		displayFolder: _08 RAG & Design
-		lineageTag: f6abab19-fa83-4316-881b-63c0011993b3
+		lineageTag: 7ae38085-d8ef-4bf6-889a-ffac0bbac7cb
 
 	/// 41. Multi-Context Card Subtitle with RAG Icons (New Card Visual)
 	measure 'Multi-Context Revenue Subtitle' =
@@ -348,7 +348,7 @@ table _Measures
 			RETURN
 			PlanText & " | " & YoYText & " | " & MoMText
 		displayFolder: _08 RAG & Design
-		lineageTag: 4513f26f-5639-4d54-af01-906ddbe329ee
+		lineageTag: 4dadf38d-1525-47e1-81b7-2cb2042ab03e
 
 	/// 42. Vedtatt Årsbudsjett Baseline 2026 (Nøyaktig 130 153 825 kr)
 	measure 'HHU 2026 Vedtatt Årsbudsjett' =
@@ -358,31 +358,31 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: 69b6be47-91b6-497d-9576-2e55b35a95c8
+		lineageTag: 7f22510e-c6c3-4180-b1bc-def68082dac8
 
 	/// 43. Ansvarsområde: K10000 Admin & Felles (14 000 000 kr)
 	measure 'HHU K10000 Admin Budsjett' = CALCULATE([HHU 2026 Vedtatt Årsbudsjett], 'DimOrganization'[OrgKode] = "K10000")
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: e2ff6513-7e43-46be-a99a-5659f7c4b1f8
+		lineageTag: 201a586c-e6fb-4df0-9eee-67bc273a29be
 
 	/// 44. Ansvarsområde: K11000 Inst. for ledelse og innovasjon (38 500 000 kr)
 	measure 'HHU K11000 Ledelse Budsjett' = CALCULATE([HHU 2026 Vedtatt Årsbudsjett], 'DimOrganization'[OrgKode] = "K11000")
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: dd81b9b0-421c-4714-8ee2-2a5be9b383bb
+		lineageTag: 474a566a-b83d-4ee3-ae94-76c7fa6b4a3d
 
 	/// 45. Ansvarsområde: K12000 Inst. for rettsvitenskap (29 250 000 kr)
 	measure 'HHU K12000 Rettsvitenskap Budsjett' = CALCULATE([HHU 2026 Vedtatt Årsbudsjett], 'DimOrganization'[OrgKode] = "K12000")
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: 71c1c1cb-5364-459e-be66-a23945b9090b
+		lineageTag: 92d3fbdb-0bfd-495e-9c5f-34c46c582be4
 
 	/// 46. Ansvarsområde: K13000 Inst. for økonomi (48 403 825 kr)
 	measure 'HHU K13000 Økonomi Budsjett' = CALCULATE([HHU 2026 Vedtatt Årsbudsjett], 'DimOrganization'[OrgKode] = "K13000")
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: c4bd9141-c048-4b4c-bf73-d4894fe967c6
+		lineageTag: 8e82ce01-18d9-4ff7-a1c5-f5dc3d08b928
 
 	/// 47. Ansvarsområde Regnskap YTD M01-M09
 	measure 'Ansvarsområde Actual YTD 2026' =
@@ -393,7 +393,7 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: 2e125fc4-044c-4642-b81c-291017319ffb
+		lineageTag: dfb43fcf-cf08-4625-b128-bf87f1b7f6f2
 
 	/// 48. Ansvarsområde Avvik YTD M01-M09 (MNOK / NOK)
 	measure 'Ansvarsområde Avvik YTD 2026' =
@@ -401,7 +401,7 @@ table _Measures
 			RETURN [Ansvarsområde Actual YTD 2026] - BudgetYTD
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: 57c69d9d-5343-4509-9697-eedb6a2ff128
+		lineageTag: f1ed92f4-728e-4442-bc8e-27821b8cf41d
 
 	/// 49. Ansvarsområde Helårs Sluttavvik (VAC 2026)
 	measure 'Ansvarsområde Sluttavvik VAC 2026' =
@@ -411,7 +411,7 @@ table _Measures
 			RETURN [HHU 2026 Vedtatt Årsbudsjett] - TotalEAC
 		formatString: #,##0
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: 80a60154-af49-4a61-9bb7-721fac9b370c
+		lineageTag: 0d5ec1bc-63d1-4374-8620-546f95ce8f5c
 
 	/// 50. HHU 2026 Lønnsandel % (Mål: < 65,0%)
 	measure 'HHU 2026 Lønnsandel %' =
@@ -420,7 +420,7 @@ table _Measures
 			RETURN DIVIDE(Lonn, TotalKost, 0)
 		formatString: 0.0%
 		displayFolder: _09 HHU 2026 Ansvarsområder
-		lineageTag: 62c0ac84-ab1e-4140-a5f3-6521810765b6
+		lineageTag: 348d2a0b-26af-467d-8825-5ccf44a67f70
 
 	/// 51. Vedtatt Inntekt BUD2027 HHU (288,07 MNOK)
 	measure 'BUD2027 Inntekter HHU' =
@@ -432,7 +432,7 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _10 HHU 2027 Budsjett
-		lineageTag: 47fb4a37-a8ed-4457-9b11-906dd4f0a429
+		lineageTag: cf7bb650-9fc2-4d63-8d5a-a402a172b4e7
 
 	/// 52. Vedtatt Kostnad BUD2027 HHU (282,00 MNOK)
 	measure 'BUD2027 Kostnader HHU' =
@@ -444,13 +444,13 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _10 HHU 2027 Budsjett
-		lineageTag: dacfffc1-b3da-4271-a723-ceb8f4e162e3
+		lineageTag: f0c24059-af0d-4825-b33b-7ce1211dcc0a
 
 	/// 53. Planlagt Netto Driftsresultat BUD2027 (+6,07 MNOK til Note 15)
 	measure 'BUD2027 Netto Resultat HHU' = [BUD2027 Inntekter HHU] - [BUD2027 Kostnader HHU]
 		formatString: #,##0
 		displayFolder: _10 HHU 2027 Budsjett
-		lineageTag: 3082e85e-fcf5-4b68-8e0c-a4e71a598c4a
+		lineageTag: cb64c4e1-ef78-4ba5-ab7f-e775e29b7041
 
 	/// 54. 2-Års Lag Resultatutbetaling 2027 (Kategori 1 for 2025-produksjon)
 	measure 'KD Kat 1 Resultatutbetaling 2027' =
@@ -461,7 +461,7 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _10 HHU 2027 Budsjett
-		lineageTag: 8a006792-3a67-4e83-a1b6-61600354e8e5
+		lineageTag: 5ebea930-15bf-475c-8a14-6e6de2f1f61f
 
 	/// 55. HHU Lønnsandel 2027 % (Mål: < 64,5%)
 	measure 'HHU Lønnsandel 2027 %' =
@@ -469,7 +469,7 @@ table _Measures
 			RETURN DIVIDE(Lonn2027, [BUD2027 Inntekter HHU], 0)
 		formatString: 0.0%
 		displayFolder: _10 HHU 2027 Budsjett
-		lineageTag: e52098b8-575a-4676-9a4f-649c86a5872b
+		lineageTag: cfdd6de2-02d1-48cc-b118-c3b30bb7bfaf
 
 	/// 56. HHU 2027 RAG Status Text Badge
 	measure 'HHU 2027 RAG Status Badge' =
@@ -483,7 +483,7 @@ table _Measures
 			    "🔴 Underskudd / Høy lønnsandel"
 			)
 		displayFolder: _10 HHU 2027 Budsjett
-		lineageTag: 7c3bc4e3-5b93-41d1-8cc1-a8b5f0567bc1
+		lineageTag: 00d69e9b-890a-4951-bd72-d6d324feef71
 
 	/// Dynamisk budsjettavvik-indikator for inntektskort
 	measure 'Revenue Variance Indicator' =
@@ -496,7 +496,7 @@ table _Measures
 			"Budsjett: " & FORMAT(BudgetMNOK, "#,##0.0") & " MNOK | " &
 			IF(Diff >= 0, "▲ +" & FORMAT(Pct, "0.0%"), "▼ " & FORMAT(Pct, "0.0%"))
 		displayFolder: _08 RAG & Design
-		lineageTag: 96ef2918-09e8-49e8-b4dd-630e21e7e474
+		lineageTag: 9043df52-d631-4434-bacb-d78c112f03b3
 
 	/// Status- og avvikstekst for nettoresultat
 	measure 'Net Result Status Text' =
@@ -505,7 +505,7 @@ table _Measures
 			RETURN
 			"Helårsavvik: " & FORMAT(HelarVAC, "+#,##0.0;-#,##0.0;0.0") & " MNOK | YTD: " & FORMAT(YTDResult, "#,##0.0") & " MNOK"
 		displayFolder: _08 RAG & Design
-		lineageTag: cb2336d4-ac62-4a46-8fa4-e8d6b8bbe9a6
+		lineageTag: 1b0609a4-db40-48fd-a2d3-aafd0436c83f
 
 	/// UF/TA fordeling og lønnsandel for bemanningskort
 	measure 'Staffing Card Subtitle' =
@@ -515,7 +515,7 @@ table _Measures
 			RETURN
 			FORMAT(UF, "#0") & " UF / " & FORMAT(TA, "#0") & " TA | Lønnsandel: " & FORMAT(LonnPct, "0.0%")
 		displayFolder: _05 Staffing & FTE
-		lineageTag: b423d8e8-cd24-490d-b725-08b49d408d0b
+		lineageTag: ee5257f8-8fbc-4351-b9c4-8cefa8b168b1
 
 	/// Studiepoeng og studenttetthet for studentkort
 	measure 'Student KPI Subtitle' =
@@ -524,12 +524,12 @@ table _Measures
 			RETURN
 			FORMAT(SPE, "#,##0") & " SPE60 | " & FORMAT(Ratio, "0.0") & " Studenter/UF-ÅV"
 		displayFolder: _06 Utdanning & SPE60
-		lineageTag: 19bd7a7c-f5a5-42b5-b712-4cd165bcdfde
+		lineageTag: d3445149-23c7-4ad3-b02b-610a3af77ca5
 
 	/// Tufte RAG-fargekode for instituttstolper
 	measure 'Faculty Bar Color' = IF([Sluttavvik (VAC)] >= 0, "#10b981", "#ef4444")
 		displayFolder: _08 RAG & Design
-		lineageTag: 7b5292ee-f97a-44ed-b6e7-af48383a01a4
+		lineageTag: 143b506b-1708-4f1b-a6a7-8ff2d63cf585
 
 	/// Akkumulerte faktiske kostnader og Q4-prognose
 	measure 'Cumulative Actual & Forecast' =
@@ -542,7 +542,7 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _02 Forecast & LE
-		lineageTag: 64c08e9b-72ac-4afa-9c6a-9df95e68b858
+		lineageTag: 9ab8a7a4-4676-4bfb-9bf5-219d71d1e00a
 
 	/// Akkumulert periodisert årsbudsjett
 	measure 'Cumulative Budget' =
@@ -555,7 +555,7 @@ table _Measures
 			)
 		formatString: #,##0
 		displayFolder: _02 Forecast & LE
-		lineageTag: 02c31d84-cfbd-48c0-a6b0-733fa535b224
+		lineageTag: ee7cee36-6699-4c16-aa4f-c619d158e841
 
 	/// Dynamisk kantlinjefarge basert på VAC % terskler
 	measure 'KPI Card Border Color' =
@@ -566,7 +566,7 @@ table _Measures
 			    "#10B981"
 			)
 		displayFolder: _08 RAG & Design
-		lineageTag: 17e7da97-0d32-4e44-9ffd-648e03d21022
+		lineageTag: 70bfb416-7402-4e5a-8f73-d1abfaf11eac
 
 	/// Månedlige kostnader (M01-M09 faktiske, M10-M12 prognose) i MNOK
 	measure 'Faktiske & Prognostiserte Driftskostnader' =
@@ -579,7 +579,7 @@ table _Measures
 			DIVIDE(Amount, 1000000, 0)
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		lineageTag: bf82a1f4-c35d-45b0-b926-f76d75071ada
+		lineageTag: 8f40ed91-5c6f-45d7-b9cf-c102645feb35
 
 	/// Periodisert månedlig driftsbudsjett i MNOK
 	measure 'Månedlig Budsjett MNOK' =
@@ -588,7 +588,7 @@ table _Measures
 			DIVIDE(Bud, 1000000, 0)
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		lineageTag: d90999d8-2e83-466d-92f3-da08d7f655cd
+		lineageTag: 48ebe6a2-ef1c-4870-9843-ce81eb8b1580
 
 	/// Driftsbudsjett i MNOK
 	measure 'Budsjett MNOK' =
@@ -597,7 +597,7 @@ table _Measures
 			DIVIDE(Bud, 1000000, 0)
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		lineageTag: d12df533-e6eb-4c96-b5e2-8434b4c06282
+		lineageTag: 1762bab1-c514-442f-8a98-1523a7a10be6
 
 	/// Samlet inntekt / bevilget ramme i MNOK
 	measure 'Total Inntekt MNOK' =
@@ -609,7 +609,7 @@ table _Measures
 			DIVIDE(Res, IF(Res > 1000, 1000000, 1), 0)
 		formatString: #,##0.0
 		displayFolder: _01 Accounting
-		lineageTag: e3d4a5f9-7b8b-4541-bcf5-80f952b2e400
+		lineageTag: b02d3042-7366-41ee-928a-e33163a2dab6
 
 	/// Helårsprognose for lønnskostnader i MNOK
 	measure 'Actual/FC Lønn' =
@@ -618,7 +618,7 @@ table _Measures
 			DIVIDE(Lonn, IF(ABS(Lonn) > 1000, 1000000, 1), 0)
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		lineageTag: a1276ddc-4128-4c85-8961-35dbf4ada866
+		lineageTag: 6a89d7ec-b12b-452c-8182-18570eb38f09
 
 	/// Helårsprognose for andre driftskostnader i MNOK
 	measure 'Actual/FC Drift' =
@@ -627,7 +627,7 @@ table _Measures
 			DIVIDE(Drift, IF(ABS(Drift) > 1000, 1000000, 1), 0)
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		lineageTag: 33caad6d-bddf-4d54-b307-997acf2640fa
+		lineageTag: b85aadb3-ad96-4e4f-8825-7aac097c7e7d
 
 	/// Helårsprognose for investeringer / utstyr i MNOK
 	measure 'Actual/FC Capex' =
@@ -636,13 +636,13 @@ table _Measures
 			DIVIDE(COALESCE(Capex, 0), IF(ABS(COALESCE(Capex, 0)) > 1000, 1000000, 1), 0)
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		lineageTag: d894531d-10dd-4286-b266-64a6b14b6c6a
+		lineageTag: 686dd8ce-149f-446e-8d74-ed1b93635ef3
 
 	/// Sluttavvik (VAC) skalert til MNOK
 	measure 'Sluttavvik (VAC) MNOK' = DIVIDE([Sluttavvik (VAC)], 1000000, 0)
 		formatString: #,##0.0
 		displayFolder: _02 Forecast & LE
-		lineageTag: e271e99c-bb41-4d54-b087-ec1665905aa6
+		lineageTag: 281e596c-0586-41cf-a108-afbb43756d3f
 
 	/// Evaluering av helårsavvik med RAG trafikklys-symboler
 	measure 'Forecast RAG Status' =
@@ -656,7 +656,7 @@ table _Measures
 			    "🔴 Vesentlig avvik"
 			)
 		displayFolder: _08 RAG & Design
-		lineageTag: 1e1b5b8c-333e-4f4c-829e-068653d9d83c
+		lineageTag: 07b5079d-f06f-4c5e-b658-6ebef0343b8d
 
 	/// Tekstlig analyse av økonomiske drivere per institutt
 	measure 'Diagnose og Drivere' =
@@ -671,7 +671,7 @@ table _Measures
 			    "Handelshøyskolen ved UiA har en samlet vedtatt ramme på 130,15 MNOK med balansert drift og kontrollert lønnsandel."
 			)
 		displayFolder: _08 RAG & Design
-		lineageTag: e77b344b-4cd7-4607-9c76-6106d2dcee7e
+		lineageTag: 060bff64-4078-47f7-86a7-e1c3c6a4bbdf
 
 	/// RAG evaluering av årlig inntektsvekst
 	measure 'YoY Growth RAG Status' =
@@ -684,7 +684,7 @@ table _Measures
 			    "🔴 Svekket inntekt (< -2%)"
 			)
 		displayFolder: _08 RAG & Design
-		lineageTag: 72ecd6ac-b15b-4d40-8053-a747a6a8b791
+		lineageTag: 2a5f4f48-489e-4f7d-b2a1-a842d3495084
 
 	/// EVM kostnadseffektivitet status
 	measure 'EVM RAG Status' =
@@ -697,7 +697,7 @@ table _Measures
 			    "🔴 Kritisk overskridelse (CPI < 0.90)"
 			)
 		displayFolder: _04 EVM
-		lineageTag: 34873f94-1efc-44cf-868c-08924b41eaf4
+		lineageTag: c52c53d9-2075-4b1c-8936-dc35139d3241
 
 	/// Hex fargekode for CPI
 	measure 'EVM CPI RAG Hex' =
@@ -705,13 +705,102 @@ table _Measures
 			RETURN
 			IF(CPIVal >= 1.00, "#10b981", IF(CPIVal >= 0.90, "#f59e0b", "#ef4444"))
 		displayFolder: _04 EVM
-		lineageTag: d346c234-3b81-42f2-9f30-c74cd18dd5d3
+		lineageTag: 8c5bc109-975e-416b-9423-aa32e9a498f0
+
+	/// Summert forventet effekt av prioriterte tiltak i handlingsplan
+	measure 'Samlet Tiltakseffekt Handlingsplan' = SUM('FactActionPlan'[ForventetEffektNOK])
+		formatString: #,##0 kr
+		displayFolder: _07 Omstilling & Tiltak
+		lineageTag: a56e7e2f-41e3-4b35-a0ce-d308a12eed5d
+
+	/// Summert brutto gap som krever tiltak
+	measure 'Samlet Brutto Gap Handlingsplan' = SUM('FactActionPlan'[BruttoGapNOK])
+		formatString: #,##0 kr
+		displayFolder: _07 Omstilling & Tiltak
+		lineageTag: 858f1518-1014-4689-aca6-e4376bef1633
+
+	/// Netto gjenværende gap etter planlagt tiltakseffekt
+	measure 'Netto Restrisiko Handlingsplan' = [Samlet Brutto Gap Handlingsplan] - [Samlet Tiltakseffekt Handlingsplan]
+		formatString: #,##0 kr
+		displayFolder: _07 Omstilling & Tiltak
+		lineageTag: acb61139-7031-4a4c-97c5-72fc3b81d050
+
+	/// Antall prioriterte tiltak i handlingsplanen
+	measure 'Antall Tiltak i Handlingsplan' = COUNTROWS('FactActionPlan')
+		formatString: 0
+		displayFolder: _07 Omstilling & Tiltak
+		lineageTag: a1fecdd9-631a-4796-9f00-27c0bcb8e06b
+
+	/// Antall identifiserte rotårsaksdrivere for avvik
+	measure 'Antall Avviksdrivere' = COUNTROWS('FactVarianceDriver')
+		formatString: 0
+		displayFolder: _03 Avvik & Varians
+		lineageTag: 4b132d75-11df-442b-96bf-83ae0c583154
+
+	/// Største negative enkeltavvik blant driverne i MNOK
+	measure 'Største Enkeltavvik MNOK' = DIVIDE(MIN('FactVarianceDriver'[AvvikBelop]), 1000000, 0)
+		formatString: #,##0.0 MNOK
+		displayFolder: _03 Avvik & Varians
+		lineageTag: fc76df27-ad93-4022-9683-b6b6741a8247
+
+	/// Identifisert rammegap mellom kildemodell og vedtatt ramme
+	measure 'Budsjett 2027 Inntektsgap MNOK' = 2.0
+		formatString: 0.0 MNOK
+		displayFolder: _08 RAG & Design
+		lineageTag: 64a561b2-6f4c-411b-ae89-f1e77dcb5f7d
+
+	/// Summert planlagt inntektsramme for 2027 per enhet
+	measure '2027 Ramme Plan Inntekt MNOK' = DIVIDE(SUM('FactPlan2027Unit'[InntekterNOK]), 1000000, 0)
+		formatString: #,##0.0 MNOK
+		displayFolder: _01 Accounting
+		lineageTag: be0a6a77-e3d9-4530-a6f5-9f2d8afca5b5
+
+	/// Summert planlagte kostnader for 2027 per enhet
+	measure '2027 Ramme Plan Kostnad MNOK' = DIVIDE(SUM('FactPlan2027Unit'[KostnaderNOK]), 1000000, 0)
+		formatString: #,##0.0 MNOK
+		displayFolder: _01 Accounting
+		lineageTag: 4ac4c28f-f917-4d51-a111-73e96e011055
+
+	/// Summert planlagt nettoresultat for 2027 per enhet
+	measure '2027 Ramme Plan Netto MNOK' = DIVIDE(SUM('FactPlan2027Unit'[NettoResultatNOK]), 1000000, 0)
+		formatString: +#,##0.0 MNOK
+		displayFolder: _01 Accounting
+		lineageTag: 66ae1ffc-77cd-47d6-85d3-dfa2ae8c1f36
+
+	/// Summert planlagte årsverk for 2027
+	measure '2027 Plan Årsverk' = SUM('FactPlan2027Unit'[AarsverkTotalt])
+		formatString: #,##0.0 ÅV
+		displayFolder: _05 Staffing & FTE
+		lineageTag: a4c5df50-3b2c-46ad-acc3-e427145469ac
+
+	/// Summert planlagte faglige årsverk (UF) for 2027
+	measure '2027 Plan UF Årsverk' = SUM('FactPlan2027Unit'[UFAarsverk])
+		formatString: #,##0 ÅV
+		displayFolder: _05 Staffing & FTE
+		lineageTag: c658a242-4e57-437a-b91c-adc290b23098
+
+	/// Planlagt studentantall for 2027
+	measure '2027 Plan Studenter' = SUM('FactPlan2027Unit'[Studenter])
+		formatString: #,##0
+		displayFolder: _06 Utdanning & SPE60
+		lineageTag: 30309c4d-2bbe-472a-9cb5-539736d1f9a1
+
+	/// Planlagte studiepoengekvivalenter for 2027
+	measure '2027 Plan SPE60' = SUM('FactPlan2027Unit'[SPE60])
+		formatString: #,##0
+		displayFolder: _06 Utdanning & SPE60
+		lineageTag: b5526045-12ac-4f49-86c2-64b106516785
+
+	/// Status for beslutningsport 5 styringsavstemming
+	measure 'Port 5 Flaskehals Status' = "🔴 Ikke klar (Lønnsandel 66,8% & 2,0M gap)"
+		displayFolder: _08 RAG & Design
+		lineageTag: bcfc776a-8f9b-44ee-bb54-20545be5d87c
 
 	column RowId
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 6497eb33-b3d9-4eb4-b451-8303fc307948
+		lineageTag: 1996508c-8565-4eb6-bd5f-76f583f6f130
 		summarizeBy: none
 		sourceColumn: RowId
 

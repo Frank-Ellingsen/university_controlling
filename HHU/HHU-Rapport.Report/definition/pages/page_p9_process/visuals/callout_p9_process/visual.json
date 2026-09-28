@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p9_process",
+  "position": {
+    "x": 1220,
+    "y": 695,
+    "z": 10,
+    "height": 365,
+    "width": 680,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "📋 SAMLET PROSESSANALYSE OG ANBEFALING",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#0F172A"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Budsjettprosessen er en moden, driverbasert styringsprosess, men Port 5 er flagget RØD (Ikke klar):\n\n1. Rammegapet på 2,0 MNOK og lønnsandelen på 66,8 % må avstemmes og godkjennes før systemfrys.\n2. Anbefaling: Stopp ved beslutningsport 5 til rammebrev og stillingsplaner er formelt signert.\n3. Lås BUD2027 sammen med flerårig investeringsplan, tiltakseiere og månedlig RAG-rapportering.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+table FactClosurePlan
+	lineageTag: 512e07a2-f2a1-4784-b99a-94284aaf587a
+
+	column Prio
+		dataType: int64
+		formatString: 0
+		lineageTag: 35f8e6df-8717-4a03-ac72-dd1fad6e74cb
+		summarizeBy: none
+		sourceColumn: Prio
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvvikRisiko
+		dataType: string
+		lineageTag: af84dc7e-f078-4a22-8b21-d457da08552b
+		summarizeBy: none
+		sourceColumn: AvvikRisiko
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaakrevdHandling
+		dataType: string
+		lineageTag: 25b8d7bb-39f4-4789-ad89-cafcb1b5e18e
+		summarizeBy: none
+		sourceColumn: PaakrevdHandling
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnsvarligEier
+		dataType: string
+		lineageTag: e4e4b142-b1a1-45f8-8743-6d25b7686b1e
+		summarizeBy: none
+		sourceColumn: AnsvarligEier
+
+		annotation SummarizationSetBy = Automatic
+
+	column FristDato
+		dataType: string
+		lineageTag: 7686b5dc-75c8-47b6-a7c2-484828ce5cf9
+		summarizeBy: none
+		sourceColumn: FristDato
+
+		annotation SummarizationSetBy = Automatic
+
+	column BevisFerdigkriterium
+		dataType: string
+		lineageTag: f12e9925-ca09-4ba6-8e3a-8389fdc3640e
+		summarizeBy: none
+		sourceColumn: BevisFerdigkriterium
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konsekvens
+		dataType: string
+		lineageTag: 0c6f4189-da60-4a22-a24f-725b4d2256e6
+		summarizeBy: none
+		sourceColumn: Konsekvens
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Status
+		dataType: string
+		lineageTag: 3ef15aaf-73ef-47ab-91cc-ce0713e975d7
+		summarizeBy: none
+		sourceColumn: RAG_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactClosurePlan = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactClosurePlan.csv"),[Delimiter=";", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Prio", Int64.Type}, {"AvvikRisiko", type text}, {"PaakrevdHandling", type text}, {"AnsvarligEier", type text}, {"FristDato", type text}, {"BevisFerdigkriterium", type text}, {"Konsekvens", type text}, {"RAG_Status", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

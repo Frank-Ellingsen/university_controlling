@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p5_staffing_diag",
+  "position": {
+    "x": 1300,
+    "y": 240,
+    "z": 10,
+    "height": 480,
+    "width": 600,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "📋 BEMANNINGSDIAGNOSE & LØNNSANDEL",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#0369A1"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Faglig andel på 67,2 % er godt over sektormålet på 50–55 %, noe som sikrer kjerneleveransen innen forskning og utdanning.\n\n• Konto-basert lønnsandel (66,8 %) overskrider målet på 64,5 % (+2,27 pp). Dette representerer en strukturell kostnadsutfordring for 2027-budsjettet.\n\n• Avstemming mot UBW: Det er identifisert en differanse mellom FTE-filens lønnsandel (63,9 %) og hovedbokens lønnskonti (66,8 %) som må avstemmes før systemfrys.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_p27_units",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 460,
+    "width": 1180,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "Enhetsnavn"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.Enhetsnavn",
+              "nativeQueryRef": "Enhetsnavn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.OrgKode",
+              "nativeQueryRef": "OrgKode",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "InntekterNOK"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.InntekterNOK",
+              "nativeQueryRef": "Inntekter (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "KostnaderNOK"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.KostnaderNOK",
+              "nativeQueryRef": "Kostnader (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "NettoResultatNOK"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.NettoResultatNOK",
+              "nativeQueryRef": "Netto Resultat (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "AarsverkTotalt"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.AarsverkTotalt",
+              "nativeQueryRef": "Årsverk",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "UFAarsverk"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.UFAarsverk",
+              "nativeQueryRef": "UF-ÅV",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "Studenter"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.Studenter",
+              "nativeQueryRef": "Studenter",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactPlan2027Unit"
+                    }
+                  },
+                  "Property": "SPE60"
+                }
+              },
+              "queryRef": "FactPlan2027Unit.SPE60",
+              "nativeQueryRef": "SPE60",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Økonomi og Kapasitet per Enhet 2027 (Inntekter, Kostnader, Årsverk og Produksjon)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

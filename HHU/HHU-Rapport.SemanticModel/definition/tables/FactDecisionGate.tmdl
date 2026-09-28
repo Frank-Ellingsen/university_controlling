@@ -1,0 +1,128 @@
+table FactDecisionGate
+	lineageTag: 8da7a3e7-c86f-4620-bef8-8d07371b241c
+
+	column PortNummer
+		dataType: int64
+		formatString: 0
+		lineageTag: bc13bb18-2947-4e39-b331-0cd65db34e70
+		summarizeBy: none
+		sourceColumn: PortNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Periode
+		dataType: string
+		lineageTag: 24f73e6c-4ed6-43fe-8261-a99dc526c5ff
+		summarizeBy: none
+		sourceColumn: Periode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hovedspoersmaal
+		dataType: string
+		lineageTag: b53e8369-d10f-4ca3-a3e7-425c31c5ffa4
+		summarizeBy: none
+		sourceColumn: Hovedspoersmaal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aktivitet
+		dataType: string
+		lineageTag: 547462b0-0a63-416c-8dca-ab599d41e6ef
+		summarizeBy: none
+		sourceColumn: Aktivitet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inndata
+		dataType: string
+		lineageTag: 95898184-d98b-4242-a83f-be0495535b3d
+		summarizeBy: none
+		sourceColumn: Inndata
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ansvarlig
+		dataType: string
+		lineageTag: ddd5a753-8ece-4ed1-b56d-eca710fdfb5a
+		summarizeBy: none
+		sourceColumn: Ansvarlig
+
+		annotation SummarizationSetBy = Automatic
+
+	column Leveranse
+		dataType: string
+		lineageTag: ad117e72-a437-415c-862b-d29094eb13a3
+		summarizeBy: none
+		sourceColumn: Leveranse
+
+		annotation SummarizationSetBy = Automatic
+
+	column Arena
+		dataType: string
+		lineageTag: f4c0c366-ed4c-4184-9c95-715599db8276
+		summarizeBy: none
+		sourceColumn: Arena
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 577073e1-9f22-410b-b063-cc1442a2765f
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAG_Ikon
+		dataType: string
+		lineageTag: 720acd53-96dc-430c-940c-155f15055398
+		summarizeBy: none
+		sourceColumn: RAG_Ikon
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kriterier
+		dataType: string
+		lineageTag: 67d0df8f-82e7-4dcb-b1bf-9edc5e185c90
+		summarizeBy: none
+		sourceColumn: Kriterier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Forutsetninger
+		dataType: string
+		lineageTag: 596e57f8-3ed6-405d-b902-02494beaa436
+		summarizeBy: none
+		sourceColumn: Forutsetninger
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tiltak
+		dataType: string
+		lineageTag: 1d8c34f3-20b7-4c4b-a672-105b5f89deb0
+		summarizeBy: none
+		sourceColumn: Tiltak
+
+		annotation SummarizationSetBy = Automatic
+
+	column FristDato
+		dataType: string
+		lineageTag: 06e64bf0-0c47-46db-b06b-90712f81cf8b
+		summarizeBy: none
+		sourceColumn: FristDato
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactDecisionGate = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactDecisionGate.csv"),[Delimiter=";", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"PortNummer", Int64.Type}, {"Periode", type text}, {"Hovedspoersmaal", type text}, {"Aktivitet", type text}, {"Inndata", type text}, {"Ansvarlig", type text}, {"Leveranse", type text}, {"Arena", type text}, {"Status", type text}, {"RAG_Ikon", type text}, {"Kriterier", type text}, {"Forutsetninger", type text}, {"Tiltak", type text}, {"FristDato", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

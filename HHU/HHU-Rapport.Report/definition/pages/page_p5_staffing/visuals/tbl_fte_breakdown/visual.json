@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_fte_breakdown",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 480,
+    "width": 1260,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactFTE"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "FactFTE.OrgKode",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactFTE"
+                    }
+                  },
+                  "Property": "Stillingstype"
+                }
+              },
+              "queryRef": "FactFTE.Stillingstype",
+              "nativeQueryRef": "Stillingstype",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactFTE"
+                    }
+                  },
+                  "Property": "Aarsverk"
+                }
+              },
+              "queryRef": "FactFTE.Aarsverk",
+              "nativeQueryRef": "Årsverk",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactFTE"
+                    }
+                  },
+                  "Property": "Aarsverk_UF"
+                }
+              },
+              "queryRef": "FactFTE.Aarsverk_UF",
+              "nativeQueryRef": "UF-Årsverk",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactFTE"
+                    }
+                  },
+                  "Property": "Aarsverk_TA"
+                }
+              },
+              "queryRef": "FactFTE.Aarsverk_TA",
+              "nativeQueryRef": "TA-Årsverk",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactFTE"
+                    }
+                  },
+                  "Property": "Budsjettert_Aarsverk"
+                }
+              },
+              "queryRef": "FactFTE.Budsjettert_Aarsverk",
+              "nativeQueryRef": "Budsjettert ÅV",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Stillingsstruktur per Institutt: Årsverksfordeling og Bemanningskategorier'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

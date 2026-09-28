@@ -2058,7 +2058,17 @@ relationship rel_factaction2027_dimorg
     with open(os.path.join(SEMANTIC_DIR, "tables", "_Measures.tmdl"), "w", encoding="utf-8") as f:
         f.write(measures_tmdl)
         
-    print(f"Successfully wrote semantic model with 16 tables and {len(measures)} measures.")
+    print(f"Successfully wrote base semantic model.")
+
+    # Call full update for the 9 specialized Excel reporting tables and measures
+    from build_hhu_pbip_full import export_all_csvs, update_semantic_model
+    export_all_csvs()
+    update_semantic_model()
+
+    # Generate all 11 production-grade PBIR report pages
+    from build_hhu_rapport_pages import build_all_report_pages
+    build_all_report_pages()
 
 if __name__ == "__main__":
     write_tmdl_semantic_model()
+

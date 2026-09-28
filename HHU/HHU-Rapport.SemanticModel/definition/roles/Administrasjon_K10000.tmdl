@@ -3,5 +3,5 @@ role Administrasjon_K10000
 
 	tablePermission DimOrganization = 'DimOrganization'[OrgKode] == "K10000"
 
-	annotation PBI_Id = 0af98ece65734554bc5237c14396106d
+	annotation PBI_Id = 7e711b0f27614ccd9f2a6b30b882bdfb
 

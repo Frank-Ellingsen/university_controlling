@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "page_p7_students",
+  "displayName": "7. Studieproduksjon & KD",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920
+}

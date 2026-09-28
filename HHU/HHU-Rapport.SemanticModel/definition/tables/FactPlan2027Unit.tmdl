@@ -1,0 +1,94 @@
+table FactPlan2027Unit
+	lineageTag: 9b90ec15-7630-43e1-b390-a6986718701f
+
+	column OrgKode
+		dataType: string
+		lineageTag: e938b030-9262-4299-ac98-2f6fe3d5d94a
+		summarizeBy: none
+		sourceColumn: OrgKode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Enhetsnavn
+		dataType: string
+		lineageTag: 26a037ce-afee-491f-81a9-f5993120e85e
+		summarizeBy: none
+		sourceColumn: Enhetsnavn
+
+		annotation SummarizationSetBy = Automatic
+
+	column InntekterNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: 3705ba9b-aa62-4ae9-bf47-495c8f37676b
+		summarizeBy: sum
+		sourceColumn: InntekterNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnaderNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: 7591bfeb-931b-4164-a444-5402f31818cf
+		summarizeBy: sum
+		sourceColumn: KostnaderNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column NettoResultatNOK
+		dataType: double
+		formatString: #,##0
+		lineageTag: 0ba0973e-5f7a-4caf-ac48-0218af0c5d5b
+		summarizeBy: sum
+		sourceColumn: NettoResultatNOK
+
+		annotation SummarizationSetBy = Automatic
+
+	column AarsverkTotalt
+		dataType: double
+		formatString: 0.0
+		lineageTag: ea3c0362-541a-4ad7-988f-f90c9bcfea4e
+		summarizeBy: sum
+		sourceColumn: AarsverkTotalt
+
+		annotation SummarizationSetBy = Automatic
+
+	column UFAarsverk
+		dataType: double
+		formatString: 0.0
+		lineageTag: 56b05fa3-b7d6-47f0-84a8-643ab91b919e
+		summarizeBy: sum
+		sourceColumn: UFAarsverk
+
+		annotation SummarizationSetBy = Automatic
+
+	column Studenter
+		dataType: double
+		formatString: #,##0
+		lineageTag: 1d0be574-cae9-4ebc-be48-e91905980dae
+		summarizeBy: sum
+		sourceColumn: Studenter
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPE60
+		dataType: double
+		formatString: #,##0
+		lineageTag: 427b42a3-06a3-4eeb-a253-95c47f68cb07
+		summarizeBy: sum
+		sourceColumn: SPE60
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactPlan2027Unit = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactPlan2027Unit.csv"),[Delimiter=";", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrgKode", type text}, {"Enhetsnavn", type text}, {"InntekterNOK", type number}, {"KostnaderNOK", type number}, {"NettoResultatNOK", type number}, {"AarsverkTotalt", type number}, {"UFAarsverk", type number}, {"Studenter", type number}, {"SPE60", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

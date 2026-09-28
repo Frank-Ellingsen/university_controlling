@@ -1,10 +1,10 @@
 table FactBudget
-	lineageTag: 60b76e30-f949-40bd-89fe-1c6c96b6404c
+	lineageTag: 3098a097-b256-4fdd-81d5-db677b05346a
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: 55dd7f73-d94b-46bd-b071-e1e65b161aae
+		lineageTag: 7d4e9b2a-8ae1-4270-b849-d16ddaa71205
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -12,7 +12,7 @@ table FactBudget
 
 	column OrgKode
 		dataType: string
-		lineageTag: acca491a-aaa4-4a33-aa73-e77993f5f236
+		lineageTag: 289078e8-7d7e-40db-ab2b-8d943ef805c2
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -21,7 +21,7 @@ table FactBudget
 	column Konto
 		dataType: int64
 		formatString: 0
-		lineageTag: acff5ac5-07ea-417f-b65b-ff3d108f7aa1
+		lineageTag: ba4161fc-ee57-4e97-a17d-e4f8f5a97805
 		summarizeBy: none
 		sourceColumn: Konto
 
@@ -29,7 +29,7 @@ table FactBudget
 
 	column VersjonKode
 		dataType: string
-		lineageTag: f90b90d1-2e55-49d8-bea2-914df64c83c3
+		lineageTag: a2dfecae-df1e-4f5e-b11e-9f7d24a2d649
 		summarizeBy: none
 		sourceColumn: VersjonKode
 
@@ -38,7 +38,7 @@ table FactBudget
 	column BudsjettBelop
 		dataType: double
 		formatString: #,##0
-		lineageTag: 952d3727-d47b-4374-a6f7-ee7fa162e9ab
+		lineageTag: a283d60e-62d5-4c4c-aa07-1a130a1a7324
 		summarizeBy: sum
 		sourceColumn: BudsjettBelop
 
@@ -46,7 +46,7 @@ table FactBudget
 
 	column Budsjettansvarsområde
 		dataType: string
-		lineageTag: 82c1d7d3-17f8-431b-8a64-9d3dce0ddc45
+		lineageTag: 9c10dd03-ceb5-4a4e-8fac-20564b3ca89a
 		summarizeBy: none
 		sourceColumn: Budsjettansvarsområde
 
@@ -54,7 +54,7 @@ table FactBudget
 
 	column BudsjettansvarligLeder
 		dataType: string
-		lineageTag: ad97c180-a5c7-4414-9678-25aa7f9cb933
+		lineageTag: 2e43e4c8-0540-4367-8e6e-e1ca423d7f03
 		summarizeBy: none
 		sourceColumn: BudsjettansvarligLeder
 

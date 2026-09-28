@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p10_formula",
+  "position": {
+    "x": 20,
+    "y": 105,
+    "z": 10,
+    "height": 110,
+    "width": 1880,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "📐 STANDARD PROGNOSEFORMEL: Actual YTD + ETC = EAC / Latest Estimate",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#10B981"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• Actual YTD (låst regnskap hittil i året) + ETC (driverbasert prognose for resterende måneder) = EAC / Latest Estimate (ny forventet helårsverdi).\n• Sluttavvik (VAC) = BUD2027 − EAC. Positivt tall er gunstig for kostnader (mindreforbruk). RAG-kriterier: Grønn ≥ 0 %; Gul 0 til −5 %; Rød < −5 %.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

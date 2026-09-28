@@ -11,7 +11,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode","TMDL-Extension"]
 
-annotation PBI_QueryOrder = ["DimAccountHierarchy","DimDate","DimDate_2027","DimForecastVersion","DimOrganization","FactAction","FactAction_2027","FactBudget","FactBudget_2027","FactEVM","FactFTE","FactFTE_2027","FactGL","FactStudents","FactStudents_2027","_Measures"]
+annotation PBI_QueryOrder = ["DimAccountHierarchy", "DimDate", "DimDate_2027", "DimForecastVersion", "DimOrganization", "FactAction", "FactAction_2027", "FactBudget", "FactBudget_2027", "FactEVM", "FactFTE", "FactFTE_2027", "FactGL", "FactStudents", "FactStudents_2027", "FactVarianceDriver", "FactMonthHotspot", "FactActionPlan", "FactDecisionGate", "FactDriverAnalysis", "FactClosurePlan", "FactForecastMethod", "FactRoutineStep", "FactPlan2027Unit", "_Measures"]
 
 ref table DimAccountHierarchy
 ref table DimDate
@@ -29,6 +29,15 @@ ref table FactGL
 ref table FactStudents
 ref table FactStudents_2027
 ref table _Measures
+ref table FactVarianceDriver
+ref table FactMonthHotspot
+ref table FactActionPlan
+ref table FactDecisionGate
+ref table FactDriverAnalysis
+ref table FactClosurePlan
+ref table FactForecastMethod
+ref table FactRoutineStep
+ref table FactPlan2027Unit
 
 ref role Universitetsledelse
 ref role Dekan_HHU

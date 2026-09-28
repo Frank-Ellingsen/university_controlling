@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p7_education",
+  "position": {
+    "x": 1300,
+    "y": 240,
+    "z": 10,
+    "height": 500,
+    "width": 600,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "📋 STUDIEPRODUKSJONSSTRATEGI & EFFEKTIVITET",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#0F172A"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "• K13000 har den høyeste studieproduksjonen med Siviløkonom- og bachelorprogrammene (71,7 MNOK inntekt, 21,6 stud/UF).\n\n• K11000 har høyeste studenttetthet (25,6 stud/UF) på masterprogrammene, men marginene på etterutdanning krever optimalisering.\n\n• Finansieringsmodellen: Endringer i SPE60-produksjon slår ut i KD-rammen med to års forsinkelse (t-2). Dagens overproduksjon sikrer inntektsgrunnlaget inn i 2028.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

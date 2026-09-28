@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "_Measures.CPI",
-              "nativeQueryRef": "CPI"
+              "nativeQueryRef": "EVM KOSTNADSEFFEKTIVITET (CPI)"
             }
           ]
         }

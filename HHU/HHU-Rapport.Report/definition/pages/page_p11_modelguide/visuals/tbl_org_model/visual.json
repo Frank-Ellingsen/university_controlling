@@ -1,0 +1,173 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_org_model",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 460,
+    "width": 1880,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "DimOrganization.OrgKode",
+              "nativeQueryRef": "OrgKode",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Enhetsnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Enhetsnavn",
+              "nativeQueryRef": "Enhetsnavn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Virksomhetstype"
+                }
+              },
+              "queryRef": "DimOrganization.Virksomhetstype",
+              "nativeQueryRef": "Virksomhetstype",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Budsjettansvarlig"
+                }
+              },
+              "queryRef": "DimOrganization.Budsjettansvarlig",
+              "nativeQueryRef": "Budsjettansvarlig",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "LederTittel"
+                }
+              },
+              "queryRef": "DimOrganization.LederTittel",
+              "nativeQueryRef": "LederTittel",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Nivaa2"
+                }
+              },
+              "queryRef": "DimOrganization.Nivaa2",
+              "nativeQueryRef": "Fakultet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Nivaa3"
+                }
+              },
+              "queryRef": "DimOrganization.Nivaa3",
+              "nativeQueryRef": "Institutt",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Organisasjonsstruktur (DimOrganization): Enhetshierarki, Virksomhetstype og Budsjettansvar'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

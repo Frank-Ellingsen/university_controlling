@@ -1,9 +1,9 @@
 table DimOrganization
-	lineageTag: 120fe2ae-f3cc-42a9-af2d-6fb57c6a117d
+	lineageTag: b211751d-e265-4f17-9c9d-49ef1e82c36e
 
 	column OrgKode
 		dataType: string
-		lineageTag: 0d82da0f-afa2-48dc-a108-fcc6093e225b
+		lineageTag: 22fc635a-328e-41d9-a484-6be442b700ec
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -11,7 +11,7 @@ table DimOrganization
 
 	column Enhetsnavn
 		dataType: string
-		lineageTag: 7cb103d0-1de1-43a5-98b1-2830fad30f6d
+		lineageTag: b7fb90e8-821d-42c6-beab-336ecdf66b26
 		summarizeBy: none
 		sourceColumn: Enhetsnavn
 
@@ -19,7 +19,7 @@ table DimOrganization
 
 	column Nivaa1
 		dataType: string
-		lineageTag: 381e4a9d-377a-41e4-801a-971487b35eac
+		lineageTag: ec232711-58b2-4587-9e81-756094583d8b
 		summarizeBy: none
 		sourceColumn: Nivaa1
 
@@ -27,7 +27,7 @@ table DimOrganization
 
 	column Nivaa2
 		dataType: string
-		lineageTag: dc7f3262-be2a-4936-a636-952469e6fe13
+		lineageTag: 4a5f401f-afee-4821-b22e-e73a7cd39a40
 		summarizeBy: none
 		sourceColumn: Nivaa2
 
@@ -35,7 +35,7 @@ table DimOrganization
 
 	column Nivaa3
 		dataType: string
-		lineageTag: 352a0181-846b-49ff-87f7-2cf13675f8c3
+		lineageTag: 3ac2be17-f869-465a-99f8-67b5bdc9ebd1
 		summarizeBy: none
 		sourceColumn: Nivaa3
 
@@ -43,7 +43,7 @@ table DimOrganization
 
 	column Budsjettansvarlig
 		dataType: string
-		lineageTag: f09ea868-492b-4229-882d-fb77eb1fb77d
+		lineageTag: 7fcab01c-f99d-4e21-ae56-d3acae99733d
 		summarizeBy: none
 		sourceColumn: Budsjettansvarlig
 
@@ -51,7 +51,7 @@ table DimOrganization
 
 	column LederTittel
 		dataType: string
-		lineageTag: c06b9ccb-dd83-41bf-8533-a1abc18a5ce2
+		lineageTag: 484c6851-254b-45ff-8360-0ad28a8cc6a8
 		summarizeBy: none
 		sourceColumn: LederTittel
 
@@ -59,7 +59,7 @@ table DimOrganization
 
 	column Virksomhetstype
 		dataType: string
-		lineageTag: fd0d07ba-ad43-4c9b-b69c-341fff93e808
+		lineageTag: e1b64c80-d2e5-4575-8309-eb55e1b43b2e
 		summarizeBy: none
 		sourceColumn: Virksomhetstype
 
@@ -67,7 +67,7 @@ table DimOrganization
 
 	column Fakultetsnavn
 		dataType: string
-		lineageTag: 59f712d4-10c6-4964-b483-fe1af530329e
+		lineageTag: ee3991b9-2eb8-449a-b101-e4abcd54a120
 		summarizeBy: none
 		sourceColumn: Fakultetsnavn
 

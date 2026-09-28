@@ -1,0 +1,248 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_action_plan",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 480,
+    "width": 1880,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "Prio"
+                }
+              },
+              "queryRef": "FactActionPlan.Prio",
+              "nativeQueryRef": "Prio",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "Omraade"
+                }
+              },
+              "queryRef": "FactActionPlan.Omraade",
+              "nativeQueryRef": "Område",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "Rotaarsak"
+                }
+              },
+              "queryRef": "FactActionPlan.Rotaarsak",
+              "nativeQueryRef": "Rotårsak / Observasjon",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "AnbefaltHandling"
+                }
+              },
+              "queryRef": "FactActionPlan.AnbefaltHandling",
+              "nativeQueryRef": "Anbefalt Handling",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "AnsvarligEier"
+                }
+              },
+              "queryRef": "FactActionPlan.AnsvarligEier",
+              "nativeQueryRef": "Eier",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "FristDato"
+                }
+              },
+              "queryRef": "FactActionPlan.FristDato",
+              "nativeQueryRef": "Frist",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "BruttoGapNOK"
+                }
+              },
+              "queryRef": "FactActionPlan.BruttoGapNOK",
+              "nativeQueryRef": "Brutto Gap (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "ForventetEffektNOK"
+                }
+              },
+              "queryRef": "FactActionPlan.ForventetEffektNOK",
+              "nativeQueryRef": "Effekt (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "KPI_Kontrollpunkt"
+                }
+              },
+              "queryRef": "FactActionPlan.KPI_Kontrollpunkt",
+              "nativeQueryRef": "KPI / Kontroll",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "RAG_Status"
+                }
+              },
+              "queryRef": "FactActionPlan.RAG_Status",
+              "nativeQueryRef": "RAG",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "BeslutningNaa"
+                }
+              },
+              "queryRef": "FactActionPlan.BeslutningNaa",
+              "nativeQueryRef": "Beslutning Nå",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactActionPlan"
+                    }
+                  },
+                  "Property": "Oppfoelging"
+                }
+              },
+              "queryRef": "FactActionPlan.Oppfoelging",
+              "nativeQueryRef": "Oppfølgingsarena",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Prioritert Handlingsplan: 5 Kritiske Tiltak for Budsjettbalanse og Risikohåndtering'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

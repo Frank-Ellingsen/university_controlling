@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "DimDate.MaanedNavnKort",
-              "nativeQueryRef": "MaanedNavnKort",
+              "nativeQueryRef": "Rapporteringsmåned",
               "active": true
             }
           ]

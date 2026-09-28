@@ -1,0 +1,188 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_forecast_methods",
+  "position": {
+    "x": 20,
+    "y": 230,
+    "z": 30,
+    "height": 500,
+    "width": 1880,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "Prio"
+                }
+              },
+              "queryRef": "FactForecastMethod.Prio",
+              "nativeQueryRef": "Prio",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "Budsjettpost"
+                }
+              },
+              "queryRef": "FactForecastMethod.Budsjettpost",
+              "nativeQueryRef": "Budsjettpost",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "KontoTabell"
+                }
+              },
+              "queryRef": "FactForecastMethod.KontoTabell",
+              "nativeQueryRef": "Konto / Tabell",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "Baseline2027"
+                }
+              },
+              "queryRef": "FactForecastMethod.Baseline2027",
+              "nativeQueryRef": "2027 Baseline (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "Prognosemetode"
+                }
+              },
+              "queryRef": "FactForecastMethod.Prognosemetode",
+              "nativeQueryRef": "Prognosemetode",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "DriverInput"
+                }
+              },
+              "queryRef": "FactForecastMethod.DriverInput",
+              "nativeQueryRef": "Driver / Inndata",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "OperativBeregning"
+                }
+              },
+              "queryRef": "FactForecastMethod.OperativBeregning",
+              "nativeQueryRef": "Operativ Beregning",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactForecastMethod"
+                    }
+                  },
+                  "Property": "Oppdateringsfrekvens"
+                }
+              },
+              "queryRef": "FactForecastMethod.Oppdateringsfrekvens",
+              "nativeQueryRef": "Oppdatering",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Metodebibliotek for 11 Budsjettsoster: Beregningsformler, Drivere og Oppdateringsrutiner'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

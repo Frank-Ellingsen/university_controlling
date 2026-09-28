@@ -3,11 +3,15 @@
   "pageOrder": [
     "page_p1_summary",
     "page_p2_institutter",
-    "page_p3_staffing",
-    "page_p4_evm",
-    "page_p5_students",
-    "page_p6_action",
-    "page_p7_budget2027"
+    "page_p3_variance",
+    "page_p4_actionplan",
+    "page_p5_staffing",
+    "page_p6_evm",
+    "page_p7_students",
+    "page_p8_budget2027",
+    "page_p9_process",
+    "page_p10_methods",
+    "page_p11_modelguide"
   ],
-  "activePageName": "page_p4_evm"
+  "activePageName": "page_p1_summary"
 }

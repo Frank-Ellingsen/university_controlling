@@ -1,9 +1,9 @@
 table FactAction_2027
-	lineageTag: a160dcb3-ca04-49c4-8746-fd72dfa75cfd
+	lineageTag: 64b63754-2c5e-4358-a6e2-2837cd3a5204
 
 	column TiltakID
 		dataType: string
-		lineageTag: 7ef7364f-1d48-44ad-8c94-7d8cbbe517e6
+		lineageTag: 754b0c3d-cd1d-4c0d-8195-7cea1f97fb29
 		summarizeBy: none
 		sourceColumn: TiltakID
 
@@ -11,7 +11,7 @@ table FactAction_2027
 
 	column OrgKode
 		dataType: string
-		lineageTag: 8263626b-1b83-4e33-bddb-beb1b4b9e802
+		lineageTag: a06be126-7860-41fe-ba63-17c6bbb0584a
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -19,7 +19,7 @@ table FactAction_2027
 
 	column Tiltaksnavn
 		dataType: string
-		lineageTag: 8f6d79b0-05ba-415d-bd83-6983d43d3f53
+		lineageTag: f66a0014-cfef-40b9-add9-35e13dcea610
 		summarizeBy: none
 		sourceColumn: Tiltaksnavn
 
@@ -27,7 +27,7 @@ table FactAction_2027
 
 	column Kategori
 		dataType: string
-		lineageTag: ee83281d-ca3d-4307-82a1-cb13402f3091
+		lineageTag: dfcdbad1-4414-44d9-88d6-e68cd05138bc
 		summarizeBy: none
 		sourceColumn: Kategori
 
@@ -35,7 +35,7 @@ table FactAction_2027
 
 	column Ansvarlig
 		dataType: string
-		lineageTag: 8413857e-8690-4d97-98c7-88eb17e73717
+		lineageTag: 646fab46-8c16-425c-af30-d09d248c8645
 		summarizeBy: none
 		sourceColumn: Ansvarlig
 
@@ -44,7 +44,7 @@ table FactAction_2027
 	column ForventetEffekt
 		dataType: double
 		formatString: #,##0
-		lineageTag: 7cd331b7-bd25-4fc7-8b8a-0d8c2de69abd
+		lineageTag: e551ccb8-5b3e-4bca-8173-8f5e4277227b
 		summarizeBy: sum
 		sourceColumn: ForventetEffekt
 
@@ -53,7 +53,7 @@ table FactAction_2027
 	column RealisertEffekt
 		dataType: double
 		formatString: #,##0
-		lineageTag: 4db35b9c-159b-4fe2-b41c-1b946f2569fe
+		lineageTag: c92e7fed-cff9-4f14-a691-851d6eb83ac8
 		summarizeBy: sum
 		sourceColumn: RealisertEffekt
 
@@ -61,7 +61,7 @@ table FactAction_2027
 
 	column Status
 		dataType: string
-		lineageTag: 65e7812d-8a5b-4775-ab41-7613ff7501bf
+		lineageTag: 297e7d62-164c-4e0c-8aa1-97c86889593c
 		summarizeBy: none
 		sourceColumn: Status
 
@@ -69,7 +69,7 @@ table FactAction_2027
 
 	column Beskrivelse
 		dataType: string
-		lineageTag: 8242a2f4-f3e5-4f0d-ad24-41d809bb0ca7
+		lineageTag: 5b032846-4c0d-45a5-b341-c4a81f24d9a9
 		summarizeBy: none
 		sourceColumn: Beskrivelse
 

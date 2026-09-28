@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_p27_actions",
+  "position": {
+    "x": 1220,
+    "y": 240,
+    "z": 30,
+    "height": 460,
+    "width": 680,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "TiltakID"
+                }
+              },
+              "queryRef": "FactAction_2027.TiltakID",
+              "nativeQueryRef": "TiltakID",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "FactAction_2027.OrgKode",
+              "nativeQueryRef": "Enhet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "Tiltaksnavn"
+                }
+              },
+              "queryRef": "FactAction_2027.Tiltaksnavn",
+              "nativeQueryRef": "Tiltakstittel",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "ForventetEffekt"
+                }
+              },
+              "queryRef": "FactAction_2027.ForventetEffekt",
+              "nativeQueryRef": "Effekt (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "FactAction_2027.Status",
+              "nativeQueryRef": "Status",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAction_2027"
+                    }
+                  },
+                  "Property": "Beskrivelse"
+                }
+              },
+              "queryRef": "FactAction_2027.Beskrivelse",
+              "nativeQueryRef": "Beskrivelse",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2027 Strategiske Omstillingstiltak (T001–T003)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,56 @@
+table FactRoutineStep
+	lineageTag: 6397ee08-143d-4422-9adc-e47600de19b4
+
+	column TrinnNummer
+		dataType: int64
+		formatString: 0
+		lineageTag: 739074f6-f646-4f49-a4b0-64cdc20b170a
+		summarizeBy: none
+		sourceColumn: TrinnNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column FormelMetode
+		dataType: string
+		lineageTag: 3ba886cc-21eb-411e-95bd-2b584ae6dcc1
+		summarizeBy: none
+		sourceColumn: FormelMetode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Forklaring
+		dataType: string
+		lineageTag: 5f26c45c-4fdb-4b29-8f4d-63d9265624e2
+		summarizeBy: none
+		sourceColumn: Forklaring
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontrollaktivitet
+		dataType: string
+		lineageTag: 4a27084f-db8b-426d-b4fb-4e6c09218e48
+		summarizeBy: none
+		sourceColumn: Kontrollaktivitet
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaanedligTidslinje
+		dataType: string
+		lineageTag: 360e67c0-6a61-4cc1-8dc3-65add4d1f668
+		summarizeBy: none
+		sourceColumn: MaanedligTidslinje
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactRoutineStep = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\frank\Desktop\UIA2\HHU\FactRoutineStep.csv"),[Delimiter=";", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TrinnNummer", Int64.Type}, {"FormelMetode", type text}, {"Forklaring", type text}, {"Kontrollaktivitet", type text}, {"MaanedligTidslinje", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

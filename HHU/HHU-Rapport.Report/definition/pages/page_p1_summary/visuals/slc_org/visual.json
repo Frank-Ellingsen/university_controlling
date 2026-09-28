@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "DimOrganization.Enhetsnavn",
-              "nativeQueryRef": "Enhetsnavn",
+              "nativeQueryRef": "Enhet / Institutt",
               "active": true
             }
           ]

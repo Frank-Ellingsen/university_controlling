@@ -1,0 +1,203 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_decision_gates",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 440,
+    "width": 1080,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "PortNummer"
+                }
+              },
+              "queryRef": "FactDecisionGate.PortNummer",
+              "nativeQueryRef": "Port",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "Periode"
+                }
+              },
+              "queryRef": "FactDecisionGate.Periode",
+              "nativeQueryRef": "Periode",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "Hovedspoersmaal"
+                }
+              },
+              "queryRef": "FactDecisionGate.Hovedspoersmaal",
+              "nativeQueryRef": "Hovedspørsmål",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "Aktivitet"
+                }
+              },
+              "queryRef": "FactDecisionGate.Aktivitet",
+              "nativeQueryRef": "Hovedaktivitet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "Leveranse"
+                }
+              },
+              "queryRef": "FactDecisionGate.Leveranse",
+              "nativeQueryRef": "Leveranse",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "Arena"
+                }
+              },
+              "queryRef": "FactDecisionGate.Arena",
+              "nativeQueryRef": "Beslutningsarena",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "FactDecisionGate.Status",
+              "nativeQueryRef": "Status",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "RAG_Ikon"
+                }
+              },
+              "queryRef": "FactDecisionGate.RAG_Ikon",
+              "nativeQueryRef": "RAG",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactDecisionGate"
+                    }
+                  },
+                  "Property": "FristDato"
+                }
+              },
+              "queryRef": "FactDecisionGate.FristDato",
+              "nativeQueryRef": "Frist",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'De 6 Beslutningsportene i Budsjettprosessen (Roadmap fra Rammevedtak til Endelig Låsing)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

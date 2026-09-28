@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "callout_p11_dataquality",
+  "position": {
+    "x": 20,
+    "y": 715,
+    "z": 10,
+    "height": 345,
+    "width": 1880,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "⚠️ VIKTIG DATAKVALITETSFUNN (2,0 MNOK Inntektsgap)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "11pt",
+                      "fontWeight": "bold",
+                      "color": "#B91C1C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "4pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Gjennomgang av kildetabellene avdekker et vesentlig datakvalitetsfunn i 2027-budsjettet:\n\n• Kildemodell FactBudget_2027 summerer til 286,07 MNOK, mens styringsdokumentene oppgir en vedtatt ramme på 288,07 MNOK.\n\n• Differansen på 2,0 MNOK reduserer nettoresultatet fra +6,07 MNOK til +4,07 MNOK.\n\n• Årsak: En strategisk tildelingslinje på 2,0 MNOK mangler i FactBudget_2027-kilden. Dette må korrigeres i UBW før endelig systemfrys ved Port 5.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#334155"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

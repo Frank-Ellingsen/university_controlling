@@ -86,3 +86,11 @@ relationship rel_factaction2027_dimorg
 	fromColumn: FactAction_2027.OrgKode
 	toColumn: DimOrganization.OrgKode
 
+relationship rel_factvariancedriver_dimorg
+	fromColumn: FactVarianceDriver.OrgKode
+	toColumn: DimOrganization.OrgKode
+
+relationship rel_factplan2027unit_dimorg
+	fromColumn: FactPlan2027Unit.OrgKode
+	toColumn: DimOrganization.OrgKode
+

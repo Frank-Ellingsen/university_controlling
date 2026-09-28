@@ -1,0 +1,143 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_routine_steps",
+  "position": {
+    "x": 20,
+    "y": 745,
+    "z": 30,
+    "height": 315,
+    "width": 1880,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactRoutineStep"
+                    }
+                  },
+                  "Property": "TrinnNummer"
+                }
+              },
+              "queryRef": "FactRoutineStep.TrinnNummer",
+              "nativeQueryRef": "Trinn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactRoutineStep"
+                    }
+                  },
+                  "Property": "FormelMetode"
+                }
+              },
+              "queryRef": "FactRoutineStep.FormelMetode",
+              "nativeQueryRef": "Formel / Metode",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactRoutineStep"
+                    }
+                  },
+                  "Property": "Forklaring"
+                }
+              },
+              "queryRef": "FactRoutineStep.Forklaring",
+              "nativeQueryRef": "Forklaring & Hensikt",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactRoutineStep"
+                    }
+                  },
+                  "Property": "Kontrollaktivitet"
+                }
+              },
+              "queryRef": "FactRoutineStep.Kontrollaktivitet",
+              "nativeQueryRef": "Kontrollaktivitet",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactRoutineStep"
+                    }
+                  },
+                  "Property": "MaanedligTidslinje"
+                }
+              },
+              "queryRef": "FactRoutineStep.MaanedligTidslinje",
+              "nativeQueryRef": "Tidslinje & Leveranser (Dag 1–10)",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Månedlig Rapporteringsrutine og Årshjul (Trinn 1–6 fra Periodelukking til Styringspublisering)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -3,5 +3,5 @@ role Universitetsledelse
 
 	tablePermission DimOrganization = true
 
-	annotation PBI_Id = 9e229707b18f44f5ab1c4b46902a21e5
+	annotation PBI_Id = 33cf46ad2f3d4bfb9f80d783c972c125
 

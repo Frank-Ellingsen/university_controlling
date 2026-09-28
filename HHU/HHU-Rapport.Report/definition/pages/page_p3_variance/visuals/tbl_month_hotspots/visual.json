@@ -1,0 +1,113 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_month_hotspots",
+  "position": {
+    "x": 1300,
+    "y": 240,
+    "z": 30,
+    "height": 500,
+    "width": 600,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthHotspot"
+                    }
+                  },
+                  "Property": "Maaned"
+                }
+              },
+              "queryRef": "FactMonthHotspot.Maaned",
+              "nativeQueryRef": "Måned",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthHotspot"
+                    }
+                  },
+                  "Property": "AvvikBelop"
+                }
+              },
+              "queryRef": "FactMonthHotspot.AvvikBelop",
+              "nativeQueryRef": "Avvik (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactMonthHotspot"
+                    }
+                  },
+                  "Property": "Forklaring"
+                }
+              },
+              "queryRef": "FactMonthHotspot.Forklaring",
+              "nativeQueryRef": "Årsaksforklaring & Sesongmønster",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'4 Månedshotspots (Sesongmessige Avvik)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

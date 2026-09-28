@@ -6,7 +6,7 @@
     "y": 15,
     "z": 10,
     "height": 75,
-    "width": 1200,
+    "width": 1280,
     "tabOrder": 1
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "HHU Ansvarsområder & Instituttoppfølging 2026",
+                    "value": "2. Enhets- & Kontooppfølging — Økonomiske Rammer og Kontostruktur",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "14pt",
+                      "fontSize": "13pt",
                       "fontWeight": "bold",
                       "color": "#0F172A"
                     }
@@ -32,7 +32,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "K10000 Admin (14,0 MNOK) | K11000 Ledelse (38,5 MNOK) | K12000 Rettsvitenskap (29,25 MNOK) | K13000 Økonomi (48,40 MNOK)",
+                    "value": "Granulær oppfølging av inntekter, lønn og drift per institutt og SRS-kontoart | M01-M09 Faktisk, M10-M12 Prognose",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "9pt",

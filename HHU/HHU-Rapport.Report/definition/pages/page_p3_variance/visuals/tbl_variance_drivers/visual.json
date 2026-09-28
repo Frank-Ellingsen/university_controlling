@@ -1,0 +1,188 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_variance_drivers",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 30,
+    "height": 500,
+    "width": 1260,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "FactVarianceDriver.OrgKode",
+              "nativeQueryRef": "Org",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "Konto"
+                }
+              },
+              "queryRef": "FactVarianceDriver.Konto",
+              "nativeQueryRef": "Konto",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "Avviksdriver"
+                }
+              },
+              "queryRef": "FactVarianceDriver.Avviksdriver",
+              "nativeQueryRef": "Avviksdriver / Årsak",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "BudsjettBelop"
+                }
+              },
+              "queryRef": "FactVarianceDriver.BudsjettBelop",
+              "nativeQueryRef": "Budsjett (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "PrognoseLE"
+                }
+              },
+              "queryRef": "FactVarianceDriver.PrognoseLE",
+              "nativeQueryRef": "Prognose LE (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "AvvikBelop"
+                }
+              },
+              "queryRef": "FactVarianceDriver.AvvikBelop",
+              "nativeQueryRef": "Avvik (kr)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "AvvikProsent"
+                }
+              },
+              "queryRef": "FactVarianceDriver.AvvikProsent",
+              "nativeQueryRef": "Avvik %",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVarianceDriver"
+                    }
+                  },
+                  "Property": "RAG_Status"
+                }
+              },
+              "queryRef": "FactVarianceDriver.RAG_Status",
+              "nativeQueryRef": "RAG Status",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Topp 11 Avviksdrivere: Kvantifisering av Vesentlige Avvik og Årsakssammenhenger'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

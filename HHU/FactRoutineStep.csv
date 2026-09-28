@@ -1,0 +1,7 @@
+﻿TrinnNummer;FormelMetode;Forklaring;Kontrollaktivitet;MaanedligTidslinje
+1;Actual YTD = bokført M01–cutoff;Låst regnskap hittil i året;Avstem mot hovedbok;(Datainnhenting | Lukk periode | HR-uttrekk)
+2;ETC = prognose for resterende måneder;Bygges fra driverne i tabellen over;Ingen dobbeltelling;(Driveroppdatering |  | Lønn/vakans)
+3;EAC = Actual YTD + ETC;Ny forventet helårsverdi;Sammenlign med BUD2027;(Analyse |  | )
+4;VAC = BUD2027 − EAC;Positivt tall er gunstig for kostnader;Vurder fortegn for inntekter;(Beslutning |  | )
+5;VAC % = VAC / BUD2027;Normaliserer vesentligheten;"RAG: grønn ≥0; gul 0 til −5 %; rød <−5 %";(Publisering |  | )
+6;Ny LE godkjennes og versjoneres;Bevar forrige prognose for sporbarhet;Dato, eier og kommentar obligatorisk;( |  | )

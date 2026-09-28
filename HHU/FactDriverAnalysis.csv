@@ -1,0 +1,7 @@
+﻿DriverNavn;Mekanisme;Kvantifisering;Helaarseffekt;Risiko;Kontroll;AnsvarligEier;Avstemming;Modellverdi;Referanseverdi;Differanse;RAG_Status;Konklusjon
+KD/SPE60 2-års lag;2025-produksjon styrer 2027-utbetaling;+33 SPE60 × 54 550 kr;+1,80 MNOK inntekt;Lav sats kan gi negativ marginaløkonomi;Avstem FS mot finansieringsgrunnlag;Studiedirektør / Controller;🟡;0.0;0.0;286069999.8;288070000;-2000000.2
+Basisbevilgning;Eksisterende volum ligger i fast basis;251,8 MNOK konto 3900;Stabiliserer inntektene;Feil rammeversjon påvirker hele modellen;Signert rammebrev og versjonskontroll;Fakultetsdirektør;🔴;0.0;0.0;282000000.12;282000000;0.12
+Bemanning og vakans;230 planlagte ÅV med 3,5 % vakans;221,94 effektive ÅV;Reduserer lønnsbelastning;Tidligere oppstart øker kostnaden;Stillingsregister og månedlig lønnsbro;HR + instituttledere;🔴;0.0;0.0;4069999.68;6070000;-2000000.32
+BOA/TDI;Frikjøp flytter lønn og gir overhead;"T004: 1,80 MNOK; ca. 22 % OH";Bedrer BFV-handlingsrom;Underdekning subsidierer prosjekter;Prosjektkalkyle og dekningsgradsport;Forskningsleder;🟡;0.0;0.0;0.6676687534;0.645;0.0226687534
+EVU/SRS 9;"Inntekt etter fullføringsgrad; tap avsettes straks";T003: 1,40 MNOK;Øker ekstern inntekt;Marginerosjon og tapsavsetning;Kontraktsmargin og månedlig EAC;Instituttleder Ledelse;🟡;0.0;0.0;221.94;230;-8.06
+Capex / 5 %-regel;Overskudd bindes til investeringer;32,0 MNOK konto 1250;Beskytter handlingsrom;Udisponerte reserver kan trekkes inn;Godkjent investeringsplan;Fakultetsdirektør;🟢;0.0;0.0;0.0;;

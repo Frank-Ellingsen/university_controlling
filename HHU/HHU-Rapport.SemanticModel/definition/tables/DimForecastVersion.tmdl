@@ -1,9 +1,9 @@
 table DimForecastVersion
-	lineageTag: e92110ff-b8d5-4886-b272-1e3425b81d8a
+	lineageTag: 4557a2ca-04ac-42ee-98b9-44a425593dee
 
 	column VersjonKode
 		dataType: string
-		lineageTag: cee6b9bd-fb47-4b1c-bd29-be222370f4ec
+		lineageTag: 3822a453-b61e-40b5-987a-6f013280de91
 		summarizeBy: none
 		sourceColumn: VersjonKode
 
@@ -11,7 +11,7 @@ table DimForecastVersion
 
 	column VersjonNavn
 		dataType: string
-		lineageTag: 2d9b101f-db08-4a73-aa86-b99865f05967
+		lineageTag: 98bb8b90-d38a-4041-a06b-90e7906407e1
 		summarizeBy: none
 		sourceColumn: VersjonNavn
 
@@ -19,7 +19,7 @@ table DimForecastVersion
 
 	column Status
 		dataType: string
-		lineageTag: 1075b675-b91c-44e9-8cb0-960cc97971a3
+		lineageTag: b3975d51-75d2-4455-a284-3cd94afa44b9
 		summarizeBy: none
 		sourceColumn: Status
 
@@ -28,7 +28,7 @@ table DimForecastVersion
 	column SisteOppdatert
 		dataType: dateTime
 		formatString: yyyy-MM-dd
-		lineageTag: d48b6fc1-5e42-4510-8c28-3b847dfbca9c
+		lineageTag: 8e2d38ab-1527-4901-9d7d-846213d48ed1
 		summarizeBy: none
 		sourceColumn: SisteOppdatert
 

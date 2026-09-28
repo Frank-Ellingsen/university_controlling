@@ -1,10 +1,10 @@
 table FactFTE
-	lineageTag: c01b7cbc-b31b-49af-ae81-51e600bee15c
+	lineageTag: 240c7586-506c-44ea-b0cb-56b9d0d2800d
 
 	column DatoNokkel
 		dataType: int64
 		formatString: 0
-		lineageTag: ee339f72-51cd-4e22-a60a-bc38acb85f93
+		lineageTag: bca42a20-4e64-4853-940c-b3b03afb1b5b
 		summarizeBy: none
 		sourceColumn: DatoNokkel
 
@@ -12,7 +12,7 @@ table FactFTE
 
 	column OrgKode
 		dataType: string
-		lineageTag: 1e32dad0-1528-4dfb-91b9-a1d2074dbf04
+		lineageTag: e2ca1cdb-3362-4af6-be46-d0c32da18b94
 		summarizeBy: none
 		sourceColumn: OrgKode
 
@@ -20,7 +20,7 @@ table FactFTE
 
 	column Budsjettansvarsområde
 		dataType: string
-		lineageTag: 0780c410-7539-4145-b2ff-811eae434a33
+		lineageTag: e5281848-3568-44f6-9a44-ef4856fbe55c
 		summarizeBy: none
 		sourceColumn: Budsjettansvarsområde
 
@@ -28,7 +28,7 @@ table FactFTE
 
 	column BudsjettansvarligLeder
 		dataType: string
-		lineageTag: 6556e838-7e61-4f07-9746-6407bbcc8fac
+		lineageTag: 0f3bb677-3224-4df9-8373-244d9bd6ead3
 		summarizeBy: none
 		sourceColumn: BudsjettansvarligLeder
 
@@ -36,7 +36,7 @@ table FactFTE
 
 	column Stillingstype
 		dataType: string
-		lineageTag: 20cf2c96-8952-4492-a387-f702ca39f601
+		lineageTag: dce580da-c0cf-4cbf-8d25-1173ce4634bb
 		summarizeBy: none
 		sourceColumn: Stillingstype
 
@@ -45,7 +45,7 @@ table FactFTE
 	column Aarsverk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 35733c8c-a385-45e9-b3ee-cba6e79fc952
+		lineageTag: 06ee27ec-8e22-45cc-b3a3-309441e41f37
 		summarizeBy: sum
 		sourceColumn: Aarsverk
 
@@ -54,7 +54,7 @@ table FactFTE
 	column Budsjettert_Aarsverk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: bca0f684-fc51-4be4-baa1-f87a933bb096
+		lineageTag: 94d63457-8340-41fb-b8e5-b01738bf38f6
 		summarizeBy: sum
 		sourceColumn: Budsjettert_Aarsverk
 
@@ -63,7 +63,7 @@ table FactFTE
 	column Aarsverk_UF
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: b679cd4f-0179-48e5-bad7-9246de4e71d1
+		lineageTag: c88fc615-be4f-468b-acdf-f4e75bd96f87
 		summarizeBy: sum
 		sourceColumn: Aarsverk_UF
 
@@ -72,7 +72,7 @@ table FactFTE
 	column Aarsverk_TA
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 395e51ee-8817-45d0-a3b0-c3f78e92611c
+		lineageTag: 9beadb61-25c7-4caf-a8a7-b5bffb40e423
 		summarizeBy: sum
 		sourceColumn: Aarsverk_TA
 
@@ -81,7 +81,7 @@ table FactFTE
 	column Aarsverk_Totalt
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 3927db81-81a7-4050-b821-91e41eba5291
+		lineageTag: 60e94b47-7142-4aa8-a87e-f7d0354edbc9
 		summarizeBy: sum
 		sourceColumn: Aarsverk_Totalt
 
@@ -90,7 +90,7 @@ table FactFTE
 	column Vakans_Aarsverk
 		dataType: double
 		formatString: #,##0.0
-		lineageTag: 8ea32c45-504f-4d21-942c-293f6ddb5d6c
+		lineageTag: f9c36fe6-8f78-4b0a-97cc-aceaefa52f44
 		summarizeBy: sum
 		sourceColumn: Vakans_Aarsverk
 
@@ -99,7 +99,7 @@ table FactFTE
 	column Antall_Ansatte
 		dataType: int64
 		formatString: 0
-		lineageTag: e8c21f28-3032-46e4-be00-85e3c58c7156
+		lineageTag: d38d01e6-b2ce-49d7-8b73-de5194c6f453
 		summarizeBy: sum
 		sourceColumn: Antall_Ansatte
 
@@ -108,7 +108,7 @@ table FactFTE
 	column Vakansgrad_Pct
 		dataType: double
 		formatString: 0.0%
-		lineageTag: 3d543806-9fa8-46b6-afc0-86e34b07c79e
+		lineageTag: 3c096092-f304-4165-93d7-18bbf0bc442f
 		summarizeBy: average
 		sourceColumn: Vakansgrad_Pct
 

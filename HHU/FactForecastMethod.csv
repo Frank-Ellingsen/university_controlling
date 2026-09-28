@@ -1,0 +1,12 @@
+﻿Prio;Budsjettpost;KontoTabell;Baseline2027;Prognosemetode;DriverInput;OperativBeregning;Oppdateringsfrekvens
+Prioritet;Budsjettpost;Konto / tabell;0.0;Prognosemetode;Driver / input;Operativ beregning;Oppdatering
+Høy;Basisbevilgning;3900;251800149.96;Fast ramme + vedtatte endringer;Tildelingsbrev og rammeendringer;Siste godkjente ramme + signerte endringer;Ved rammeendring
+Middels;SPE60-resultatinntekt;FactStudents_2027;1800150.0;Volum × sats med 2-års lag;Endelig 2025 SPE60-vekst og KD-sats;SPE60-vekst × 54 550 kr;Tertial
+Høy;NFR/EU og TDI;3400/3420;19999999.92;Prosjekt-for-prosjekt EAC;Kontrakt, fremdrift, frikjøp og overhead;Bokført inntekt + gjenstående finansiert aktivitet;Månedlig
+Høy;EVU-inntekter;3600/3630;13000000.0;Kontraktsbasert EAC;Kontraktsverdi, fullføringsgrad og kostnad til ferdigstillelse;Opptjent inntekt + gjenstående leveranseverdi;Månedlig
+Høy;Fast lønn;5000;155400000.12;Ansatt-for-ansatt prognose;Årslønn, stillingsprosent, start/slutt og lønnsoppgjør;Bokført lønn + månedslønn × resterende måneder;Månedlig
+Høy;Arbeidsgiveravgift;5400;35600000.04;Påslag på prognostisert lønn;Gjeldende AGA-sats og avgiftsgrunnlag;Prognostisert lønnsgrunnlag × AGA-sats;Månedlig
+Høy;Vakans og rekruttering;FactFTE_2027;221.94;Stilling-for-stilling kapasitetsplan;Faktisk ledighet og forventet tiltredelse;Budsjettert ÅV − vakans frem til realistisk start;Månedlig
+Middels;Driftskostnader;6300/6420/6700/7130;58999999.92;Run-rate + kjente forpliktelser;Faste avtaler, forbruk, pris og engangskostnader;Bokført + åpne PO + normalisert månedsforbruk;Månedlig
+Middels;Investeringer / Capex;1250;32000000.04;Milepælsbasert prognose;Kontrakt, anskaffelse, leveranse og aktivering;Bokført + kontraktsfestet beløp per milepæl;Månedlig
+Høy;Tiltak T001–T004;FactAction_2027;6500000.0;Tiltakseier-estimat;Realisert effekt, sannsynlighet og timing;Realisert + sannsynlig gjenstående effekt;Ukentlig/månedlig

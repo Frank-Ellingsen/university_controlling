@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "tbl_org_students_summary",
+  "position": {
+    "x": 20,
+    "y": 755,
+    "z": 30,
+    "height": 305,
+    "width": 1880,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "OrgKode"
+                }
+              },
+              "queryRef": "DimOrganization.OrgKode",
+              "nativeQueryRef": "OrgKode",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrganization"
+                    }
+                  },
+                  "Property": "Enhetsnavn"
+                }
+              },
+              "queryRef": "DimOrganization.Enhetsnavn",
+              "nativeQueryRef": "Enhetsnavn",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Registrerte Studenter"
+                }
+              },
+              "queryRef": "_Measures.Registrerte Studenter",
+              "nativeQueryRef": "Studenter",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Avlagte SPE60"
+                }
+              },
+              "queryRef": "_Measures.Avlagte SPE60",
+              "nativeQueryRef": "SPE60",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Faglige Årsverk (UF)"
+                }
+              },
+              "queryRef": "_Measures.Faglige Årsverk (UF)",
+              "nativeQueryRef": "UF-Årsverk",
+              "active": false
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Studenter pr UF-Årsverk"
+                }
+              },
+              "queryRef": "_Measures.Studenter pr UF-Årsverk",
+              "nativeQueryRef": "Ratio Stud/UF",
+              "active": false
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Aggregert Studieproduksjon og Veiledningskapasitet per Institutt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
